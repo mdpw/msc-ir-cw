@@ -1,0 +1,22 @@
+"""
+Configuration file for Brandix ISPS
+"""
+
+# File paths
+STRATEGIC_PLAN_PATH = "data/BRANDIX_STRATEGIC_PLAN_2025.docx"
+ACTION_PLAN_PATH = "data/BRANDIX_ACTION_PLAN.docx"
+
+# Model settings
+EMBEDDING_MODEL = "all-MiniLM-L6-v2"
+LLM_MODEL = "llama3.1"
+EMBEDDING_DIMENSION = 384
+
+# Analysis settings
+TOP_K_MATCHES = 5
+ALIGNMENT_THRESHOLD_STRONG = 0.75
+ALIGNMENT_THRESHOLD_MODERATE = 0.60
+ALIGNMENT_THRESHOLD_WEAK = 0.40
+
+# Output settings
+OUTPUT_DIR = "outputs"
+MODELS_DIR = "models"

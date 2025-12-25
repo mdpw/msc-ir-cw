@@ -10,3 +10,4 @@ langchain-community==0.0.10
 streamlit==1.28.0
 plotly==5.17.0
 huggingface-hub==0.16.4
+pytorch==2.1.2

@@ -81,11 +81,21 @@ def load_improvements():
             return json.load(f)
     return None
 
+@st.cache_data
+def load_executive_summary():
+    """Load AI-generated executive summary"""
+    summary_path = 'outputs/executive_summary.json'
+    if os.path.exists(summary_path):
+        with open(summary_path, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    return None
+
 # Load data
 try:
     report = load_synchronization_report()
     embedding_analysis = load_embedding_analysis()
-    improvements_data = load_improvements()  # NEW!
+    improvements_data = load_improvements()
+    executive_summary = load_executive_summary()  # NEW!
 except Exception as e:
     st.error(f"Error loading data: {e}")
     st.stop()
@@ -104,14 +114,15 @@ st.sidebar.title("🎯 Brandix ISPS")
 st.sidebar.markdown("**Intelligent Strategic Planning Synchronization**")
 st.sidebar.markdown("---")
 
-# MODIFIED: Added AI Improvements to navigation
+# MODIFIED: Added Executive Summary to navigation
 page = st.sidebar.radio(
     "Navigate",
     [
         "📊 Dashboard",
         "🔍 Detailed Analysis",
         "💡 Gap Analysis",
-        "🤖 AI Improvements",  # NEW!
+        "🤖 AI Improvements",
+        "📋 Executive Summary",  # NEW!
         "📈 Pillar View",
         "ℹ️ About"
     ]
@@ -474,7 +485,7 @@ elif page == "💡 Gap Analysis":
                 st.warning(f"⚠️ {orphan['recommendation']}")
 
 # ============================================================
-# PAGE 4: AI-Powered Improvements (NEW!)
+# PAGE 4: AI-Powered Improvements
 # ============================================================
 
 elif page == "🤖 AI Improvements":
@@ -656,7 +667,80 @@ elif page == "🤖 AI Improvements":
         )
 
 # ============================================================
-# PAGE 5: Pillar View
+# PAGE 5: Executive Summary (NEW!)
+# ============================================================
+
+elif page == "📋 Executive Summary":
+    st.title("📋 Executive Summary")
+    st.markdown("AI-generated comprehensive summary for leadership and stakeholders")
+    
+    if executive_summary is None:
+        st.warning("⚠️ **Executive Summary not yet generated**")
+        st.info("""
+        The executive summary uses LLM-based summarization to synthesize the entire
+        synchronization analysis into a concise report for decision-makers.
+        
+        **To generate:**
+```bash
+        python src/executive_summary.py
+```
+        
+        This will:
+        - Analyze all 731 objective-action comparisons
+        - Generate 6 executive-level sections
+        - Create actionable recommendations
+        - Takes 2-3 minutes to complete
+        """)
+        st.stop()
+    
+    # Display summary sections
+    st.markdown("## 📄 Executive Overview")
+    st.info(executive_summary['overview'])
+    
+    st.markdown("---")
+    st.markdown("## 🔍 Key Findings")
+    st.markdown(executive_summary['key_findings'])
+    
+    st.markdown("---")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.markdown("## 🚨 Critical Gaps")
+        st.warning(executive_summary['critical_gaps'])
+    
+    with col2:
+        st.markdown("## ⚠️ Risk Assessment")
+        st.error(executive_summary['risk_assessment'])
+    
+    st.markdown("---")
+    st.markdown("## 💡 Strategic Recommendations")
+    st.success(executive_summary['recommendations'])
+    
+    st.markdown("---")
+    st.markdown("## ✅ Immediate Next Steps (30-90 Days)")
+    st.info(executive_summary['next_steps'])
+    
+    # Export options
+    st.markdown("---")
+    st.markdown("### 📥 Export Summary")
+    
+    col1, col2 = st.columns([3, 1])
+    
+    with col1:
+        st.caption("Download the complete executive summary for distribution to stakeholders")
+    
+    with col2:
+        json_str = json.dumps(executive_summary, indent=2)
+        st.download_button(
+            label="📥 Download JSON",
+            data=json_str,
+            file_name="brandix_executive_summary.json",
+            mime="application/json"
+        )
+
+# ============================================================
+# PAGE 6: Pillar View
 # ============================================================
 
 elif page == "📈 Pillar View":
@@ -718,7 +802,7 @@ elif page == "📈 Pillar View":
         st.markdown("")
 
 # ============================================================
-# PAGE 6: About
+# PAGE 7: About
 # ============================================================
 
 else:  # About page
@@ -749,12 +833,17 @@ else:  # About page
     - Finds orphan actions with weak strategic links
     - Categorizes gaps by severity (Critical/High/Medium)
     
-    **4. AI-Powered Improvements** ✨ NEW!
+    **4. AI-Powered Improvements** ✨
     - RAG-enhanced LLM suggestions for gap objectives
     - Context-aware recommendations using retrieved documents
     - Categorized improvements: Actions, KPIs, Timeline, Resources
     
-    **5. Pillar-wise Categorization**
+    **5. Executive Summary** ✨ NEW!
+    - LLM-based summarization and reporting
+    - Comprehensive analysis synthesis for decision-makers
+    - 6 professional sections: Overview, Findings, Gaps, Recommendations, Risks, Next Steps
+    
+    **6. Pillar-wise Categorization**
     - Groups analysis by strategic pillars
     - Shows pillar-level performance
     - Identifies weak areas requiring attention
@@ -796,6 +885,11 @@ else:  # About page
         st.markdown(f"""
     - **AI Improvements Generated:** {improvements_data['summary']['total_suggestions']} suggestions
     - **Gap Objectives Processed:** {improvements_data['summary']['processed']} objectives
+        """)
+    
+    if executive_summary:
+        st.markdown("""
+    - **Executive Summary:** ✅ Generated with 6 comprehensive sections
         """)
     
     st.markdown("""

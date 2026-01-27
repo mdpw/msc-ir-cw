@@ -1,3 +1,8 @@
+"""
+Brandix ISPS - Multi-Year Comparison Page
+Track strategic alignment progress across years
+"""
+
 import streamlit as st
 import json
 import pandas as pd
@@ -6,6 +11,13 @@ import plotly.express as px
 from pathlib import Path
 
 st.set_page_config(page_title="Multi-Year Comparison", page_icon="📈", layout="wide")
+
+# Custom CSS
+st.markdown("""
+    <style>
+    .main {background-color: #f5f7fa;}
+    </style>
+""", unsafe_allow_html=True)
 
 st.title("📈 Multi-Year Strategic Alignment Comparison")
 st.markdown("### Track Progress Toward 2030 Strategic Goals")
@@ -16,7 +28,7 @@ OUTPUTS_BASE = Path("outputs")
 
 # Function to load year data
 def load_year_data(year):
-    results_file = OUTPUTS_BASE / year / "analysis_results.json"
+    results_file = OUTPUTS_BASE / year / "synchronization_report.json"
     if results_file.exists():
         with open(results_file, 'r') as f:
             return json.load(f)
@@ -50,13 +62,15 @@ st.subheader("📊 Overall Strategic Alignment Trend")
 alignment_data = []
 for year in years_with_data:
     data = all_data[year]
+    overall = data['overall_alignment']
     alignment_data.append({
         'Year': year,
-        'Alignment': data['overall_alignment'],
-        'Strong Alignments': data['strong_alignments'],
-        'Moderate Alignments': data['moderate_alignments'],
-        'Weak Alignments': data['weak_alignments'],
-        'Critical Gaps': data['critical_gaps']
+        'Alignment': overall['overall_score'],
+        'Mean Max Similarity': overall['mean_max_similarity'],
+        'Strong Alignments': overall['distribution']['strong'],
+        'Moderate Alignments': overall['distribution']['moderate'],
+        'Weak Alignments': overall['distribution']['weak'],
+        'Critical Gaps': overall['distribution']['weak']
     })
 
 df_alignment = pd.DataFrame(alignment_data)
@@ -133,10 +147,9 @@ st.subheader("📊 Alignment Distribution by Year")
 fig_dist = go.Figure()
 
 for col, name, color in [
-    ('Strong Alignments', 'Strong', '#2ca02c'),
-    ('Moderate Alignments', 'Moderate', '#ff7f0e'),
-    ('Weak Alignments', 'Weak', '#d62728'),
-    ('Critical Gaps', 'Critical Gap', '#9467bd')
+    ('Strong Alignments', 'Strong', '#2ecc71'),
+    ('Moderate Alignments', 'Moderate', '#f39c12'),
+    ('Weak Alignments', 'Weak', '#e74c3c'),
 ]:
     fig_dist.add_trace(go.Bar(
         name=name,
@@ -158,21 +171,20 @@ st.plotly_chart(fig_dist, use_container_width=True)
 
 st.markdown("---")
 
-# Pillar-wise comparison (if data available)
+# Pillar-wise comparison
 st.subheader("🎯 Pillar-wise Alignment Comparison")
 
-# Check if pillar data exists
-has_pillar_data = all('pillar_analysis' in all_data[year] for year in years_with_data)
+has_pillar_data = all('pillar_stats' in all_data[year] for year in years_with_data)
 
 if has_pillar_data:
     pillar_data = []
     
     for year in years_with_data:
-        for pillar_name, pillar_info in all_data[year]['pillar_analysis'].items():
+        for pillar_name, pillar_info in all_data[year]['pillar_stats'].items():
             pillar_data.append({
                 'Year': year,
                 'Pillar': pillar_name,
-                'Alignment': pillar_info['average_alignment']
+                'Alignment': pillar_info['average_score']
             })
     
     df_pillars = pd.DataFrame(pillar_data)
@@ -201,6 +213,7 @@ st.subheader("📋 Detailed Year-over-Year Metrics")
 
 comparison_table = df_alignment.copy()
 comparison_table['Alignment'] = comparison_table['Alignment'].apply(lambda x: f"{x:.1f}%")
+comparison_table['Mean Max Similarity'] = comparison_table['Mean Max Similarity'].apply(lambda x: f"{x:.1f}%")
 
 st.dataframe(
     comparison_table,

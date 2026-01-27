@@ -1,3 +1,8 @@
+"""
+Brandix ISPS - Admin Upload Page
+Year-specific document upload and management
+"""
+
 import streamlit as st
 import os
 import json
@@ -6,7 +11,23 @@ from datetime import datetime
 
 st.set_page_config(page_title="Admin Upload", page_icon="📤", layout="wide")
 
-st.title("📤 Admin Panel - Document Upload & Management")
+# Custom CSS
+st.markdown("""
+    <style>
+    .main {background-color: #f5f7fa;}
+    .stButton>button {width: 100%;}
+    .info-box {
+        background-color: #d1ecf1;
+        border: 1px solid #bee5eb;
+        border-radius: 5px;
+        padding: 15px;
+        margin: 10px 0;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+st.title("📤 Document Upload & Management")
+st.markdown("### Upload Strategic Plan and Action Plans by Year")
 st.markdown("---")
 
 # Available years (Strategic Plan 2025-2030)
@@ -20,25 +41,33 @@ if 'selected_year' not in st.session_state:
 
 # Year Selection
 st.subheader("📅 Step 1: Select Planning Year")
-st.info("💡 Strategic Plan covers 2025-2030. Select the action plan year you want to analyze.")
+st.markdown("""
+<div class="info-box">
+💡 <strong>Information:</strong> The Strategic Plan covers 2025-2030. Select the action plan year you want to upload and analyze.
+</div>
+""", unsafe_allow_html=True)
 
-selected_year = st.selectbox(
-    "Select Year",
-    AVAILABLE_YEARS,
-    index=AVAILABLE_YEARS.index(st.session_state.selected_year),
-    key='year_selector'
-)
+col1, col2 = st.columns([1, 3])
 
-# Update session state
-if selected_year != st.session_state.selected_year:
-    st.session_state.selected_year = selected_year
-    st.rerun()
+with col1:
+    selected_year = st.selectbox(
+        "Select Year",
+        AVAILABLE_YEARS,
+        index=AVAILABLE_YEARS.index(st.session_state.selected_year),
+        key='year_selector'
+    )
+
+with col2:
+    # Update session state
+    if selected_year != st.session_state.selected_year:
+        st.session_state.selected_year = selected_year
+        st.rerun()
+    
+    st.success(f"✅ Selected Year: **{selected_year}**")
 
 # Create year-specific directory
 year_path = UPLOAD_BASE / selected_year
 year_path.mkdir(parents=True, exist_ok=True)
-
-st.success(f"✅ Selected Year: **{selected_year}**")
 
 st.markdown("---")
 
@@ -212,7 +241,7 @@ with col3:
 # Document Management
 if strategic_exists or action_exists:
     st.markdown("---")
-    st.subheader("📁 Document Management")
+    st.subheader("🗂️ Document Management")
     
     col1, col2 = st.columns(2)
     
@@ -256,12 +285,12 @@ if both_ready:
     st.success("### 🎯 Documents Ready for Analysis!")
     st.info("👉 Go to **'⚙️ Run Analysis'** page to process your documents")
     
-    # Quick link to analysis page
-    st.markdown("[▶️ Start Analysis Now →](Run_Analysis)")
+    if st.button("▶️ Start Analysis Now →", type="primary", use_container_width=True):
+        st.switch_page("pages/02_⚙️_Run_Analysis.py")
 
 # All uploaded years summary
 st.markdown("---")
-st.subheader("📋 All Uploaded Years")
+st.subheader("📋 All Uploaded Years Summary")
 
 all_years_data = []
 for year in AVAILABLE_YEARS:
@@ -282,7 +311,7 @@ if all_years_data:
     df = pd.DataFrame(all_years_data)
     st.dataframe(df, use_container_width=True, hide_index=True)
 else:
-    st.info("No documents uploaded yet.")
+    st.info("No documents uploaded yet. Start by selecting a year and uploading documents above.")
 
 st.markdown("---")
-st.caption(f"💡 Tip: You can manage different years independently. Strategic Plan is shared across years, while Action Plans are year-specific.")
+st.caption("💡 **Tip:** You can manage different years independently. Strategic Plan is shared across years, while Action Plans are year-specific.")

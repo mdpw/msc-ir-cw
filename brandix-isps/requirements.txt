@@ -12,3 +12,4 @@ plotly==5.17.0
 huggingface-hub==0.16.4
 torch==2.1.2
 requests==2.31.0
+tabulate

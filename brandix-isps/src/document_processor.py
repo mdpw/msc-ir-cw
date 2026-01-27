@@ -2,7 +2,7 @@ from docx import Document
 import re
 from typing import List, Dict
 
-class BrandixDocumentProcessor:
+class DocumentProcessor:
     def __init__(self):
         self.strategic_objectives = []
         self.action_items = []
@@ -264,7 +264,7 @@ if __name__ == "__main__":
     # Create outputs directory if it doesn't exist
     os.makedirs('outputs', exist_ok=True)
     
-    processor = BrandixDocumentProcessor()
+    processor = DocumentProcessor()
     
     print("="*80)
     print("BRANDIX DOCUMENT PROCESSOR TEST")

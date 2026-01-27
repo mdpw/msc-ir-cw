@@ -15,14 +15,59 @@ class SynchronizationEngine:
         Initialize synchronization engine
         
         Args:
-            doc_processor: BrandixDocumentProcessor instance
+            doc_processor: DocumentProcessor instance
             embedding_engine: EmbeddingEngine instance
-            vector_store: FAISSVectorStore instance
+            vector_store: VectorStore instance
         """
         self.doc_processor = doc_processor
         self.embedding_engine = embedding_engine
         self.vector_store = vector_store
         self.alignment_matrix = None
+    
+    # ============================================================
+    # NEW METHOD: Main Analysis Entry Point
+    # ============================================================
+    
+    def analyze_synchronization(self, objectives: List[Dict], actions: List[Dict]) -> Dict:
+        """
+        Main method to analyze synchronization between objectives and actions
+        
+        Args:
+            objectives: List of strategic objectives
+            actions: List of action items
+            
+        Returns:
+            Dictionary containing complete synchronization analysis
+        """
+        print(f"\n{'='*80}")
+        print(f"SYNCHRONIZATION ANALYSIS")
+        print(f"{'='*80}")
+        print(f"Objectives: {len(objectives)}")
+        print(f"Actions: {len(actions)}")
+        
+        # Set the data on the document processor
+        self.doc_processor.strategic_objectives = objectives
+        self.doc_processor.action_items = actions
+        
+        # Generate embeddings
+        print("\nGenerating embeddings...")
+        self.embedding_engine.embed_objectives(objectives)
+        self.embedding_engine.embed_actions(actions)
+        
+        # Calculate similarity matrix
+        print("Calculating similarity matrix...")
+        self.embedding_engine.calculate_similarity_matrix()
+        
+        # Generate comprehensive report
+        print("Generating synchronization report...")
+        report = self.generate_summary_report()
+        
+        print(f"\n{'='*80}")
+        print(f"ANALYSIS COMPLETE")
+        print(f"Overall Alignment: {report['overall_alignment']['overall_score']:.1f}%")
+        print(f"{'='*80}\n")
+        
+        return report
     
     # ============================================================
     # REQUIREMENT 1: Overall Synchronization Assessment
@@ -107,7 +152,7 @@ class SynchronizationEngine:
             matched_actions.append({
                 'action_idx': int(idx),
                 'action_id': action['id'],
-                'title': action['title'],
+                'title': action.get('title', action.get('text', '')[:50]),
                 'pillar': action.get('pillar', 'Unknown'),
                 'similarity': float(similarities[idx]),
                 'alignment_strength': self._classify_alignment(similarities[idx])
@@ -120,11 +165,11 @@ class SynchronizationEngine:
         
         # Determine coverage level
         if alignment_score >= 70:
-            coverage = 'High'
+            coverage = 'Strong'
         elif alignment_score >= 50:
             coverage = 'Moderate'
         else:
-            coverage = 'Low'
+            coverage = 'Weak'
         
         return {
             'objective_idx': objective_idx,
@@ -169,7 +214,7 @@ class SynchronizationEngine:
         ]
         
         action_labels = [
-            f"{act['id']}: {act['title'][:30]}..."
+            f"{act['id']}: {act.get('title', act.get('text', ''))[:30]}..."
             for act in self.doc_processor.action_items
         ]
         
@@ -307,7 +352,7 @@ class SynchronizationEngine:
                 action = self.doc_processor.action_items[idx]
                 gaps['orphan_actions'].append({
                     'action_id': action['id'],
-                    'title': action['title'],
+                    'title': action.get('title', action.get('text', '')[:50]),
                     'pillar': action.get('pillar', 'Unknown'),
                     'max_similarity': float(max_sim),
                     'recommendation': 'Review strategic alignment or consider removing'
@@ -392,7 +437,7 @@ class SynchronizationEngine:
         with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(report, f, indent=2)
         
-        print(f" Report saved to {output_file}")
+        print(f"✓ Report saved to {output_file}")
         return report
 
 
@@ -406,39 +451,34 @@ if __name__ == "__main__":
     print("="*80)
     
     # Import required modules
-    import sys
-    sys.path.append('src')
-    from document_processor import BrandixDocumentProcessor
+    from document_processor import DocumentProcessor
     from embedding_engine import EmbeddingEngine
-    from vector_store import FAISSVectorStore
+    from vector_store import VectorStore
     
     # 1. Load documents
     print("\nStep 1: Loading documents...")
-    processor = BrandixDocumentProcessor()
+    processor = DocumentProcessor()
     objectives = processor.load_strategic_plan('data/BRANDIX_STRATEGIC_PLAN_2025.docx')
     actions = processor.load_action_plan('data/BRANDIX_ACTION_PLAN.docx')
     
-    # 2. Create embeddings
-    print("\nStep 2: Creating embeddings...")
+    # 2. Create engines
+    print("\nStep 2: Creating engines...")
     engine = EmbeddingEngine()
-    engine.embed_objectives(objectives)
-    engine.embed_actions(actions)
-    engine.calculate_similarity_matrix()
+    vs = VectorStore(dimension=384)
     
-    # 3. Create vector store
-    print("\nStep 3: Creating vector store...")
-    vs = FAISSVectorStore()
-    vs.add_vectors(engine.action_embeddings, [{'id': a['id']} for a in actions])
-    
-    # 4. Initialize synchronization engine
-    print("\nStep 4: Initializing Synchronization Engine...")
+    # 3. Initialize synchronization engine
+    print("\nStep 3: Initializing Synchronization Engine...")
     sync_engine = SynchronizationEngine(processor, engine, vs)
     
-    # 5. Test overall alignment
+    # 4. Run analysis using the new method
+    print("\nStep 4: Running synchronization analysis...")
+    results = sync_engine.analyze_synchronization(objectives, actions)
+    
+    # 5. Display results
     print("\n" + "="*80)
-    print("OVERALL ALIGNMENT ANALYSIS")
+    print("RESULTS SUMMARY")
     print("="*80)
-    overall = sync_engine.calculate_overall_alignment()
+    overall = results['overall_alignment']
     print(f"Overall Score: {overall['overall_score']:.2f}%")
     print(f"Mean Max Similarity: {overall['mean_max_similarity']:.2f}%")
     print(f"Classification: {overall['classification']}")
@@ -448,58 +488,16 @@ if __name__ == "__main__":
     print(f"  Moderate (50-70%): {overall['distribution']['moderate']}")
     print(f"  Weak (<50%): {overall['distribution']['weak']}")
     
-    # 6. Test strategy-wise analysis
+    # 6. Save report
     print("\n" + "="*80)
-    print("STRATEGY-WISE ANALYSIS (Sample: First Objective)")
+    print("SAVING REPORT")
     print("="*80)
-    obj_analysis = sync_engine.analyze_objective_alignment(0)
-    print(f"Objective: {obj_analysis['objective'][:80]}...")
-    print(f"Pillar: {obj_analysis['pillar']}")
-    print(f"Alignment Score: {obj_analysis['alignment_score']:.2f}%")
-    print(f"Coverage: {obj_analysis['coverage']}")
-    print(f"\nTop 3 Matched Actions:")
-    for i, action in enumerate(obj_analysis['matched_actions'][:3], 1):
-        print(f"{i}. [{action['action_id']}] {action['title']}")
-        print(f"   Similarity: {action['similarity']:.2%} ({action['alignment_strength']})")
+    output_file = 'outputs/synchronization_report.json'
+    os.makedirs('outputs', exist_ok=True)
+    with open(output_file, 'w', encoding='utf-8') as f:
+        json.dump(results, f, indent=2)
+    print(f"✓ Report saved to {output_file}")
     
-    # 7. Test gap detection
     print("\n" + "="*80)
-    print("GAP DETECTION")
+    print("✓ TEST COMPLETE!")
     print("="*80)
-    gaps = sync_engine.detect_gaps()
-    print(f"Weak Objectives: {len(gaps['weak_objectives'])}")
-    print(f"Orphan Actions: {len(gaps['orphan_actions'])}")
-    print(f"Weak Pillars: {len(gaps['pillar_gaps'])}")
-    print(f"Coverage Gaps: {len(gaps['coverage_gaps'])}")
-    
-    if gaps['weak_objectives']:
-        print("\nTop 3 Gap Objectives:")
-        for i, gap in enumerate(gaps['weak_objectives'][:3], 1):
-            print(f"{i}. [{gap['objective_id']}] Score: {gap['alignment_score']:.1f}% ({gap['severity']})")
-            print(f"   {gap['objective'][:70]}...")
-    
-    # 8. Test pillar analysis
-    print("\n" + "="*80)
-    print("PILLAR-WISE ANALYSIS")
-    print("="*80)
-    pillar_stats = sync_engine.categorize_by_pillar()
-    for pillar, stats in pillar_stats.items():
-        print(f"\n{pillar}:")
-        print(f"  Objectives: {stats['count']}")
-        print(f"  Average Score: {stats['average_score']:.1f}%")
-        print(f"  Status: {stats['pillar_status']}")
-    
-    # 9. Generate and save full report
-    print("\n" + "="*80)
-    print("GENERATING FULL REPORT")
-    print("="*80)
-    report = sync_engine.save_report('outputs/synchronization_report.json')
-    
-    print("\n" + "="*80)    
-    print("="*80)
-    print("\nYou have successfully built:")
-    print("   Overall synchronization assessment")
-    print("   Strategy-wise alignment analysis")
-    print("   Gap detection system")
-    print("   Pillar-level categorization")
-    print("\nCheck outputs/synchronization_report.json for full results!")

@@ -3,7 +3,7 @@ import numpy as np
 import pickle
 from typing import List, Dict
 
-class FAISSVectorStore:
+class VectorStore:
     def __init__(self, dimension=384):
         """Initialize FAISS index"""
         self.dimension = dimension
@@ -59,11 +59,11 @@ class FAISSVectorStore:
 
 # Test
 if __name__ == "__main__":
-    from document_processor import BrandixDocumentProcessor
+    from document_processor import DocumentProcessor
     from embedding_engine import EmbeddingEngine
     
     # Load documents
-    processor = BrandixDocumentProcessor()
+    processor = DocumentProcessor()
     objectives = processor.load_strategic_plan('data/BRANDIX_STRATEGIC_PLAN_2025.docx')
     actions = processor.load_action_plan('data/BRANDIX_ACTION_PLAN.docx')
     
@@ -72,7 +72,7 @@ if __name__ == "__main__":
     action_embeddings = engine.embed_actions(actions)
     
     # Create vector store
-    vector_store = FAISSVectorStore(dimension=384)
+    vector_store = VectorStore(dimension=384)
     
     # Add actions to vector store
     action_metadata = [

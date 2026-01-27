@@ -8,7 +8,7 @@ import os
 
 # Add parent directory to path to import document_processor
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from src.document_processor import BrandixDocumentProcessor
+from src.document_processor import DocumentProcessor
 
 class EmbeddingEngine:
     def __init__(self, model_name='all-MiniLM-L6-v2'):
@@ -166,7 +166,7 @@ if __name__ == "__main__":
     
     # Load documents
     print("\nStep 1: Loading documents...")
-    processor = BrandixDocumentProcessor()
+    processor = DocumentProcessor()
     objectives = processor.load_strategic_plan('data/BRANDIX_STRATEGIC_PLAN_2025.docx')
     actions = processor.load_action_plan('data/BRANDIX_ACTION_PLAN.docx')
     

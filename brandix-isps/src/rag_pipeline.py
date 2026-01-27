@@ -15,7 +15,7 @@ class RAGPipeline:
         Args:
             llm_engine: LLMEngine instance
             embedding_engine: EmbeddingEngine instance
-            doc_processor: BrandixDocumentProcessor instance
+            doc_processor: DocumentProcessor instance
         """
         self.llm = llm_engine
         self.embedding_engine = embedding_engine
@@ -382,7 +382,7 @@ if __name__ == "__main__":
     import sys
     sys.path.append('src')
     
-    from document_processor import BrandixDocumentProcessor
+    from document_processor import DocumentProcessor
     from embedding_engine import EmbeddingEngine
     from vector_store import FAISSVectorStore
     from synchronization_engine import SynchronizationEngine
@@ -394,7 +394,7 @@ if __name__ == "__main__":
     
     # Load everything
     print("\n1. Loading documents...")
-    processor = BrandixDocumentProcessor()
+    processor = DocumentProcessor()
     objectives = processor.load_strategic_plan('data/BRANDIX_STRATEGIC_PLAN_2025.docx')
     actions = processor.load_action_plan('data/BRANDIX_ACTION_PLAN.docx')
     

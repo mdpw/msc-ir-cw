@@ -9,17 +9,38 @@ from pathlib import Path
 # Page config
 st.set_page_config(
     page_title="Brandix ISPS",
-    page_icon="🎯",
+    page_icon="🎯",  # Keep for browser tab
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-# Dark Theme Compatible CSS
+# Dark Theme Compatible CSS + Font Awesome Icons
 st.markdown("""
     <style>
+    /* Import Font Awesome */
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+    
     /* Main background */
     .main {
         background-color: #0e1117;
+    }
+    
+    /* Icon styling */
+    .fa-icon {
+        color: #4da6ff;
+        margin-right: 8px;
+    }
+    
+    .fa-icon-large {
+        font-size: 1.2em;
+        color: #4da6ff;
+        margin-right: 10px;
+    }
+    
+    .fa-icon-small {
+        font-size: 0.9em;
+        color: #4da6ff;
+        margin-right: 6px;
     }
     
     /* Metric boxes */
@@ -182,7 +203,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Header
-st.title("🎯 Brandix ISPS")
+st.markdown('<h1><i class="fas fa-bullseye fa-icon-large"></i>Brandix ISPS</h1>', unsafe_allow_html=True)
 st.markdown("### Intelligent Strategic Planning Synchronization System")
 st.markdown("**AI-Powered Strategic Alignment Analysis for Brandix Lanka Limited**")
 st.markdown("---")
@@ -200,41 +221,41 @@ with col1:
     
     #### Key Features:
     
-    **📤 Document Upload & Management**
+    **<i class="fas fa-upload fa-icon-small"></i>Document Upload & Management**
     - Upload and manage strategic plans and action plans by year
     - Support for multi-year analysis (2026-2030)
     - Version control and document tracking
     
-    **⚙️ AI-Powered Analysis**
+    **<i class="fas fa-cog fa-icon-small"></i>AI-Powered Analysis**
     - Advanced NLP embeddings using Sentence Transformers
     - FAISS vector similarity search
     - Local LLM integration (Phi-3 Mini via Ollama)
     - Comprehensive synchronization scoring
     
-    **📊 Detailed Results & Insights**
+    **<i class="fas fa-chart-bar fa-icon-small"></i>Detailed Results & Insights**
     - Overall alignment metrics and KPIs
     - Strategy-wise synchronization analysis
     - Gap identification and severity assessment
     - Pillar-level performance breakdown
     
-    **🤖 AI-Generated Improvements**
+    **<i class="fas fa-robot fa-icon-small"></i>AI-Generated Improvements**
     - Intelligent recommendations for weak alignments
     - New action suggestions
     - KPI enhancements
     - Timeline and resource recommendations
     
-    **📋 Executive Summaries**
+    **<i class="fas fa-clipboard fa-icon-small"></i>Executive Summaries**
     - LLM-generated professional reports
     - Key findings and critical gaps
     - Strategic recommendations
     - Risk assessment and next steps
     
-    **📈 Multi-Year Comparison**
+    **<i class="fas fa-chart-line fa-icon-small"></i>Multi-Year Comparison**
     - Track alignment progress across years
     - Trend analysis and projections
     - Year-over-year improvements
     - 2030 goal tracking
-    """)
+    """, unsafe_allow_html=True)
 
 with col2:
     st.markdown("""
@@ -280,32 +301,32 @@ with col2:
     ### Quick Start
     
     **Step 1:** Upload Documents
-    - Go to 📤 Admin Upload
+    - Go to <i class="fas fa-upload fa-icon-small"></i>Admin Upload
     - Select year
     - Upload plans
     
     **Step 2:** Run Analysis
-    - Go to ⚙️ Run Analysis
+    - Go to <i class="fas fa-cog fa-icon-small"></i>Run Analysis
     - Click Start
     - Wait for completion
     
     **Step 3:** View Results
-    - Go to 📊 View Results
+    - Go to <i class="fas fa-chart-bar fa-icon-small"></i>View Results
     - Explore insights
     - Download reports
-    """)
+    """, unsafe_allow_html=True)
 
 st.markdown("---")
 
 # System Architecture
-st.markdown("### 🏗️ System Architecture")
+st.markdown('<h3><i class="fas fa-building fa-icon"></i>System Architecture</h3>', unsafe_allow_html=True)
 
 col1, col2, col3 = st.columns(3)
 
 with col1:
     st.markdown("""
     <div class="feature-box">
-    <h4>📄 Document Processing</h4>
+    <h4><i class="fas fa-file-alt fa-icon-small"></i>Document Processing</h4>
     <ul>
     <li>DOCX text extraction</li>
     <li>Strategic objective parsing</li>
@@ -318,7 +339,7 @@ with col1:
 with col2:
     st.markdown("""
     <div class="feature-box">
-    <h4>🧮 Embedding & Vector Store</h4>
+    <h4><i class="fas fa-calculator fa-icon-small"></i>Embedding & Vector Store</h4>
     <ul>
     <li>Sentence-Transformers (MiniLM)</li>
     <li>384-dimensional embeddings</li>
@@ -331,7 +352,7 @@ with col2:
 with col3:
     st.markdown("""
     <div class="feature-box">
-    <h4>🤖 LLM Integration</h4>
+    <h4><i class="fas fa-robot fa-icon-small"></i>LLM Integration</h4>
     <ul>
     <li>Ollama + Phi-3 Mini</li>
     <li>RAG pipeline</li>
@@ -344,10 +365,16 @@ with col3:
 st.markdown("---")
 
 # Navigation Guide
-st.markdown("### 🧭 Navigation Guide")
+st.markdown('<h3><i class="fas fa-compass fa-icon"></i>Navigation Guide</h3>', unsafe_allow_html=True)
 
 navigation_data = {
-    "Page": ["📤 Admin Upload", "⚙️ Run Analysis", "📊 View Results", "📋 Executive Summary", "📈 Multi-Year Comparison"],
+    "Page": [
+        '<i class="fas fa-upload fa-icon-small"></i>Admin Upload',
+        '<i class="fas fa-cog fa-icon-small"></i>Run Analysis',
+        '<i class="fas fa-chart-bar fa-icon-small"></i>View Results',
+        '<i class="fas fa-clipboard fa-icon-small"></i>Executive Summary',
+        '<i class="fas fa-chart-line fa-icon-small"></i>Multi-Year Comparison'
+    ],
     "Purpose": [
         "Upload and manage strategic and action plans by year",
         "Execute AI analysis pipeline (embeddings → alignment → insights)",
@@ -366,7 +393,7 @@ navigation_data = {
 
 import pandas as pd
 df_nav = pd.DataFrame(navigation_data)
-st.dataframe(df_nav, use_container_width=True, hide_index=True)
+st.markdown(df_nav.to_html(escape=False, index=False), unsafe_allow_html=True)
 
 st.markdown("---")
 
@@ -409,31 +436,31 @@ col1, col2, col3 = st.columns(3)
 
 with col1:
     st.markdown("""
-    **📧 Support**
+    **<i class="fas fa-envelope fa-icon-small"></i>Support**
     
     For technical issues or questions:
     - Check documentation
     - Review coursework brief
     - Contact developer
-    """)
+    """, unsafe_allow_html=True)
 
 with col2:
     st.markdown("""
-    **🎓 Academic Project**
+    **<i class="fas fa-graduation-cap fa-icon-small"></i>Academic Project**
     
     MSc Computer Science
     Information Retrieval Module
     Brandix Case Study
-    """)
+    """, unsafe_allow_html=True)
 
 with col3:
     st.markdown("""
-    **📅 Version Info**
+    **<i class="fas fa-calendar-alt fa-icon-small"></i>Version Info**
     
     Version: 1.0
     Released: January 2026
     Status: Production Ready
-    """)
+    """, unsafe_allow_html=True)
 
 st.markdown("---")
-st.caption("🎯 Brandix ISPS - Intelligent Strategic Planning Synchronization System | Powered by AI")
+st.markdown('<p style="text-align: center; color: rgba(255, 255, 255, 0.5);"><i class="fas fa-bullseye fa-icon-small"></i>Brandix ISPS - Intelligent Strategic Planning Synchronization System | Powered by AI</p>', unsafe_allow_html=True)

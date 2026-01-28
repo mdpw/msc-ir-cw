@@ -1,0 +1,504 @@
+{
+  "metadata": {
+    "year": "2026",
+    "created": "2026-01-28",
+    "annotator": "Domain Expert Name",
+    "instructions": "Please review each objective-action pair and provide your expert assessment",
+    "notes": "Annotated 10 pairs for testing validation"
+  },
+  "alignment_criteria": {
+    "Strong": "Direct match, clear implementation of objective (≥70% alignment)",
+    "Moderate": "Related but partial implementation (50-70% alignment)",
+    "Weak": "Minimal or unclear connection (<50% alignment)"
+  },
+  "scoring_guide": {
+    "1.0": "Perfect alignment - action directly achieves objective",
+    "0.8-0.9": "Strong alignment - action substantially addresses objective",
+    "0.6-0.7": "Good alignment - action clearly supports objective",
+    "0.5-0.6": "Moderate alignment - action partially supports objective",
+    "0.3-0.5": "Weak alignment - action has minor connection",
+    "0.0-0.3": "Very weak alignment - action barely relates"
+  },
+  "objective_action_pairs": [
+    {
+      "objective_id": "OBJ-001",
+      "objective_text": "Achieve net-positive environmental impact across the value chain by 2030",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-WATER-002",
+      "action_title": "Wastewater Recycling Enhancement",
+      "action_pillar": "WATER - STEWARDSHIP",
+      "system_prediction": {
+        "alignment": "Weak",
+        "score": 0.466882586479187
+      },
+      "expected_alignment": "Weak",
+      "expected_score": 0.46,
+      "expert_notes": "Minimal connection to objective",
+      "confidence": "Medium"
+    },
+    {
+      "objective_id": "OBJ-001",
+      "objective_text": "Achieve net-positive environmental impact across the value chain by 2030",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "GOV-RISK-001",
+      "action_title": "Climate Risk Assessment and Management",
+      "action_pillar": "ESG GOVERNANCE",
+      "system_prediction": {
+        "alignment": "Weak",
+        "score": 0.4528851807117462
+      },
+      "expected_alignment": "Weak",
+      "expected_score": 0.45,
+      "expert_notes": "Minimal connection to objective",
+      "confidence": "Medium"
+    },
+    {
+      "objective_id": "OBJ-001",
+      "objective_text": "Achieve net-positive environmental impact across the value chain by 2030",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-EARTH-002",
+      "action_title": "Waste Reduction and Recycling Initiative",
+      "action_pillar": "EARTH - CIRCULAR ECONOMY",
+      "system_prediction": {
+        "alignment": "Weak",
+        "score": 0.4523783326148987
+      },
+      "expected_alignment": "Weak",
+      "expected_score": 0.45,
+      "expert_notes": "Minimal connection to objective",
+      "confidence": "Medium"
+    },
+    {
+      "objective_id": "OBJ-002",
+      "objective_text": "1.1 AIR - Climate Action and Decarbonization",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-AIR-002",
+      "action_title": "Energy Efficiency Program Launch",
+      "action_pillar": "AIR - CLIMATE ACTION",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.5996938943862915
+      },
+      "expected_alignment": "Moderate",
+      "expected_score": 0.59,
+      "expert_notes": "Action supports objective but not directly",
+      "confidence": "Medium"
+    },
+    {
+      "objective_id": "OBJ-002",
+      "objective_text": "1.1 AIR - Climate Action and Decarbonization",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "GOV-RISK-001",
+      "action_title": "Climate Risk Assessment and Management",
+      "action_pillar": "ESG GOVERNANCE",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.5191463232040405
+      },
+      "expected_alignment": "Moderate",
+      "expected_score": 0.51,
+      "expert_notes": "Action supports objective but not directly",
+      "confidence": "Medium"
+    },
+    {
+      "objective_id": "OBJ-002",
+      "objective_text": "1.1 AIR - Climate Action and Decarbonization",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-AIR-001",
+      "action_title": "Solar PV Installation Phase 1",
+      "action_pillar": "AIR - CLIMATE ACTION",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.5076501965522766
+      },
+      "expected_alignment": "Moderate",
+      "expected_score": 0.50,
+      "expert_notes": "Action supports objective but not directly",
+      "confidence": "Medium"
+    },
+    {
+      "objective_id": "OBJ-003",
+      "objective_text": "Net Zero Carbon by 2030 (operations) and Net Zero value chain by 2050 (SBTi-validated)",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-EARTH-002",
+      "action_title": "Waste Reduction and Recycling Initiative",
+      "action_pillar": "EARTH - CIRCULAR ECONOMY",
+      "system_prediction": {
+        "alignment": "Weak",
+        "score": 0.47456008195877075
+      },
+      "expected_alignment": "TO_BE_ANNOTATED",
+      "expected_score": 0.0,
+      "expert_notes": "",
+      "confidence": "TO_BE_ANNOTATED"
+    },
+    {
+      "objective_id": "OBJ-003",
+      "objective_text": "Net Zero Carbon by 2030 (operations) and Net Zero value chain by 2050 (SBTi-validated)",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-EARTH-001",
+      "action_title": "Sustainable Materials Sourcing Program",
+      "action_pillar": "EARTH - CIRCULAR ECONOMY",
+      "system_prediction": {
+        "alignment": "Weak",
+        "score": 0.460033118724823
+      },
+      "expected_alignment": "TO_BE_ANNOTATED",
+      "expected_score": 0.0,
+      "expert_notes": "",
+      "confidence": "TO_BE_ANNOTATED"
+    },
+    {
+      "objective_id": "OBJ-003",
+      "objective_text": "Net Zero Carbon by 2030 (operations) and Net Zero value chain by 2050 (SBTi-validated)",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-AIR-002",
+      "action_title": "Energy Efficiency Program Launch",
+      "action_pillar": "AIR - CLIMATE ACTION",
+      "system_prediction": {
+        "alignment": "Weak",
+        "score": 0.4112139940261841
+      },
+      "expected_alignment": "TO_BE_ANNOTATED",
+      "expected_score": 0.0,
+      "expert_notes": "",
+      "confidence": "TO_BE_ANNOTATED"
+    },
+    {
+      "objective_id": "OBJ-004",
+      "objective_text": "Renewable energy: 100% by 2030",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-AIR-002",
+      "action_title": "Energy Efficiency Program Launch",
+      "action_pillar": "AIR - CLIMATE ACTION",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.5829588174819946
+      },
+      "expected_alignment": "Moderate",
+      "expected_score": 0.58,
+      "expert_notes": "Supports renewable energy through efficiency",
+      "confidence": "Medium"
+    },
+    {
+      "objective_id": "OBJ-004",
+      "objective_text": "Renewable energy: 100% by 2030",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-EARTH-002",
+      "action_title": "Waste Reduction and Recycling Initiative",
+      "action_pillar": "EARTH - CIRCULAR ECONOMY",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.5379760265350342
+      },
+      "expected_alignment": "TO_BE_ANNOTATED",
+      "expected_score": 0.0,
+      "expert_notes": "",
+      "confidence": "TO_BE_ANNOTATED"
+    },
+    {
+      "objective_id": "OBJ-004",
+      "objective_text": "Renewable energy: 100% by 2030",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-EARTH-001",
+      "action_title": "Sustainable Materials Sourcing Program",
+      "action_pillar": "EARTH - CIRCULAR ECONOMY",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.532894492149353
+      },
+      "expected_alignment": "TO_BE_ANNOTATED",
+      "expected_score": 0.0,
+      "expert_notes": "",
+      "confidence": "TO_BE_ANNOTATED"
+    },
+    {
+      "objective_id": "OBJ-005",
+      "objective_text": "Scope 1&2: Net Zero by 2030",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-AIR-002",
+      "action_title": "Energy Efficiency Program Launch",
+      "action_pillar": "AIR - CLIMATE ACTION",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.5091090202331543
+      },
+      "expected_alignment": "TO_BE_ANNOTATED",
+      "expected_score": 0.0,
+      "expert_notes": "",
+      "confidence": "TO_BE_ANNOTATED"
+    },
+    {
+      "objective_id": "OBJ-005",
+      "objective_text": "Scope 1&2: Net Zero by 2030",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-EARTH-002",
+      "action_title": "Waste Reduction and Recycling Initiative",
+      "action_pillar": "EARTH - CIRCULAR ECONOMY",
+      "system_prediction": {
+        "alignment": "Weak",
+        "score": 0.49810531735420227
+      },
+      "expected_alignment": "TO_BE_ANNOTATED",
+      "expected_score": 0.0,
+      "expert_notes": "",
+      "confidence": "TO_BE_ANNOTATED"
+    },
+    {
+      "objective_id": "OBJ-005",
+      "objective_text": "Scope 1&2: Net Zero by 2030",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "GOV-RISK-001",
+      "action_title": "Climate Risk Assessment and Management",
+      "action_pillar": "ESG GOVERNANCE",
+      "system_prediction": {
+        "alignment": "Weak",
+        "score": 0.4851606488227844
+      },
+      "expected_alignment": "TO_BE_ANNOTATED",
+      "expected_score": 0.0,
+      "expert_notes": "",
+      "confidence": "TO_BE_ANNOTATED"
+    },
+    {
+      "objective_id": "OBJ-006",
+      "objective_text": "Scope 3: 42% reduction by 2030",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-AIR-002",
+      "action_title": "Energy Efficiency Program Launch",
+      "action_pillar": "AIR - CLIMATE ACTION",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.5611807703971863
+      },
+      "expected_alignment": "TO_BE_ANNOTATED",
+      "expected_score": 0.0,
+      "expert_notes": "",
+      "confidence": "TO_BE_ANNOTATED"
+    },
+    {
+      "objective_id": "OBJ-006",
+      "objective_text": "Scope 3: 42% reduction by 2030",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-EARTH-002",
+      "action_title": "Waste Reduction and Recycling Initiative",
+      "action_pillar": "EARTH - CIRCULAR ECONOMY",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.5288169384002686
+      },
+      "expected_alignment": "TO_BE_ANNOTATED",
+      "expected_score": 0.0,
+      "expert_notes": "",
+      "confidence": "TO_BE_ANNOTATED"
+    },
+    {
+      "objective_id": "OBJ-006",
+      "objective_text": "Scope 3: 42% reduction by 2030",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "GOV-RISK-001",
+      "action_title": "Climate Risk Assessment and Management",
+      "action_pillar": "ESG GOVERNANCE",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.503955602645874
+      },
+      "expected_alignment": "TO_BE_ANNOTATED",
+      "expected_score": 0.0,
+      "expert_notes": "",
+      "confidence": "TO_BE_ANNOTATED"
+    },
+    {
+      "objective_id": "OBJ-007",
+      "objective_text": "1.2 WATER - Stewardship and Net-Positive Operations",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-WATER-001",
+      "action_title": "Rainwater Harvesting Expansion",
+      "action_pillar": "WATER - STEWARDSHIP",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.6129035949707031
+      },
+      "expected_alignment": "Moderate",
+      "expected_score": 0.61,
+      "expert_notes": "Directly supports water stewardship goals",
+      "confidence": "High"
+    },
+    {
+      "objective_id": "OBJ-007",
+      "objective_text": "1.2 WATER - Stewardship and Net-Positive Operations",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-WATER-002",
+      "action_title": "Wastewater Recycling Enhancement",
+      "action_pillar": "WATER - STEWARDSHIP",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.5671006441116333
+      },
+      "expected_alignment": "TO_BE_ANNOTATED",
+      "expected_score": 0.0,
+      "expert_notes": "",
+      "confidence": "TO_BE_ANNOTATED"
+    },
+    {
+      "objective_id": "OBJ-007",
+      "objective_text": "1.2 WATER - Stewardship and Net-Positive Operations",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "GOV-RISK-001",
+      "action_title": "Climate Risk Assessment and Management",
+      "action_pillar": "ESG GOVERNANCE",
+      "system_prediction": {
+        "alignment": "Weak",
+        "score": 0.4263051152229309
+      },
+      "expected_alignment": "TO_BE_ANNOTATED",
+      "expected_score": 0.0,
+      "expert_notes": "",
+      "confidence": "TO_BE_ANNOTATED"
+    },
+    {
+      "objective_id": "OBJ-008",
+      "objective_text": "Net-positive water operations by 2030 with 50% sustainable water mix",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-WATER-002",
+      "action_title": "Wastewater Recycling Enhancement",
+      "action_pillar": "WATER - STEWARDSHIP",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.5771859884262085
+      },
+      "expected_alignment": "Moderate",
+      "expected_score": 0.58,
+      "expert_notes": "Wastewater recycling supports net-positive water goals",
+      "confidence": "High"
+    },
+    {
+      "objective_id": "OBJ-008",
+      "objective_text": "Net-positive water operations by 2030 with 50% sustainable water mix",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-WATER-001",
+      "action_title": "Rainwater Harvesting Expansion",
+      "action_pillar": "WATER - STEWARDSHIP",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.5341699719429016
+      },
+      "expected_alignment": "TO_BE_ANNOTATED",
+      "expected_score": 0.0,
+      "expert_notes": "",
+      "confidence": "TO_BE_ANNOTATED"
+    },
+    {
+      "objective_id": "OBJ-008",
+      "objective_text": "Net-positive water operations by 2030 with 50% sustainable water mix",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-EARTH-002",
+      "action_title": "Waste Reduction and Recycling Initiative",
+      "action_pillar": "EARTH - CIRCULAR ECONOMY",
+      "system_prediction": {
+        "alignment": "Weak",
+        "score": 0.36295586824417114
+      },
+      "expected_alignment": "TO_BE_ANNOTATED",
+      "expected_score": 0.0,
+      "expert_notes": "",
+      "confidence": "TO_BE_ANNOTATED"
+    },
+    {
+      "objective_id": "OBJ-009",
+      "objective_text": "Sustainable water mix: 50% by 2030",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-WATER-002",
+      "action_title": "Wastewater Recycling Enhancement",
+      "action_pillar": "WATER - STEWARDSHIP",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.6242908239364624
+      },
+      "expected_alignment": "Moderate",
+      "expected_score": 0.62,
+      "expert_notes": "Partial implementation supports water sustainability",
+      "confidence": "High"
+    },
+    {
+      "objective_id": "OBJ-009",
+      "objective_text": "Sustainable water mix: 50% by 2030",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-WATER-001",
+      "action_title": "Rainwater Harvesting Expansion",
+      "action_pillar": "WATER - STEWARDSHIP",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.5581828355789185
+      },
+      "expected_alignment": "TO_BE_ANNOTATED",
+      "expected_score": 0.0,
+      "expert_notes": "",
+      "confidence": "TO_BE_ANNOTATED"
+    },
+    {
+      "objective_id": "OBJ-009",
+      "objective_text": "Sustainable water mix: 50% by 2030",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-EARTH-002",
+      "action_title": "Waste Reduction and Recycling Initiative",
+      "action_pillar": "EARTH - CIRCULAR ECONOMY",
+      "system_prediction": {
+        "alignment": "Weak",
+        "score": 0.4809310734272003
+      },
+      "expected_alignment": "TO_BE_ANNOTATED",
+      "expected_score": 0.0,
+      "expert_notes": "",
+      "confidence": "TO_BE_ANNOTATED"
+    },
+    {
+      "objective_id": "OBJ-010",
+      "objective_text": "Groundwater (SL): 0% by 2028",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-WATER-001",
+      "action_title": "Rainwater Harvesting Expansion",
+      "action_pillar": "WATER - STEWARDSHIP",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.5452635288238525
+      },
+      "expected_alignment": "TO_BE_ANNOTATED",
+      "expected_score": 0.0,
+      "expert_notes": "",
+      "confidence": "TO_BE_ANNOTATED"
+    },
+    {
+      "objective_id": "OBJ-010",
+      "objective_text": "Groundwater (SL): 0% by 2028",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-WATER-002",
+      "action_title": "Wastewater Recycling Enhancement",
+      "action_pillar": "WATER - STEWARDSHIP",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.500847339630127
+      },
+      "expected_alignment": "TO_BE_ANNOTATED",
+      "expected_score": 0.0,
+      "expert_notes": "",
+      "confidence": "TO_BE_ANNOTATED"
+    },
+    {
+      "objective_id": "OBJ-010",
+      "objective_text": "Groundwater (SL): 0% by 2028",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-EARTH-002",
+      "action_title": "Waste Reduction and Recycling Initiative",
+      "action_pillar": "EARTH - CIRCULAR ECONOMY",
+      "system_prediction": {
+        "alignment": "Weak",
+        "score": 0.4269670844078064
+      },
+      "expected_alignment": "TO_BE_ANNOTATED",
+      "expected_score": 0.0,
+      "expert_notes": "",
+      "confidence": "TO_BE_ANNOTATED"
+    }
+  ]
+}

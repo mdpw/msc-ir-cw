@@ -14,31 +14,169 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS
+# Dark Theme Compatible CSS
 st.markdown("""
     <style>
+    /* Main background */
     .main {
-        background-color: #f5f7fa;
+        background-color: #0e1117;
     }
-    .stMetric {
-        background-color: white;
-        padding: 15px;
-        border-radius: 10px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    
+    /* Metric boxes */
+    .stMetric, [data-testid="stMetric"] {
+        background-color: rgba(255, 255, 255, 0.05) !important;
+        padding: 15px !important;
+        border-radius: 10px !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
     }
+    
+    [data-testid="stMetricValue"] {
+        color: #ffffff !important;
+        font-size: 2rem !important;
+        font-weight: 600 !important;
+    }
+    
+    [data-testid="stMetricLabel"] {
+        color: #e0e0e0 !important;
+        font-size: 0.875rem !important;
+    }
+    
+    /* Headers */
     h1 {
-        color: #1f4788;
-        font-weight: 600;
+        color: #4da6ff !important;
+        font-weight: 600 !important;
     }
-    h2, h3 {
-        color: #2c5aa0;
+    
+    h2, h3, h4 {
+        color: #66b3ff !important;
     }
+    
+    /* Feature boxes */
     .feature-box {
-        background-color: white;
+        background-color: rgba(28, 131, 225, 0.08);
         padding: 20px;
         border-radius: 10px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        border: 1px solid rgba(28, 131, 225, 0.2);
         margin: 10px 0;
+    }
+    
+    .feature-box h4 {
+        color: #4da6ff !important;
+        margin-bottom: 15px;
+    }
+    
+    .feature-box ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+    
+    .feature-box li {
+        color: #e0e0e0;
+        padding: 5px 0;
+        padding-left: 20px;
+        position: relative;
+    }
+    
+    .feature-box li:before {
+        content: "▸";
+        position: absolute;
+        left: 0;
+        color: #4da6ff;
+    }
+    
+    /* Info/Success/Warning boxes */
+    div[data-baseweb="notification"] {
+        background-color: rgba(28, 131, 225, 0.15) !important;
+        border-left: 4px solid #1c83e1 !important;
+        border-radius: 8px !important;
+        color: #e0e0e0 !important;
+    }
+    
+    .element-container div[data-testid="stMarkdown"] div[data-baseweb="notification"] {
+        background-color: rgba(28, 131, 225, 0.15) !important;
+    }
+    
+    /* Success messages */
+    [kind="success"] {
+        background-color: rgba(76, 175, 80, 0.15) !important;
+        border-left: 4px solid #4caf50 !important;
+    }
+    
+    /* Warning messages */
+    [kind="warning"] {
+        background-color: rgba(255, 152, 0, 0.15) !important;
+        border-left: 4px solid #ff9800 !important;
+    }
+    
+    /* Text visibility */
+    p, span, label, li {
+        color: #e0e0e0 !important;
+    }
+    
+    /* Strong/bold text */
+    strong {
+        color: #ffffff !important;
+    }
+    
+    /* Dividers */
+    hr {
+        border-color: rgba(255, 255, 255, 0.1) !important;
+        margin: 20px 0 !important;
+    }
+    
+    /* Buttons */
+    .stButton>button {
+        background-color: rgba(28, 131, 225, 0.2);
+        color: #e0e0e0;
+        border: 1px solid rgba(28, 131, 225, 0.3);
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+    
+    .stButton>button:hover {
+        background-color: rgba(28, 131, 225, 0.3);
+        border: 1px solid rgba(28, 131, 225, 0.5);
+        transform: translateY(-2px);
+    }
+    
+    /* Dataframe */
+    [data-testid="stDataFrame"] {
+        background-color: rgba(255, 255, 255, 0.03);
+        border-radius: 8px;
+    }
+    
+    /* Expander */
+    [data-testid="stExpander"] {
+        background-color: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+    }
+    
+    /* Sidebar */
+    [data-testid="stSidebar"] {
+        background-color: #262730;
+    }
+    
+    /* Links */
+    a {
+        color: #4da6ff !important;
+    }
+    
+    a:hover {
+        color: #66b3ff !important;
+    }
+    
+    /* Code blocks */
+    code {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        color: #4da6ff !important;
+        padding: 2px 6px;
+        border-radius: 4px;
+    }
+    
+    /* Caption text */
+    .stCaption {
+        color: rgba(255, 255, 255, 0.5) !important;
     }
     </style>
 """, unsafe_allow_html=True)

@@ -11,17 +11,140 @@ from datetime import datetime
 
 st.set_page_config(page_title="Admin Upload", page_icon="📤", layout="wide")
 
-# Custom CSS
+# Dark Theme Compatible CSS
 st.markdown("""
     <style>
-    .main {background-color: #f5f7fa;}
-    .stButton>button {width: 100%;}
+    /* Main background */
+    .main {
+        background-color: #0e1117;
+    }
+    
+    /* Info boxes - Dark blue */
     .info-box {
-        background-color: #d1ecf1;
-        border: 1px solid #bee5eb;
-        border-radius: 5px;
+        background-color: rgba(28, 131, 225, 0.15);
+        border: 1px solid rgba(28, 131, 225, 0.3);
+        border-left: 4px solid #1c83e1;
+        border-radius: 8px;
         padding: 15px;
         margin: 10px 0;
+        color: #e0e0e0;
+    }
+    
+    /* Streamlit info boxes */
+    div[data-baseweb="notification"] {
+        background-color: rgba(28, 131, 225, 0.15) !important;
+        border-left: 4px solid #1c83e1 !important;
+        border-radius: 8px !important;
+        color: #e0e0e0 !important;
+    }
+    
+    /* Success messages */
+    .element-container div[data-testid="stMarkdown"] > div:has(> div[data-testid="stNotification"][kind="success"]) {
+        background-color: rgba(76, 175, 80, 0.15) !important;
+        border-left: 4px solid #4caf50 !important;
+    }
+    
+    /* Warning messages */
+    .element-container div[data-testid="stMarkdown"] > div:has(> div[data-testid="stNotification"][kind="warning"]) {
+        background-color: rgba(255, 152, 0, 0.15) !important;
+        border-left: 4px solid #ff9800 !important;
+    }
+    
+    /* Metric boxes */
+    [data-testid="stMetric"] {
+        background-color: rgba(255, 255, 255, 0.05);
+        padding: 15px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Buttons */
+    .stButton>button {
+        width: 100%;
+        background-color: rgba(28, 131, 225, 0.2);
+        color: #e0e0e0;
+        border: 1px solid rgba(28, 131, 225, 0.3);
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+    
+    .stButton>button:hover {
+        background-color: rgba(28, 131, 225, 0.3);
+        border: 1px solid rgba(28, 131, 225, 0.5);
+        transform: translateY(-2px);
+    }
+    
+    /* Primary buttons */
+    .stButton>button[kind="primary"] {
+        background-color: rgba(28, 131, 225, 0.4);
+        border: 1px solid #1c83e1;
+    }
+    
+    .stButton>button[kind="primary"]:hover {
+        background-color: rgba(28, 131, 225, 0.6);
+    }
+    
+    /* File uploader */
+    [data-testid="stFileUploader"] {
+        background-color: rgba(255, 255, 255, 0.03);
+        border: 1px dashed rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        padding: 20px;
+    }
+    
+    /* Text visibility */
+    p, span, label, div {
+        color: #e0e0e0 !important;
+    }
+    
+    /* Headers */
+    h1, h2, h3, h4 {
+        color: #ffffff !important;
+    }
+    
+    /* Dividers */
+    hr {
+        border-color: rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    /* Selectbox */
+    div[data-baseweb="select"] {
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+    
+    /* Checkbox */
+    [data-testid="stCheckbox"] {
+        color: #e0e0e0 !important;
+    }
+    
+    /* Download buttons - distinct green color */
+    .stDownloadButton>button {
+        background-color: rgba(76, 175, 80, 0.2) !important;
+        border: 1px solid rgba(76, 175, 80, 0.3) !important;
+        color: #81c784 !important;
+    }
+    
+    .stDownloadButton>button:hover {
+        background-color: rgba(76, 175, 80, 0.3) !important;
+        border: 1px solid #4caf50 !important;
+    }
+    
+    /* Delete buttons - red color */
+    .stButton>button:has(span:contains("Delete")) {
+        background-color: rgba(244, 67, 54, 0.2) !important;
+        border: 1px solid rgba(244, 67, 54, 0.3) !important;
+        color: #ef5350 !important;
+    }
+    
+    .stButton>button:has(span:contains("Delete")):hover {
+        background-color: rgba(244, 67, 54, 0.3) !important;
+        border: 1px solid #f44336 !important;
+    }
+    
+    /* Dataframe */
+    [data-testid="stDataFrame"] {
+        background-color: rgba(255, 255, 255, 0.03);
+        border-radius: 8px;
     }
     </style>
 """, unsafe_allow_html=True)
@@ -283,7 +406,11 @@ if strategic_exists or action_exists:
 if both_ready:
     st.markdown("---")
     st.success("### 🎯 Documents Ready for Analysis!")
-    st.info("👉 Go to **'⚙️ Run Analysis'** page to process your documents")
+    st.markdown("""
+    <div class="info-box">
+    👉 <strong>Next Step:</strong> Go to <strong>'⚙️ Run Analysis'</strong> page to process your documents
+    </div>
+    """, unsafe_allow_html=True)
     
     if st.button("▶️ Start Analysis Now →", type="primary", use_container_width=True):
         st.switch_page("pages/02_⚙️_Run_Analysis.py")
@@ -311,7 +438,15 @@ if all_years_data:
     df = pd.DataFrame(all_years_data)
     st.dataframe(df, use_container_width=True, hide_index=True)
 else:
-    st.info("No documents uploaded yet. Start by selecting a year and uploading documents above.")
+    st.markdown("""
+    <div class="info-box">
+    ℹ️ <strong>No documents uploaded yet.</strong> Start by selecting a year and uploading documents above.
+    </div>
+    """, unsafe_allow_html=True)
 
 st.markdown("---")
-st.caption("💡 **Tip:** You can manage different years independently. Strategic Plan is shared across years, while Action Plans are year-specific.")
+st.markdown("""
+<div class="info-box">
+💡 <strong>Tip:</strong> You can manage different years independently. Strategic Plan is shared across years, while Action Plans are year-specific.
+</div>
+""", unsafe_allow_html=True)

@@ -5,6 +5,16 @@ Main Homepage
 
 import streamlit as st
 from pathlib import Path
+import base64
+
+# Helper function to encode image
+def get_base64_image(image_path):
+    """Convert image to base64 for HTML embedding"""
+    try:
+        with open(image_path, "rb") as img_file:
+            return base64.b64encode(img_file.read()).decode()
+    except FileNotFoundError:
+        return ""
 
 # Page config
 st.set_page_config(
@@ -41,6 +51,19 @@ st.markdown("""
         font-size: 0.9em;
         color: #4da6ff;
         margin-right: 6px;
+    }
+    
+    /* Logo styling */
+    .logo-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    
+    .logo-img {
+        height: 55px;
+        margin-right: 15px;
+        border-radius: 5px;
     }
     
     /* Metric boxes */
@@ -202,8 +225,22 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Header
-st.markdown('<h1><i class="fas fa-bullseye fa-icon-large"></i>Brandix ISPS</h1>', unsafe_allow_html=True)
+# Header with Logo
+logo_base64 = get_base64_image("pages/brandix_logo.png")
+
+if logo_base64:
+    st.markdown(f"""
+        <div class="logo-container">
+            <img src="data:image/png;base64,{logo_base64}" class="logo-img">
+            <h1 style="margin: 0;">
+                Brandix ISPS
+            </h1>
+        </div>
+    """, unsafe_allow_html=True)
+else:
+    # Fallback if logo not found
+    st.markdown('<h1><i class="fas fa-bullseye fa-icon-large"></i>Brandix ISPS</h1>', unsafe_allow_html=True)
+
 st.markdown("### Intelligent Strategic Planning Synchronization System")
 st.markdown("**AI-Powered Strategic Alignment Analysis for Brandix Lanka Limited**")
 st.markdown("---")

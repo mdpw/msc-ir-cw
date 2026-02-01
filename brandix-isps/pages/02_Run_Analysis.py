@@ -21,60 +21,170 @@ from synchronization_engine import SynchronizationEngine
 from llm_engine import LLMEngine
 from executive_summary import ExecutiveSummaryGenerator
 
-st.set_page_config(page_title="Run Analysis", page_icon="⚙️", layout="wide")
+st.set_page_config(page_title="Run Analysis", page_icon="🎯", layout="wide")
 
-# Custom CSS
+# Dark Theme Compatible CSS + Font Awesome Icons
 st.markdown("""
     <style>
-    .main {background-color: #f5f7fa;}
+    /* Import Font Awesome */
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+    
+    /* Main background */
+    .main {
+        background-color: #0e1117;
+    }
+    
+    /* Icon styling */
+    .fa-icon {
+        color: #4da6ff;
+        margin-right: 8px;
+    }
+    
+    .fa-icon-large {
+        font-size: 1.2em;
+        color: #4da6ff;
+        margin-right: 10px;
+    }
+    
+    .fa-icon-small {
+        font-size: 0.9em;
+        color: #4da6ff;
+        margin-right: 6px;
+    }
+    
+    /* Info boxes */
+    .info-box {
+        background-color: rgba(28, 131, 225, 0.08);
+        border: 1px solid rgba(28, 131, 225, 0.2);
+        border-left: 4px solid #4da6ff;
+        border-radius: 10px;
+        padding: 15px;
+        margin: 10px 0;
+        color: #e0e0e0;
+    }
+    
+    /* Headers */
+    h1 {
+        color: #4da6ff !important;
+        font-weight: 600 !important;
+    }
+    
+    h2, h3, h4 {
+        color: #66b3ff !important;
+    }
+    
+    /* Sidebar explicit dark mode */
+    [data-testid="stSidebar"] {
+        background-color: #0e1117 !important;
+        border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    [data-testid="stSidebarNav"] span {
+        color: #e0e0e0 !important;
+        font-weight: 500 !important;
+    }
+    
+    /* Top Header */
+    header[data-testid="stHeader"] {
+        background-color: #0e1117 !important;
+        background: transparent !important;
+    }
+    
+    /* Dropdown/Selectbox dark mode */
+    div[data-baseweb="select"] {
+        background-color: rgba(255, 255, 255, 0.05) !important;
+    }
+    
+    ul[data-testid="stSelectboxVirtualList"] {
+        background-color: #1e2129 !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    /* Buttons */
     .stButton>button {
         width: 100%;
+        background-color: rgba(28, 131, 225, 0.2);
+        color: #e0e0e0;
+        border: 1px solid rgba(28, 131, 225, 0.3);
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+    
+    .stButton>button:hover {
+        background-color: rgba(28, 131, 225, 0.3);
+        border: 1px solid rgba(28, 131, 225, 0.5);
+        transform: translateY(-2px);
+    }
+    
+    /* Primary buttons */
+    .stButton>button[kind="primary"] {
         height: 60px;
         font-size: 18px;
         font-weight: bold;
+        background-color: rgba(28, 131, 225, 0.4);
+        border: 1px solid #1c83e1;
     }
-    .success-box {
-        background-color: #d4edda;
-        border: 1px solid #c3e6cb;
-        border-radius: 5px;
-        padding: 15px;
-        margin: 10px 0;
+    
+    /* Metric boxes */
+    [data-testid="stMetric"] {
+        background-color: rgba(255, 255, 255, 0.05) !important;
+        padding: 15px !important;
+        border-radius: 10px !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
     }
+    
+    [data-testid="stMetricValue"] {
+        color: #ffffff !important;
+    }
+    
     /* Fixed height log viewer */
     div[data-testid="stCodeBlock"] {
         height: 400px !important;
         max-height: 400px !important;
         overflow-y: auto !important;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
     }
-    div[data-testid="stCodeBlock"] > div {
-        height: 400px !important;
-        max-height: 400px !important;
-    }
+    
     div[data-testid="stCodeBlock"] pre {
+        background-color: #1e2129 !important;
         height: 380px !important;
         max-height: 380px !important;
         overflow-y: auto !important;
         margin: 0 !important;
     }
+    
     /* Scrollbar styling */
     div[data-testid="stCodeBlock"] pre::-webkit-scrollbar {
         width: 10px;
     }
     div[data-testid="stCodeBlock"] pre::-webkit-scrollbar-track {
-        background: #2d2d2d;
-        border-radius: 5px;
+        background: #0e1117;
     }
     div[data-testid="stCodeBlock"] pre::-webkit-scrollbar-thumb {
-        background: #555;
+        background: #333;
         border-radius: 5px;
     }
     div[data-testid="stCodeBlock"] pre::-webkit-scrollbar-thumb:hover {
-        background: #777;
+        background: #444;
+    }
+    
+    /* Text colors */
+    p, span, label, li {
+        color: #e0e0e0 !important;
+    }
+    
+    strong {
+        color: #ffffff !important;
+    }
+    
+    hr {
+        border-color: rgba(255, 255, 255, 0.1) !important;
     }
     </style>
 """, unsafe_allow_html=True)
 
-st.title("⚙️ Strategic Alignment Analysis")
+st.markdown('<h1><i class="fas fa-cog fa-icon-large"></i>Strategic Alignment Analysis</h1>', unsafe_allow_html=True)
 st.markdown("### Single-Click AI Analysis Pipeline")
 st.markdown("---")
 
@@ -92,7 +202,7 @@ if 'analysis_running' not in st.session_state:
     st.session_state.analysis_running = False
 
 # Year Selection
-st.subheader("📅 Step 1: Select Year to Analyze")
+st.markdown('<h3><i class="fas fa-calendar-alt fa-icon"></i>Step 1: Select Year to Analyze</h3>', unsafe_allow_html=True)
 col1, col2 = st.columns([1, 3])
 
 with col1:
@@ -108,7 +218,7 @@ with col2:
         st.session_state.selected_year = selected_year
         st.rerun()
     
-    st.info(f"📌 Analyzing Year: **{selected_year}**")
+    st.info(f"Analyzing Year: **{selected_year}**")
 
 # Check if documents exist
 year_path = UPLOAD_BASE / selected_year
@@ -121,30 +231,30 @@ action_exists = action_path.exists()
 st.markdown("---")
 
 # Document Status
-st.subheader("📂 Step 2: Verify Documents")
+st.markdown('<h3><i class="fas fa-folder-open fa-icon"></i>Step 2: Verify Documents</h3>', unsafe_allow_html=True)
 col1, col2, col3 = st.columns(3)
 
 with col1:
     if strategic_exists:
-        st.success("✅ Strategic Plan Ready")
+        st.success("Strategic Plan Ready")
     else:
-        st.error("❌ Strategic Plan Missing")
+        st.error("Strategic Plan Missing")
 
 with col2:
     if action_exists:
-        st.success("✅ Action Plan Ready")
+        st.success("Action Plan Ready")
     else:
-        st.error("❌ Action Plan Missing")
+        st.error("Action Plan Missing")
 
 with col3:
     if strategic_exists and action_exists:
-        st.success("✅ Ready to Analyze")
+        st.success("Ready to Analyze")
     else:
-        st.warning("⏳ Upload Required")
+        st.warning("Upload Required")
 
 if not (strategic_exists and action_exists):
-    st.error(f"⚠️ Documents missing for year {selected_year}!")
-    st.info("👉 Go to **'📤 Admin Upload'** page to upload documents")
+    st.error(f"Documents missing for year {selected_year}!")
+    st.info("Go to **'Admin Upload'** page to upload documents")
     st.stop()
 
 # Create output directory
@@ -154,30 +264,32 @@ output_dir.mkdir(parents=True, exist_ok=True)
 st.markdown("---")
 
 # Analysis Section
-st.subheader("⚙️ Step 3: Run Complete Analysis")
+st.markdown('<h3><i class="fas fa-play-circle fa-icon"></i>Step 3: Run Complete Analysis</h3>', unsafe_allow_html=True)
 
 st.markdown("""
-**This will execute the full AI pipeline:**
-1. 📄 Load & Process Documents (Extract objectives & actions)
-2. 🧮 Generate AI Embeddings (Convert text to vectors)
-3. 🔍 Analyze Alignment (Calculate similarity scores)
-4. 📊 Calculate Metrics (KPIs and statistics)
-5. ✨ Generate Insights (LLM-powered improvements)
-6. 📋 Create Executive Summary (Professional report)
-""")
+<div class="info-box">
+<i class="fas fa-info-circle fa-icon-small"></i><strong>This will execute the full AI pipeline:</strong><br>
+1. <i class="fas fa-file-alt fa-icon-small"></i> Load & Process Documents (Extract objectives & actions)<br>
+2. <i class="fas fa-microchip fa-icon-small"></i> Generate AI Embeddings (Convert text to vectors)<br>
+3. <i class="fas fa-search fa-icon-small"></i> Analyze Alignment (Calculate similarity scores)<br>
+4. <i class="fas fa-chart-bar fa-icon-small"></i> Calculate Metrics (KPIs and statistics)<br>
+5. <i class="fas fa-magic fa-icon-small"></i> Generate Insights (LLM-powered improvements)<br>
+6. <i class="fas fa-clipboard-list fa-icon-small"></i> Create Executive Summary (Professional report)
+</div>
+""", unsafe_allow_html=True)
 
 # Check if already analyzed
 analysis_complete_key = f'analysis_complete_{selected_year}'
 already_analyzed = st.session_state.analysis_complete.get(selected_year, False)
 
 if already_analyzed:
-    st.success("✅ Analysis already completed for this year!")
+    st.success("Analysis already completed for this year!")
     st.info("Click below to re-run analysis or view results")
 
 st.markdown("---")
 
 # Single Start Button
-if st.button("▶️ START COMPLETE ANALYSIS", type="primary", disabled=st.session_state.analysis_running):
+if st.button("START COMPLETE ANALYSIS", type="primary", disabled=st.session_state.analysis_running):
     st.session_state.analysis_running = True
     
     # Progress tracking
@@ -186,7 +298,7 @@ if st.button("▶️ START COMPLETE ANALYSIS", type="primary", disabled=st.sessi
     
     # Create scrollable log viewer with fixed height
     st.markdown("---")
-    st.markdown("### 📜 Analysis Log")
+    st.markdown('### <i class="fas fa-terminal fa-icon-small"></i> Analysis Log')
     log_placeholder = st.empty()
     
     # Initialize log
@@ -215,20 +327,20 @@ if st.button("▶️ START COMPLETE ANALYSIS", type="primary", disabled=st.sessi
         add_log("STAGE 1/6: Load & Process Documents")
         add_log("="*60)
         
-        status_text.info("📄 **Stage 1/6:** Loading & Processing Documents...")
+        status_text.info("Stage 1/6: Loading & Processing Documents...")
         progress_bar.progress(5)
         time.sleep(0.3)
         
         add_log("Initializing document processor...")
         processor = DocumentProcessor()
         
-        status_text.info("📋 Loading strategic plan...")
+        status_text.info("Loading strategic plan...")
         progress_bar.progress(8)
         add_log(f"Loading strategic plan from: {strategic_path.name}")
         objectives = processor.load_strategic_plan(str(strategic_path))
         add_log(f"Extracted {len(objectives)} strategic objectives")
         
-        status_text.info("📅 Loading action plan...")
+        status_text.info("Loading action plan...")
         progress_bar.progress(12)
         add_log(f"Loading action plan from: {action_path.name}")
         actions = processor.load_action_plan(str(action_path))
@@ -236,7 +348,7 @@ if st.button("▶️ START COMPLETE ANALYSIS", type="primary", disabled=st.sessi
         
         progress_bar.progress(15)
         add_log("Stage 1 Complete!")
-        status_text.success(f"✅ Stage 1 Complete: {len(objectives)} objectives, {len(actions)} actions")
+        status_text.success(f"Stage 1 Complete: {len(objectives)} objectives, {len(actions)} actions")
         time.sleep(0.5)
         
         # Show metrics
@@ -252,7 +364,7 @@ if st.button("▶️ START COMPLETE ANALYSIS", type="primary", disabled=st.sessi
         add_log("STAGE 2/6: Generate AI Embeddings")
         add_log("="*60)
         
-        status_text.info("🧮 **Stage 2/6:** Generating AI Embeddings...")
+        status_text.info("Stage 2/6: Generating AI Embeddings...")
         progress_bar.progress(18)
         time.sleep(0.3)
         
@@ -261,13 +373,13 @@ if st.button("▶️ START COMPLETE ANALYSIS", type="primary", disabled=st.sessi
         embedding_engine = EmbeddingEngine()
         add_log("Embedding model loaded successfully")
         
-        status_text.info("🔤 Encoding objectives...")
+        status_text.info("Encoding objectives...")
         progress_bar.progress(22)
         add_log(f"Encoding {len(objectives)} objectives to 384D vectors...")
         embedding_engine.embed_objectives(objectives)
         add_log("Objective embeddings generated")
         
-        status_text.info("🔤 Encoding actions...")
+        status_text.info("Encoding actions...")
         progress_bar.progress(28)
         add_log(f"Encoding {len(actions)} actions to 384D vectors...")
         embedding_engine.embed_actions(actions)
@@ -275,7 +387,7 @@ if st.button("▶️ START COMPLETE ANALYSIS", type="primary", disabled=st.sessi
         
         progress_bar.progress(35)
         add_log("Stage 2 Complete!")
-        status_text.success("✅ Stage 2 Complete: Embeddings generated")
+        status_text.success("Stage 2 Complete: Embeddings generated")
         time.sleep(0.5)
         
         # ============================================================
@@ -285,19 +397,19 @@ if st.button("▶️ START COMPLETE ANALYSIS", type="primary", disabled=st.sessi
         add_log("STAGE 3/6: Analyze Strategic Alignment")
         add_log("="*60)
         
-        status_text.info("🔍 **Stage 3/6:** Analyzing Strategic Alignment...")
+        status_text.info("Stage 3/6: Analyzing Strategic Alignment...")
         progress_bar.progress(38)
         time.sleep(0.3)
         
         # Create vector store
-        status_text.info("📦 Creating vector database...")
+        status_text.info("Creating vector database...")
         progress_bar.progress(42)
         add_log("Initializing FAISS vector store (L2 distance)...")
         vector_store = VectorStore(dimension=384)
         add_log("Vector store initialized")
         
         # Prepare action embeddings
-        status_text.info("🧮 Preparing action embeddings...")
+        status_text.info("Preparing action embeddings...")
         progress_bar.progress(45)
         add_log("Converting action embeddings to numpy arrays...")
         action_texts = [action['text'] for action in actions]
@@ -306,7 +418,7 @@ if st.button("▶️ START COMPLETE ANALYSIS", type="primary", disabled=st.sessi
         add_log(f"Action embeddings ready: shape {action_embeddings.shape}")
         
         # Add to vector store
-        status_text.info("💾 Building vector index...")
+        status_text.info("Building vector index...")
         progress_bar.progress(48)
         add_log(f"Adding {len(actions)} action vectors to FAISS index...")
         action_metadata = [
@@ -322,7 +434,7 @@ if st.button("▶️ START COMPLETE ANALYSIS", type="primary", disabled=st.sessi
         add_log(f"Vector index built with {vector_store.index.ntotal} vectors")
         
         # Initialize sync engine
-        status_text.info("⚙️ Initializing synchronization engine...")
+        status_text.info("Initializing synchronization engine...")
         progress_bar.progress(52)
         add_log("Creating synchronization engine...")
         sync_engine = SynchronizationEngine(
@@ -333,7 +445,7 @@ if st.button("▶️ START COMPLETE ANALYSIS", type="primary", disabled=st.sessi
         add_log("Synchronization engine ready")
         
         # Run synchronization analysis
-        status_text.info("🔍 Running alignment analysis (this may take 1-2 minutes)...")
+        status_text.info("Running alignment analysis (this may take 1-2 minutes)...")
         progress_bar.progress(55)
         add_log("Calculating similarity matrix...")
         add_log(f"Matrix size: {len(objectives)} objectives × {len(actions)} actions")
@@ -348,7 +460,7 @@ if st.button("▶️ START COMPLETE ANALYSIS", type="primary", disabled=st.sessi
         
         progress_bar.progress(60)
         add_log("Stage 3 Complete!")
-        status_text.success("✅ Stage 3 Complete: Alignment calculated")
+        status_text.success("Stage 3 Complete: Alignment calculated")
         time.sleep(0.5)
         
         # ============================================================
@@ -358,7 +470,7 @@ if st.button("▶️ START COMPLETE ANALYSIS", type="primary", disabled=st.sessi
         add_log("STAGE 4/6: Calculate Performance Metrics")
         add_log("="*60)
         
-        status_text.info("📊 **Stage 4/6:** Calculating Performance Metrics...")
+        status_text.info("Stage 4/6: Calculating Performance Metrics...")
         progress_bar.progress(63)
         
         # Add metadata to results
@@ -369,7 +481,7 @@ if st.button("▶️ START COMPLETE ANALYSIS", type="primary", disabled=st.sessi
         
         progress_bar.progress(70)
         add_log("Stage 4 Complete!")
-        status_text.success("✅ Stage 4 Complete: Metrics calculated")
+        status_text.success("Stage 4 Complete: Metrics calculated")
         time.sleep(0.5)
         
         # Show key metrics
@@ -389,7 +501,7 @@ if st.button("▶️ START COMPLETE ANALYSIS", type="primary", disabled=st.sessi
         add_log("STAGE 5/6: Generate AI-Powered Improvements")
         add_log("="*60)
         
-        status_text.info("✨ **Stage 5/6:** Generating AI-Powered Improvements...")
+        status_text.info("Stage 5/6: Generating AI-Powered Improvements...")
         progress_bar.progress(73)
         time.sleep(0.3)
         
@@ -403,7 +515,7 @@ if st.button("▶️ START COMPLETE ANALYSIS", type="primary", disabled=st.sessi
                 add_log("Ollama connection successful")
                 add_log("Model: phi3:mini")
                 
-                status_text.info("🤖 Initializing improvement generator...")
+                status_text.info("Initializing improvement generator...")
                 progress_bar.progress(76)
                 
                 add_log("Creating RAG pipeline...")
@@ -412,7 +524,7 @@ if st.button("▶️ START COMPLETE ANALYSIS", type="primary", disabled=st.sessi
                 add_log(f"Created {len(improvement_gen.rag_pipeline.chunks)} document chunks")
                 add_log("Generated embeddings for all chunks")
                 
-                status_text.info("💡 Generating improvement suggestions (this may take 2-3 minutes)...")
+                status_text.info("Generating improvement suggestions (this may take 2-3 minutes)...")
                 progress_bar.progress(78)
                 
                 add_log("Identifying gap objectives...")
@@ -444,15 +556,15 @@ if st.button("▶️ START COMPLETE ANALYSIS", type="primary", disabled=st.sessi
                 
                 progress_bar.progress(85)
                 add_log("Stage 5 Complete!")
-                status_text.success(f"✅ Stage 5 Complete: Generated {num_suggestions} suggestions")
+                status_text.success(f"Stage 5 Complete: Generated {num_suggestions} suggestions")
             else:
                 add_log("WARNING: Ollama not available - skipping improvement generation")
-                status_text.warning("⚠️ Ollama not available - skipping improvement generation")
+                status_text.warning("Ollama not available - skipping improvement generation")
                 progress_bar.progress(85)
         
         except Exception as e:
             add_log(f"WARNING: Error in improvement generation: {str(e)}")
-            status_text.warning(f"⚠️ Could not generate improvements: {str(e)}")
+            status_text.warning(f"Could not generate improvements: {str(e)}")
             progress_bar.progress(85)
         
         time.sleep(0.5)
@@ -464,7 +576,7 @@ if st.button("▶️ START COMPLETE ANALYSIS", type="primary", disabled=st.sessi
         add_log("STAGE 6/6: Create Executive Summary")
         add_log("="*60)
         
-        status_text.info("📋 **Stage 6/6:** Creating Executive Summary...")
+        status_text.info("Stage 6/6: Creating Executive Summary...")
         progress_bar.progress(88)
         time.sleep(0.3)
         
@@ -474,7 +586,7 @@ if st.button("▶️ START COMPLETE ANALYSIS", type="primary", disabled=st.sessi
             if llm.test_connection():
                 add_log("LLM connection successful")
                 
-                status_text.info("✍️ Generating executive insights with AI...")
+                status_text.info("Generating executive insights with AI...")
                 progress_bar.progress(92)
                 
                 add_log("Initializing executive summary generator...")
@@ -527,15 +639,15 @@ if st.button("▶️ START COMPLETE ANALYSIS", type="primary", disabled=st.sessi
                 
                 progress_bar.progress(98)
                 add_log("Stage 6 Complete!")
-                status_text.success("✅ Stage 6 Complete: Executive summary generated")
+                status_text.success("Stage 6 Complete: Executive summary generated")
             else:
                 add_log("WARNING: Ollama not available - skipping executive summary")
-                status_text.warning("⚠️ Ollama not available - skipping executive summary")
+                status_text.warning("Ollama not available - skipping executive summary")
                 progress_bar.progress(98)
         
         except Exception as e:
             add_log(f"WARNING: Error in summary generation: {str(e)}")
-            status_text.warning(f"⚠️ Could not generate executive summary: {str(e)}")
+            status_text.warning(f"Could not generate executive summary: {str(e)}")
             progress_bar.progress(98)
         
         time.sleep(0.5)
@@ -547,7 +659,7 @@ if st.button("▶️ START COMPLETE ANALYSIS", type="primary", disabled=st.sessi
         add_log("FINALIZATION: Saving Reports")
         add_log("="*60)
         
-        status_text.info("💾 Saving final reports...")
+        status_text.info("Saving final reports...")
         progress_bar.progress(99)
         
         # Save main synchronization report
@@ -579,21 +691,20 @@ if st.button("▶️ START COMPLETE ANALYSIS", type="primary", disabled=st.sessi
         
         st.balloons()
         
-        st.success(f"""
-        ### 🎉 Analysis Complete for {selected_year}!
-        
+        st.markdown(f'### <i class="fas fa-check-circle fa-icon-small" style="color: #4caf50;"></i> Analysis Complete for {selected_year}!', unsafe_allow_html=True)
+        st.success("""
         All stages completed successfully:
-        - ✅ Documents processed
-        - ✅ Embeddings generated
-        - ✅ Alignment analyzed
-        - ✅ Metrics calculated
-        - ✅ Improvements generated
-        - ✅ Executive summary created
+        - Documents processed
+        - Embeddings generated
+        - Alignment analyzed
+        - Metrics calculated
+        - Improvements generated
+        - Executive summary created
         """)
         
         # Final metrics
         st.markdown("---")
-        st.subheader("📊 Final Results Summary")
+        st.markdown('<h3><i class="fas fa-chart-line fa-icon"></i>Final Results Summary</h3>', unsafe_allow_html=True)
         col1, col2, col3, col4 = st.columns(4)
         
         with col1:
@@ -613,7 +724,7 @@ if st.button("▶️ START COMPLETE ANALYSIS", type="primary", disabled=st.sessi
     except Exception as e:
         progress_bar.empty()
         status_text.empty()
-        st.error(f"❌ Error during analysis: {str(e)}")
+        st.error(f"Error during analysis: {str(e)}")
         st.exception(e)
         st.session_state.analysis_running = False
         st.stop()
@@ -621,25 +732,25 @@ if st.button("▶️ START COMPLETE ANALYSIS", type="primary", disabled=st.sessi
 # Navigation after completion
 if st.session_state.analysis_complete.get(selected_year):
     st.markdown("---")
-    st.subheader("🎯 Next Steps")
+    st.markdown('<h3><i class="fas fa-directions fa-icon"></i>Next Steps</h3>', unsafe_allow_html=True)
     
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        if st.button("📊 View Detailed Results", use_container_width=True):
+        if st.button("View Detailed Results", use_container_width=True):
             st.switch_page("pages/03_View_Results.py")
     
     with col2:
-        if st.button("📋 Read Executive Summary", use_container_width=True):
+        if st.button("Read Executive Summary", use_container_width=True):
             st.switch_page("pages/04_Executive_Summary.py")
     
     with col3:
-        if st.button("📈 Compare Years", use_container_width=True):
+        if st.button("Compare Years", use_container_width=True):
             st.switch_page("pages/05_Multi_Year_Comparison.py")
     
     # Download section
     st.markdown("---")
-    st.subheader("📥 Download Reports")
+    st.markdown('<h3><i class="fas fa-download fa-icon"></i>Download Reports</h3>', unsafe_allow_html=True)
     
     col1, col2 = st.columns(2)
     
@@ -648,7 +759,7 @@ if st.session_state.analysis_complete.get(selected_year):
         if results_file.exists():
             with open(results_file, 'r', encoding='utf-8') as f:
                 st.download_button(
-                    label="📄 Download Analysis Results (JSON)",
+                    label="Download Analysis Results (JSON)",
                     data=f.read(),
                     file_name=f"synchronization_report_{selected_year}.json",
                     mime="application/json",
@@ -660,7 +771,7 @@ if st.session_state.analysis_complete.get(selected_year):
         if md_file.exists():
             with open(md_file, 'r', encoding='utf-8') as f:
                 st.download_button(
-                    label="📋 Download Executive Summary (MD)",
+                    label="Download Executive Summary (MD)",
                     data=f.read(),
                     file_name=f"executive_summary_{selected_year}.md",
                     mime="text/markdown",
@@ -668,4 +779,8 @@ if st.session_state.analysis_complete.get(selected_year):
                 )
 
 st.markdown("---")
-st.caption("💡 **Tip:** Analysis results are automatically saved and can be viewed anytime from the View Results page")
+st.markdown("""
+<div class="info-box">
+<i class="fas fa-lightbulb fa-icon-small"></i><strong>Tip:</strong> Analysis results are automatically saved and can be viewed anytime from the View Results page
+</div>
+""", unsafe_allow_html=True)

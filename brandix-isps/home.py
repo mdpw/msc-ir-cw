@@ -196,31 +196,31 @@ st.markdown("""
         border-radius: 8px;
     }
     
-    /* Sidebar */
+    /* Sidebar explicit dark mode */
     [data-testid="stSidebar"] {
-        background-color: #262730;
+        background-color: #0e1117 !important;
+        border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
     }
     
-    /* Links */
-    a {
-        color: #4da6ff !important;
+    [data-testid="stSidebarNav"] span {
+        color: #e0e0e0 !important;
+        font-weight: 500 !important;
     }
     
-    a:hover {
-        color: #66b3ff !important;
+    /* Top Header */
+    header[data-testid="stHeader"] {
+        background-color: #0e1117 !important;
+        background: transparent !important;
     }
     
-    /* Code blocks */
-    code {
-        background-color: rgba(255, 255, 255, 0.1) !important;
-        color: #4da6ff !important;
-        padding: 2px 6px;
-        border-radius: 4px;
+    /* Dropdown/Selectbox dark mode */
+    div[data-baseweb="select"] {
+        background-color: rgba(255, 255, 255, 0.05) !important;
     }
     
-    /* Caption text */
-    .stCaption {
-        color: rgba(255, 255, 255, 0.5) !important;
+    ul[data-testid="stSelectboxVirtualList"] {
+        background-color: #1e2129 !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
     }
     </style>
 """, unsafe_allow_html=True)

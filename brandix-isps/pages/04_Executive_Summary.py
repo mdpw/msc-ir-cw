@@ -7,22 +7,131 @@ import streamlit as st
 import json
 from pathlib import Path
 
-st.set_page_config(page_title="Executive Summary", page_icon="📋", layout="wide")
+st.set_page_config(page_title="Executive Summary", page_icon="🎯", layout="wide")
 
-# Custom CSS
+# Dark Theme Compatible CSS + Font Awesome Icons
 st.markdown("""
     <style>
-    .main {background-color: #f5f7fa;}
+    /* Import Font Awesome */
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+    
+    /* Main background */
+    .main {
+        background-color: #0e1117;
+    }
+    
+    /* Icon styling */
+    .fa-icon {
+        color: #4da6ff;
+        margin-right: 8px;
+    }
+    
+    .fa-icon-large {
+        font-size: 1.2em;
+        color: #4da6ff;
+        margin-right: 10px;
+    }
+    
+    .fa-icon-small {
+        font-size: 0.9em;
+        color: #4da6ff;
+        margin-right: 6px;
+    }
+    
+    /* Info boxes */
+    .info-box {
+        background-color: rgba(28, 131, 225, 0.08);
+        border: 1px solid rgba(28, 131, 225, 0.2);
+        border-left: 4px solid #4da6ff;
+        border-radius: 10px;
+        padding: 15px;
+        margin: 10px 0;
+        color: #e0e0e0;
+    }
+    
+    /* Summary Section Styling */
     .summary-section {
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.03);
         padding: 20px;
         border-radius: 10px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        margin: 15px 0;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        margin: 20px 0;
     }
-    h1 {color: #1f4788; font-weight: 600;}
-    h2 {color: #2c5aa0;}
-    h3 {color: #34495e;}
+    
+    .summary-section h3 {
+        margin-top: 0;
+        color: #4da6ff !important;
+        font-size: 1.3rem;
+        display: flex;
+        align-items: center;
+    }
+    
+    /* Headers */
+    h1 {
+        color: #4da6ff !important;
+        font-weight: 600 !important;
+    }
+    
+    h2, h3, h4 {
+        color: #66b3ff !important;
+    }
+    
+    /* Sidebar explicit dark mode */
+    [data-testid="stSidebar"] {
+        background-color: #0e1117 !important;
+        border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    [data-testid="stSidebarNav"] span {
+        color: #e0e0e0 !important;
+        font-weight: 500 !important;
+    }
+    
+    /* Top Header */
+    header[data-testid="stHeader"] {
+        background-color: #0e1117 !important;
+        background: transparent !important;
+    }
+    
+    /* Dropdown/Selectbox dark mode */
+    div[data-baseweb="select"] {
+        background-color: rgba(255, 255, 255, 0.05) !important;
+    }
+    
+    /* Buttons */
+    .stButton>button {
+        width: 100%;
+        background-color: rgba(28, 131, 225, 0.2);
+        color: #e0e0e0;
+        border: 1px solid rgba(28, 131, 225, 0.3);
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+    
+    .stButton>button:hover {
+        background-color: rgba(28, 131, 225, 0.3);
+        border: 1px solid rgba(28, 131, 225, 0.5);
+        transform: translateY(-2px);
+    }
+    
+    /* Primary buttons */
+    .stButton>button[kind="primary"] {
+        background-color: rgba(28, 131, 225, 0.4);
+        border: 1px solid #1c83e1;
+    }
+    
+    /* Text colors */
+    p, span, label, li {
+        color: #e0e0e0 !important;
+    }
+    
+    strong {
+        color: #ffffff !important;
+    }
+    
+    hr {
+        border-color: rgba(255, 255, 255, 0.1) !important;
+    }
     </style>
 """, unsafe_allow_html=True)
 
@@ -35,7 +144,7 @@ if 'selected_year' not in st.session_state:
     st.session_state.selected_year = "2026"
 
 # Header
-st.title("📋 Executive Summary")
+st.markdown('<h1><i class="fas fa-clipboard-list fa-icon-large"></i>Executive Summary</h1>', unsafe_allow_html=True)
 st.markdown("### AI-Generated Strategic Insights")
 st.markdown("---")
 
@@ -55,7 +164,7 @@ with col1:
         st.rerun()
 
 with col2:
-    st.info(f"📅 Executive Summary for **Year {selected_year}**")
+    st.info(f"Executive Summary for **Year {selected_year}**")
 
 # Load Data
 @st.cache_data
@@ -73,28 +182,30 @@ def load_executive_summary(year):
 summary = load_executive_summary(selected_year)
 
 if summary is None:
-    st.error(f"⚠️ No executive summary found for year {selected_year}")
-    st.info("👉 Go to **'⚙️ Run Analysis'** page to generate executive summary")
+    st.error(f"No executive summary found for year {selected_year}")
+    st.info("Go to **'Run Analysis'** page to generate executive summary")
     st.stop()
 
-st.success(f"✅ Executive summary available for {selected_year}")
+st.success(f"Executive summary available for {selected_year}")
 
 st.markdown("---")
 
-# Display Summary Sections
+# Display Summary Sections with Font Awesome Icons
 sections = [
-    ("📊 Executive Overview", "overview"),
-    ("🔍 Key Findings", "key_findings"),
-    ("🔴 Critical Gaps", "critical_gaps"),
-    ("💡 Strategic Recommendations", "recommendations"),
-    ("⚠️ Risk Assessment", "risk_assessment"),
-    ("🎯 Next Steps", "next_steps")
+    ("fas fa-chart-line", "Executive Overview", "overview"),
+    ("fas fa-search", "Key Findings", "key_findings"),
+    ("fas fa-exclamation-triangle", "Critical Gaps", "critical_gaps"),
+    ("fas fa-lightbulb", "Strategic Recommendations", "recommendations"),
+    ("fas fa-shield-alt", "Risk Assessment", "risk_assessment"),
+    ("fas fa-forward", "Next Steps", "next_steps")
 ]
 
-for title, key in sections:
+for icon, title, key in sections:
+    icon_color = "#f44336" if key == "critical_gaps" else "#4da6ff"
+    
     st.markdown(f"""
     <div class="summary-section">
-    <h3>{title}</h3>
+    <h3><i class="{icon}" style="color: {icon_color}; margin-right: 15px;"></i>{title}</h3>
     </div>
     """, unsafe_allow_html=True)
     
@@ -103,7 +214,7 @@ for title, key in sections:
     st.markdown("---")
 
 # Download Section
-st.subheader("📥 Download Executive Summary")
+st.markdown('<h3><i class="fas fa-download fa-icon"></i>Download Executive Summary</h3>', unsafe_allow_html=True)
 
 col1, col2 = st.columns(2)
 
@@ -111,7 +222,7 @@ with col1:
     # JSON download
     json_data = json.dumps(summary, indent=2)
     st.download_button(
-        label="📄 Download as JSON",
+        label="Download as JSON",
         data=json_data,
         file_name=f"executive_summary_{selected_year}.json",
         mime="application/json",
@@ -126,7 +237,7 @@ with col2:
             md_data = f.read()
         
         st.download_button(
-            label="📋 Download as Markdown",
+            label="Download as Markdown",
             data=md_data,
             file_name=f"executive_summary_{selected_year}.md",
             mime="text/markdown",
@@ -135,16 +246,21 @@ with col2:
 
 # Navigation
 st.markdown("---")
+st.markdown('<h3><i class="fas fa-directions fa-icon"></i>Next Steps</h3>', unsafe_allow_html=True)
 
 col1, col2 = st.columns(2)
 
 with col1:
-    if st.button("📊 View Detailed Results", use_container_width=True):
+    if st.button("View Detailed Results", use_container_width=True):
         st.switch_page("pages/03_View_Results.py")
 
 with col2:
-    if st.button("📈 Compare Years", use_container_width=True):
+    if st.button("Compare Years", use_container_width=True):
         st.switch_page("pages/05_Multi_Year_Comparison.py")
 
 st.markdown("---")
-st.caption("🤖 **Generated by:** Phi-3 Mini via Ollama | **Technology:** Local LLM with RAG Pipeline")
+st.markdown("""
+<div class="info-box">
+<i class="fas fa-microchip fa-icon-small"></i><strong>Generated by:</strong> Phi-3 Mini via Ollama | <strong>Technology:</strong> Local LLM with RAG Pipeline
+</div>
+""", unsafe_allow_html=True)

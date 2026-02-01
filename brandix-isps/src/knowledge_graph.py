@@ -211,29 +211,31 @@ class KnowledgeGraphGenerator:
         # Combine all traces
         fig = go.Figure(data=edge_traces + [objective_trace, action_trace])
         
-        # Update layout
+        # Update layout for dark mode compatibility
         fig.update_layout(
             title={
                 'text': title,
                 'x': 0.5,
                 'xanchor': 'center',
-                'font': {'size': 20, 'color': '#1f4788'}
+                'font': {'size': 20, 'color': '#4da6ff'}
             },
             showlegend=True,
             width=width,
             height=height,
             hovermode='closest',
             margin=dict(b=20, l=5, r=5, t=60),
-            plot_bgcolor='rgba(240, 240, 245, 0.3)',
-            paper_bgcolor='white',
+            plot_bgcolor='rgba(0,0,0,0)',
+            paper_bgcolor='rgba(0,0,0,0)',
+            font=dict(color='#e0e0e0'),
             xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
             yaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
             legend=dict(
                 x=0.02,
                 y=0.98,
-                bgcolor='rgba(255,255,255,0.8)',
-                bordercolor='#ddd',
-                borderwidth=1
+                bgcolor='rgba(0,0,0,0.5)',
+                bordercolor='rgba(255,255,255,0.1)',
+                borderwidth=1,
+                font=dict(color='#e0e0e0')
             )
         )
         

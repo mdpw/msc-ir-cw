@@ -17,9 +17,158 @@ sys.path.append(str(Path(__file__).parent.parent / 'src'))
 
 from testing_framework import TestingFramework
 
-st.set_page_config(page_title="Testing & Evaluation", page_icon="🧪", layout="wide")
+st.set_page_config(page_title="Testing & Evaluation", page_icon="🎯", layout="wide")
 
-st.title("🧪 Testing & Evaluation Dashboard")
+# Dark Theme Compatible CSS + Font Awesome Icons
+st.markdown("""
+    <style>
+    /* Import Font Awesome */
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+    
+    /* Main background */
+    .main {
+        background-color: #0e1117;
+    }
+    
+    /* Icon styling */
+    .fa-icon {
+        color: #4da6ff;
+        margin-right: 8px;
+    }
+    
+    .fa-icon-large {
+        font-size: 1.2em;
+        color: #4da6ff;
+        margin-right: 10px;
+    }
+    
+    .fa-icon-small {
+        font-size: 0.9em;
+        color: #4da6ff;
+        margin-right: 6px;
+    }
+    
+    /* Info boxes */
+    .info-box {
+        background-color: rgba(28, 131, 225, 0.08);
+        border: 1px solid rgba(28, 131, 225, 0.2);
+        border-left: 4px solid #4da6ff;
+        border-radius: 10px;
+        padding: 15px;
+        margin: 10px 0;
+        color: #e0e0e0;
+    }
+    
+    /* Headers */
+    h1 {
+        color: #4da6ff !important;
+        font-weight: 600 !important;
+    }
+    
+    h2, h3, h4 {
+        color: #66b3ff !important;
+    }
+    
+    /* Sidebar explicit dark mode */
+    [data-testid="stSidebar"] {
+        background-color: #0e1117 !important;
+        border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    [data-testid="stSidebarNav"] span {
+        color: #e0e0e0 !important;
+        font-weight: 500 !important;
+    }
+    
+    /* Top Header */
+    header[data-testid="stHeader"] {
+        background-color: #0e1117 !important;
+        background: transparent !important;
+    }
+    
+    /* Dropdown/Selectbox dark mode */
+    div[data-baseweb="select"] {
+        background-color: rgba(255, 255, 255, 0.05) !important;
+    }
+    
+    /* Tabs styling */
+    .stTabs [data-baseweb="tab-list"] {
+        gap: 10px;
+        background-color: transparent !important;
+    }
+    
+    .stTabs [data-baseweb="tab"] {
+        height: 50px;
+        border-radius: 8px 8px 0px 0px;
+        padding: 10px 20px;
+        background-color: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-bottom: none;
+        color: #a0a0a0;
+    }
+    
+    .stTabs [aria-selected="true"] {
+        background-color: rgba(77, 166, 255, 0.1) !important;
+        color: #4da6ff !important;
+        border-top: 3px solid #4da6ff !important;
+    }
+    
+    /* Metric boxes */
+    [data-testid="stMetric"] {
+        background-color: rgba(255, 255, 255, 0.05) !important;
+        padding: 15px !important;
+        border-radius: 10px !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    [data-testid="stMetricValue"] {
+        color: #ffffff !important;
+    }
+    
+    /* Buttons */
+    .stButton>button {
+        width: 100%;
+        background-color: rgba(28, 131, 225, 0.2);
+        color: #e0e0e0;
+        border: 1px solid rgba(28, 131, 225, 0.3);
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+    
+    .stButton>button:hover {
+        background-color: rgba(28, 131, 225, 0.3);
+        border: 1px solid rgba(28, 131, 225, 0.5);
+        transform: translateY(-2px);
+    }
+    
+    /* Primary buttons */
+    .stButton>button[kind="primary"] {
+        background-color: rgba(28, 131, 225, 0.4);
+        border: 1px solid #1c83e1;
+    }
+    
+    /* Dataframe */
+    [data-testid="stDataFrame"] {
+        background-color: rgba(255, 255, 255, 0.03);
+        border-radius: 8px;
+    }
+    
+    /* Text colors */
+    p, span, label, li {
+        color: #e0e0e0 !important;
+    }
+    
+    strong {
+        color: #ffffff !important;
+    }
+    
+    hr {
+        border-color: rgba(255, 255, 255, 0.1) !important;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+st.markdown('<h1><i class="fas fa-flask fa-icon-large"></i>Testing & Evaluation Dashboard</h1>', unsafe_allow_html=True)
 st.markdown("### System Accuracy Testing & Performance Validation")
 st.markdown("---")
 
@@ -40,7 +189,7 @@ with col1:
     )
 
 with col2:
-    st.info(f"📊 Testing results for **Year {selected_year}**")
+    st.info(f"Testing results for **Year {selected_year}**")
 
 st.markdown("---")
 
@@ -54,36 +203,36 @@ sync_exists = sync_report_path.exists()
 gt_exists = gt_path.exists()
 
 # Status overview
-st.subheader("📋 Testing Status")
+st.markdown('<h3><i class="fas fa-list-check fa-icon"></i>Testing Status</h3>', unsafe_allow_html=True)
 
 col1, col2, col3 = st.columns(3)
 
 with col1:
     if sync_exists:
-        st.success("✅ **Analysis Complete**")
+        st.success("Analysis Complete")
     else:
-        st.warning("⏳ **Analysis Pending**")
+        st.warning("Analysis Pending")
 
 with col2:
     if gt_exists:
-        st.success("✅ **Ground Truth Ready**")
+        st.success("Ground Truth Ready")
     else:
-        st.warning("⏳ **Ground Truth Needed**")
+        st.warning("Ground Truth Needed")
 
 with col3:
     if test_exists:
-        st.success("✅ **Tests Complete**")
+        st.success("Tests Complete")
     else:
-        st.info("⏳ **Tests Not Run**")
+        st.info("Tests Not Run")
 
 st.markdown("---")
 
 # Tabs
 tab1, tab2, tab3, tab4 = st.tabs([
-    "🧪 Run Tests",
-    "📊 Test Results",
-    "📝 Ground Truth",
-    "📈 Performance"
+    "Run Tests",
+    "Test Results",
+    "Ground Truth",
+    "Performance"
 ])
 
 # ============================================================
@@ -91,11 +240,11 @@ tab1, tab2, tab3, tab4 = st.tabs([
 # ============================================================
 
 with tab1:
-    st.subheader("🧪 Run Comprehensive Tests")
+    st.markdown('<h3><i class="fas fa-play-circle fa-icon"></i>Run Comprehensive Tests</h3>', unsafe_allow_html=True)
     
     if not sync_exists:
-        st.error("❌ No analysis results found!")
-        st.info("👉 Go to **'Run Analysis'** page and complete analysis first")
+        st.error("No analysis results found!")
+        st.info("Go to **'Run Analysis'** page and complete analysis first")
         st.stop()
     
     st.write("Execute the complete testing suite to validate system accuracy")
@@ -104,7 +253,7 @@ with tab1:
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("### Available Tests")
+        st.markdown('### <i class="fas fa-tasks fa-icon-small"></i>Available Tests', unsafe_allow_html=True)
         st.markdown("""
         1. **Alignment Classification** - Accuracy of Strong/Moderate/Weak labels
         2. **Similarity Scores** - Numerical score accuracy (MSE, MAE, correlation)
@@ -114,28 +263,28 @@ with tab1:
         """)
     
     with col2:
-        st.markdown("### Prerequisites")
+        st.markdown('### <i class="fas fa-check-double fa-icon-small"></i>Prerequisites', unsafe_allow_html=True)
         
         prereqs = []
         if sync_exists:
-            prereqs.append("✅ Synchronization analysis complete")
+            prereqs.append("Synchronization analysis complete")
         else:
-            prereqs.append("❌ Synchronization analysis required")
+            prereqs.append("Synchronization analysis required")
         
         if gt_exists:
             # Count ground truth pairs
             with open(gt_path, 'r') as f:
                 gt_data = json.load(f)
                 gt_count = len(gt_data.get('objective_action_pairs', []))
-            prereqs.append(f"✅ Ground truth ready ({gt_count} pairs)")
+            prereqs.append(f"Ground truth ready ({gt_count} pairs)")
         else:
-            prereqs.append("⚠️ Ground truth recommended (optional)")
+            prereqs.append("Ground truth recommended (optional)")
         
         improvements_path = OUTPUTS_BASE / selected_year / "improvements.json"
         if improvements_path.exists():
-            prereqs.append("✅ LLM improvements available")
+            prereqs.append("LLM improvements available")
         else:
-            prereqs.append("⚠️ LLM improvements optional")
+            prereqs.append("LLM improvements optional")
         
         for prereq in prereqs:
             st.markdown(f"- {prereq}")
@@ -143,7 +292,7 @@ with tab1:
     st.markdown("---")
     
     # Run button
-    if st.button("▶️ Run Complete Test Suite", type="primary", use_container_width=True):
+    if st.button("Run Complete Test Suite", type="primary", use_container_width=True):
         
         progress_bar = st.progress(0)
         status_text = st.empty()
@@ -156,7 +305,7 @@ with tab1:
             from vector_store import VectorStore
             
             # Load synchronization report
-            status_text.info("📊 Loading synchronization report...")
+            status_text.info("Loading synchronization report...")
             progress_bar.progress(10)
             
             with open(sync_report_path, 'r', encoding='utf-8') as f:
@@ -169,7 +318,7 @@ with tab1:
                     improvements_data = json.load(f)
             
             # Initialize system components
-            status_text.info("⚙️ Initializing system components...")
+            status_text.info("Initializing system components...")
             progress_bar.progress(20)
             
             upload_dir = Path("data/uploaded") / selected_year
@@ -186,20 +335,20 @@ with tab1:
             sync_engine = SynchronizationEngine(processor, engine, vs)
             
             # Embed documents
-            status_text.info("🧮 Generating embeddings...")
+            status_text.info("Generating embeddings...")
             progress_bar.progress(40)
             
             engine.embed_objectives(objectives)
             engine.embed_actions(actions)
             
             # Initialize testing framework
-            status_text.info("🧪 Initializing testing framework...")
+            status_text.info("Initializing testing framework...")
             progress_bar.progress(60)
             
             testing_framework = TestingFramework()
             
             # Run tests
-            status_text.info("🔬 Running comprehensive tests (this may take 1-2 minutes)...")
+            status_text.info("Running comprehensive tests (this may take 1-2 minutes)...")
             progress_bar.progress(70)
             
             test_results = testing_framework.run_comprehensive_tests(
@@ -211,16 +360,16 @@ with tab1:
             )
             
             # Save results
-            status_text.info("💾 Saving test results...")
+            status_text.info("Saving test results...")
             progress_bar.progress(90)
             
             testing_framework.save_test_results(test_results, str(test_results_path))
             
             # Complete
             progress_bar.progress(100)
-            status_text.success("✅ All tests complete!")
+            status_text.success("All tests complete!")
             
-            st.success("### 🎉 Testing Complete!")
+            st.success("### Testing Complete!")
             
             # Show summary
             if 'overall_assessment' in test_results:
@@ -235,14 +384,12 @@ with tab1:
                 with col3:
                     st.metric("Overall Grade", assessment['overall_grade'])
             
-            st.info("👉 Switch to **'Test Results'** tab to view detailed results")
-            
-            # Force rerun to show results
+            st.info("Switch to **'Test Results'** tab to view detailed results")
             st.rerun()
             
         except Exception as e:
             progress_bar.progress(0)
-            status_text.error(f"❌ Error during testing: {str(e)}")
+            status_text.error(f"Error during testing: {str(e)}")
             st.exception(e)
 
 # ============================================================
@@ -250,11 +397,11 @@ with tab1:
 # ============================================================
 
 with tab2:
-    st.subheader("📊 Test Results & Metrics")
+    st.markdown('<h3><i class="fas fa-chart-pie fa-icon"></i>Test Results & Metrics</h3>', unsafe_allow_html=True)
     
     if not test_exists:
-        st.warning("⚠️ No test results available yet")
-        st.info("👉 Go to **'Run Tests'** tab to execute tests")
+        st.warning("No test results available yet")
+        st.info("Go to **'Run Tests'** tab to execute tests")
     else:
         # Load test results
         with open(test_results_path, 'r', encoding='utf-8') as f:
@@ -282,7 +429,7 @@ with tab2:
             
             # Recommendations
             if assessment.get('recommendations'):
-                st.markdown("#### 📌 Recommendations")
+                st.markdown('#### <i class="fas fa-thumbtack fa-icon-small"></i>Recommendations', unsafe_allow_html=True)
                 for i, rec in enumerate(assessment['recommendations'], 1):
                     st.warning(f"{i}. {rec}")
             
@@ -339,7 +486,7 @@ with tab2:
                         colorscale='Blues',
                         text=cm,
                         texttemplate='%{text}',
-                        textfont={"size": 16},
+                        textfont={"size": 16, "color": "white"},
                         hovertemplate='Predicted: %{x}<br>Actual: %{y}<br>Count: %{z}<extra></extra>'
                     ))
                     
@@ -347,7 +494,12 @@ with tab2:
                         title="Confusion Matrix",
                         xaxis_title="Predicted Class",
                         yaxis_title="Actual Class",
-                        height=400
+                        height=400,
+                        plot_bgcolor='rgba(0,0,0,0)',
+                        paper_bgcolor='rgba(0,0,0,0)',
+                        font=dict(color='#e0e0e0'),
+                        xaxis=dict(gridcolor='rgba(255,255,255,0.05)'),
+                        yaxis=dict(gridcolor='rgba(255,255,255,0.05)')
                     )
                     
                     st.plotly_chart(fig, use_container_width=True)
@@ -410,7 +562,7 @@ with tab2:
                             y=rates,
                             text=[f"{r:.0%}" for r in rates],
                             textposition='auto',
-                            marker_color='#1f77b4'
+                            marker_color='#4da6ff'
                         )
                     ])
                     
@@ -419,7 +571,12 @@ with tab2:
                         xaxis_title="Category",
                         yaxis_title="Coverage Rate",
                         yaxis_tickformat='.0%',
-                        height=400
+                        height=400,
+                        plot_bgcolor='rgba(0,0,0,0)',
+                        paper_bgcolor='rgba(0,0,0,0)',
+                        font=dict(color='#e0e0e0'),
+                        xaxis=dict(gridcolor='rgba(255,255,255,0.05)'),
+                        yaxis=dict(gridcolor='rgba(255,255,255,0.05)')
                     )
                     
                     st.plotly_chart(fig, use_container_width=True)
@@ -449,14 +606,14 @@ with tab2:
         
         # Download results
         st.markdown("---")
-        st.subheader("📥 Download Results")
+        st.markdown('<h3><i class="fas fa-download fa-icon"></i>Download Results</h3>', unsafe_allow_html=True)
         
         col1, col2 = st.columns(2)
         
         with col1:
             with open(test_results_path, 'r') as f:
                 st.download_button(
-                    label="📄 Download Full Results (JSON)",
+                    label="Download Full Results (JSON)",
                     data=f.read(),
                     file_name=f"test_results_{selected_year}.json",
                     mime="application/json",
@@ -468,7 +625,7 @@ with tab2:
             if summary_path.exists():
                 with open(summary_path, 'r') as f:
                     st.download_button(
-                        label="📋 Download Summary (Markdown)",
+                        label="Download Summary (Markdown)",
                         data=f.read(),
                         file_name=f"test_summary_{selected_year}.md",
                         mime="text/markdown",
@@ -480,7 +637,7 @@ with tab2:
 # ============================================================
 
 with tab3:
-    st.subheader("📝 Ground Truth Management")
+    st.markdown('<h3><i class="fas fa-file-signature fa-icon"></i>Ground Truth Management</h3>', unsafe_allow_html=True)
     
     st.info("""
     **Ground truth** is expert-validated data used to test system accuracy.
@@ -488,7 +645,7 @@ with tab3:
     """)
     
     if gt_exists:
-        st.success("✅ Ground truth file exists!")
+        st.success("Ground truth file exists!")
         
         # Load and display
         with open(gt_path, 'r', encoding='utf-8') as f:
@@ -532,7 +689,7 @@ with tab3:
         # Download
         with open(gt_path, 'r') as f:
             st.download_button(
-                label="📥 Download Ground Truth File",
+                label="Download Ground Truth File",
                 data=f.read(),
                 file_name=f"{selected_year}_ground_truth.json",
                 mime="application/json",
@@ -540,7 +697,7 @@ with tab3:
             )
     
     else:
-        st.warning("⚠️ No ground truth file found")
+        st.warning("No ground truth file found")
         
         st.markdown("""
         ### Create Ground Truth Template
@@ -548,10 +705,10 @@ with tab3:
         Generate a template with system predictions that experts can annotate.
         """)
         
-        if st.button("📝 Create Ground Truth Template", type="primary", use_container_width=True):
+        if st.button("Create Ground Truth Template", type="primary", use_container_width=True):
             
             if not sync_exists:
-                st.error("❌ Run analysis first to create template")
+                st.error("Run analysis first to create template")
             else:
                 try:
                     # Load sync report
@@ -567,13 +724,13 @@ with tab3:
                     with redirect_stdout(f):
                         create_sample_ground_truth(selected_year)
                     
-                    st.success("✅ Ground truth template created!")
-                    st.info(f"📁 File saved to: {gt_path}")
+                    st.success("Ground truth template created!")
+                    st.info(f"File saved to: {gt_path}")
                     
                     st.rerun()
                     
                 except Exception as e:
-                    st.error(f"❌ Error: {str(e)}")
+                    st.error(f"Error: {str(e)}")
                     st.exception(e)
 
 # ============================================================
@@ -581,10 +738,10 @@ with tab3:
 # ============================================================
 
 with tab4:
-    st.subheader("📈 Performance Benchmarks")
+    st.markdown('<h3><i class="fas fa-tachometer-alt fa-icon"></i>Performance Benchmarks</h3>', unsafe_allow_html=True)
     
     if not test_exists:
-        st.warning("⚠️ Run tests first to see performance benchmarks")
+        st.warning("Run tests first to see performance benchmarks")
     else:
         with open(test_results_path, 'r') as f:
             test_results = json.load(f)
@@ -608,7 +765,8 @@ with tab4:
                     x=list(times.keys()),
                     y=list(times.values()),
                     text=[f"{v:.2f}s" for v in times.values()],
-                    textposition='auto'
+                    textposition='auto',
+                    marker_color='#4da6ff'
                 )
             ])
             
@@ -616,7 +774,12 @@ with tab4:
                 title="Component Processing Times",
                 xaxis_title="Component",
                 yaxis_title="Time (seconds)",
-                height=400
+                height=400,
+                plot_bgcolor='rgba(0,0,0,0)',
+                paper_bgcolor='rgba(0,0,0,0)',
+                font=dict(color='#e0e0e0'),
+                xaxis=dict(gridcolor='rgba(255,255,255,0.05)'),
+                yaxis=dict(gridcolor='rgba(255,255,255,0.05)')
             )
             
             st.plotly_chart(fig, use_container_width=True)
@@ -639,4 +802,8 @@ with tab4:
                 st.metric("Total Analysis Time", f"{benchmarks['estimated_total_analysis_time']:.2f}s")
 
 st.markdown("---")
-st.caption("💡 Testing Framework validates system accuracy and performance | Coursework Requirement 3.8")
+st.markdown("""
+<div class="info-box">
+<i class="fas fa-info-circle fa-icon-small"></i><strong>Note:</strong> Testing Framework validates system accuracy and performance | Coursework Requirement 3.8
+</div>
+""", unsafe_allow_html=True)

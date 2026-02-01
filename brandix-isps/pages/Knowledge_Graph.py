@@ -15,21 +15,136 @@ sys.path.append('src')
 from knowledge_graph import KnowledgeGraphGenerator
 
 # Page configuration
+# Page configuration
 st.set_page_config(
     page_title="Knowledge Graph",
-    page_icon="🕸️",
+    page_icon="🎯",
     layout="wide"
 )
 
-# Custom CSS
+# Dark Theme Compatible CSS + Font Awesome Icons
 st.markdown("""
     <style>
+    /* Import Font Awesome */
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+    
+    /* Main background */
     .main {
-        background-color: #f5f7fa;
+        background-color: #0e1117;
     }
+    
+    /* Icon styling */
+    .fa-icon {
+        color: #4da6ff;
+        margin-right: 8px;
+    }
+    
+    .fa-icon-large {
+        font-size: 1.2em;
+        color: #4da6ff;
+        margin-right: 10px;
+    }
+    
+    .fa-icon-small {
+        font-size: 0.9em;
+        color: #4da6ff;
+        margin-right: 6px;
+    }
+    
+    /* Info boxes */
+    .info-box {
+        background-color: rgba(28, 131, 225, 0.08);
+        border: 1px solid rgba(28, 131, 225, 0.2);
+        border-left: 4px solid #4da6ff;
+        border-radius: 10px;
+        padding: 15px;
+        margin: 10px 0;
+        color: #e0e0e0;
+    }
+    
+    /* Headers */
     h1 {
-        color: #1f4788;
-        font-weight: 600;
+        color: #4da6ff !important;
+        font-weight: 600 !important;
+    }
+    
+    h2, h3, h4 {
+        color: #66b3ff !important;
+    }
+    
+    /* Sidebar explicit dark mode */
+    [data-testid="stSidebar"] {
+        background-color: #0e1117 !important;
+        border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    [data-testid="stSidebarNav"] span {
+        color: #e0e0e0 !important;
+        font-weight: 500 !important;
+    }
+    
+    /* Top Header */
+    header[data-testid="stHeader"] {
+        background-color: #0e1117 !important;
+        background: transparent !important;
+    }
+    
+    /* Dropdown/Selectbox dark mode */
+    div[data-baseweb="select"] {
+        background-color: rgba(255, 255, 255, 0.05) !important;
+    }
+    
+    /* Metric boxes */
+    [data-testid="stMetric"] {
+        background-color: rgba(255, 255, 255, 0.05) !important;
+        padding: 15px !important;
+        border-radius: 10px !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    [data-testid="stMetricValue"] {
+        color: #ffffff !important;
+    }
+    
+    /* Buttons */
+    .stButton>button {
+        width: 100%;
+        background-color: rgba(28, 131, 225, 0.2);
+        color: #e0e0e0;
+        border: 1px solid rgba(28, 131, 225, 0.3);
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+    
+    .stButton>button:hover {
+        background-color: rgba(28, 131, 225, 0.3);
+        border: 1px solid rgba(28, 131, 225, 0.5);
+        transform: translateY(-2px);
+    }
+    
+    /* Primary buttons */
+    .stButton>button[kind="primary"] {
+        background-color: rgba(28, 131, 225, 0.4);
+        border: 1px solid #1c83e1;
+    }
+    
+    /* Dataframe */
+    [data-testid="stDataFrame"] {
+        background-color: rgba(255, 255, 255, 0.03);
+        border-radius: 8px;
+    }
+    
+    /* Text colors */
+    p, span, label, li {
+        color: #e0e0e0 !important;
+    }
+    
+    strong {
+        color: #ffffff !important;
+    }
+    
+    hr {
+        border-color: rgba(255, 255, 255, 0.1) !important;
     }
     </style>
 """, unsafe_allow_html=True)
@@ -49,7 +164,7 @@ if 'selected_year' not in st.session_state:
 # Header
 # ============================================================
 
-st.title("🕸️ Strategic Alignment Knowledge Graph")
+st.markdown('<h1><i class="fas fa-network-wired fa-icon-large"></i>Strategic Alignment Knowledge Graph</h1>', unsafe_allow_html=True)
 st.markdown("Interactive network visualization of strategic objectives and action items")
 st.markdown("---")
 
@@ -69,7 +184,7 @@ with col1:
         st.rerun()
 
 with col2:
-    st.info(f"📅 Visualizing strategic network for **Year {selected_year}**")
+    st.info(f"Visualizing strategic network for **Year {selected_year}**")
 
 # ============================================================
 # Load Data
@@ -88,24 +203,24 @@ def load_sync_report(year):
 report = load_sync_report(selected_year)
 
 if report is None:
-    st.error(f"⚠️ No analysis data found for year {selected_year}")
-    st.info("👉 Go to **'⚙️ Run Analysis'** page to analyze this year first")
+    st.error(f"No analysis data found for year {selected_year}")
+    st.info("Go to **'Run Analysis'** page to analyze this year first")
     st.stop()
 
-st.success(f"✅ Loaded analysis data for {selected_year}")
+st.success(f"Loaded analysis data for {selected_year}")
 st.markdown("---")
 
 # ============================================================
 # Configuration Controls
 # ============================================================
 
-st.subheader("⚙️ Graph Configuration")
+st.markdown('<h3><i class="fas fa-sliders-h fa-icon"></i>Graph Configuration</h3>', unsafe_allow_html=True)
 
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
     similarity_threshold = st.slider(
-        "🎯 Similarity Threshold",
+        "Similarity Threshold",
         min_value=0.30,
         max_value=0.80,
         value=0.50,
@@ -115,7 +230,7 @@ with col1:
 
 with col2:
     layout_type = st.selectbox(
-        "📐 Layout Algorithm",
+        "Layout Algorithm",
         options=['spring', 'hierarchical', 'circular', 'kamada_kawai'],
         index=0,
         help="Algorithm for positioning nodes in the graph"
@@ -123,7 +238,7 @@ with col2:
 
 with col3:
     graph_height = st.slider(
-        "📏 Graph Height",
+        "Graph Height",
         min_value=600,
         max_value=1200,
         value=900,
@@ -132,7 +247,7 @@ with col3:
 
 with col4:
     show_labels = st.checkbox(
-        "🏷️ Show Node Labels",
+        "Show Node Labels",
         value=False,
         help="Display labels directly on nodes (may be crowded)"
     )
@@ -143,15 +258,17 @@ st.markdown("---")
 # Generate and Display Graph
 # ============================================================
 
-st.subheader("🌐 Interactive Network Visualization")
+st.markdown('<h3><i class="fas fa-project-diagram fa-icon"></i>Interactive Network Visualization</h3>', unsafe_allow_html=True)
 
-st.markdown("""
-**Legend:**
-- 🔵 **Circles** = Strategic Objectives (size = alignment strength)
-- 🟦 **Squares** = Action Items
-- **Edges**: 🟢 Strong (≥70%), 🟠 Moderate (50-70%), 🔴 Weak (<50%)
-- **Hover** over nodes and edges for details
-""")
+st.markdown(f"""
+<div class="info-box">
+<strong>Legend:</strong><br>
+- <i class="fas fa-circle" style="color: #4da6ff;"></i> <strong>Circles</strong> = Strategic Objectives (size = alignment strength)<br>
+- <i class="fas fa-square" style="color: #1c83e1;"></i> <strong>Squares</strong> = Action Items<br>
+- <strong>Edges:</strong> <span style="color: #2ecc71; font-weight: bold;">Strong (≥70%)</span>, <span style="color: #f39c12; font-weight: bold;">Moderate (50-70%)</span>, <span style="color: #e74c3c; font-weight: bold;">Weak (<50%)</span><br>
+- <strong>Hover</strong> over nodes and edges for details
+</div>
+""", unsafe_allow_html=True)
 
 with st.spinner("🔄 Generating knowledge graph..."):
     try:
@@ -182,7 +299,7 @@ with st.spinner("🔄 Generating knowledge graph..."):
         # ============================================================
         
         st.markdown("---")
-        st.subheader("📊 Network Statistics")
+        st.markdown('<h3><i class="fas fa-chart-bar fa-icon"></i>Network Statistics</h3>', unsafe_allow_html=True)
         
         stats = kg.get_graph_statistics()
         
@@ -191,31 +308,27 @@ with st.spinner("🔄 Generating knowledge graph..."):
         with col1:
             st.metric(
                 "Total Nodes",
-                stats['total_nodes'],
-                help="Total number of objectives and actions"
+                stats['total_nodes']
             )
         
         with col2:
             st.metric(
                 "Total Connections",
-                stats['total_edges'],
-                help="Number of alignment links above threshold"
+                stats['total_edges']
             )
         
         with col3:
             st.metric(
                 "Strong Links",
                 stats['strong_edges'],
-                delta="≥70% similarity",
-                help="High-quality alignments"
+                delta="≥70%"
             )
         
         with col4:
             st.metric(
                 "Moderate Links",
                 stats['moderate_edges'],
-                delta="50-70%",
-                help="Good alignments"
+                delta="50-70%"
             )
         
         with col5:
@@ -223,8 +336,7 @@ with st.spinner("🔄 Generating knowledge graph..."):
                 "Weak Links",
                 stats['weak_edges'],
                 delta="<50%",
-                delta_color="inverse",
-                help="Low alignments (needs improvement)"
+                delta_color="inverse"
             )
         
         # Detailed statistics
@@ -247,7 +359,7 @@ with st.spinner("🔄 Generating knowledge graph..."):
         # ============================================================
         
         st.markdown("---")
-        st.subheader("🔍 Network Analysis Insights")
+        st.markdown('<h3><i class="fas fa-lightbulb fa-icon"></i>Network Analysis Insights</h3>', unsafe_allow_html=True)
         
         if graph.number_of_nodes() > 0:
             # Calculate centrality
@@ -256,7 +368,7 @@ with st.spinner("🔄 Generating knowledge graph..."):
             col1, col2 = st.columns(2)
             
             with col1:
-                st.markdown("**🎯 Most Connected Objectives**")
+                st.markdown('**<i class="fas fa-link fa-icon-small"></i>Most Connected Objectives**', unsafe_allow_html=True)
                 st.caption("Objectives with the highest number of action alignments")
                 
                 # Get objective nodes only
@@ -280,13 +392,13 @@ with st.spinner("🔄 Generating knowledge graph..."):
                         st.markdown(f"""
                         **{rank}. {node}**
                         - {node_data['label']}
-                        - {connections} connections | Score: {node_data['alignment_score']:.1f}%
-                        """)
+                        - {connections} connections | Score: <span style="color: #4da6ff; font-weight: bold;">{node_data['alignment_score']:.1f}%</span>
+                        """, unsafe_allow_html=True)
                 else:
                     st.info("No objectives in current graph view")
             
             with col2:
-                st.markdown("**⚠️ Isolated or Weak Objectives**")
+                st.markdown('**<i class="fas fa-link-slash fa-icon-small" style="color: #f44336;"></i>Isolated or Weak Objectives**', unsafe_allow_html=True)
                 st.caption("Objectives with few or no connections")
                 
                 # Find objectives with 0-2 connections
@@ -301,23 +413,23 @@ with st.spinner("🔄 Generating knowledge graph..."):
                         connections = graph.degree(node)
                         
                         if connections == 0:
-                            status = "🔴 CRITICAL - No connections"
+                            status = '<span style="color: #f44336; font-weight: bold;">CRITICAL - No connections</span>'
                         elif connections == 1:
-                            status = "🟠 HIGH - Only 1 connection"
+                            status = '<span style="color: #ff9800; font-weight: bold;">HIGH - Only 1 connection</span>'
                         else:
-                            status = "🟡 MEDIUM - 2 connections"
+                            status = '<span style="color: #ffeb3b; font-weight: bold;">MEDIUM - 2 connections</span>'
                         
                         st.markdown(f"""
                         **{node}** - {status}
                         - {node_data['label']}
-                        - Score: {node_data['alignment_score']:.1f}%
-                        """)
+                        - Score: <span style="color: #4da6ff; font-weight: bold;">{node_data['alignment_score']:.1f}%</span>
+                        """, unsafe_allow_html=True)
                 else:
-                    st.success("✅ All objectives are well-connected")
+                    st.success("All objectives are well-connected")
             
             # Pillar connectivity
             st.markdown("---")
-            st.markdown("**🏛️ Connectivity by Strategic Pillar**")
+            st.markdown('**<i class="fas fa-landmark fa-icon-small"></i>Connectivity by Strategic Pillar**', unsafe_allow_html=True)
             
             pillar_connections = {}
             for node in graph.nodes():
@@ -359,7 +471,7 @@ with st.spinner("🔄 Generating knowledge graph..."):
         # ============================================================
         
         st.markdown("---")
-        st.subheader("📥 Export Graph Data")
+        st.markdown('<h3><i class="fas fa-file-export fa-icon"></i>Export Graph Data</h3>', unsafe_allow_html=True)
         
         col1, col2, col3 = st.columns(3)
         
@@ -383,7 +495,7 @@ with st.spinner("🔄 Generating knowledge graph..."):
             }
             
             st.download_button(
-                label="📄 JSON Data",
+                label="Download JSON Data",
                 data=json.dumps(graph_json, indent=2),
                 file_name=f"knowledge_graph_{selected_year}_t{int(similarity_threshold*100)}.json",
                 mime="application/json",
@@ -394,7 +506,7 @@ with st.spinner("🔄 Generating knowledge graph..."):
             # Export as HTML
             html_str = fig.to_html(include_plotlyjs='cdn')
             st.download_button(
-                label="🌐 Interactive HTML",
+                label="Download Interactive HTML",
                 data=html_str,
                 file_name=f"knowledge_graph_{selected_year}_t{int(similarity_threshold*100)}.html",
                 mime="text/html",
@@ -406,7 +518,7 @@ with st.spinner("🔄 Generating knowledge graph..."):
             import pickle
             graph_bytes = pickle.dumps(graph)
             st.download_button(
-                label="🔬 NetworkX Graph (PKL)",
+                label="Download NetworkX Graph (PKL)",
                 data=graph_bytes,
                 file_name=f"graph_{selected_year}.pkl",
                 mime="application/octet-stream",
@@ -415,8 +527,8 @@ with st.spinner("🔄 Generating knowledge graph..."):
             )
         
     except Exception as e:
-        st.error(f"❌ Error generating knowledge graph: {str(e)}")
-        with st.expander("🔍 Error Details"):
+        st.error(f"Error generating knowledge graph: {str(e)}")
+        with st.expander("Error Details"):
             st.exception(e)
 
 # ============================================================
@@ -424,10 +536,12 @@ with st.spinner("🔄 Generating knowledge graph..."):
 # ============================================================
 
 st.markdown("---")
-st.caption("""
-💡 **Tips:**
-- Lower threshold shows more connections but may be cluttered
-- Higher threshold shows only strong relationships
-- Try different layouts for different perspectives
+st.markdown("""
+<div class="info-box">
+<i class="fas fa-lightbulb fa-icon-small"></i><strong>Tips:</strong><br>
+- Lower threshold shows more connections but may be cluttered<br>
+- Higher threshold shows only strong relationships<br>
+- Try different layouts for different perspectives<br>
 - Hover over nodes to see full details
-""")
+</div>
+""", unsafe_allow_html=True)

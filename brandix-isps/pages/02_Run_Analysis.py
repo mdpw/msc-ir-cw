@@ -627,15 +627,15 @@ if st.session_state.analysis_complete.get(selected_year):
     
     with col1:
         if st.button("📊 View Detailed Results", use_container_width=True):
-            st.switch_page("pages/03_📊_View_Results.py")
+            st.switch_page("pages/03_View_Results.py")
     
     with col2:
         if st.button("📋 Read Executive Summary", use_container_width=True):
-            st.switch_page("pages/04_📋_Executive_Summary.py")
+            st.switch_page("pages/04_Executive_Summary.py")
     
     with col3:
         if st.button("📈 Compare Years", use_container_width=True):
-            st.switch_page("pages/05_📈_Multi_Year_Comparison.py")
+            st.switch_page("pages/05_Multi_Year_Comparison.py")
     
     # Download section
     st.markdown("---")

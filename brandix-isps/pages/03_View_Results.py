@@ -376,7 +376,7 @@ with col1:
 
 with col2:
     if st.button("📋 View Executive Summary →", type="primary", use_container_width=True):
-        st.switch_page("pages/04_📋_Executive_Summary.py")
+        st.switch_page("pages/04_Executive_Summary.py")
 
 st.markdown("---")
 st.caption("💡 **Tip:** Use the tabs above to explore different aspects of the analysis")

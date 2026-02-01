@@ -413,7 +413,7 @@ if both_ready:
     """, unsafe_allow_html=True)
     
     if st.button("▶️ Start Analysis Now →", type="primary", use_container_width=True):
-        st.switch_page("pages/02_⚙️_Run_Analysis.py")
+        st.switch_page("pages/02_Run_Analysis.py")
 
 # All uploaded years summary
 st.markdown("---")

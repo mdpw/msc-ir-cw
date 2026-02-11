@@ -1,4 +1,4 @@
-# 🎯 Brandix ISPS - Intelligent Strategic Planning Synchronization System
+# Brandix ISPS - Intelligent Strategic Planning Synchronization System
 
 ## Overview
 AI-powered system for analyzing synchronization between Strategic Plans and Action Plans.
@@ -41,7 +41,7 @@ ollama pull llama3.1
 ### 4. Add your documents
 Place your documents in the `data/` folder:
 - BRANDIX_STRATEGIC_PLAN_2025.docx
-- BRANDIX_ACTION_PLAN.docx
+- BRANDIX_ACTION_PLAN_YEAR_1.docx
 
 ## Usage
 

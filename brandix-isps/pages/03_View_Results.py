@@ -10,7 +10,7 @@ import pandas as pd
 import json
 from pathlib import Path
 
-st.set_page_config(page_title="View Results", page_icon="🎯", layout="wide")
+st.set_page_config(page_title="View Results", page_icon=None, layout="wide")
 
 # Dark Theme Compatible CSS + Font Awesome Icons
 st.markdown("""
@@ -231,10 +231,10 @@ st.markdown("---")
 
 # Navigation Tabs with icons
 tab1, tab2, tab3, tab4 = st.tabs([
-    "📊 Dashboard",
-    "🔍 Detailed Analysis",
-    "💡 Gap Analysis",
-    "📈 Pillar View"
+    "Dashboard",
+    "Detailed Analysis",
+    "Gap Analysis",
+    "Pillar View"
 ])
 
 # ============================================================

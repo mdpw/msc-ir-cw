@@ -37,32 +37,32 @@ def run_tests_for_year(year: str = "2026"):
     
     # Check if synchronization report exists
     if not sync_report_path.exists():
-        print(f"\n❌ Error: Synchronization report not found for {year}")
+        print(f"\nError: Synchronization report not found for {year}")
         print(f"Expected at: {sync_report_path}")
-        print("\n👉 Please run analysis first:")
+        print("\nPlease run analysis first:")
         print(f"   1. Go to 'Run Analysis' page")
         print(f"   2. Select year {year}")
         print(f"   3. Complete analysis")
         return None
     
     # Load synchronization report
-    print(f"\n📊 Loading synchronization report...")
+    print(f"\nLoading synchronization report...")
     with open(sync_report_path, 'r', encoding='utf-8') as f:
         sync_report = json.load(f)
-    print(f"✅ Loaded report with {sync_report['overall_alignment']['total_objectives']} objectives")
+    print(f"Loaded report with {sync_report['overall_alignment']['total_objectives']} objectives")
     
     # Load improvements if available
     improvements_data = None
     if improvements_path.exists():
-        print(f"\n💡 Loading improvement suggestions...")
+        print(f"\nLoading improvement suggestions...")
         with open(improvements_path, 'r', encoding='utf-8') as f:
             improvements_data = json.load(f)
-        print(f"✅ Loaded {len(improvements_data.get('improvements', []))} improvement sets")
+        print(f"Loaded {len(improvements_data.get('improvements', []))} improvement sets")
     else:
-        print(f"\n⚠️ No improvements file found - skipping LLM evaluation")
+        print(f"\nNo improvements file found - skipping LLM evaluation")
     
     # Initialize synchronization engine for benchmarking
-    print(f"\n⚙️ Initializing system components for benchmarking...")
+    print(f"\nInitializing system components for benchmarking...")
     
     # Load documents
     upload_dir = Path("data/uploaded") / year
@@ -84,10 +84,10 @@ def run_tests_for_year(year: str = "2026"):
     engine.embed_objectives(objectives)
     engine.embed_actions(actions)
     
-    print(f"✅ System components initialized")
+    print(f"System components initialized")
     
     # Initialize testing framework
-    print(f"\n🧪 Initializing testing framework...")
+    print(f"\nInitializing testing framework...")
     testing_framework = TestingFramework()
     
     # Run comprehensive tests
@@ -103,7 +103,7 @@ def run_tests_for_year(year: str = "2026"):
     testing_framework.save_test_results(test_results, str(test_output_path))
     
     print("\n" + "="*80)
-    print("✅ TESTING COMPLETE!")
+    print("TESTING COMPLETE!")
     print("="*80)
     print(f"\nResults saved to:")
     print(f"  - {test_output_path}")
@@ -128,7 +128,7 @@ def create_sample_ground_truth(year: str = "2026"):
     sync_report_path = outputs_dir / "synchronization_report.json"
     
     if not sync_report_path.exists():
-        print(f"\n❌ Error: No synchronization report found for {year}")
+        print(f"\nError: No synchronization report found for {year}")
         print("Please run analysis first.")
         return
     
@@ -199,9 +199,9 @@ def create_sample_ground_truth(year: str = "2026"):
     with open(gt_path, 'w', encoding='utf-8') as f:
         json.dump(template, f, indent=2)
     
-    print(f"\n✅ Sample ground truth template created!")
+    print(f"\nSample ground truth template created!")
     print(f"📝 File: {gt_path}")
-    print(f"📊 Contains: {len(template['objective_action_pairs'])} pairs to annotate")
+    print(f"Contains: {len(template['objective_action_pairs'])} pairs to annotate")
     
     print("\n" + "="*80)
     print("NEXT STEPS FOR EXPERT ANNOTATION")

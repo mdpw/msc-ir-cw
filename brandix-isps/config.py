@@ -4,7 +4,7 @@ Configuration file for Brandix ISPS
 
 # File paths
 STRATEGIC_PLAN_PATH = "data/BRANDIX_STRATEGIC_PLAN_2025.docx"
-ACTION_PLAN_PATH = "data/BRANDIX_ACTION_PLAN.docx"
+ACTION_PLAN_PATH = "data/BRANDIX_ACTION_PLAN_YEAR_1.docx"
 
 # Model settings
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"

@@ -34,7 +34,7 @@ class ExecutiveSummaryGenerator:
         # Build comprehensive context
         context = self._build_context(overall, gaps, pillar_stats)
         
-        print("\n📄 Generating summary sections...")
+        print("\nGenerating summary sections...")
         
         # Generate different sections
         summary = {
@@ -46,7 +46,7 @@ class ExecutiveSummaryGenerator:
             'next_steps': self._generate_next_steps(context)
         }
         
-        print("✓ All sections generated successfully!")
+        print("All sections generated successfully!")
         
         return summary
     
@@ -220,7 +220,7 @@ Format as a numbered list with clear actions and deadlines."""
         with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(summary, f, indent=2)
         
-        print(f"\n✓ Executive summary saved to {output_file}")
+        print(f"\nExecutive summary saved to {output_file}")
         return summary
 
 
@@ -240,9 +240,9 @@ if __name__ == "__main__":
     try:
         with open('outputs/synchronization_report.json', 'r', encoding='utf-8') as f:
             report = json.load(f)
-        print(f"✓ Loaded report with {report['overall_alignment']['total_objectives']} objectives")
+        print(f"Loaded report with {report['overall_alignment']['total_objectives']} objectives")
     except Exception as e:
-        print(f"❌ Error loading report: {e}")
+        print(f"ERROR loading report: {e}")
         print("Please run: python src/synchronization_engine.py")
         exit(1)
     
@@ -250,7 +250,7 @@ if __name__ == "__main__":
     print("\nStep 2: Initializing LLM (Phi-3 Mini)...")
     llm = LLMEngine(model_name="phi3:mini")
     if not llm.test_connection():
-        print("❌ Ollama not running!")
+        print("Ollama not running!")
         print("\nPlease start Ollama:")
         print("  1. Open terminal")
         print("  2. Run: ollama serve")
@@ -298,7 +298,7 @@ if __name__ == "__main__":
     generator.save_summary(summary, 'outputs/executive_summary.json')
     
     print("\n" + "="*80)
-    print("✓ EXECUTIVE SUMMARY GENERATION COMPLETE!")
+    print("EXECUTIVE SUMMARY GENERATION COMPLETE!")
     print("="*80)
     print("\nNext Steps:")
     print("  1. Review outputs/executive_summary.json")

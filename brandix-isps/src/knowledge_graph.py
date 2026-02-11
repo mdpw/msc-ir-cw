@@ -160,7 +160,7 @@ class KnowledgeGraphGenerator:
             # Default to spring
             self.node_positions = nx.spring_layout(self.graph, seed=42)
         
-        print("✅ Layout calculated")
+        print("Layout calculated")
         
         return self.node_positions
     
@@ -239,7 +239,7 @@ class KnowledgeGraphGenerator:
             )
         )
         
-        print("✅ Plotly figure created")
+        print("Plotly figure created")
         
         return fig
     
@@ -437,7 +437,7 @@ class KnowledgeGraphGenerator:
         with open(filepath, 'w', encoding='utf-8') as f:
             json.dump(graph_data, f, indent=2)
         
-        print(f"✅ Graph data exported to {filepath}")
+        print(f"Graph data exported to {filepath}")
 
 
 # Test
@@ -454,9 +454,9 @@ if __name__ == "__main__":
     try:
         with open('outputs/synchronization_report.json', 'r', encoding='utf-8') as f:
             report = json.load(f)
-        print(f"✅ Loaded report")
+        print(f"Loaded report")
     except Exception as e:
-        print(f"❌ Error loading report: {e}")
+        print(f"ERROR loading report: {e}")
         print("\nPlease run: python src/synchronization_engine.py")
         exit(1)
     
@@ -491,13 +491,13 @@ if __name__ == "__main__":
         os.makedirs(output_dir, exist_ok=True)
         
         fig.write_html(f'{output_dir}/knowledge_graph_threshold_{int(threshold*100)}.html')
-        print(f"\n✅ Saved visualization to {output_dir}/knowledge_graph_threshold_{int(threshold*100)}.html")
+        print(f"\nSaved visualization to {output_dir}/knowledge_graph_threshold_{int(threshold*100)}.html")
         
         # Export graph data
         kg.export_graph(f'{output_dir}/graph_data_threshold_{int(threshold*100)}.json')
     
     print("\n" + "="*80)
-    print("✅ KNOWLEDGE GRAPH GENERATION COMPLETE!")
+    print("KNOWLEDGE GRAPH GENERATION COMPLETE!")
     print("="*80)
     print("\nCheck outputs/knowledge_graphs/ for:")
     print("  - Interactive HTML visualizations")

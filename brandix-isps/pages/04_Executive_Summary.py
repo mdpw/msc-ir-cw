@@ -7,7 +7,7 @@ import streamlit as st
 import json
 from pathlib import Path
 
-st.set_page_config(page_title="Executive Summary", page_icon="🎯", layout="wide")
+st.set_page_config(page_title="Executive Summary", page_icon=None, layout="wide")
 
 # Dark Theme Compatible CSS + Font Awesome Icons
 st.markdown("""

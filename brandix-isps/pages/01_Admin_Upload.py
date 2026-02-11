@@ -9,7 +9,7 @@ import json
 from pathlib import Path
 from datetime import datetime
 
-st.set_page_config(page_title="Admin Upload", page_icon="🎯", layout="wide")
+st.set_page_config(page_title="Admin Upload", page_icon="None", layout="wide")
 
 # Dark Theme Compatible CSS + Font Awesome Icons
 st.markdown("""

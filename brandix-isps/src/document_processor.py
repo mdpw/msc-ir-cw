@@ -274,7 +274,7 @@ if __name__ == "__main__":
     objectives = processor.load_strategic_plan('data/BRANDIX_STRATEGIC_PLAN_2025.docx')
     
     print("\nLoading Action Plan...")
-    actions = processor.load_action_plan('data/BRANDIX_ACTION_PLAN.docx')
+    actions = processor.load_action_plan('data/BRANDIX_ACTION_PLAN_YEAR_1.docx')
     
     print("\n" + "="*80)
     summary = processor.get_summary()
@@ -291,7 +291,7 @@ if __name__ == "__main__":
     
     # Save detailed results
     processor.save_parsed_data('outputs/parsed_data.txt')
-    print("\n✓ Processing complete! Check outputs/parsed_data.txt for details")
+    print("\nProcessing complete! Check outputs/parsed_data.txt for details")
     
     # Show samples
     if objectives:

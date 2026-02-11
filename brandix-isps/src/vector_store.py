@@ -65,7 +65,7 @@ if __name__ == "__main__":
     # Load documents
     processor = DocumentProcessor()
     objectives = processor.load_strategic_plan('data/BRANDIX_STRATEGIC_PLAN_2025.docx')
-    actions = processor.load_action_plan('data/BRANDIX_ACTION_PLAN.docx')
+    actions = processor.load_action_plan('data/BRANDIX_ACTION_PLAN_YEAR_1.docx')
     
     # Create embeddings
     engine = EmbeddingEngine()

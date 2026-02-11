@@ -27,7 +27,7 @@ class RAGPipeline:
         """
         Create overlapping chunks from strategic and action plans
         """
-        print("\n📄 Creating document chunks for RAG...")
+        print("\nCreating document chunks for RAG...")
         
         chunks = []
         
@@ -60,7 +60,7 @@ Context: This is a Year 1 action item from Brandix's 2025-2026 action plan."""
             })
         
         self.chunks = chunks
-        print(f"✓ Created {len(chunks)} document chunks")
+        print(f"Created {len(chunks)} document chunks")
         
         # Create embeddings for chunks
         chunk_texts = [c['text'] for c in chunks]
@@ -69,7 +69,7 @@ Context: This is a Year 1 action item from Brandix's 2025-2026 action plan."""
             convert_to_numpy=True,
             show_progress_bar=False
         )
-        print(f"✓ Generated embeddings for all chunks")
+        print(f"Generated embeddings for all chunks")
         
         return chunks
     
@@ -120,7 +120,7 @@ Context: This is a Year 1 action item from Brandix's 2025-2026 action plan."""
         Returns:
             Enhanced suggestions with retrieved context
         """
-        print(f"\n🔍 Using RAG for: {gap_objective['objective'][:60]}...")
+        print(f"\nUsing RAG for: {gap_objective['objective'][:60]}...")
         
         # Retrieve relevant context
         query = f"{gap_objective['pillar']} {gap_objective['objective']}"
@@ -242,7 +242,7 @@ Be specific, realistic, and ensure suggestions align with Brandix's sustainabili
         Returns:
             List of improvement suggestions for each objective
         """
-        print(f"\n🤖 Generating RAG-enhanced improvements for {len(gap_objectives)} objectives...")
+        print(f"\nGenerating RAG-enhanced improvements for {len(gap_objectives)} objectives...")
         
         all_improvements = []
         
@@ -255,12 +255,12 @@ Be specific, realistic, and ensure suggestions align with Brandix's sustainabili
             try:
                 improvement = self.generate_rag_enhanced_suggestions(gap, top_actions)
                 all_improvements.append(improvement)
-                print(f"  ✓ Generated {sum(len(v) for v in improvement['suggestions'].values())} suggestions")
+                print(f"  Generated {sum(len(v) for v in improvement['suggestions'].values())} suggestions")
             except Exception as e:
-                print(f"  ❌ Error: {e}")
+                print(f"  ERROR: {e}")
                 continue
         
-        print(f"\n✓ Completed! Generated improvements for {len(all_improvements)}/{len(gap_objectives)} objectives")
+        print(f"\nCompleted! Generated improvements for {len(all_improvements)}/{len(gap_objectives)} objectives")
         return all_improvements
 
 
@@ -308,7 +308,7 @@ class ImprovementGenerator:
         gap_objectives = self.sync_engine.identify_gap_objectives(threshold=threshold)
         
         if not gap_objectives:
-            print("\n✓ No gap objectives found! All objectives are well-aligned.")
+            print("\nNo gap objectives found! All objectives are well-aligned.")
             return {
                 'improvements': [],
                 'summary': {
@@ -372,7 +372,7 @@ class ImprovementGenerator:
         with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(results, f, indent=2)
         
-        print(f"\n✓ Improvements saved to {output_file}")
+        print(f"\nImprovements saved to {output_file}")
         
         return results
 
@@ -384,7 +384,7 @@ if __name__ == "__main__":
     
     from document_processor import DocumentProcessor
     from embedding_engine import EmbeddingEngine
-    from vector_store import FAISSVectorStore
+    from vector_store import VectorStore
     from synchronization_engine import SynchronizationEngine
     from llm_engine import LLMEngine
     
@@ -396,7 +396,7 @@ if __name__ == "__main__":
     print("\n1. Loading documents...")
     processor = DocumentProcessor()
     objectives = processor.load_strategic_plan('data/BRANDIX_STRATEGIC_PLAN_2025.docx')
-    actions = processor.load_action_plan('data/BRANDIX_ACTION_PLAN.docx')
+    actions = processor.load_action_plan('data/BRANDIX_ACTION_PLAN_YEAR_1.docx')
     
     print("\n2. Creating embeddings...")
     engine = EmbeddingEngine()
@@ -405,7 +405,7 @@ if __name__ == "__main__":
     engine.calculate_similarity_matrix()
     
     print("\n3. Creating vector store...")
-    vs = FAISSVectorStore()
+    vs = VectorStore(dimension=384)
     vs.add_vectors(engine.action_embeddings, [{'id': a['id']} for a in actions])
     
     print("\n4. Initializing synchronization engine...")
@@ -414,7 +414,7 @@ if __name__ == "__main__":
     print("\n5. Initializing LLM...")
     llm = LLMEngine(model_name="phi3:mini")
     if not llm.test_connection():
-        print("❌ Ollama not running!")
+        print("Ollama not running!")
         exit(1)
     
     print("\n6. Creating improvement generator...")
@@ -456,5 +456,5 @@ if __name__ == "__main__":
     # Save results
     improvement_gen.save_improvements('outputs/improvements.json')
     
-    print("\n✓ RAG Pipeline Complete!")
+    print("\nRAG Pipeline Complete!")
     print("\nNext: Integrate into dashboard (app.py)")

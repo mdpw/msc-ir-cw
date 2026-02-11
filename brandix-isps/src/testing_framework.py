@@ -58,7 +58,7 @@ class TestingFramework:
             pairs = data.get('objective_action_pairs', [])
             
             if not pairs:
-                print(f"⚠️ Ground truth file exists but has no pairs: {filepath}")
+                print(f"WARNING: Ground truth file exists but has no pairs: {filepath}")
                 return None
             
             # Check if at least some pairs are annotated (not "TO_BE_ANNOTATED")
@@ -68,7 +68,7 @@ class TestingFramework:
             )
             
             if annotated_count == 0:
-                print(f"⚠️ Ground truth file exists but contains no annotated pairs")
+                print(f"WARNING: Ground truth file exists but contains no annotated pairs")
                 print(f"   File: {filepath}")
                 print(f"   Total pairs: {len(pairs)}, Annotated: {annotated_count}")
                 print(f"   Please annotate at least 5-10 pairs before running tests")
@@ -76,11 +76,11 @@ class TestingFramework:
             
             # Valid annotated ground truth
             self.ground_truth = data
-            print(f"✅ Loaded ground truth: {len(pairs)} pairs, {annotated_count} annotated")
+            print(f"Loaded ground truth: {len(pairs)} pairs, {annotated_count} annotated")
             return self.ground_truth
         
         except FileNotFoundError:
-            print(f"⚠️ Ground truth file not found: {filepath}")
+            print(f"WARNING: Ground truth file not found: {filepath}")
             print("Creating template ground truth file...")
             self._create_ground_truth_template(filepath)
             return None
@@ -648,7 +648,7 @@ class TestingFramework:
             test_results['alignment_classification'] = classification_results
             test_results['tests_run'].append('alignment_classification')
         else:
-            print("\n⚠️ Skipping classification test - no ground truth available")
+            print("\nWARNING: Skipping classification test - no ground truth available")
             test_results['alignment_classification'] = {
                 'status': 'skipped',
                 'reason': 'Ground truth not available'
@@ -661,7 +661,7 @@ class TestingFramework:
             test_results['similarity_scores'] = score_results
             test_results['tests_run'].append('similarity_scores')
         else:
-            print("\n⚠️ Skipping score test - no ground truth available")
+            print("\nWARNING: Skipping score test - no ground truth available")
             test_results['similarity_scores'] = {
                 'status': 'skipped',
                 'reason': 'Ground truth not available'
@@ -677,7 +677,7 @@ class TestingFramework:
             test_results['llm_improvements'] = improvement_results
             test_results['tests_run'].append('llm_improvements')
         else:
-            print("\n⚠️ Skipping LLM improvement test - no improvement data available")
+            print("\nWARNING: Skipping LLM improvement test - no improvement data available")
             test_results['llm_improvements'] = {
                 'status': 'skipped',
                 'reason': 'No improvement data provided'
@@ -816,7 +816,7 @@ class TestingFramework:
         with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(test_results, f, indent=2)
         
-        print(f"✅ Test results saved to: {output_file}")
+        print(f"Test results saved to: {output_file}")
         
         # Also save a markdown summary
         md_file = output_file.replace('.json', '_summary.md')
@@ -873,7 +873,7 @@ class TestingFramework:
             f.write("---\n\n")
             f.write("*End of Report*\n")
         
-        print(f"📄 Markdown summary saved to: {output_file}")
+        print(f"Markdown summary saved to: {output_file}")
 
 
 # ============================================================

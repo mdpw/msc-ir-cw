@@ -437,7 +437,7 @@ class SynchronizationEngine:
         with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(report, f, indent=2)
         
-        print(f"✓ Report saved to {output_file}")
+        print(f"Report saved to {output_file}")
         return report
 
 
@@ -459,7 +459,7 @@ if __name__ == "__main__":
     print("\nStep 1: Loading documents...")
     processor = DocumentProcessor()
     objectives = processor.load_strategic_plan('data/BRANDIX_STRATEGIC_PLAN_2025.docx')
-    actions = processor.load_action_plan('data/BRANDIX_ACTION_PLAN.docx')
+    actions = processor.load_action_plan('data/BRANDIX_ACTION_PLAN_YEAR_1.docx')
     
     # 2. Create engines
     print("\nStep 2: Creating engines...")
@@ -496,8 +496,8 @@ if __name__ == "__main__":
     os.makedirs('outputs', exist_ok=True)
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(results, f, indent=2)
-    print(f"✓ Report saved to {output_file}")
+    print(f"Report saved to {output_file}")
     
     print("\n" + "="*80)
-    print("✓ TEST COMPLETE!")
+    print("TEST COMPLETE!")
     print("="*80)

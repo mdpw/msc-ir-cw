@@ -152,7 +152,7 @@ class EmbeddingEngine:
         with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(results, f, indent=2)
         
-        print(f"\n✓ Analysis saved to {output_file}")
+        print(f"\nAnalysis saved to {output_file}")
         return results
 
 # Test
@@ -168,10 +168,10 @@ if __name__ == "__main__":
     print("\nStep 1: Loading documents...")
     processor = DocumentProcessor()
     objectives = processor.load_strategic_plan('data/BRANDIX_STRATEGIC_PLAN_2025.docx')
-    actions = processor.load_action_plan('data/BRANDIX_ACTION_PLAN.docx')
+    actions = processor.load_action_plan('data/BRANDIX_ACTION_PLAN_YEAR_1.docx')
     
     if not objectives or not actions:
-        print("\n❌ ERROR: No objectives or actions loaded!")
+        print("\nERROR: No objectives or actions loaded!")
         print("Make sure your data files are in the correct location.")
         sys.exit(1)
     
@@ -215,7 +215,6 @@ if __name__ == "__main__":
         print(f"   Similarity: {match['similarity']:.2%}")
         print(f"   Title: {actions[match['action_idx']]['title'][:60]}...")
     
-    print("\n✓ Day 2 Complete!")
     print("\nNext Steps:")
     print("  - Check outputs/embedding_analysis.json for detailed results")
     print("  - Proceed to Day 3: Local LLM Integration")

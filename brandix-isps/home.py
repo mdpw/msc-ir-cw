@@ -19,7 +19,7 @@ def get_base64_image(image_path):
 # Page config
 st.set_page_config(
     page_title="Brandix ISPS",
-    page_icon="🎯",  # Keep for browser tab
+    page_icon="Brandix_Logo_Small.png",  # Use image instead of emoji
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -328,9 +328,9 @@ with col2:
     st.metric("Years Analyzed", len(analyzed_years))
     
     if uploaded_years:
-        st.success("✅ Ready")
+        st.success("Ready")
     else:
-        st.warning("⏳ Upload Documents")
+        st.warning("Upload Documents")
     
     st.markdown("---")
     

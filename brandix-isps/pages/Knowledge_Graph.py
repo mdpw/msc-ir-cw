@@ -18,7 +18,7 @@ from knowledge_graph import KnowledgeGraphGenerator
 # Page configuration
 st.set_page_config(
     page_title="Knowledge Graph",
-    page_icon="🎯",
+    page_icon=None,
     layout="wide"
 )
 
@@ -340,7 +340,7 @@ with st.spinner("🔄 Generating knowledge graph..."):
             )
         
         # Detailed statistics
-        with st.expander("📈 Detailed Network Metrics"):
+        with st.expander("Detailed Network Metrics"):
             col1, col2, col3 = st.columns(3)
             
             with col1:

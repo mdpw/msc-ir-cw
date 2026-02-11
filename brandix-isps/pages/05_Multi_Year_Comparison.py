@@ -10,7 +10,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 from pathlib import Path
 
-st.set_page_config(page_title="Multi-Year Comparison", page_icon="🎯", layout="wide")
+st.set_page_config(page_title="Multi-Year Comparison", page_icon=None, layout="wide")
 
 # Dark Theme Compatible CSS + Font Awesome Icons
 st.markdown("""

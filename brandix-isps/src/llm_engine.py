@@ -19,15 +19,15 @@ class LLMEngine:
         try:
             response = requests.get(f"{self.base_url}/api/tags")
             if response.status_code == 200:
-                print("✓ Ollama connection successful")
+                print("Ollama connection successful")
                 models = response.json().get('models', [])
                 print(f"  Available models: {[m['name'] for m in models]}")
                 return True
             else:
-                print("❌ Ollama not responding correctly")
+                print("Ollama not responding correctly")
                 return False
         except Exception as e:
-            print(f"❌ Cannot connect to Ollama: {e}")
+            print(f"Cannot connect to Ollama: {e}")
             print("  Make sure Ollama is running: ollama serve")
             return False
     
@@ -119,7 +119,7 @@ Format your response as:
 
 Be specific, actionable, and realistic for an apparel manufacturing company."""
 
-        print(f"\n🤖 Generating suggestions for: {obj_text[:60]}...")
+        print(f"\nGenerating suggestions for: {obj_text[:60]}...")
         
         # Generate response
         response = self.generate(prompt, max_tokens=800)
@@ -200,7 +200,7 @@ Write a 3-paragraph executive summary (max 200 words) covering:
 
 Be professional, data-driven, and actionable."""
 
-        print("\n📊 Generating executive summary...")
+        print("\nGenerating executive summary...")
         return self.generate(prompt, max_tokens=400)
 
 
@@ -214,7 +214,7 @@ if __name__ == "__main__":
     
     # Test connection
     if not llm.test_connection():
-        print("\n⚠️ Please start Ollama:")
+        print("\nWARNING: Please start Ollama:")
         print("  1. Open terminal")
         print("  2. Run: ollama serve")
         print("  3. In another terminal: ollama pull llama3.1")
@@ -246,9 +246,9 @@ if __name__ == "__main__":
     
     suggestions = llm.generate_improvement_suggestions(test_gap, test_actions)
     
-    print(f"\n✓ Generated suggestions for: {test_gap['objective']}")
+    print(f"\nGenerated suggestions for: {test_gap['objective']}")
     print(f"\nNEW ACTIONS ({len(suggestions['suggestions']['new_actions'])}):")
     for action in suggestions['suggestions']['new_actions'][:3]:
         print(f"  - {action}")
     
-    print("\n✓ Day 5-6 Complete! LLM Engine working!")
+    print("\nLLM Engine working!")

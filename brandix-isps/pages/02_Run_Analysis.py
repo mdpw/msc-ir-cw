@@ -21,7 +21,7 @@ from synchronization_engine import SynchronizationEngine
 from llm_engine import LLMEngine
 from executive_summary import ExecutiveSummaryGenerator
 
-st.set_page_config(page_title="Run Analysis", page_icon="🎯", layout="wide")
+st.set_page_config(page_title="Run Analysis", page_icon="None", layout="wide")
 
 # Dark Theme Compatible CSS + Font Awesome Icons
 st.markdown("""

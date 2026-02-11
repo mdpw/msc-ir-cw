@@ -17,7 +17,7 @@ sys.path.append(str(Path(__file__).parent.parent / 'src'))
 
 from testing_framework import TestingFramework
 
-st.set_page_config(page_title="Testing & Evaluation", page_icon="🎯", layout="wide")
+st.set_page_config(page_title="Testing & Evaluation", page_icon=None, layout="wide")
 
 # Dark Theme Compatible CSS + Font Awesome Icons
 st.markdown("""
@@ -443,7 +443,7 @@ with tab2:
             result = test_results['alignment_classification']
             
             if result.get('status') != 'skipped' and 'overall_accuracy' in result:
-                with st.expander("📊 Test 1: Alignment Classification Accuracy", expanded=True):
+                with st.expander("Test 1: Alignment Classification Accuracy", expanded=True):
                     
                     col1, col2, col3 = st.columns(3)
                     
@@ -509,7 +509,7 @@ with tab2:
             result = test_results['similarity_scores']
             
             if result.get('status') != 'skipped' and 'mean_absolute_error' in result:
-                with st.expander("📈 Test 2: Similarity Score Accuracy", expanded=True):
+                with st.expander("Test 2: Similarity Score Accuracy", expanded=True):
                     
                     col1, col2, col3, col4 = st.columns(4)
                     
@@ -538,7 +538,7 @@ with tab2:
             result = test_results['llm_improvements']
             
             if result.get('status') != 'skipped' and 'objectives_processed' in result:
-                with st.expander("🤖 Test 3: LLM Improvement Quality", expanded=True):
+                with st.expander("Test 3: LLM Improvement Quality", expanded=True):
                     
                     col1, col2, col3 = st.columns(3)
                     

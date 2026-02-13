@@ -337,10 +337,10 @@ with tab1:
                     st.exception(e)
 
 # ============================================================
-# TAB 2: Test Results
+# TAB 3: Test Results
 # ============================================================
 
-with tab2:
+with tab3:
     st.markdown('<h3><i class="fas fa-chart-pie fa-icon"></i>Test Results & Metrics</h3>', unsafe_allow_html=True)
     
     if not test_exists:

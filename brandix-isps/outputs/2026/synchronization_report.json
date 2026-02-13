@@ -5,9 +5,9 @@
     "classification": "Needs Improvement",
     "coverage_rate": 44.134078212290504,
     "distribution": {
-      "strong": 58,
-      "moderate": 71,
-      "weak": 50
+      "strong": 108,
+      "moderate": 62,
+      "weak": 9
     },
     "total_objectives": 179,
     "total_actions": 18
@@ -19373,11 +19373,11 @@
   "summary": {
     "total_objectives": 179,
     "total_actions": 18,
-    "well_covered_objectives": 129,
+    "well_covered_objectives": 170,
     "gap_objectives_count": 100,
     "orphan_actions_count": 2,
     "weak_pillars_count": 3
   },
   "year": "2026",
-  "analysis_date": "2026-02-13 14:20:33"
+  "analysis_date": "2026-02-13 15:21:11"
 }

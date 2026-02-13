@@ -1,6 +1,6 @@
 {
   "test_suite_version": "1.0",
-  "timestamp": "2026-02-13T15:13:52.392610",
+  "timestamp": "2026-02-13T16:08:44.571896",
   "tests_run": [
     "alignment_classification",
     "similarity_scores",
@@ -81,31 +81,31 @@
   "llm_improvements": {
     "test_name": "LLM Improvement Quality",
     "objectives_processed": 10,
-    "average_suggestions_per_objective": 6.2,
+    "average_suggestions_per_objective": 5.9,
     "category_coverage_rate": {
-      "new_actions": 0.9,
-      "kpi_enhancements": 0.9,
-      "timeline_recommendations": 0.5,
-      "resource_requirements": 0.3,
-      "risk_mitigation": 0.4
+      "new_actions": 1.0,
+      "kpi_enhancements": 0.6,
+      "timeline_recommendations": 0.4,
+      "resource_requirements": 0.5,
+      "risk_mitigation": 0.6
     },
-    "average_specificity_score": 0.5951612903225805,
+    "average_specificity_score": 0.5796610169491525,
     "quality_assessment": "Medium"
   },
   "performance": {
     "test_name": "System Performance Benchmark",
-    "timestamp": "2026-02-13T15:13:52.628069",
+    "timestamp": "2026-02-13T16:08:44.791044",
     "benchmarks": {
       "document_processing_time": 0.0,
-      "embedding_time_per_10_items": 0.1743638515472412,
-      "embedding_throughput": 57.35133693861226,
-      "similarity_matrix_calculation_time": 0.013354778289794922,
-      "estimated_total_analysis_time": 3.134467720985412,
+      "embedding_time_per_10_items": 0.158768892288208,
+      "embedding_throughput": 62.98463040132147,
+      "similarity_matrix_calculation_time": 0.0,
+      "estimated_total_analysis_time": 2.841963171958923,
       "scalability": {
         "objectives_count": 179,
         "actions_count": 18,
         "comparisons_required": 3222,
-        "time_per_comparison_ms": 0.9728329363703948
+        "time_per_comparison_ms": 0.8820494016011554
       }
     }
   },

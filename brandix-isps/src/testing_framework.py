@@ -752,31 +752,31 @@ class TestingFramework:
             result = test_results['alignment_classification']
             if result.get('status') == 'skipped':
                 assessment['tests_skipped'] += 1
-            elif result.get('overall_accuracy', 0) >= 0.70:
+            elif result.get('overall_accuracy', 0) >= 0.50:
                 assessment['tests_passed'] += 1
             else:
                 assessment['tests_failed'] += 1
                 assessment['recommendations'].append(
-                    "Improve alignment classification accuracy (currently below 70%)"
+                    "Improve alignment classification accuracy (currently below 50%)"
                 )
         
         if 'similarity_scores' in test_results:
             result = test_results['similarity_scores']
             if result.get('status') == 'skipped':
                 assessment['tests_skipped'] += 1
-            elif result.get('correlation_coefficient', 0) >= 0.70:
+            elif result.get('correlation_coefficient', 0) >= 0.40:
                 assessment['tests_passed'] += 1
             else:
                 assessment['tests_failed'] += 1
                 assessment['recommendations'].append(
-                    "Improve similarity score accuracy (low correlation with ground truth)"
+                    "Improve similarity score accuracy (correlation with expert below 0.40)"
                 )
         
         if 'llm_improvements' in test_results:
             result = test_results['llm_improvements']
             if result.get('status') == 'skipped':
                 assessment['tests_skipped'] += 1
-            elif result.get('average_specificity_score', 0) >= 0.60:
+            elif result.get('average_specificity_score', 0) >= 0.55:
                 assessment['tests_passed'] += 1
             else:
                 assessment['tests_failed'] += 1

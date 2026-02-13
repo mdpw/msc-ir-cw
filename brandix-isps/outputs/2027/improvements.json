@@ -4,20 +4,20 @@
       "objective_id": "OBJ-085",
       "objective": "Blockchain traceability (95% visibility by 2029)",
       "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
-      "current_score": 49.717044830322266,
+      "current_score": 21.584714949131012,
       "suggestions": {
         "new_actions": [
-          "Implement a comprehensive Blockchain Traceability Solution: Develop partnerships to implement blockchain technology specifically designed for the fashion industry which will enhance traceability from raw materials to finished products within Brandix's supply chain network by Q4 of Year 2, aiming at achieving a pilot run with full functionality.",
-          "Blockchain Certification Program: Establish an internal certification process where suppliers are required to use and demonstrate blockchain capabilities as part of their auditing procedures for compliance within the first year after implementation commencement in Q1, ensuring that Brandix's supply chain adheres to responsible sourcing practices.",
-          "Employee Blockchain Awareness Campaign: Launch an internal education campaign starting from Year 2 with continuous updates and workshops on blockchain technology by the end of each quarter for all employees, focusing particularly on those in procurement, supply chain management, quality assurance teams to ensure they are well-versed in operationalizing Blockchain traceability."
+          "Launch a dedicated Blockchain Project Team: Establishment of an internal blockchain team tasked specifically to integrate traceability into the supply chain from sourcing raw materials through manufacturing and delivery processes by Q4, Year 1. This will ensure focused expertise on achieving our visibility goal using cutting-edge technology in line with Brandix's innovation ambitions (Similarity: Similar actions are often undertaken when aligning strategic objectives towards blockchain).",
+          "Form Strategic Blockchain Partnerships: Identify and form partnerships with industry leaders specializing in supply chain transparency using distributed ledger technology, aimed at piloting a small-scale implementation of the traceability solution by Q3, Year 1 (Similarity: Aligns closely as it involves direct actions towards achieving our blockchain visibility objective)."
         ],
-        "kpi_enhancements": [],
+        "kpi_enhancements": [
+          "STRATEGIC PLANNING EXPERT FOR BRANDIX - SOLUTION CREATETEXT"
+        ],
         "timeline_recommendations": [],
-        "resource_requirements": [],
-        "integration_opportunities": [
-          "Visibility Transparency Score: Develop a scoring system wherein suppliers' ability to demonstrate 95% traceability is assessed quarterly, using blockchain audits that provide real-time data on material sourcing and movement within the Brandix network; by end of Year 3, aim for at least an average score above 80% across all major supply tiers.",
-          "Employee Competency Level: By Q4 of Year 2, ensure a minimum competency level is met wherein 95% of relevant employees have completed the Blockchain Awareness Campaign and can demonstrate proficiency in blockchain-related processes; this will be measured through practical assessments as part of their regular job performance reviews."
-        ]
+        "resource_requirements": [
+          "Form a team comprising blockchain experts, supply chain managers, IT specialists, and project management staff to ensure diverse expertise is available for effective implementation planning. This may require hiring or training existing employees (Similarity: Similar actions often include forming dedicated teams with the right mix of skills)."
+        ],
+        "integration_opportunities": []
       },
       "retrieved_context": [
         {
@@ -56,18 +56,561 @@
           "similarity": 0.3415800929069519
         }
       ],
-      "raw_response": "**NEW ACTIONS** (3 items):\n1. Implement a comprehensive Blockchain Traceability Solution: Develop partnerships to implement blockchain technology specifically designed for the fashion industry which will enhance traceability from raw materials to finished products within Brandix's supply chain network by Q4 of Year 2, aiming at achieving a pilot run with full functionality.\n   \n2. Blockchain Certification Program: Establish an internal certification process where suppliers are required to use and demonstrate blockchain capabilities as part of their auditing procedures for compliance within the first year after implementation commencement in Q1, ensuring that Brandix's supply chain adheres to responsible sourcing practices.\n   \n3. Employee Blockchain Awareness Campaign: Launch an internal education campaign starting from Year 2 with continuous updates and workshops on blockchain technology by the end of each quarter for all employees, focusing particularly on those in procurement, supply chain management, quality assurance teams to ensure they are well-versed in operationalizing Blockchain traceability.\n   \n**KPI ENHANCEMENTS** (3 items):\n1. Supplier Integration Rate: Increase from current zero% by 20% at the end of Year 1, with full integration expected to reach a target rate where all suppliers in Brandix's top five tiers have blockchain traceability measures implemented within their processes. This will be achieved through both direct partnership efforts and cooperative initiatives such as shared pilot programs or learning consortiums for supply chain visibility solutions.\n   \n2. Visibility Transparency Score: Develop a scoring system wherein suppliers' ability to demonstrate 95% traceability is assessed quarterly, using blockchain audits that provide real-time data on material sourcing and movement within the Brandix network; by end of Year 3, aim for at least an average score above 80% across all major supply tiers.\n   \n3. Employee Competency Level: By Q4 of Year 2, ensure a minimum competency level is met wherein 95% of relevant employees have completed the Blockchain Awareness Campaign and can demonstrate proficiency in blockchain-related processes; this will be measured through practical assessments as part of their regular job performance reviews.\n   \n**TIMELINE RECOMMENDATIONS**:\n1. Year 1 Quarterly Milestones (Q1, Q2, Q3, and Q4): Launch the Blockchain Traceability Solution development; begin employee education campaigns; initiate supplier integration pilot programs with first set of partnerships established for blockchain auditing capabilities by mid-year endpoints.\n   \n2. Year 2 Quarterly Milestones (Q1, Q2, and H2): Reach a targeted Supplier Integration Rate increment; continue education campaigns assessing initial results and adjust as needed to ensure understanding is being retained and applied in their roles effectively by the end of each quarter's third month.\n   \n3. Year 0-4 Quarterly Milestons: Implement supplier certification program milestones, with an aim for all major audits within Brandix\u2019s supply chain to incorporate blockchain traceability measures and a Visibility Transparency Score by the end of Q4 in year four.\n   \n**RESOURCE REQUIREMENTS**: \n- Budget Allocation: Set aside an initial investment fund that increases progressively from $2 million at commencement, reaching up to $10 million over five years with scaling blockchain solution development and full supplier integration.\n   \n-",
+      "raw_response": "**NEW ACTIONS** (2-3):\n1. Launch a dedicated Blockchain Project Team: Establishment of an internal blockchain team tasked specifically to integrate traceability into the supply chain from sourcing raw materials through manufacturing and delivery processes by Q4, Year 1. This will ensure focused expertise on achieving our visibility goal using cutting-edge technology in line with Brandix's innovation ambitions (Similarity: Similar actions are often undertaken when aligning strategic objectives towards blockchain).\n   \n2. Form Strategic Blockchain Partnerships: Identify and form partnerships with industry leaders specializing in supply chain transparency using distributed ledger technology, aimed at piloting a small-scale implementation of the traceability solution by Q3, Year 1 (Similarity: Aligns closely as it involves direct actions towards achieving our blockchain visibility objective).\n   \n**KPI Enhancements** (2):\na. Blockchain Implementation Progress KPI - Set a measurable target of integrating the first traceable supply chain batch by Q4, Year 1 and increasing to full integration across all products within two years post-launch as an initial stretch goal that will provide continuous improvement benchmarks while aligning with digital transformation (Similarity: Similar actions often include setting up KPI progression targets for technology rollouts).\n   \nb. User Adoption Rate - Monitor the rate at which our supply chain members and customers adopt blockchain-based processes, aiming for 25% within Year 1 to establish a strong foundation of trust in traceability (Similarity: Similar actions often involve monitoring user adoption rates as an indicator of success).\n   \n**Timeline Recommendations**:\nQ4, Year 1 - Integrate the first blockchain-enabled supply chain batch.\nQ2 and Q3, Year 2 - Incrementally expand integration to cover a larger percentage of our products quarterly until full implementation in H2 by Year 3.\n   \n**Resource Requirements**:\n- Budget Allocation for Blockchain Implementation Team setup and technology development is set at $5 million annually, with initial capital reserved from the strategic innovation fund (Similarity: Similar actions often include budget allocations that match objectives in scope).\n   \n- Form a team comprising blockchain experts, supply chain managers, IT specialists, and project management staff to ensure diverse expertise is available for effective implementation planning. This may require hiring or training existing employees (Similarity: Similar actions often include forming dedicated teams with the right mix of skills).\n   \n**Integration Opportunities**:\n- Integrate digital skill development programs into blockchain project team activities, ensuring that personnel not only gain knowledge in traceability but also enhance their overall digital competencies. This aligns IT and HR objectives for workforce upskilling with our technical innovation goals (Similarity: Similar actions often involve integrating KPI-enhancement initiatives to promote continuous learning within a strategic objective).\n   \n**STRATEGIC PLANNING EXPERT FOR BRANDIX - SOLUTION CREATETEXT",
+      "method": "RAG-enhanced"
+    },
+    {
+      "objective_id": "OBJ-148",
+      "objective": "Customer complaints: 0",
+      "pillar": "OPERATIONAL EXCELLENCE",
+      "current_score": 24.29899126291275,
+      "suggestions": {
+        "new_actions": [
+          "Implement a 'Zero Defect Culture Program': Launch an initiative to foster continuous improvement in quality control by integrating employee-driven feedback mechanisms into production processes, aiming at reducing defect rates below the industry standard of 0.5% for all products within six months through rigorous Six Sigma training and tools implementation.",
+          "Customer Feedback Loop Optimization: Develop a real-time customer experience monitoring system that promptly collects and analyzes feedback during each stage of purchase, delivery, and post-purchase support to identify areas requiring immediate attention; this would be implemented within the first three months along with staff training on rapid response protocol.",
+          "Employee Quality Engagement: Introduce quarterly 'Quality Champions' programs where randomly selected employees are trained in quality assurance techniques that they can then teach their peers, creating a pervasive culture of excellence and ownership over the zero defects objective; roll out within two months with champions from each department."
+        ],
+        "kpi_enhancements": [
+          "Defect Rate Reduction Target (DRRT): Set an ambitious target to reduce product defect rates by 20% in Q2, aiming for a continuous decline until the rate is below industry standards within six months with bi-monthly review points using real-time quality data analytics tools.",
+          "Customer Satisfaction Score (CSS) Target: Increase CSS from an initial benchmark of 85% to >90% by end Q3 through targeted improvements in delivery times and customer support, leveraging a CRM system with sentiment analysis capabilities for immediate action on negative feedback points identified monthly."
+        ],
+        "timeline_recommendations": [
+          "End of Q2 Targets: Achieve a defect rate reduction target while beginning the refinement process based on feedback received from customer experience monitoring systems, ensuring continuous improvement in quality control methods with adjustments made quarterly to stay ahead of trends and issues identified by customers or within production itself."
+        ],
+        "resource_requirements": [],
+        "integration_opportunities": []
+      },
+      "retrieved_context": [
+        {
+          "text": "Strategic Objective: Customer complaints: 0\nPillar: OPERATIONAL EXCELLENCE\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-148",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.6260347962379456
+        },
+        {
+          "text": "Strategic Objective: Zero complaints and Six Sigma quality\nPillar: OPERATIONAL EXCELLENCE\nType: goal\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-144",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.5557217597961426
+        },
+        {
+          "text": "Strategic Objective: Zero defect culture\nPillar: OPERATIONAL EXCELLENCE\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-147",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.5258050560951233
+        },
+        {
+          "text": "Strategic Objective: Customer satisfaction: >90%\nPillar: OPERATIONAL EXCELLENCE\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-151",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.47430819272994995
+        },
+        {
+          "text": "Strategic Objective: World-class quality, efficiency, and customer satisfaction\nPillar: OPERATIONAL EXCELLENCE\nType: vision\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-142",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.46797534823417664
+        }
+      ],
+      "raw_response": "New Actions:\n1. Implement a 'Zero Defect Culture Program': Launch an initiative to foster continuous improvement in quality control by integrating employee-driven feedback mechanisms into production processes, aiming at reducing defect rates below the industry standard of 0.5% for all products within six months through rigorous Six Sigma training and tools implementation.\n2. Customer Feedback Loop Optimization: Develop a real-time customer experience monitoring system that promptly collects and analyzes feedback during each stage of purchase, delivery, and post-purchase support to identify areas requiring immediate attention; this would be implemented within the first three months along with staff training on rapid response protocol.\n3. Employee Quality Engagement: Introduce quarterly 'Quality Champions' programs where randomly selected employees are trained in quality assurance techniques that they can then teach their peers, creating a pervasive culture of excellence and ownership over the zero defects objective; roll out within two months with champions from each department.\n\nKPI Enhancements:\n1. Defect Rate Reduction Target (DRRT): Set an ambitious target to reduce product defect rates by 20% in Q2, aiming for a continuous decline until the rate is below industry standards within six months with bi-monthly review points using real-time quality data analytics tools.\n2. Customer Satisfaction Score (CSS) Target: Increase CSS from an initial benchmark of 85% to >90% by end Q3 through targeted improvements in delivery times and customer support, leveraging a CRM system with sentiment analysis capabilities for immediate action on negative feedback points identified monthly.\n3. Engagement Levels within Zero Defect Culture Program (EZDCLP): Measure the percentage of employees actively participating in quality programs quarterly to ensure at least 90% engagement, aligning this KPI with overall defect rate targets for direct correlation and feedback loop refinement as necessary.\n\nTimeframe Recommendations:\n- Q1 Milestones: Launch Zero Defect Culture Program and Customer Feedback Loop Optimization; begin employee selection for Quality Champions program. \n- End of Q2 Targets: Achieve a defect rate reduction target while beginning the refinement process based on feedback received from customer experience monitoring systems, ensuring continuous improvement in quality control methods with adjustments made quarterly to stay ahead of trends and issues identified by customers or within production itself.\n- End of Year 1 Milestones: Achieve CSS >90%, maintain a defect rate below industry standards across all product lines; sustain Zero Defect Culture Program engagement above the targeted threshold, with employee performance assessments conducted bi-annually to ensure continuous participation and success in improving quality.\n\nResource Requirements:\nBudget allocation should prioritize funding for advanced AI data analytics tools capable of real-time monitoring and reporting on customer feedback as well as the implementation costs associated with training programs like Six Sigma, CRM integration services, and development/maintenance of internal employee engagement platforms. The team will require a dedicated Quality Control Manager to oversee Zero Defect Culture Programs along with additional staff for real-time monitoring roles; infrastructure investment in data analytics software as well as upgraded communication systems may also be necessary to support the feedback loop and rapid information dissemination within teams.\n\nIntegration Opportunities:\nThe proposed actions can integrate into existing initiatives by leveraging ongoing sustainability efforts, such as using eco-friendly materials in products which already align with quality objectives; furthermore, employee training programs like Zero Defect Culture Programs and Six S",
+      "method": "RAG-enhanced"
+    },
+    {
+      "objective_id": "OBJ-013",
+      "objective": "Eliminate R-22 refrigerants by 2030",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "current_score": 25.156286358833313,
+      "suggestions": {
+        "new_actions": [
+          "Implement a full switch from HCFC (hydrochlorofluorocarbons) and R-22 refrigerants used in cooling systems to environmentally friendly alternatives such as hydrofluoroolefins (HFOs). This should be done by the end of Year 1, with progress reviews every six months.",
+          "Invest in technology research for developing a proprietary non-toxic refrigerant blend that can effectively replace R-22 without harming the ozone layer or contributing to global warming. This initiative should have preliminary results by Year 3 and full adoption across all manufacturing units within five years after successful testing, ensuring alignment with industry standards for safety and efficiency.",
+          "Establish a partnership program with cooling system suppliers that mandates the phase-out of R-22 in favor of certified greener alternatives by 2027 as part of Brandix's commitment to environmental leadership, fostering industry change beyond their immediate operations."
+        ],
+        "kpi_enhancements": [
+          "Achieve a progress report with at least an initial phase-out rate reaching 5% annually from HCFC and R-22 refrigerant usage within the first two years of implementing alternative solutions, aiming for complete substitution by Year 3 or earlier based on technological advancements.",
+          "Establish a zero tolerance policy against illegal handling and disposal of any remaining CFC (chlorofluorocarbons) materials within the company premises with mandatory training sessions conducted bi-annually, leading to full compliance by Year 3.",
+          "Timeframe Recommendations**:",
+          "Complete a comprehensive audit and start transitioning away from R-22 refrigerants in all cooling systems within the first quarter of Year 1. Progress should be reviewed every two months, with at least a 5% annual phase-out rate starting immediately after this initial switch to alternatives such as HFOs or non-toxic blends discovered through internal R&D efforts by Q3 Y1 and supplier collaboration initiated in Q4 of the first year."
+        ],
+        "timeline_recommendations": [],
+        "resource_requirements": [
+          "Establishment of a dedicated team consisting of chemical engineers and environmental specialists with expertise in green refrigerants, aiming to create at least two full teams by the end of Year 1 for focused work on alternative solutions development and safety protocol training respectively. The size should be determined based on initial assessments but planned not exceed a total headcount of ten per team.",
+          "Infrastructure investment in R&D facilities with specialized equipment to test new refrigerant blends under realistic operating conditions, expected installation completion by Q3 Year 1 and"
+        ],
+        "integration_opportunities": []
+      },
+      "retrieved_context": [
+        {
+          "text": "Strategic Objective: Eliminate R-22 refrigerants by 2030\nPillar: ENVIRONMENTAL LEADERSHIP\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-013",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.8096652626991272
+        },
+        {
+          "text": "Strategic Objective: 50% green + recycled water by 2030\nPillar: ENVIRONMENTAL LEADERSHIP\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-027",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.43102312088012695
+        },
+        {
+          "text": "Strategic Objective: Eliminate single-use plastics by 2026\nPillar: ENVIRONMENTAL LEADERSHIP\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-058",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.4301134943962097
+        },
+        {
+          "text": "Strategic Objective: Advanced recycling systems\nPillar: ENVIRONMENTAL LEADERSHIP\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-032",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.41929104924201965
+        },
+        {
+          "text": "Strategic Objective: 42% emission reduction by 2030\nPillar: ENVIRONMENTAL LEADERSHIP\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-017",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.40244168043136597
+        }
+      ],
+      "raw_response": "Based on the strategic objective of eliminating R-22 refrigerants by 2030 as part of Brandix's environmental leadership pillar, here are specific improvement suggestions to enhance alignment:\n\n**NEW ACTIONS**:\n1. Implement a full switch from HCFC (hydrochlorofluorocarbons) and R-22 refrigerants used in cooling systems to environmentally friendly alternatives such as hydrofluoroolefins (HFOs). This should be done by the end of Year 1, with progress reviews every six months.\n   \n2. Invest in technology research for developing a proprietary non-toxic refrigerant blend that can effectively replace R-22 without harming the ozone layer or contributing to global warming. This initiative should have preliminary results by Year 3 and full adoption across all manufacturing units within five years after successful testing, ensuring alignment with industry standards for safety and efficiency.\n   \n3. Establish a partnership program with cooling system suppliers that mandates the phase-out of R-22 in favor of certified greener alternatives by 2027 as part of Brandix's commitment to environmental leadership, fostering industry change beyond their immediate operations.\n   \n**KPI Enhancements**:\n1. Achieve a progress report with at least an initial phase-out rate reaching 5% annually from HCFC and R-22 refrigerant usage within the first two years of implementing alternative solutions, aiming for complete substitution by Year 3 or earlier based on technological advancements.\n   \n2. Establish a zero tolerance policy against illegal handling and disposal of any remaining CFC (chlorofluorocarbons) materials within the company premises with mandatory training sessions conducted bi-annually, leading to full compliance by Year 3.\n\n**Timeframe Recommendations**:\n1. Complete a comprehensive audit and start transitioning away from R-22 refrigerants in all cooling systems within the first quarter of Year 1. Progress should be reviewed every two months, with at least a 5% annual phase-out rate starting immediately after this initial switch to alternatives such as HFOs or non-toxic blends discovered through internal R&D efforts by Q3 Y1 and supplier collaboration initiated in Q4 of the first year.\n   \n2. Set quarterly milestones for technology research teams developing alternative refrigerants, aiming at having a working prototype to test within 18 months from project start date (Q1 Year 2). Progress reviews every three months should be scheduled with final product testing and approval benchmarks established by Q3 of the third year.\n\n**Resource Requirements**:\n- Budget allocation for R&D towards alternative refrigerant development, expected to reach $5 million annually from Year 2 onwards based on internal funding capabilities or potential grants supporting sustainable innovations in manufacturing processes.\n   \n- Establishment of a dedicated team consisting of chemical engineers and environmental specialists with expertise in green refrigerants, aiming to create at least two full teams by the end of Year 1 for focused work on alternative solutions development and safety protocol training respectively. The size should be determined based on initial assessments but planned not exceed a total headcount of ten per team.\n   \n- Infrastructure investment in R&D facilities with specialized equipment to test new refrigerant blends under realistic operating conditions, expected installation completion by Q3 Year 1 and",
+      "method": "RAG-enhanced"
+    },
+    {
+      "objective_id": "OBJ-145",
+      "objective": "Six Sigma methodology",
+      "pillar": "OPERATIONAL EXCELLENCE",
+      "current_score": 25.755885243415833,
+      "suggestions": {
+        "new_actions": [
+          "**Dedicated Six Sigma Training Program (Similarity Rating: ~47%)** - Launch an internal training program focused on DMAIC methodology for all mid-level managers and production team leaders, ensuring they understand the principles of Six Sigma to effectively cascade this knowledge down.",
+          "**Six Sigma Champions Program (Similarity Rating: ~48%)** - Establish a group of trained experts from different departments who will act as champions for Six Sigma initiatives, facilitating cross-functional collaboration and serving as mentors to others in the organization."
+        ],
+        "kpi_enhancements": [],
+        "timeline_recommendations": [],
+        "resource_requirements": [],
+        "integration_opportunities": [
+          "**Customer Complaints (Target: Zero complaints received consistently each quarter) - Implement real-time feedback loops via digital platforms to capture customer sentiments immediately following service encounters, aiming for zero unresolved or negative customer experiences by Q2 2025 and thereafter maintaining this standard.",
+          "**Process Cycle Time (Target: Reduce cycle time variability in key processes) - Quantify improvements monthly with statistical process control charts to ensure that any deviations are promptly addressed, aiming for less than a five-minute deviation from the mean processing times within six months of project initiation and maintain thereafter.",
+          "Timeframe Recommendations:**"
+        ]
+      },
+      "retrieved_context": [
+        {
+          "text": "Strategic Objective: Six Sigma methodology\nPillar: OPERATIONAL EXCELLENCE\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-145",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.7519072890281677
+        },
+        {
+          "text": "Strategic Objective: Zero complaints and Six Sigma quality\nPillar: OPERATIONAL EXCELLENCE\nType: goal\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-144",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.6485610604286194
+        },
+        {
+          "text": "Strategic Objective: 4.2 Operational Efficiency\nPillar: OPERATIONAL EXCELLENCE\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-152",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.480018675327301
+        },
+        {
+          "text": "Strategic Objective: AI-powered inspection\nPillar: OPERATIONAL EXCELLENCE\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-146",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.4485350251197815
+        },
+        {
+          "text": "Strategic Objective: 30% capacity expansion\nPillar: OPERATIONAL EXCELLENCE\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-155",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.44210609793663025
+        }
+      ],
+      "raw_response": "Given the current alignment of only about half for achieving Six Sigma methodology under Operational Excellence at Brandix as outlined in its strategic objectives from their 2025-2030 plan, here are detailed improvement suggestions to enhance this objective:\n\n**NEW ACTIONS:**\n1. **Dedicated Six Sigma Training Program (Similarity Rating: ~47%)** - Launch an internal training program focused on DMAIC methodology for all mid-level managers and production team leaders, ensuring they understand the principles of Six Sigma to effectively cascade this knowledge down.\n2. **Six Sigma Champions Program (Similarity Rating: ~48%)** - Establish a group of trained experts from different departments who will act as champions for Six Sigma initiatives, facilitating cross-functional collaboration and serving as mentors to others in the organization.\n3. **Six Sigma Project Partnerships (Similarity Rating: ~46%)** - Create partnerships with local universities or research institutions that specialize in operations management to develop bespo0ke Six Sigma projects tailored to Brandix's unique challenges and opportunities, encouraging innovation within the framework of operational excellence.\n\n**KPI Enhancements:**\n1. **Reduction in Defect Rate (Target: Decrease by 50% from baseline) - Goal to be achieved over 6 months with monthly review meetings and adjustments as necessary, aiming for a defect rate below industry standard benchmarks of less than 3.4 per million opportunities.\n2. **Customer Complaints (Target: Zero complaints received consistently each quarter) - Implement real-time feedback loops via digital platforms to capture customer sentiments immediately following service encounters, aiming for zero unresolved or negative customer experiences by Q2 2025 and thereafter maintaining this standard.\n3. **Process Cycle Time (Target: Reduce cycle time variability in key processes) - Quantify improvements monthly with statistical process control charts to ensure that any deviations are promptly addressed, aiming for less than a five-minute deviation from the mean processing times within six months of project initiation and maintain thereafter.\n\n**Timeframe Recommendations:** \nFor Year 1 Quarter Milestones - Q1: Launch Six Sigma training program and identify champions; Q2: Evaluate initial defect rate reduction, review digital feedback implementation progress for customer complaints tracking system; initiate first cross-departmental project partnership. For subsequent quarters plan incrementally more complex projects with a focus on integrating sustainability into process improvements wherever possible (e.g., reducing fabric waste).\n\n**Resource Requirements:** \nBudget - Allocate an additional $50,000 for training and project execution this fiscal year; Team - Recruit Six Sigma consultants to run the Champions Program by partnering with external experts. Infrastructure needs may include data analytics software subscription costs or small grants toward collaborative projects between Brandix and academic institutions.\n\n**Integration Opportunities:** \nThe dedicated training program can integrate insights from Lean Manufacturing Transformation, Advanced Warehouse Management System (efficiency in material flow), Production Capacity Expansion Phase II (utilizing process improvements for seamless expansion planning). Quality Control Innovations such as AI-Powered Inspection align with the Six Sigma goals and can be further developed through partnerships. Safety Culture & ISO 4",
+      "method": "RAG-enhanced"
+    },
+    {
+      "objective_id": "OBJ-112",
+      "objective": "\"Formula 1 Driver\" career pathways",
+      "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+      "current_score": 27.803993225097656,
+      "suggestions": {
+        "new_actions": [],
+        "kpi_enhancements": [
+          "Track mentor-mentee engagement rates with a goal of achieving at least 90% retention over six months, measured through regular check-ins (Set quarterly targets). Targeting an increase in internal promotions by 25% within the first year among participants (+3%)."
+        ],
+        "timeline_recommendations": [
+          "Q1 Year 1: Launch the \"Formula 1 Driver\" mentorship program and begin targeted internal campaign. Start employee surveys on career development satisfaction levels."
+        ],
+        "resource_requirements": [
+          "Form a cross-departmental leadership team of at least five senior managers to oversee the development and implementation of \"Formula 1 Driver\" programs across Brandix (+3%)."
+        ],
+        "integration_opportunities": [
+          "Develop a targeted internal campaign promoting success stories where individuals have advanced through \"Formula 1 Driver\" pathways, showcasing the direct link between personal growth and broader company goals to inspire participation across all levels and departments (+28%).",
+          "Integrate the \"Formula 1 Driver\" program with existing mentorship and professional development initiatives to create a cohesive career progression strategy across Brandix (+3%). This creates synergy by reinforcing company values of excellence, diversity, equity, and inclusion while promoting personal growth."
+        ]
+      },
+      "retrieved_context": [
+        {
+          "text": "Strategic Objective: \"Formula 1 Driver\" career pathways\nPillar: PEOPLE EXCELLENCE & SOCIAL IMPACT\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-112",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.7794373035430908
+        },
+        {
+          "text": "Strategic Objective: \"Associate as Formula 1 Driver\" program\nPillar: INNOVATION & DIGITAL TRANSFORMATION\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-075",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.4925024211406708
+        },
+        {
+          "text": "Strategic Objective: Most inclusive and empowered workforce with transformative community impact\nPillar: PEOPLE EXCELLENCE & SOCIAL IMPACT\nType: vision\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-099",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.434543251991272
+        },
+        {
+          "text": "Strategic Objective: Mentorship programs\nPillar: PEOPLE EXCELLENCE & SOCIAL IMPACT\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-122",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.42675554752349854
+        },
+        {
+          "text": "Strategic Objective: 3.2 Diversity, Equity, and Inclusion\nPillar: PEOPLE EXCELLENCE & SOCIAL IMPACT\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-118",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4164550006389618
+        }
+      ],
+      "raw_response": "**NEW ACTIONS:**\n1. Launch a comprehensive \"Formula 1 Driver\" mentorship program pairing entry-level employees with experienced leaders within the company to foster growth, skill development, and career progression opportunities that reflect Brandix's core values of excellence and social impact (Similarity: +30%).\n2. Develop a targeted internal campaign promoting success stories where individuals have advanced through \"Formula 1 Driver\" pathways, showcasing the direct link between personal growth and broader company goals to inspire participation across all levels and departments (+28%).\n\n**KPI Enhancements:**\n1. Track mentor-mentee engagement rates with a goal of achieving at least 90% retention over six months, measured through regular check-ins (Set quarterly targets). Targeting an increase in internal promotions by 25% within the first year among participants (+3%).\n2. Implement employee satisfaction surveys focusing on career development opportunities and track changes bi-annually with a goal of increasing overall job satisfaction scores related to growth prospects by at least 15% over two years (+4%).\n\n**Timeline Recommendations:**\n- Q1 Year 1: Launch the \"Formula 1 Driver\" mentorship program and begin targeted internal campaign. Start employee surveys on career development satisfaction levels.\n- Q2 Year 1: Conduct a midterm review of engagement rates, retention, promotion increases among participants; refine or expand successful elements within six months (Targets to be adjusted based upon initial results). Set up the KPI tracking system for progress measurement and reporting purposes by end of Quarter 3.\n- Q4 Year 1: Evaluate yearly success against set targets, with specific attention on retention rates and promotion increases; begin planning next steps or enhancements in mentorship program based on feedback (+2%). Set a new two-year goal for job satisfaction scores related to career development opportunities.\n\n**Resource Requirements:**\n- Budget allocation of $300,000 annually dedicated specifically towards the \"Formula 1 Driver\" initiative including mentor stipends and marketing campaign costs ($25,000 allocated for initial setup). Ongoing yearly budget adjustment based on program growth.\n- Form a cross-departmental leadership team of at least five senior managers to oversee the development and implementation of \"Formula 1 Driver\" programs across Brandix (+3%).\n- Infrastructure needs include an online platform for mentorship matching, campaign promotion materials distribution, as well as resources for continuous training on diversity, equity, inclusion topics. ($50,000 allocated annually).\n\n**Integration Opportunities:**\n1. Integrate the \"Formula 1 Driver\" program with existing mentorship and professional development initiatives to create a cohesive career progression strategy across Brandix (+3%). This creates synergy by reinforcing company values of excellence, diversity, equity, and inclusion while promoting personal growth.\n2. Link the success stories from \"Formula 1 Driver\" pathways with internal branding efforts in marketing materials to highlight our commitment to employee development as part of Brandix's core identity (+3%). This enhances employer brand value among potential talent by showcasing tangible opportunities for advancement and work-life fulfillment.",
+      "method": "RAG-enhanced"
+    },
+    {
+      "objective_id": "OBJ-179",
+      "objective": "Supply chain disruption: <5%",
+      "pillar": "GOVERNANCE & RISK MANAGEMENT",
+      "current_score": 28.854939341545105,
+      "suggestions": {
+        "new_actions": [
+          "Implement a supplier diversity program to expand the network of alternative materials providers that adhere to sustainable practices\u2014aiming for at least three new partnerships by Q2 of Year One, with an emphasis on local sourcing where possible to reduce lead times and carbon footprints associated with long-distance transport.",
+          "Launch a 'Supply Chain Resilience Certification' initiative that sets clear criteria for risk management practices among suppliers\u2014by Q4 of Year One, at least 75% of primary material providers should have achieved this certification to ensure alignment with our disruption reduction objective.",
+          "Develop a real-time supply chain monitoring system using AI and IoT technologies that provide alerts on potential risks\u2014by Q2 of Year One, deploy the initial pilot program in one key supplier region as an actionable case study for wider rollout within 18 months."
+        ],
+        "kpi_enhancements": [
+          "Target a Supply Chain Disruption Rate (SCDR) below 5%\u2014Aim to bring down from the current baseline of approximately 20%, measured quarterly against industry benchmarks and historical company data, with an achievable target by Q4 Year One based on projected improvements in supplier relations.",
+          "Supplier Sustainability Score (SSS)\u2014Aim for a score that aligns with best practices within the sector; set specific sustainability criteria related to material sourcing, labor conditions, and environmental impact by Q3 of Year One as part of supplier onboarding processes.",
+          "Supply Chain Visibility Index (SCVI)\u2014Set a target visibility level at 95% across all tiers of the supply chain within two years; measure progress monthly through data analytics tools that track logistics and inventory levels, aimed to be integrated with our existing ERP system by Q2 Year One."
+        ],
+        "timeline_recommendations": [
+          "Launch initial supplier diversity program in the first quarter of Year One; establish a review committee meeting every two months for progress assessments and adjustment plans as necessary.",
+          "Complete 'Supply Chain Resilience Certification' pilot within 6 months, followed by an evaluation to refine criteria based on feedback\u2014aiming for certification expansion across suppliers in the following six-month period post-pilot review."
+        ],
+        "resource_requirements": [],
+        "integration_opportunities": []
+      },
+      "retrieved_context": [
+        {
+          "text": "Strategic Objective: Supply chain disruption: <5%\nPillar: GOVERNANCE & RISK MANAGEMENT\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-179",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.6809031367301941
+        },
+        {
+          "text": "Strategic Objective: Supply chain resilience programs\nPillar: GOVERNANCE & RISK MANAGEMENT\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-173",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.5955800414085388
+        },
+        {
+          "text": "Strategic Objective: Exemplary governance and proactive risk management\nPillar: GOVERNANCE & RISK MANAGEMENT\nType: vision\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-160",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.520185649394989
+        },
+        {
+          "text": "Strategic Objective: Supply chain visibility: 95% by 2029\nPillar: INNOVATION & DIGITAL TRANSFORMATION\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-089",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.4573725461959839
+        },
+        {
+          "text": "Strategic Objective: Board-level ESG oversight\nPillar: GOVERNANCE & RISK MANAGEMENT\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-164",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.4498104751110077
+        }
+      ],
+      "raw_response": "NEW ACTIONS:\n1. Implement a supplier diversity program to expand the network of alternative materials providers that adhere to sustainable practices\u2014aiming for at least three new partnerships by Q2 of Year One, with an emphasis on local sourcing where possible to reduce lead times and carbon footprints associated with long-distance transport.\n   \n2. Launch a 'Supply Chain Resilience Certification' initiative that sets clear criteria for risk management practices among suppliers\u2014by Q4 of Year One, at least 75% of primary material providers should have achieved this certification to ensure alignment with our disruption reduction objective.\n   \n3. Develop a real-time supply chain monitoring system using AI and IoT technologies that provide alerts on potential risks\u2014by Q2 of Year One, deploy the initial pilot program in one key supplier region as an actionable case study for wider rollout within 18 months.\n   \nKPI ENHANCEMENTS:\n1. Target a Supply Chain Disruption Rate (SCDR) below 5%\u2014Aim to bring down from the current baseline of approximately 20%, measured quarterly against industry benchmarks and historical company data, with an achievable target by Q4 Year One based on projected improvements in supplier relations.\n   \n2. Supplier Sustainability Score (SSS)\u2014Aim for a score that aligns with best practices within the sector; set specific sustainability criteria related to material sourcing, labor conditions, and environmental impact by Q3 of Year One as part of supplier onboarding processes.\n   \n3. Supply Chain Visibility Index (SCVI)\u2014Set a target visibility level at 95% across all tiers of the supply chain within two years; measure progress monthly through data analytics tools that track logistics and inventory levels, aimed to be integrated with our existing ERP system by Q2 Year One.\n   \nTIMELINE RECOMMENDATIONS:\n1. Launch initial supplier diversity program in the first quarter of Year One; establish a review committee meeting every two months for progress assessments and adjustment plans as necessary.\n   \n2. Complete 'Supply Chain Resilience Certification' pilot within 6 months, followed by an evaluation to refine criteria based on feedback\u2014aiming for certification expansion across suppliers in the following six-month period post-pilot review.\n   \n3. Deploy real-time monitoring system at selected key supplier region as a quarterly milestone with subsequent scaling every 6 months, aiming full implementation within two years based on pilot feedback and scalability assessment by end of Year Two.\n   \nRESOURCE REQUIREMENTS:\n1. Budget for the establishment of an initial $500K supplier diversity fund to attract and vet potential partners\u2014allocated from existing sustainability budget lines with quarterly reviews on expenditure efficiency against outcomes achieved by Q2 Year One.\n   \n2. Invest in AI-powered supply chain monitoring technology, setting aside a $750K investment for the initial rollout and subsequent system enhancements\u2014this includes training costs as well as integration with current IT infrastructure to ensure smooth transition from legacy systems by Q2 Year One pilot deployment date.\n   \n3. Formulate an expert task force dedicated to developing SCR standards, consisting of internal risk management professionals along with select external consultants; allocate a team budget and resources for comprehensive benchmarking studies against industry leaders over the first year as this initiative is critical foundation-building before full implementation rollout",
+      "method": "RAG-enhanced"
+    },
+    {
+      "objective_id": "OBJ-033",
+      "objective": "Real-time monitoring and leak detection",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "current_score": 29.242682456970215,
+      "suggestions": {
+        "new_actions": [
+          "Implement an advanced leak detection system using smart sensors and IoT technology throughout Brandix's manufacturing facilities to provide real-time data analytics, which can be automatically analyzed by our machine learning algorithms developed under the Quality 4.0 initiative (Similarity: AI-Powered Inspection at 16.7%).",
+          "Launch a pilot project on one major manufacturing site to integrate green technology in wastewater treatment, which includes real-time monitoring of water quality and system performance using smart sensors linked directly to our centralized environmental management platform (Similarity: Water Stewardship - Net Positive Operations at 29.2%).",
+          "Initiate a partnership with local universities specializing in environmental engineering for continuous improvement research specifically focused on developing cost-effective and efficient methods of leak detection, which can be piloted across multiple sites subsequently (Similarity: Sustainable Materials & Circular Supply Chain at 19.7%)."
+        ],
+        "kpi_enhancements": [
+          "Reduce water loss due to leaks by no more than 2% quarter-over-quarter within the first year across all Brandix sites, measured through real-time data from our new IoT systems (Similarity: Water Stewardship - Net Positive Operations at 29.2%).",
+          "Decrease detection time for leaks to less than 48 hours per incident as a result of implementing smart sensor technology and AI algorithms, ensuring rapid response times with quarterly progressive improvements (Similarity: Quality 4.0 - AI-Powered Inspection at 16.7%).",
+          "Achieve an operational readiness level where the pilot green wastewater treatment system demonstrates a minimum of 85% efficiency in identifying and mitigating leaks during its first year, measured through performance data collected by smart sensors (Similarity: Water Stewardship - Net Positive Operations at 29.2%).",
+          "Timeframe Recommendations:**",
+          "Q1 to Mid-Q1 Year 1: Complete the selection process for IoT and AI leak detection systems, finalize pilot project site preparation; initiate partnerships with relevant academic institutions.",
+          "End of Q2 & Start of Q3 Year 1: Assess pilot project's performance and scale successful approaches across additional sites."
+        ],
+        "timeline_recommendations": [],
+        "resource_requirements": [
+          "End of Q2 Year 1: Launch pilot project site; begin collecting baseline leak detection and water quality data."
+        ],
+        "integration_opportunities": []
+      },
+      "retrieved_context": [
+        {
+          "text": "Strategic Objective: Real-time monitoring and leak detection\nPillar: ENVIRONMENTAL LEADERSHIP\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-033",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6718382239341736
+        },
+        {
+          "text": "Strategic Objective: Expand rainwater harvesting (40% capture)\nPillar: ENVIRONMENTAL LEADERSHIP\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-029",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.3643518090248108
+        },
+        {
+          "text": "Strategic Objective: 40% water intensity reduction\nPillar: ENVIRONMENTAL LEADERSHIP\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-031",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.36017078161239624
+        },
+        {
+          "text": "Strategic Objective: Third-party quality audits\nPillar: ENVIRONMENTAL LEADERSHIP\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-037",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.3575679063796997
+        },
+        {
+          "text": "Action Item: Water Stewardship - Net Positive Operations\nID: ENV-006\nPillar: ENVIRONMENTAL LEADERSHIP\nContext: This is a Year 1 action item from Brandix's 2025-2026 action plan.",
+          "source": "action_plan",
+          "id": "ENV-006",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.35538458824157715
+        }
+      ],
+      "raw_response": "To improve alignment for the objective of Real-time monitoring and leak detection under Pillar: Environmental Leadership at Brandix, we need to generate a comprehensive strategy that not only enhances this specific goal but also aligns with broader environmental leadership initiatives within our sustainability plan. Here are my suggestions based on your request for actionable improvements in various areas:\n\n**NEW ACTIONS:** \n1. Implement an advanced leak detection system using smart sensors and IoT technology throughout Brandix's manufacturing facilities to provide real-time data analytics, which can be automatically analyzed by our machine learning algorithms developed under the Quality 4.0 initiative (Similarity: AI-Powered Inspection at 16.7%).\n2. Launch a pilot project on one major manufacturing site to integrate green technology in wastewater treatment, which includes real-time monitoring of water quality and system performance using smart sensors linked directly to our centralized environmental management platform (Similarity: Water Stewardship - Net Positive Operations at 29.2%).\n3. Initiate a partnership with local universities specializing in environmental engineering for continuous improvement research specifically focused on developing cost-effective and efficient methods of leak detection, which can be piloted across multiple sites subsequently (Similarity: Sustainable Materials & Circular Supply Chain at 19.7%).\n\n**KPI Enhancements:**  \n1. Reduce water loss due to leaks by no more than 2% quarter-over-quarter within the first year across all Brandix sites, measured through real-time data from our new IoT systems (Similarity: Water Stewardship - Net Positive Operations at 29.2%).\n2. Decrease detection time for leaks to less than 48 hours per incident as a result of implementing smart sensor technology and AI algorithms, ensuring rapid response times with quarterly progressive improvements (Similarity: Quality 4.0 - AI-Powered Inspection at 16.7%).\n3. Achieve an operational readiness level where the pilot green wastewater treatment system demonstrates a minimum of 85% efficiency in identifying and mitigating leaks during its first year, measured through performance data collected by smart sensors (Similarity: Water Stewardship - Net Positive Operations at 29.2%).\n\n**Timeframe Recommendations:**  \n- Q1 to Mid-Q1 Year 1: Complete the selection process for IoT and AI leak detection systems, finalize pilot project site preparation; initiate partnerships with relevant academic institutions.\n- End of Q1 & Start of Q2 Year 1: Begin installation of smart sensors on selected sites in parallel to technology setup activities at our central data center that will handle the analytics aspect (Similarity: Sustainable Materials & Circular Supply Chain initiative, which also focuses on efficient resource use).\n- End of Q2 Year 1: Launch pilot project site; begin collecting baseline leak detection and water quality data.\n- Mid to Late in each Quarter of the First Half of Year 1: Monitor progress towards KPIs with bi-monthly reports, tweak system parameters as needed for optimization (Similarity: Third-party quality audits objective).\n- End of Q2 & Start of Q3 Year 1: Assess pilot project's performance and scale successful approaches across additional sites.\n- Mid to Late in each Quarter of the Second Half of Year 1: Reflect on KPI achievements, make necessary adjust",
+      "method": "RAG-enhanced"
+    },
+    {
+      "objective_id": "OBJ-035",
+      "objective": "Zero hazardous discharge",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "current_score": 29.370173811912537,
+      "suggestions": {
+        "new_actions": [
+          "**Zero Waste Manufacturing Process Implementation** (Similarity: N/A) - Establish a zero waste policy that mandates comprehensive recycling and reuse within manufacturing processes, aiming to reduce hazardous discharge directly at the source of production by 20% in Year 1.",
+          "**Green Chemistry Initiatives** (Similarity: N/A) - Partner with environmental agencies and research institutions to develop non-toxic, biodegradable alternatives for chemicals currently used in textile production processes by the end of Q1 Year 3. This will directly contribute to reducing hazardous discharge levels when implemented across all Brandix sites worldwide."
+        ],
+        "kpi_enhancements": [
+          "**Hazardous Chemical Reduction Percentage** - Achieve a 25% reduction in the use of hazardous chemicals within manufacturing processes by end Q3 Year 1, moving progressively towards complete elimination as substitutes are adopted and tested for efficacy.",
+          "**Waste Treatment Effectiveness Rate** - Improve waste treatment systems' effectiveness in removing hazardous substances before discharge to achieve a minimum of 98% efficiency rate by end Q4 Year 2 as part of continuous performance monitoring and system upgrades for each Brandix facility.",
+          "By the end of H1 2025, develop a comprehensive plan detailing current chemical usage patterns within manufacturing processes to serve as baseline data and pinpoint key areas with potential hazard reduction. This will inform subsequent action item strategies."
+        ],
+        "timeline_recommendations": [
+          "By the end of Q3 Year 1, implement at least one pilot project using biodegradable alternatives in a single Brandix facility with potential for scaling up if successful results are observed. This will demonstrate feasibility and provide learnings that can be applied to other sites within short term windows (e.g., months)."
+        ],
+        "resource_requirements": [],
+        "integration_opportunities": []
+      },
+      "retrieved_context": [
+        {
+          "text": "Strategic Objective: Zero hazardous discharge\nPillar: ENVIRONMENTAL LEADERSHIP\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-035",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6223976016044617
+        },
+        {
+          "text": "Strategic Objective: Zero waste to landfills\nPillar: ENVIRONMENTAL LEADERSHIP\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-053",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.46025550365448
+        },
+        {
+          "text": "Strategic Objective: Net Zero across all sites by 2030\nPillar: ENVIRONMENTAL LEADERSHIP\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-015",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.4350692629814148
+        },
+        {
+          "text": "Action Item: Water Stewardship - Net Positive Operations\nID: ENV-006\nPillar: ENVIRONMENTAL LEADERSHIP\nContext: This is a Year 1 action item from Brandix's 2025-2026 action plan.",
+          "source": "action_plan",
+          "id": "ENV-006",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.43239668011665344
+        },
+        {
+          "text": "Strategic Objective: Net Zero Carbon by 2030 (operations) and Net Zero value chain by 2050 (SBTi-validated)\nPillar: ENVIRONMENTAL LEADERSHIP\nType: goal\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-003",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.39848360419273376
+        }
+      ],
+      "raw_response": "New Actions to Increase Alignment for Zero Hazardous Discharge Objective:\n1. **Zero Waste Manufacturing Process Implementation** (Similarity: N/A) - Establish a zero waste policy that mandates comprehensive recycling and reuse within manufacturing processes, aiming to reduce hazardous discharge directly at the source of production by 20% in Year 1.\n   \n   Action Item ID: ENV-007\n\n2. **Green Chemistry Initiatives** (Similarity: N/A) - Partner with environmental agencies and research institutions to develop non-toxic, biodegradable alternatives for chemicals currently used in textile production processes by the end of Q1 Year 3. This will directly contribute to reducing hazardous discharge levels when implemented across all Brandix sites worldwide.\n   \n   Action Item ID: ENV-008\n\nKPI Enhancements for Zero Hazardous Discharge Objective:\n1. **Hazardous Chemical Reduction Percentage** - Achieve a 25% reduction in the use of hazardous chemicals within manufacturing processes by end Q3 Year 1, moving progressively towards complete elimination as substitutes are adopted and tested for efficacy.\n   \n   Target: N/A | Metric: Percentage decrease in specific Hazard Chemical Usage (HCU) - Baseline year HCU to be determined based on current usage data; target 25% reduction by end of Q3 Year 1, with annual reviews and incremental improvements.\n   \n2. **Waste Treatment Effectiveness Rate** - Improve waste treatment systems' effectiveness in removing hazardous substances before discharge to achieve a minimum of 98% efficiency rate by end Q4 Year 2 as part of continuous performance monitoring and system upgrades for each Brandix facility.\n   \n   Target: N/A | Metric: Efficiency Rate - Baseline year's treatment systems effectiveness; target incremental improvements to reach a minimum of 98% by end Q4 Year 2, with biannual audits and necessary upgrades or changes in procedures.\n   \nTimeframe Recommendations for Zero Hazardous Discharge Objective:\n- By the end of H1 2025, develop a comprehensive plan detailing current chemical usage patterns within manufacturing processes to serve as baseline data and pinpoint key areas with potential hazard reduction. This will inform subsequent action item strategies.\n   \n   Milestone: Baseline establishment | Timeline: End of H1 2025\n\n- By the end of Q3 Year 1, implement at least one pilot project using biodegradable alternatives in a single Brandix facility with potential for scaling up if successful results are observed. This will demonstrate feasibility and provide learnings that can be applied to other sites within short term windows (e.g., months).\n   \n   Milestone: Pilot completion | Timeline: End of Q3 Year 1, pilot expansion as required based on outcomes in H2 & Q3 Years 2-4 respectively\n\nResource Requirements for Zero Hazardous Discharge Objective:\n- Allocate an initial investment budget that enables the establishment and testing phases of new green chemistry initiatives (ENVIRONMENTAL LEADERSHIP ACTION ITEM ENV-008). This will likely be in the range of $5 million to start pilot programs, with a contingency for un",
+      "method": "RAG-enhanced"
+    },
+    {
+      "objective_id": "OBJ-156",
+      "objective": "20% cost per unit reduction",
+      "pillar": "OPERATIONAL EXCELLENCE",
+      "current_score": 29.783964157104492,
+      "suggestions": {
+        "new_actions": [
+          "Conduct a comprehensive cost audit to identify areas of inefficiency within production lines that can lead directly to reducing costs by at least 5% annually without compromising quality or worker well-being, and implement these findings immediately into the operational workflows starting Q2 Year 1 using lean manufacturing principles.",
+          "Initiate a pilot program in one of Brandix's smaller production units to fully automate repetitive tasks with AI technology by mid-Year 1; this will serve as an R&D hub for innovation, reducing manual labor costs and improving speed without sacrificing craftsmanship quality standards."
+        ],
+        "kpi_enhancements": [],
+        "timeline_recommendations": [],
+        "resource_requirements": [],
+        "integration_opportunities": []
+      },
+      "retrieved_context": [
+        {
+          "text": "Strategic Objective: 20% cost per unit reduction\nPillar: OPERATIONAL EXCELLENCE\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-156",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.6309124827384949
+        },
+        {
+          "text": "Strategic Objective: Cost reduction: 20%\nPillar: OPERATIONAL EXCELLENCE\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-159",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.560416042804718
+        },
+        {
+          "text": "Strategic Objective: 4.2 Operational Efficiency\nPillar: OPERATIONAL EXCELLENCE\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-152",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.48505374789237976
+        },
+        {
+          "text": "Strategic Objective: Quality defect rate: <0.01%\nPillar: OPERATIONAL EXCELLENCE\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-150",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.47277846932411194
+        },
+        {
+          "text": "Strategic Objective: World-class quality, efficiency, and customer satisfaction\nPillar: OPERATIONAL EXCELLENCE\nType: vision\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-142",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.46206381916999817
+        }
+      ],
+      "raw_response": "**NEW ACTIONS (2-3 Specific Action Items):**\n1. Conduct a comprehensive cost audit to identify areas of inefficiency within production lines that can lead directly to reducing costs by at least 5% annually without compromising quality or worker well-being, and implement these findings immediately into the operational workflows starting Q2 Year 1 using lean manufacturing principles.\n   \n2. Initiate a pilot program in one of Brandix's smaller production units to fully automate repetitive tasks with AI technology by mid-Year 1; this will serve as an R&D hub for innovation, reducing manual labor costs and improving speed without sacrificing craftsmanship quality standards.\n   \n3. Develop a skills enhancement program specifically tailored towards upskilling the workforce in areas of energy management and resource optimization to reduce wasteful practices identified from audit findings; this will include hands-on training, eLearning modules on best practices for material usage by Q2 Year 1.\n   \n**KPI ENHANCEMENTS (2-3 Measurable KPIs):**\na) Achieve a target of reducing energy consumption in production lines by at least 7% within the first year, measured against baseline data from the previous fiscal quarter ending March Year 1. Use smart meters and IoT devices to continuously monitor usage patterns with real-time analytics for adjustments.\n   \nb) Reduce material waste per unit produced (including fabric scraps, excess dyes, etc.) by at least 5% in the first year, measured quarterly from Q2 Year 1 onwards using RFID tagging and inventory management systems to track resource flow accurately within production.\n   \nc) Maintain a defect rate below the target of <0.01%, with an aim for continuous improvement; monitor this KPI monthly through integrated quality control software that reports directly into Brandix's ERP system, facilitating quick response to any deviations in real-time.\n   \n**TIMELINE RECOMMENDATIONS:**\nQ2 Year 1 - Complete cost audit and initiate immediate implementation of findings; start the AI automation pilot program within one month after completion of Q2 planning meetings, alongside launching workforce skills enhancement programs on a rolling basis starting from June. Mid-Year Milestone by end of July: Review initial results from both actions to adjust strategies if necessary for full rollout in Year 2.\n   \n**RESOURCE REQUIREMENTS:**\nA budget allocation increase by an additional $3 million is required, focusing on smart technologies and training programs; this will be covered within the existing capital expenditure framework but may require reallocation from non-critical projects or external funding through green investments. An interdisciplinary team comprising of IT specialists, production engineers, sustainability experts, and HR professionals is essential to facilitate this transformation; a dedicated cross-functional task force will be created with rotating memberships for continuous improvement focus areas by the end of Q2 Year 1.\n   \n**INTEGRATION OPPORTUNITIES:**\nThe lean manufacturing principles and AI automation initiatives can feed into Brandix's broader strategic objective to become a leader in 'World-class quality, efficiency, and customer satisfaction.' These actions will be integrated with existing safety culture training under ISO 45001 certification efforts by involving the same team members who work on these objectives ensuring consistency across all operational excellence initiatives.",
+      "method": "RAG-enhanced"
+    },
+    {
+      "objective_id": "OBJ-028",
+      "objective": "Eliminate Sri Lankan groundwater by 2028",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "current_score": 29.787617921829224,
+      "suggestions": {
+        "new_actions": [],
+        "kpi_enhancements": [],
+        "timeline_recommendations": [
+          "Reach and maintain compliance targets set by local environmental authorities for water use beyond industry standards \u2013 striving towards a net positive impact in terms of regional groundwater levels within two years (Quantitative measure based on quarterly audits with immediate corrective actions as necessary, aligned against annual regulatory benchmarks)."
+        ],
+        "resource_requirements": [],
+        "integration_opportunities": []
+      },
+      "retrieved_context": [
+        {
+          "text": "Strategic Objective: Eliminate Sri Lankan groundwater by 2028\nPillar: ENVIRONMENTAL LEADERSHIP\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-028",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.7621818780899048
+        },
+        {
+          "text": "Strategic Objective: Groundwater (SL): 0% by 2028\nPillar: ENVIRONMENTAL LEADERSHIP\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-043",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.5905172228813171
+        },
+        {
+          "text": "Strategic Objective: 50% green + recycled water by 2030\nPillar: ENVIRONMENTAL LEADERSHIP\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-027",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.5367020964622498
+        },
+        {
+          "text": "Strategic Objective: Sustainable Water Sourcing\nPillar: ENVIRONMENTAL LEADERSHIP\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-026",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.5316566824913025
+        },
+        {
+          "text": "Strategic Objective: Water Efficiency\nPillar: ENVIRONMENTAL LEADERSHIP\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-030",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.5283600687980652
+        }
+      ],
+      "raw_response": "SPECIFIC ACTION ITEMS TO INCREASE OBJECTIVE ALLIANCE:\n**NEW ACTIONS**\n1. Implement on-site rainwater harvesting systems in all manufacturing plants to reduce dependency on groundwater by capturing and reusing rainfall for non-potable water needs such as landscaping, cooling processes, etc. (KPI: Install at least 50% of the targeted capacity within one year).\n2. Initiate a comprehensive audit to identify high water usage areas across all Brandix facilities and implement leak detection systems coupled with regular maintenance programs to prevent unnecessary loss (KPI: Reduce non-essential water use by at least 15% in the first six months of implementation, targeting completion within one year).\n3. Partner with local NGOs focused on environmental conservation to develop community education programs about sustainable groundwater management practices that can reduce Brandix's collective impact (KPI: Reach and engage at least 10% of the surrounding communities in educational initiatives by end of Q2).\n\nMEASURABLE KPIS WITH TIMELINES\n**KPI ENHANCEMENTS**\n1. Achieve a groundwater reduction rate of 5% per quarter, with an aim to reach at least one-third reduced usage annually (Timeline: Continuous measurement from Q1 onward).\n2. Reach and maintain compliance targets set by local environmental authorities for water use beyond industry standards \u2013 striving towards a net positive impact in terms of regional groundwater levels within two years (Quantitative measure based on quarterly audits with immediate corrective actions as necessary, aligned against annual regulatory benchmarks).\n3. Reduce plastic usage and increase recycling rate by 25% across all Brandix operations before the end of Year 1 through improved waste management practices linked to water conservation (Timeline: Bi-monthly tracking with a review at each quarter's start, aiming for incremental improvements).\n\nTIMELINE RECOMMENDATIONS FOR YEAR ONE QUARTERLY MILESTONES\n**TIMELINE RECOMMENDATIONS**\n1. Initiate rainwater harvesting installations by the end of Q1 and achieve 25% completion rate in each subsequent quarter. (Timeline: Milestone at every three months).\n2. Complete leak detection system implementation across all facilities before Q3, with a full maintenance schedule established for ongoing monitoring starting from Q4 onward. (Milestone by the end of Year 1).\n3. Develop and launch partnership initiatives within the first two quarters to establish solid groundwork with local NGOs, setting up educational workshops in conjunction with key community events throughout each quarter thereafter as a regular occurrence. (Timeline: Initiate by Q2 end, aiming for an ongoing series of bi-monthly sessions).\n4. Set initial targets and benchmark the first reduction milestone at the beginning of Year 1 to establish baselines against which progress will be measured throughout subsequent quarters. Revisit these KPIs after six months with a review meeting involving senior management, sustainability teams, NGO partners, etc., for necessary adjustments (Timeline: First target set by Q2 start and bi-annual reviews).\n5. Begin the process of transitioning to more water-efficient appliances and machinery in manufacturing plants with an aim to complete this within Year 1 without disrupting production processes or output quality standards, as well as a parallel initiative for staff training on new systems (Timeline: Start by Q2 end, target full integration before the",
       "method": "RAG-enhanced"
     }
   ],
   "summary": {
-    "total_gaps": 1,
-    "processed": 1,
-    "total_suggestions": 5,
+    "total_gaps": 110,
+    "processed": 10,
+    "total_suggestions": 56,
     "by_severity": {
       "critical": 0,
-      "high": 0,
-      "medium": 1
+      "high": 10,
+      "medium": 0
     }
   },
   "gap_objectives": [
@@ -77,10 +620,109 @@
       "objective": "Blockchain traceability (95% visibility by 2029)",
       "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
       "type": "initiative",
-      "max_similarity": 0.49717044830322266,
-      "alignment_score": 49.717044830322266,
-      "severity": "Medium",
-      "gap_size": 0.2829551696777344
+      "max_similarity": 0.21584714949131012,
+      "alignment_score": 21.584714949131012,
+      "severity": "High",
+      "gap_size": 28.415285050868988
+    },
+    {
+      "objective_idx": 147,
+      "objective_id": "OBJ-148",
+      "objective": "Customer complaints: 0",
+      "pillar": "OPERATIONAL EXCELLENCE",
+      "type": "initiative",
+      "max_similarity": 0.2429899126291275,
+      "alignment_score": 24.29899126291275,
+      "severity": "High",
+      "gap_size": 25.70100873708725
+    },
+    {
+      "objective_idx": 12,
+      "objective_id": "OBJ-013",
+      "objective": "Eliminate R-22 refrigerants by 2030",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "initiative",
+      "max_similarity": 0.25156286358833313,
+      "alignment_score": 25.156286358833313,
+      "severity": "High",
+      "gap_size": 24.843713641166687
+    },
+    {
+      "objective_idx": 144,
+      "objective_id": "OBJ-145",
+      "objective": "Six Sigma methodology",
+      "pillar": "OPERATIONAL EXCELLENCE",
+      "type": "initiative",
+      "max_similarity": 0.2575588524341583,
+      "alignment_score": 25.755885243415833,
+      "severity": "High",
+      "gap_size": 24.244114756584167
+    },
+    {
+      "objective_idx": 111,
+      "objective_id": "OBJ-112",
+      "objective": "\"Formula 1 Driver\" career pathways",
+      "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+      "type": "initiative",
+      "max_similarity": 0.27803993225097656,
+      "alignment_score": 27.803993225097656,
+      "severity": "High",
+      "gap_size": 22.196006774902344
+    },
+    {
+      "objective_idx": 178,
+      "objective_id": "OBJ-179",
+      "objective": "Supply chain disruption: <5%",
+      "pillar": "GOVERNANCE & RISK MANAGEMENT",
+      "type": "initiative",
+      "max_similarity": 0.28854939341545105,
+      "alignment_score": 28.854939341545105,
+      "severity": "High",
+      "gap_size": 21.145060658454895
+    },
+    {
+      "objective_idx": 32,
+      "objective_id": "OBJ-033",
+      "objective": "Real-time monitoring and leak detection",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "initiative",
+      "max_similarity": 0.29242682456970215,
+      "alignment_score": 29.242682456970215,
+      "severity": "High",
+      "gap_size": 20.757317543029785
+    },
+    {
+      "objective_idx": 34,
+      "objective_id": "OBJ-035",
+      "objective": "Zero hazardous discharge",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "initiative",
+      "max_similarity": 0.29370173811912537,
+      "alignment_score": 29.370173811912537,
+      "severity": "High",
+      "gap_size": 20.629826188087463
+    },
+    {
+      "objective_idx": 155,
+      "objective_id": "OBJ-156",
+      "objective": "20% cost per unit reduction",
+      "pillar": "OPERATIONAL EXCELLENCE",
+      "type": "initiative",
+      "max_similarity": 0.2978396415710449,
+      "alignment_score": 29.783964157104492,
+      "severity": "High",
+      "gap_size": 20.216035842895508
+    },
+    {
+      "objective_idx": 27,
+      "objective_id": "OBJ-028",
+      "objective": "Eliminate Sri Lankan groundwater by 2028",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "initiative",
+      "max_similarity": 0.29787617921829224,
+      "alignment_score": 29.787617921829224,
+      "severity": "High",
+      "gap_size": 20.212382078170776
     }
   ]
 }

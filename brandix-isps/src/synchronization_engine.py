@@ -89,12 +89,12 @@ class SynchronizationEngine:
         overall_score = np.mean(sim_matrix) * 100
         max_per_objective = np.max(sim_matrix, axis=1)
         mean_max_similarity = np.mean(max_per_objective)
-        coverage_rate = np.sum(max_per_objective >= 0.5) / len(max_per_objective) * 100
+        coverage_rate = np.sum(max_per_objective >= 0.30) / len(max_per_objective) * 100
         
         # Classify overall alignment
-        if mean_max_similarity >= 0.70:
+        if mean_max_similarity >= 0.45:
             classification = "Strong Alignment"
-        elif mean_max_similarity >= 0.50:
+        elif mean_max_similarity >= 0.30:
             classification = "Good Alignment"
         else:
             classification = "Needs Improvement"
@@ -165,9 +165,9 @@ class SynchronizationEngine:
         alignment_score = max_similarity * 100
         
         # Determine coverage level
-        if alignment_score >= 70:
+        if alignment_score >= 45:
             coverage = 'Strong'
-        elif alignment_score >= 50:
+        elif alignment_score >= 30:
             coverage = 'Moderate'
         else:
             coverage = 'Weak'
@@ -183,15 +183,15 @@ class SynchronizationEngine:
             'coverage': coverage,
             'max_similarity': max_similarity,
             'mean_similarity': mean_similarity,
-            'num_strong_matches': int(np.sum(similarities >= 0.70)),
-            'num_moderate_matches': int(np.sum((similarities >= 0.50) & (similarities < 0.70)))
+            'num_strong_matches': int(np.sum(similarities >= 0.45)),
+            'num_moderate_matches': int(np.sum((similarities >= 0.30) & (similarities < 0.45)))
         }
     
     def _classify_alignment(self, similarity: float) -> str:
         """Classify alignment strength"""
-        if similarity >= 0.70:
+        if similarity >= 0.45:
             return "Strong"
-        elif similarity >= 0.50:
+        elif similarity >= 0.30:
             return "Moderate"
         else:
             return "Weak"
@@ -228,7 +228,7 @@ class SynchronizationEngine:
         
         return df
     
-    def identify_gap_objectives(self, threshold=0.50) -> List[Dict]:
+    def identify_gap_objectives(self, threshold=0.40) -> List[Dict]:
         """
         Identify objectives with weak alignment (gaps)
         
@@ -250,9 +250,9 @@ class SynchronizationEngine:
                 obj = self.doc_processor.strategic_objectives[idx]
                 
                 # Determine severity
-                if max_sim < 0.30:
+                if max_sim < 0.20:
                     severity = 'Critical'
-                elif max_sim < 0.40:
+                elif max_sim < 0.30:
                     severity = 'High'
                 else:
                     severity = 'Medium'
@@ -314,9 +314,9 @@ class SynchronizationEngine:
             
             # Classification
             avg = stats['average_score']
-            if avg >= 70:
+            if avg >= 45:
                 stats['pillar_status'] = 'Strong'
-            elif avg >= 50:
+            elif avg >= 30:
                 stats['pillar_status'] = 'Moderate'
             else:
                 stats['pillar_status'] = 'Weak'
@@ -349,7 +349,7 @@ class SynchronizationEngine:
         max_per_action = np.max(sim_matrix, axis=0)
         
         for idx, max_sim in enumerate(max_per_action):
-            if max_sim < 0.50:
+            if max_sim < 0.30:
                 action = self.doc_processor.action_items[idx]
                 gaps['orphan_actions'].append({
                     'action_id': action['id'],
@@ -373,7 +373,7 @@ class SynchronizationEngine:
         # 4. Coverage gaps (objectives with no moderate/strong matches)
         for idx, obj in enumerate(self.doc_processor.strategic_objectives):
             similarities = sim_matrix[idx]
-            if not np.any(similarities >= 0.50):
+            if not np.any(similarities >= 0.30):
                 gaps['coverage_gaps'].append({
                     'objective_id': obj.get('id', f'OBJ-{idx:03d}'),
                     'objective': obj['text'],

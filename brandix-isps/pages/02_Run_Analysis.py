@@ -293,9 +293,9 @@ col1, col2 = st.columns([2, 1])
 with col1:
     if st.button("START COMPLETE ANALYSIS", type="primary", disabled=st.session_state.analysis_running, use_container_width=True):
         st.session_state.analysis_running = True
-        # ... logic follows ...
+        st.session_state.skip_ai_suggestions = False
 with col2:
-    if st.button("RESET RESULTS ONLY", type="secondary", disabled=st.session_state.analysis_running, use_container_width=True):
+    if st.button("RESET RESULTS", type="secondary", disabled=st.session_state.analysis_running, use_container_width=True):
         import shutil
         output_dir = Path(f"outputs/{selected_year}")
         if output_dir.exists():
@@ -512,74 +512,78 @@ if st.session_state.analysis_running:
         # ============================================================
         # STAGE 5: Generate AI Improvements (70-85%)
         # ============================================================
-        add_log("="*60)
-        add_log("STAGE 5/6: Generate AI-Powered Improvements")
-        add_log("="*60)
-        
-        status_text.info("Stage 5/6: Generating AI-Powered Improvements...")
-        progress_bar.progress(73)
-        time.sleep(0.3)
-        
-        try:
-            from rag_pipeline import ImprovementGenerator
+        if not st.session_state.get('skip_ai_suggestions', False):
+            add_log("="*60)
+            add_log("STAGE 5/6: Generate AI-Powered Improvements")
+            add_log("="*60)
             
-            # Check if Ollama is available
-            add_log("Checking Ollama connection...")
-            llm = LLMEngine(model_name="phi3:mini")
-            if llm.test_connection():
-                add_log("Ollama connection successful")
-                add_log("Model: phi3:mini")
+            status_text.info("Stage 5/6: Generating AI-Powered Improvements...")
+            progress_bar.progress(73)
+            time.sleep(0.3)
+            
+            try:
+                from rag_pipeline import ImprovementGenerator
                 
-                status_text.info("Initializing improvement generator...")
-                progress_bar.progress(76)
-                
-                add_log("Creating RAG pipeline...")
-                add_log("Creating document chunks for context retrieval...")
-                improvement_gen = ImprovementGenerator(sync_engine, llm)
-                add_log(f"Created {len(improvement_gen.rag_pipeline.chunks)} document chunks")
-                add_log("Generated embeddings for all chunks")
-                
-                status_text.info("Generating improvement suggestions (this may take 2-3 minutes)...")
-                progress_bar.progress(78)
-                
-                add_log("Identifying gap objectives...")
-                improvements = improvement_gen.generate_improvements_for_gaps(
-                    threshold=0.50,
-                    max_objectives=10
-                )
-                
-                num_gaps = improvements['summary']['total_gaps']
-                num_processed = improvements['summary']['processed']
-                num_suggestions = improvements['summary']['total_suggestions']
-                
-                add_log(f"Found {num_gaps} gap objectives")
-                add_log(f"Processed top {num_processed} objectives")
-                add_log(f"Generated {num_suggestions} improvement suggestions")
-                
-                # Log severity breakdown
-                severity = improvements['summary']['by_severity']
-                add_log(f"Critical gaps: {severity.get('critical', 0)}")
-                add_log(f"High priority: {severity.get('high', 0)}")
-                add_log(f"Medium priority: {severity.get('medium', 0)}")
-                
-                # Save improvements
-                add_log("Saving improvement suggestions...")
-                improvements_file = output_dir / "improvements.json"
-                with open(improvements_file, 'w', encoding='utf-8') as f:
-                    json.dump(improvements, f, indent=2)
-                add_log(f"Saved to: {improvements_file.name}")
-                
+                # Check if Ollama is available
+                add_log("Checking Ollama connection...")
+                llm = LLMEngine(model_name="phi3:mini")
+                if llm.test_connection():
+                    add_log("Ollama connection successful")
+                    add_log("Model: phi3:mini")
+                    
+                    status_text.info("Initializing improvement generator...")
+                    progress_bar.progress(76)
+                    
+                    add_log("Creating RAG pipeline...")
+                    add_log("Creating document chunks for context retrieval...")
+                    improvement_gen = ImprovementGenerator(sync_engine, llm)
+                    add_log(f"Created {len(improvement_gen.rag_pipeline.chunks)} document chunks")
+                    add_log("Generated embeddings for all chunks")
+                    
+                    status_text.info("Generating improvement suggestions (this may take 2-3 minutes)...")
+                    progress_bar.progress(78)
+                    
+                    add_log("Identifying gap objectives...")
+                    improvements = improvement_gen.generate_improvements_for_gaps(
+                        threshold=0.50,
+                        max_objectives=10
+                    )
+                    
+                    num_gaps = improvements['summary']['total_gaps']
+                    num_processed = improvements['summary']['processed']
+                    num_suggestions = improvements['summary']['total_suggestions']
+                    
+                    add_log(f"Found {num_gaps} gap objectives")
+                    add_log(f"Processed top {num_processed} objectives")
+                    add_log(f"Generated {num_suggestions} improvement suggestions")
+                    
+                    # Log severity breakdown
+                    severity = improvements['summary']['by_severity']
+                    add_log(f"Critical gaps: {severity.get('critical', 0)}")
+                    add_log(f"High priority: {severity.get('high', 0)}")
+                    add_log(f"Medium priority: {severity.get('medium', 0)}")
+                    
+                    # Save improvements
+                    add_log("Saving improvement suggestions...")
+                    improvements_file = output_dir / "improvements.json"
+                    with open(improvements_file, 'w', encoding='utf-8') as f:
+                        json.dump(improvements, f, indent=2)
+                    add_log(f"Saved to: {improvements_file.name}")
+                    
+                    progress_bar.progress(85)
+                    add_log("Stage 5 Complete!")
+                    status_text.success(f"Stage 5 Complete: Generated {num_suggestions} suggestions")
+                else:
+                    add_log("WARNING: Ollama not available - skipping improvement generation")
+                    status_text.warning("Ollama not available - skipping improvement generation")
+                    progress_bar.progress(85)
+            
+            except Exception as e:
+                add_log(f"WARNING: Error in improvement generation: {str(e)}")
+                status_text.warning(f"Could not generate improvements: {str(e)}")
                 progress_bar.progress(85)
-                add_log("Stage 5 Complete!")
-                status_text.success(f"Stage 5 Complete: Generated {num_suggestions} suggestions")
-            else:
-                add_log("WARNING: Ollama not available - skipping improvement generation")
-                status_text.warning("Ollama not available - skipping improvement generation")
-                progress_bar.progress(85)
-        
-        except Exception as e:
-            add_log(f"WARNING: Error in improvement generation: {str(e)}")
-            status_text.warning(f"Could not generate improvements: {str(e)}")
+        else:
+            add_log("SKIPPING STAGE 5: Fast Mode Active")
             progress_bar.progress(85)
         
         time.sleep(0.5)
@@ -587,82 +591,86 @@ if st.session_state.analysis_running:
         # ============================================================
         # STAGE 6: Generate Executive Summary (85-100%)
         # ============================================================
-        add_log("="*60)
-        add_log("STAGE 6/6: Create Executive Summary")
-        add_log("="*60)
-        
-        status_text.info("Stage 6/6: Creating Executive Summary...")
-        progress_bar.progress(88)
-        time.sleep(0.3)
-        
-        try:
-            add_log("Checking LLM availability...")
-            llm = LLMEngine(model_name="phi3:mini")
-            if llm.test_connection():
-                add_log("LLM connection successful")
-                
-                status_text.info("Generating executive insights with AI...")
-                progress_bar.progress(92)
-                
-                add_log("Initializing executive summary generator...")
-                summary_gen = ExecutiveSummaryGenerator(llm)
-                
-                add_log("Generating summary sections:")
-                add_log("  1. Executive Overview")
-                add_log("  2. Key Findings")
-                add_log("  3. Critical Gaps")
-                add_log("  4. Strategic Recommendations")
-                add_log("  5. Risk Assessment")
-                add_log("  6. Next Steps")
-                
-                summary = summary_gen.generate_executive_summary(results)
-                
-                add_log("All 6 sections generated successfully")
-                
-                # Save summary
-                add_log("Saving executive summary...")
-                summary_file = output_dir / "executive_summary.json"
-                summary_gen.save_summary(summary, str(summary_file))
-                add_log(f"Saved JSON: {summary_file.name}")
-                
-                # Also create markdown version
-                add_log("Creating markdown report...")
-                md_content = f"""# Executive Summary - {selected_year}
-
-## Overview
-{summary['overview']}
-
-## Key Findings
-{summary['key_findings']}
-
-## Critical Gaps
-{summary['critical_gaps']}
-
-## Strategic Recommendations
-{summary['recommendations']}
-
-## Risk Assessment
-{summary['risk_assessment']}
-
-## Next Steps
-{summary['next_steps']}
-"""
-                md_file = output_dir / "executive_summary.md"
-                with open(md_file, 'w', encoding='utf-8') as f:
-                    f.write(md_content)
-                add_log(f"Saved Markdown: {md_file.name}")
-                
+        if not st.session_state.get('skip_ai_suggestions', False):
+            add_log("="*60)
+            add_log("STAGE 6/6: Create Executive Summary")
+            add_log("="*60)
+            
+            status_text.info("Stage 6/6: Creating Executive Summary...")
+            progress_bar.progress(88)
+            time.sleep(0.3)
+            
+            try:
+                add_log("Checking LLM availability...")
+                llm = LLMEngine(model_name="phi3:mini")
+                if llm.test_connection():
+                    add_log("LLM connection successful")
+                    
+                    status_text.info("Generating executive insights with AI...")
+                    progress_bar.progress(92)
+                    
+                    add_log("Initializing executive summary generator...")
+                    summary_gen = ExecutiveSummaryGenerator(llm)
+                    
+                    add_log("Generating summary sections:")
+                    add_log("  1. Executive Overview")
+                    add_log("  2. Key Findings")
+                    add_log("  3. Critical Gaps")
+                    add_log("  4. Strategic Recommendations")
+                    add_log("  5. Risk Assessment")
+                    add_log("  6. Next Steps")
+                    
+                    summary = summary_gen.generate_executive_summary(results)
+                    
+                    add_log("All 6 sections generated successfully")
+                    
+                    # Save summary
+                    add_log("Saving executive summary...")
+                    summary_file = output_dir / "executive_summary.json"
+                    summary_gen.save_summary(summary, str(summary_file))
+                    add_log(f"Saved JSON: {summary_file.name}")
+                    
+                    # Also create markdown version
+                    add_log("Creating markdown report...")
+                    md_content = f"""# Executive Summary - {selected_year}
+    
+    ## Overview
+    {summary['overview']}
+    
+    ## Key Findings
+    {summary['key_findings']}
+    
+    ## Critical Gaps
+    {summary['critical_gaps']}
+    
+    ## Strategic Recommendations
+    {summary['recommendations']}
+    
+    ## Risk Assessment
+    {summary['risk_assessment']}
+    
+    ## Next Steps
+    {summary['next_steps']}
+    """
+                    md_file = output_dir / "executive_summary.md"
+                    with open(md_file, 'w', encoding='utf-8') as f:
+                        f.write(md_content)
+                    add_log(f"Saved Markdown: {md_file.name}")
+                    
+                    progress_bar.progress(98)
+                    add_log("Stage 6 Complete!")
+                    status_text.success("Stage 6 Complete: Executive summary generated")
+                else:
+                    add_log("WARNING: Ollama not available - skipping executive summary")
+                    status_text.warning("Ollama not available - skipping executive summary")
+                    progress_bar.progress(98)
+            
+            except Exception as e:
+                add_log(f"WARNING: Error in summary generation: {str(e)}")
+                status_text.warning(f"Could not generate executive summary: {str(e)}")
                 progress_bar.progress(98)
-                add_log("Stage 6 Complete!")
-                status_text.success("Stage 6 Complete: Executive summary generated")
-            else:
-                add_log("WARNING: Ollama not available - skipping executive summary")
-                status_text.warning("Ollama not available - skipping executive summary")
-                progress_bar.progress(98)
-        
-        except Exception as e:
-            add_log(f"WARNING: Error in summary generation: {str(e)}")
-            status_text.warning(f"Could not generate executive summary: {str(e)}")
+        else:
+            add_log("SKIPPING STAGE 6: Fast Mode Active")
             progress_bar.progress(98)
         
         time.sleep(0.5)

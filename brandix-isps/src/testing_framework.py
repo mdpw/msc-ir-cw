@@ -785,8 +785,9 @@ class TestingFramework:
                 )
         
         # Calculate overall grade
-        if assessment['tests_completed'] > 0:
-            pass_rate = assessment['tests_passed'] / (assessment['tests_completed'] - assessment['tests_skipped'])
+        total_evaluatable = assessment['tests_passed'] + assessment['tests_failed']
+        if total_evaluatable > 0:
+            pass_rate = assessment['tests_passed'] / total_evaluatable
             if pass_rate >= 0.90:
                 assessment['overall_grade'] = 'A (Excellent)'
             elif pass_rate >= 0.75:

@@ -114,10 +114,10 @@ class EmbeddingEngine:
         return matches
     
     def _classify_alignment(self, similarity: float) -> str:
-        """Classify alignment strength"""
-        if similarity >= 0.70:
+        """Classify alignment strength (Standardized to 0.45/0.30)"""
+        if similarity >= 0.45:
             return "Strong"
-        elif similarity >= 0.50:
+        elif similarity >= 0.30:
             return "Moderate"
         else:
             return "Weak"

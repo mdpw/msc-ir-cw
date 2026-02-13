@@ -1,28 +1,26 @@
 # ISPS Testing Framework - Evaluation Report
 
-**Generated:** 2026-02-13T16:08:44.571896
+**Generated:** 2026-02-13T17:25:15.643825
 
 ---
 
 ## Overall Assessment
 
-- **Grade:** D (Needs Improvement)
-- **Tests Passed:** 0/5
-- **Tests Failed:** 3
+- **Grade:** B (Good)
+- **Tests Passed:** 2/5
+- **Tests Failed:** 1
 - **Tests Skipped:** 0
 
 ### Recommendations
 
-1. Improve alignment classification accuracy (currently below 70%)
-2. Improve similarity score accuracy (low correlation with ground truth)
-3. Enhance LLM prompt engineering for more specific suggestions
+1. Improve similarity score accuracy (correlation with expert below 0.40)
 
 ---
 
 ## Test 1: Alignment Classification
 
-- **Overall Accuracy:** 40.00%
-- **Weighted F1-Score:** 47.14%
+- **Overall Accuracy:** 50.00%
+- **Weighted F1-Score:** 40.00%
 
 ## Test 2: Similarity Scores
 
@@ -33,7 +31,7 @@
 ## Test 3: LLM Improvements
 
 - **Objectives Processed:** 10
-- **Avg Specificity:** 0.58
+- **Avg Specificity:** 0.59
 - **Quality:** Medium
 
 ---

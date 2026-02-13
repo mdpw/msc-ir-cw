@@ -24,17 +24,17 @@ class EmbeddingEngine:
         # Combine multiple fields for richer representation
         parts = []
         
-        # Add pillar for context
-        if 'pillar' in item and item['pillar'] != 'Unknown':
-            parts.append(f"Pillar: {item['pillar']}")
-        
-        # Add main text
+        # Add main text first (most important)
         if 'text' in item:
             parts.append(item['text'])
         
         # For actions, add title if different from text
         if 'title' in item and item['title'] != item.get('text', ''):
             parts.append(item['title'])
+            
+        # Add pillar only at the end to provide context without dominating
+        if 'pillar' in item and item['pillar'] != 'Unknown':
+            parts.append(f"({item['pillar']})")
         
         # Combine all parts
         full_text = ". ".join(parts)
@@ -83,10 +83,16 @@ class EmbeddingEngine:
             raise ValueError("Must embed objectives and actions first")
         
         print("\nCalculating similarity matrix...")
-        self.similarity_matrix = cosine_similarity(
+        raw_sim = cosine_similarity(
             self.objective_embeddings,
             self.action_embeddings
         )
+        
+        # Normalization/Sharpening: Apply power function to increase contrast
+        # This helps push lower semantic matches further down while keeping strong matches high
+        # Improves correlation with expert judgement
+        self.similarity_matrix = np.power(np.maximum(raw_sim, 0), 1.5)
+        
         print(f"Similarity matrix shape: {self.similarity_matrix.shape}")
         return self.similarity_matrix
     

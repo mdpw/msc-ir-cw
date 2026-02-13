@@ -99,10 +99,11 @@ class SynchronizationEngine:
         else:
             classification = "Needs Improvement"
         
-        # Count alignments by strength
-        strong = int(np.sum(max_per_objective >= 0.70))
-        moderate = int(np.sum((max_per_objective >= 0.50) & (max_per_objective < 0.70)))
-        weak = int(np.sum(max_per_objective < 0.50))
+        # Count alignments by strength (Adjusted for sharpened scores: matrix = raw^1.5)
+        # Raw 0.58^1.5 approx 0.45
+        strong = int(np.sum(max_per_objective >= 0.45))
+        moderate = int(np.sum((max_per_objective >= 0.30) & (max_per_objective < 0.45)))
+        weak = int(np.sum(max_per_objective < 0.30))
         
         return {
             'overall_score': float(overall_score),

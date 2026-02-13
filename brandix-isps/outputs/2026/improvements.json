@@ -1,21 +1,206 @@
 {
   "improvements": [
     {
-      "objective_id": "OBJ-085",
-      "objective": "Blockchain traceability (95% visibility by 2029)",
-      "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
-      "current_score": 47.65960872173309,
+      "objective_id": "OBJ-146",
+      "objective": "AI-powered inspection",
+      "pillar": "OPERATIONAL EXCELLENCE",
+      "current_score": 22.970137000083923,
       "suggestions": {
         "new_actions": [],
-        "kpi_enhancements": [
-          "Employee Proficiency in Blockchain: Conduct comprehensive training programs to achieve a minimum threshold where at least 80% of the supply chain and manufacturing staff are proficient with blockchain technology by Q2 2026, ensuring an informed workforce that can maintain system efficiency post-implementation."
-        ],
+        "kpi_enhancements": [],
         "timeline_recommendations": [],
         "resource_requirements": [],
         "integration_opportunities": [
-          "Pilot Blockchain Project: Initiate a small-scale pilot project in one supply chain segment that uses Ethereum or Hyperledger Fabric to create an immutable ledger of all transactions, ensuring full end-to-end traceability from raw materials sourcing through manufacturing and delivery by Q4 2025.",
-          "Partner with Blockchain Solution Providers: Engage specialized blockchain technology providers that have experience in fashion supply chain applications to assist Brandix's setup of a comprehensive, sustainable traceability system tailored for the apparel industry by Q1 2024."
+          "**Cost Reduction Per Unit Inspection** - Strive to lower inspection costs per unit by at least 15% within the first six months, with further reductions as systems improve through learning algorithms over time (Track cost savings and analyze ROI regularly).",
+          "**Reduction in Return Rates Due To Quality Issues** - Target a reduction of returns due to defects by at least 20% within the first year, with full objectives achieved in two years as systems are rolled out across all production lines (Monitor return rates and correlate them directly with inspection process improvements.)",
+          "**Q1** - Initiate research on suitable computer vision technologies. Begin training of internal team members specialized in AI and machine learning for quality control systems.",
+          "**Synergize With Six Sigma Deployment** - As computer vision technology enhances quality control, integrate findings and data with the continuous improvement loop established by Brandix's ongoing Six Sigma initiatives to refine processes further based on real-time insights from AI systems. (Create a feedback mechanism between these two pillars for holistic process improvements.)",
+          "**Incorporate Into Supply Chain Visibility** - Use data gathered through computer vision technology as part of the overall supply chain visibility, helping to track and manage quality control across all stages from raw material inspection to final product delivery (Ensure seamless flow of information for end-to-end transparency.)"
         ]
+      },
+      "retrieved_context": [
+        {
+          "text": "Strategic Objective: AI-powered inspection\nPillar: OPERATIONAL EXCELLENCE\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-146",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.6796440482139587
+        },
+        {
+          "text": "Action Item: Quality Excellence - Six Sigma Deployment\nID: OPS-001\nPillar: OPERATIONAL EXCELLENCE\nContext: This is a Year 1 action item from Brandix's 2025-2026 action plan.",
+          "source": "action_plan",
+          "id": "OPS-001",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.3633840084075928
+        },
+        {
+          "text": "Strategic Objective: AI quality control and computer vision\nPillar: INNOVATION & DIGITAL TRANSFORMATION\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-073",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.3567180931568146
+        },
+        {
+          "text": "Strategic Objective: AI pattern optimization\nPillar: INNOVATION & DIGITAL TRANSFORMATION\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-081",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.30363091826438904
+        },
+        {
+          "text": "Action Item: Supply Chain Visibility Enhancement\nID: OPS-003\nPillar: OPERATIONAL EXCELLENCE\nContext: This is a Year 1 action item from Brandix's 2025-2026 action plan.",
+          "source": "action_plan",
+          "id": "OPS-003",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.29329606890678406
+        }
+      ],
+      "raw_response": "# Improvement Suggestions for AI-powered inspection Objective at Brandix:\n\n## New Actions:\n1. **Deploy Computer Vision Technology** - Roll out computer vision systems across select production lines to automate defect detection, starting with high-volume products that are currently subject to the highest rates of returns due to quality issues. (Focus on immediate ROI by targeting areas where AI can have an instant impact.)\n   \n2. **Train Internal Expertise** - Develop a specialized internal team skilled in machine learning and computer vision, responsible for maintaining, troubleshooting, and improving the deployed systems to ensure sustainable operations beyond Year 1. (Establish expert knowledge within Brandix.)\n   \n3. **Collaborative Pilot Projects** - Partner with academic institutions or startups specializing in AI-driven quality control solutions for piloting cutting-edge technologies and integrating them into production processes, beginning Q2 2025 (Create a pipeline of innovation through partnerships.)\n   \n## KPI Enhancements:\n1. **Defect Detection Accuracy** - Aim to reduce manual defect identification errors by at least 30% within the first six months, with full integration expected over one year from deployment in selected lines (Measure current error rates and set a clear baseline for improvement.)\n   \n2. **Cost Reduction Per Unit Inspection** - Strive to lower inspection costs per unit by at least 15% within the first six months, with further reductions as systems improve through learning algorithms over time (Track cost savings and analyze ROI regularly).\n   \n3. **Reduction in Return Rates Due To Quality Issues** - Target a reduction of returns due to defects by at least 20% within the first year, with full objectives achieved in two years as systems are rolled out across all production lines (Monitor return rates and correlate them directly with inspection process improvements.)\n   \n## Timeline Recommendations:\n- **Q1** - Initiate research on suitable computer vision technologies. Begin training of internal team members specialized in AI and machine learning for quality control systems. \n- **Q2** - Start deploying pilot projects with technology partnerships, focusing initially on high-volume products with historical defect rates above industry average. Set KPI baselines based on current data.\n   \n## Resource Requirements:\n- Budget allocation of $1 million for the initial rollout and training in computer vision technologies across selected production lines should be planned out, including partnership fees if applicable. \n- A dedicated team comprising engineers with expertise in machine learning from within Brandix along with external consultants to guide project kickoff. An IT infrastructure upgrade may also be necessary for seamless integration of new systems into existing workflows.\n   \n## Integration Opportunities:\n1. **Synergize With Six Sigma Deployment** - As computer vision technology enhances quality control, integrate findings and data with the continuous improvement loop established by Brandix's ongoing Six Sigma initiatives to refine processes further based on real-time insights from AI systems. (Create a feedback mechanism between these two pillars for holistic process improvements.)\n   \n2. **Incorporate Into Supply Chain Visibility** - Use data gathered through computer vision technology as part of the overall supply chain visibility, helping to track and manage quality control across all stages from raw material inspection to final product delivery (Ensure seamless flow of information for end-to-end transparency.)",
+      "method": "RAG-enhanced"
+    },
+    {
+      "objective_id": "OBJ-013",
+      "objective": "Eliminate R-22 refrigerants by 2030",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "current_score": 23.335330188274384,
+      "suggestions": {
+        "new_actions": [
+          "Develop a comprehensive R-22 phased replacement program by integrating natural refrigerants (e.g., ammonia or CO2) into production lines, starting from high-impact areas first to ensure gradual transition without disrupting operations. Partner with local suppliers for the initial batch of alternative technologies and establish a training module on handling these substances safely within all manufacturing units by Q3 2024."
+        ],
+        "kpi_enhancements": [
+          "Achieve a minimum of 5% annual reduction in R-22 usage starting immediately, with full compliance expected by end of Year 3 (e.g., reduce total refrigerant charge volume used annually). Annual progress audits should be conducted to ensure the target is being met and adjustments made as needed for continuous improvement towards the complete elimination goal in Q2 2030.",
+          "By End of Fourth Quarter (Q4) Q1: Complete the rollout plan with remaining high impact manufacturing units; review initial results from alternative refrigerant implementations, adjust strategies if necessary based on feedback and performance data collected during this period to ensure continued alignment towards 2030 elimination goal."
+        ],
+        "timeline_recommendations": [
+          "First Quarter (Q1): Conduct an R-22 use audit across all facilities, identify high usage areas/products requiring immediate attention, initiate the search for alternative technologies and suppliers, launch internal training sessions on handling new substances."
+        ],
+        "resource_requirements": [
+          "Establish a cross-departmental task force with representatives from engineering, procurement, operations, and sustainability departments to oversee the phased replacement program's development and implementation. This team will be instrumental in ensuring all units are informed of changes, training is effectively conducted, and supplier contracts"
+        ],
+        "integration_opportunities": []
+      },
+      "retrieved_context": [
+        {
+          "text": "Strategic Objective: Eliminate R-22 refrigerants by 2030\nPillar: ENVIRONMENTAL LEADERSHIP\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-013",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.8096650838851929
+        },
+        {
+          "text": "Strategic Objective: 50% green + recycled water by 2030\nPillar: ENVIRONMENTAL LEADERSHIP\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-027",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.43102312088012695
+        },
+        {
+          "text": "Strategic Objective: Eliminate single-use plastics by 2026\nPillar: ENVIRONMENTAL LEADERSHIP\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-058",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.4301134943962097
+        },
+        {
+          "text": "Strategic Objective: Advanced recycling systems\nPillar: ENVIRONMENTAL LEADERSHIP\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-032",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.41929104924201965
+        },
+        {
+          "text": "Strategic Objective: 42% emission reduction by 2030\nPillar: ENVIRONMENTAL LEADERSHIP\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-017",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.40244168043136597
+        }
+      ],
+      "raw_response": "NEW ACTIONS:\n1. Develop a comprehensive R-22 phased replacement program by integrating natural refrigerants (e.g., ammonia or CO2) into production lines, starting from high-impact areas first to ensure gradual transition without disrupting operations. Partner with local suppliers for the initial batch of alternative technologies and establish a training module on handling these substances safely within all manufacturing units by Q3 2024.\n   \n2. Launch an 'R-22 Innovation Challenge' inviting internal employees, as well as external innovators in cooling technology, to design low-global warming potential (GWP) alternatives for Brandix refrigeration systems that can be phased into production by 2030 without compromising efficiency or product quality. Provide seed funding and resources such as co-working spaces within the company's research division to stimulate creativity from Q1 2024 onwards.\n   \nKPI ENHANCEMENTS:\n1. Achieve a minimum of 5% annual reduction in R-22 usage starting immediately, with full compliance expected by end of Year 3 (e.g., reduce total refrigerant charge volume used annually). Annual progress audits should be conducted to ensure the target is being met and adjustments made as needed for continuous improvement towards the complete elimination goal in Q2 2030.\n   \n2. Set a KPI of reducing R-22 related carbon emissions by at least 1% per year, measured against baseline figures from three years ago to directly correlate with progress toward environmental leadership and climate goals as specified within the strategic plan's emission reduction objectives. Report on this quarterly for transparency and accountability purposes starting Q3 of Year 2024.\n   \nTIMELINE RECOMMENDATIONS:\n- First Quarter (Q1): Conduct an R-22 use audit across all facilities, identify high usage areas/products requiring immediate attention, initiate the search for alternative technologies and suppliers, launch internal training sessions on handling new substances. \n   \n- By End of Second Quarter (Q2) Q2: Secure a contract with selected local natural refrigerant providers; start integration in identified areas/products. Launch R-22 Innovation Challenge and allocate seed funding. Begin quarterly progress audits for emissions reduction KPIs as well.\n   \n- By End of Fourth Quarter (Q4) Q1: Complete the rollout plan with remaining high impact manufacturing units; review initial results from alternative refrigerant implementations, adjust strategies if necessary based on feedback and performance data collected during this period to ensure continued alignment towards 2030 elimination goal.\n   \nRESOURCE REQUIREMENTS:\n- Budget Allocation for R&D innovations targeting alternatives with low GWP must be increased by at least 15% of the current environmental initiatives budget, ensuring enough capital is available to support both research and potential prototype development. Secure funding from corporate sustainability grants or allocate internal resources earmarked for green investments within Brandix's financial framework as part of this strategic shift towards eliminating R-22 by 2030.\n   \n- Establish a cross-departmental task force with representatives from engineering, procurement, operations, and sustainability departments to oversee the phased replacement program's development and implementation. This team will be instrumental in ensuring all units are informed of changes, training is effectively conducted, and supplier contracts",
+      "method": "RAG-enhanced"
+    },
+    {
+      "objective_id": "OBJ-103",
+      "objective": "Zero fatalities/high-consequence injuries",
+      "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+      "current_score": 26.14254355430603,
+      "suggestions": {
+        "new_actions": [
+          "Implement an advanced safety technology program across all facilities to provide real-time monitoring of environmental hazards, equipment malfunctions, or unsafe practices that could lead to injuries. This includes wearable devices for workers and automated sensors in the factory setting which should be integrated into our existing People Excellence & Social Impact Programs Expansion strategy (Similarity: 25.1%).",
+          "Launch a 'Safety First Campaign' to foster an organizational culture prioritizing safety, focusing on awareness and training sessions that emphasize the importance of zero harm in line with our Quality Excellence - Six Sigma Deployment (Similarity: 16.3%).",
+          "Develop a peer-to-peer injury prevention network within teams to encourage proactive reporting, sharing best practices and fostering an environment where safety is everyone's responsibility\u2014a concept that complements the Employee Skills Development Program strategy (Similarity: 21.4%)."
+        ],
+        "kpi_enhancements": [
+          "Achieve a 'Zero Harm Record': No serious injuries or fatalities should occur within Brandix\u2019 facilities by Q4 of Year 1, as measured against the baseline incident reports from the previous year(s). This will require monthly safety audits and prompt investigation following any near-miss incidents to ensure continuous improvement.",
+          "Increase in Safety Training Completion Rates: Achieve a minimum completion rate of 95% for all mandatory injury prevention training among employees by the end of Q1, with refresher courses biannually as part of our ongoing skills development (aligning with Employee Skills Development Program strategy).",
+          "Enhance Safety Culture Score: Aim to reach a 90% positive response rate in employee safety culture surveys by the end of Q2, indicating strong alignment between company values and daily practices\u2014a direct correlation sought through our Mental Health & Wellbeing Strategy (Similarity: 26.1%)."
+        ],
+        "timeline_recommendations": [],
+        "resource_requirements": [
+          "Immediate launch (Monthly) commencement of Safety First Campaign alongside regular training sessions beginning Q2; first round evaluation at mid-year for course content efficacy in promoting safety culture awareness among employees, followed by refinements where necessary."
+        ],
+        "integration_opportunities": [
+          "The 'Safety First Campaign' can be integrated into community events, aligning with Community Impact Programs Expansion (Similarity: 25."
+        ]
+      },
+      "retrieved_context": [
+        {
+          "text": "Strategic Objective: Zero fatalities/high-consequence injuries\nPillar: PEOPLE EXCELLENCE & SOCIAL IMPACT\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-103",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.6623022556304932
+        },
+        {
+          "text": "Strategic Objective: High-consequence injuries: 0\nPillar: PEOPLE EXCELLENCE & SOCIAL IMPACT\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-115",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.5962725877761841
+        },
+        {
+          "text": "Strategic Objective: Fatalities: 0\nPillar: PEOPLE EXCELLENCE & SOCIAL IMPACT\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-114",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.49951159954071045
+        },
+        {
+          "text": "Strategic Objective: Zero harm and industry-leading satisfaction\nPillar: PEOPLE EXCELLENCE & SOCIAL IMPACT\nType: goal\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-101",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4696739614009857
+        },
+        {
+          "text": "Strategic Objective: Discrimination incidents: 0\nPillar: PEOPLE EXCELLENCE & SOCIAL IMPACT\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-126",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.42559072375297546
+        }
+      ],
+      "raw_response": "To improve alignment for the objective of achieving zero fatalities/high-consequence injuries at Brandix by focusing on PEOPLE EXCELLENCE & SOCIAL IMPACT, we can develop a comprehensive plan that aligns with our company's sustainability and innovation focus. Here are the tailored suggestions:\n\n**NEW ACTIONS** (2-3 specific action items):\n1. Implement an advanced safety technology program across all facilities to provide real-time monitoring of environmental hazards, equipment malfunctions, or unsafe practices that could lead to injuries. This includes wearable devices for workers and automated sensors in the factory setting which should be integrated into our existing People Excellence & Social Impact Programs Expansion strategy (Similarity: 25.1%).\n   \n2. Launch a 'Safety First Campaign' to foster an organizational culture prioritizing safety, focusing on awareness and training sessions that emphasize the importance of zero harm in line with our Quality Excellence - Six Sigma Deployment (Similarity: 16.3%).\n   \n3. Develop a peer-to-peer injury prevention network within teams to encourage proactive reporting, sharing best practices and fostering an environment where safety is everyone's responsibility\u2014a concept that complements the Employee Skills Development Program strategy (Similarity: 21.4%).\n\n**KPI Enhancements** (2-3 measurable KPIs):\n1. Achieve a 'Zero Harm Record': No serious injuries or fatalities should occur within Brandix\u2019 facilities by Q4 of Year 1, as measured against the baseline incident reports from the previous year(s). This will require monthly safety audits and prompt investigation following any near-miss incidents to ensure continuous improvement.\n   \n2. Increase in Safety Training Completion Rates: Achieve a minimum completion rate of 95% for all mandatory injury prevention training among employees by the end of Q1, with refresher courses biannually as part of our ongoing skills development (aligning with Employee Skills Development Program strategy).\n   \n3. Enhance Safety Culture Score: Aim to reach a 90% positive response rate in employee safety culture surveys by the end of Q2, indicating strong alignment between company values and daily practices\u2014a direct correlation sought through our Mental Health & Wellbeing Strategy (Similarity: 26.1%).\n   \n**Timeline Recommendations**:\n- End of Month 3 for full implementation rollout of advanced safety technology in pilot locations, with a scaled expansion to all facilities by the end of Year 1 based on success rates and resource availability.\n   \n- Immediate launch (Monthly) commencement of Safety First Campaign alongside regular training sessions beginning Q2; first round evaluation at mid-year for course content efficacy in promoting safety culture awareness among employees, followed by refinements where necessary.\n   \n**Resource Requirements**: \nAn initial investment into technology and campaign materials will be required with a preliminary budget allocation of $500K set aside for R&D and equipment procurement in the first quarter to support these safety measures (tied back to our commitment towards sustainability by reducing wasteful expenditure on injury-related costs).\n   \n**Integration Opportunities**: \n1. The 'Safety First Campaign' can be integrated into community events, aligning with Community Impact Programs Expansion (Similarity: 25.",
+      "method": "RAG-enhanced"
+    },
+    {
+      "objective_id": "OBJ-085",
+      "objective": "Blockchain traceability (95% visibility by 2029)",
+      "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+      "current_score": 26.17034912109375,
+      "suggestions": {
+        "new_actions": [
+          "Implement a Blockchain-based Supply Chain Management (BCSM) system to record all transactions from the sourcing of raw materials through manufacturing processes, ensuring each step is transparent and verifiable on blockchain ledgers by Q3 2025. This will directly address our objective for traceability within three years while promoting sustainable practices as any identified issues in supply chain ethics can be resolved swiftly due to this enhanced visibility.",
+          "Launch a Blockchain Supplier Education Program (BSEP) by Q4 2025, targeting all suppliers directly involved with Brandix and partner firms that provide raw materials for manufacturing apparel. This program will educate them on the benefits of blockchain technology in achieving supply chain traceability goals while fostering a collaborative environment focused on shared sustainability objectives.",
+          "Develop Blockchain Traceable Certificates (BTCs) by Q2 2026, which every batch of raw materials and final products will receive upon completion of the respective stages in production to confirm their origins and ethical sourcing methods directly correlating with sustainability efforts within our supply chain."
+        ],
+        "kpi_enhancements": [
+          "Achieve a 25% increase in blockchain-verified transactions by Q4 2026, setting the pace towards full implementation of BCSM systems and providing tangible early successes that can be built upon yearly moving forward to reach our goal of 95%.",
+          "Reduce supply chain discrepancies due to lack of traceability by at least 40% in Q1-Q3 each fiscal quarter, using blockchain data analytics tools for real-time monitoring and corrective actions that align with sustainable practices within our operations as we move towards full adoption."
+        ],
+        "timeline_recommendations": [],
+        "resource_requirements": [],
+        "integration_opportunities": []
       },
       "retrieved_context": [
         {
@@ -54,31 +239,500 @@
           "similarity": 0.3415800929069519
         }
       ],
-      "raw_response": "NEW ACTIONS (2-3 Specific Action Items):\n1. Establish a dedicated Blockchain Implementation Team: Form a cross-functional team consisting of members from R&D, IT, Supply Chain Management, and Procurement to oversee the development and integration of blockchain technology for traceability within Brandix's operations by Q2 2024.\n   \n2. Pilot Blockchain Project: Initiate a small-scale pilot project in one supply chain segment that uses Ethereum or Hyperledger Fabric to create an immutable ledger of all transactions, ensuring full end-to-end traceability from raw materials sourcing through manufacturing and delivery by Q4 2025.\n   \n3. Partner with Blockchain Solution Providers: Engage specialized blockchain technology providers that have experience in fashion supply chain applications to assist Brandix's setup of a comprehensive, sustainable traceability system tailored for the apparel industry by Q1 2024.\n   \nKPI ENHANCEMENTS (2-3 Measurable KPIs):\n1. Blockchain Integration Progress: Achieve an incremental increase in blockchain integration into supply chain processes, with a target of integrating at least one traceability project per quarter by 2027 to ensure continuous improvement and adoption across all segments.\n   \n2. System Visibility Metrics: Reach full system visibility within the pilot segment first but scale up for company-wide implementation aiming for complete end-to-end blockchain traceability with real-time updates accessible by Q3 2029, meeting or exceeding our set target of 95% visibility.\n   \n3. Employee Proficiency in Blockchain: Conduct comprehensive training programs to achieve a minimum threshold where at least 80% of the supply chain and manufacturing staff are proficient with blockchain technology by Q2 2026, ensuring an informed workforce that can maintain system efficiency post-implementation.\n   \nTIMELINE RECOMMENDATIONS (Quarterly Milestones for Year 1):\nQ1: Form the Blockchain Implementation Team and engage with blockchain solution providers. Begin staff training programs on basic blockchain concepts in supply chain management. Launch a market analysis to identify potential pilot projects that can benefit most from traceability through blockchain technology. Set up initial meetings between Brandix's teams and selected vendors/partners for project planning purposes.\n   \nQ2: Finalize the vendor partner(s), initiate detailed requirements gathering, complete an impact assessment study to understand potential ROI, risks, benefits of blockchain adoption in different segments, with quarterly updates on progress shared among stakeholders and documentation finalized for implementation. Begin creating a roadmap for pilot project rollout based on the gathered data by Q3 2024 end date.\n   \nQ3: Start small-scale pilots within selected supply chain processes to test blockchain integration, with quarterly reviews to assess performance against KPIs and tweaks as necessary. Begin drafting standard operating procedures (SOP) for full company rollout based on pilot learnings by the end of Q4 2025.\n   \nQ4: Analyze pilot project data; develop a comprehensive roadmap that includes timelines, resource allocation, and integration into larger supply chain segments across Brandix's operations with clear quarterly objectives leading to full implementation readiness for company-wide rollout by Q1 2026.\n   \nRESOURCE REQUIREMENTS (Budget, Team, Infrastructure):",
+      "raw_response": "NEW ACTIONS:\n1. Implement a Blockchain-based Supply Chain Management (BCSM) system to record all transactions from the sourcing of raw materials through manufacturing processes, ensuring each step is transparent and verifiable on blockchain ledgers by Q3 2025. This will directly address our objective for traceability within three years while promoting sustainable practices as any identified issues in supply chain ethics can be resolved swiftly due to this enhanced visibility.\n   \n2. Launch a Blockchain Supplier Education Program (BSEP) by Q4 2025, targeting all suppliers directly involved with Brandix and partner firms that provide raw materials for manufacturing apparel. This program will educate them on the benefits of blockchain technology in achieving supply chain traceability goals while fostering a collaborative environment focused on shared sustainability objectives.\n   \n3. Develop Blockchain Traceable Certificates (BTCs) by Q2 2026, which every batch of raw materials and final products will receive upon completion of the respective stages in production to confirm their origins and ethical sourcing methods directly correlating with sustainability efforts within our supply chain.\n   \nKPI ENHANCEMENTS:\n1. Achieve a 25% increase in blockchain-verified transactions by Q4 2026, setting the pace towards full implementation of BCSM systems and providing tangible early successes that can be built upon yearly moving forward to reach our goal of 95%.\n   \n2. Reduce supply chain discrepancies due to lack of traceability by at least 40% in Q1-Q3 each fiscal quarter, using blockchain data analytics tools for real-time monitoring and corrective actions that align with sustainable practices within our operations as we move towards full adoption.\n   \n3. Maintain a supplier compliance rate of at least 90% regarding the BSEP by Q2 each year, ensuring continuous improvement in blockchain literacy amongst partners and integration into Brandix\u2019s sustainability-focused supply chain strategy as we approach our goal for full traceability.\n   \nTIMELINE RECOMMENDATIONS: \nYear 1 Quarterly Milestones:\nQ1 - Conduct a comprehensive audit of current suppliers and raw material sourcing to establish baseline data points that will be tracked on the blockchain platform, with progress assessments every month.\n   \nQ2 - Initiate BSEP development alongside recruiting tech partnerships specialized in integrating Blockchain technology into supply chain applications by Q3 2025 to accelerate our journey towards a fully traceable network of operations and suppliers, with progress assessments every two months.\n   \nQ3 - Begin the implementation phase for BCSM systems pilot-testing within select production lines as an operational testbed while simultaneously developing Blockchain Traceable Certificates (BTCs) to be rolled out by Q4 2025 in alignment with our annual progress review and reassessment of objectives.\n   \nQ4 - Evaluate the pilot\u2019s success, feedback from suppliers engaged through BSEP, refine strategies as necessary for full-scale implementation planned to commence at the start Q1 2026 alongside expanding Blockchain Traceable Certificates (BTCs) deployment. Assess progress against KPI enhancements bi-monthly with a comprehensive review before end of fiscal year, setting up roadmaps and goals for Year 2 based on learnings from the first full cycle implementation rollout in",
+      "method": "RAG-enhanced"
+    },
+    {
+      "objective_id": "OBJ-148",
+      "objective": "Customer complaints: 0",
+      "pillar": "OPERATIONAL EXCELLENCE",
+      "current_score": 26.244869828224182,
+      "suggestions": {
+        "new_actions": [
+          "Implement a Lean Six Sigma program focused on process improvement that targets the top three processes contributing to customer dissatisfaction based on historical complaint data analysis, aiming for defect reduction by at least 50% within six months from launch.",
+          "Launch an extensive training and certification drive in quality management systems (QMS), ensuring all employees can proficiently apply Six Sigma principles to their daily tasks over the next quarter, alongside monthly workshops on continuous improvement techniques for leadership team members only."
+        ],
+        "kpi_enhancements": [
+          "Reduce customer complaint rate by 50% within six months of implementing Lean Six Sigma programs in targeted processes; monitor through real-time feedback and post-purchase surveys with timely reporting every two weeks starting Q2, Year 1.",
+          "Achieve a 90% employee proficiency level on quality management systems certification within the first quarter of launching training drives to ensure consistent application across all levels; measure via departmental audits conducted bi-monthly beginning in Q1.",
+          "Timeframe Recommendations:**",
+          "Initiate employee training drives simultaneously as Six Sigma program launches by end Q2, with certifications expected within three months from start date and first proficiency checkpoint due at the conclusion of July 2024; ongoing monthly leadership workshops to reinforce continuous improvement mindset starting in August.",
+          "Link employee training drives with Supply Chain Visibility Enhancement initiatives by providing insights into how supply chain disruptions contribute to quality issues, thus fostering a more proactive approach in identifying and mitigating risks that could lead to defects; align leadership workshops on continuous improvement towards strategic goals of Industry 4.0 adoption where possible through process optimization techniques learned from Six Sigma certification training."
+        ],
+        "timeline_recommendations": [],
+        "resource_requirements": [
+          "Allocate $150,000 for comprehensive employee training drives and certification costs spread over three months from launch date; partnering with a recognized external provider specializing in QMS education specifically tailored towards textile manufacturing challenges."
+        ],
+        "integration_opportunities": []
+      },
+      "retrieved_context": [
+        {
+          "text": "Strategic Objective: Customer complaints: 0\nPillar: OPERATIONAL EXCELLENCE\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-148",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.6260347962379456
+        },
+        {
+          "text": "Strategic Objective: Zero complaints and Six Sigma quality\nPillar: OPERATIONAL EXCELLENCE\nType: goal\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-144",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.5557217597961426
+        },
+        {
+          "text": "Strategic Objective: Zero defect culture\nPillar: OPERATIONAL EXCELLENCE\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-147",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.5258050560951233
+        },
+        {
+          "text": "Strategic Objective: Customer satisfaction: >90%\nPillar: OPERATIONAL EXCELLENCE\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-151",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.47430819272994995
+        },
+        {
+          "text": "Strategic Objective: World-class quality, efficiency, and customer satisfaction\nPillar: OPERATIONAL EXCELLENCE\nType: vision\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-142",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.46797534823417664
+        }
+      ],
+      "raw_response": "**NEW ACTIONS:**\n1. Implement a Lean Six Sigma program focused on process improvement that targets the top three processes contributing to customer dissatisfaction based on historical complaint data analysis, aiming for defect reduction by at least 50% within six months from launch.\n2. Launch an extensive training and certification drive in quality management systems (QMS), ensuring all employees can proficiently apply Six Sigma principles to their daily tasks over the next quarter, alongside monthly workshops on continuous improvement techniques for leadership team members only.\n\n**KPI Enhancements:**\n1. Reduce customer complaint rate by 50% within six months of implementing Lean Six Sigma programs in targeted processes; monitor through real-time feedback and post-purchase surveys with timely reporting every two weeks starting Q2, Year 1.\n2. Achieve a 90% employee proficiency level on quality management systems certification within the first quarter of launching training drives to ensure consistent application across all levels; measure via departmental audits conducted bi-monthly beginning in Q1.\n\n**Timeframe Recommendations:**\n1. Roll out Lean Six Sigma programs by end Q2, with immediate focus on processes identified from complaint data analysis and first KPI measurement due at the conclusion of August 2024; subsequent audits every two weeks starting in September to track progress toward defect reduction goals.\n2. Initiate employee training drives simultaneously as Six Sigma program launches by end Q2, with certifications expected within three months from start date and first proficiency checkpoint due at the conclusion of July 2024; ongoing monthly leadership workshops to reinforce continuous improvement mindset starting in August.\n\n**Resource Requirements:**\n1. Budget allocation for Lean Six Sigma program training, consultancy fees, and process monitoring tools totaling $500,000 with a focus on targeted processes; include an internal pool of 3 trained facilitators to lead the programs within Brandix's existing teams.\n2. Allocate $150,000 for comprehensive employee training drives and certification costs spread over three months from launch date; partnering with a recognized external provider specializing in QMS education specifically tailored towards textile manufacturing challenges.\n\n**Integration Opportunities:**\n1. Integrate Lean Six Sigma improvement programs directly into existing capacity expansion efforts by aligning process improvements that enhance production efficiency and reduce waste, thereby augmenting the overall output capabilities in Phase 1; ensure parallel progress on KPIs related to defect rates within these processes is measured against customer complaint reductions.\n2. Link employee training drives with Supply Chain Visibility Enhancement initiatives by providing insights into how supply chain disruptions contribute to quality issues, thus fostering a more proactive approach in identifying and mitigating risks that could lead to defects; align leadership workshops on continuous improvement towards strategic goals of Industry 4.0 adoption where possible through process optimization techniques learned from Six Sigma certification training.\n\nBy focusing these actions, enhancements, timeframe recommendations and resource allocations directly into Brandix's operational excellence pillar with a zero complaint objective in mind while maintaining the company\u2019s sustainability and innovation focus will significantly improve alignment for this strategic goal within their five-year plan.",
+      "method": "RAG-enhanced"
+    },
+    {
+      "objective_id": "OBJ-135",
+      "objective": "50,000 volunteer hours annually",
+      "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+      "current_score": 26.768460869789124,
+      "suggestions": {
+        "new_actions": [
+          "Launch the \"Brandix Cares Program,\" a structured program where employees are encouraged and incentivized to volunteer with community organizations, including nonprofits that Brandix has historically supported or aligns closely with its corporate social responsibility (CSR) strategy. This could include offering additional paid time off specifically for these hours of service beyond the existing 80-hour training/employee requirement per year.",
+          "Partner directly with local schools, NGOs working on women's issues in Sri Lanka and across other countries where Brandix operates to create a \"Youth Mentorship\" scheme that aligns well with the Women in Leadership Development Program by mentoring young girls interested in STEM fields.",
+          "Develop an internal recognition system called \"Brandix Volunteer Heroes,\" rewarding employees who exceed volunteering hours, fostering a culture of peer-to-peer motivation and celebrating Brandix's commitment to social impact within the company community itself."
+        ],
+        "kpi_enhancements": [
+          "Aim for an increase in employee participation rate by targeting at least 75% engagement, where current volunteer hours are measured as a percentage of total employees participating annually against last year's statistics with the goal to reach or exceed this benchmark each quarter within Year 1 and subsequently aim higher every subsequent years.",
+          "Set an initial target for reaching at least two new partnerships per month, focusing on organizations where Brandix can make significant social impact aligning closely with CSR goals; track progress through a partnered dashboard that provides real-time updates into collaborative projects and their outcomes in terms of volunteer hours contributed.",
+          "Implement an annual increase target for participation duration, aiming to grow the average time spent by employees on each project from 10 hours per week (current) to at least 25 hours over a quarterly period during Year 1 with plans to reach upwards of 40 hours in years following based upon feedback and assessment."
+        ],
+        "timeline_recommendations": [],
+        "resource_requirements": [],
+        "integration_opportunities": []
+      },
+      "retrieved_context": [
+        {
+          "text": "Strategic Objective: 50,000 volunteer hours annually\nPillar: PEOPLE EXCELLENCE & SOCIAL IMPACT\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-135",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.616571843624115
+        },
+        {
+          "text": "Strategic Objective: Volunteer Initiative\nPillar: PEOPLE EXCELLENCE & SOCIAL IMPACT\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-133",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4506642520427704
+        },
+        {
+          "text": "Strategic Objective: Employee volunteers: 50%\nPillar: PEOPLE EXCELLENCE & SOCIAL IMPACT\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-139",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.41921818256378174
+        },
+        {
+          "text": "Strategic Objective: 80 hours training/employee/year\nPillar: PEOPLE EXCELLENCE & SOCIAL IMPACT\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-107",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.38574883341789246
+        },
+        {
+          "text": "Strategic Objective: Training hours: 80/employee/year\nPillar: PEOPLE EXCELLENCE & SOCIAL IMPACT\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-116",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.3707928955554962
+        }
+      ],
+      "raw_response": "Given the strategic objective of achsoring Brandix to achieve a minimum of 50,000 volunteer hours annually by leveraging its people excellence & social impact pillar effectively as part of their corporate strategy for 2025-2030:\n\n**NEW ACTIONS:**\n1. Launch the \"Brandix Cares Program,\" a structured program where employees are encouraged and incentivized to volunteer with community organizations, including nonprofits that Brandix has historically supported or aligns closely with its corporate social responsibility (CSR) strategy. This could include offering additional paid time off specifically for these hours of service beyond the existing 80-hour training/employee requirement per year.\n   \n2. Partner directly with local schools, NGOs working on women's issues in Sri Lanka and across other countries where Brandix operates to create a \"Youth Mentorship\" scheme that aligns well with the Women in Leadership Development Program by mentoring young girls interested in STEM fields.\n   \n3. Develop an internal recognition system called \"Brandix Volunteer Heroes,\" rewarding employees who exceed volunteering hours, fostering a culture of peer-to-peer motivation and celebrating Brandix's commitment to social impact within the company community itself.\n\n**KPI Enhancements:** \n1. Aim for an increase in employee participation rate by targeting at least 75% engagement, where current volunteer hours are measured as a percentage of total employees participating annually against last year's statistics with the goal to reach or exceed this benchmark each quarter within Year 1 and subsequently aim higher every subsequent years.\n   \n2. Set an initial target for reaching at least two new partnerships per month, focusing on organizations where Brandix can make significant social impact aligning closely with CSR goals; track progress through a partnered dashboard that provides real-time updates into collaborative projects and their outcomes in terms of volunteer hours contributed.\n   \n3. Implement an annual increase target for participation duration, aiming to grow the average time spent by employees on each project from 10 hours per week (current) to at least 25 hours over a quarterly period during Year 1 with plans to reach upwards of 40 hours in years following based upon feedback and assessment.\n   \n**Timeline Recommendations:** Quarter-by-quarter for the first year, Brandix should aim to achieve incremental increases from baseline participation rates by launching new initiatives or expanding existing ones while simultaneously building relationships with additional partnerships each month within a 30-day window.\n   \n**Resource Requirements:** A budget allocation of $50,000 for the first year to cover incentives and administration costs associated with these programs along with dedicated staff members who are trained or have expertise specifically in volunteer management tasks; this could include CSR managers as well as employees from each operational region that Brandix has.\n   \n**Integration Opportunities:** The new actions can be integrated into existing initiatives like the Women in Leadership Development Program by creating specialized sub-programs within, and align with community impact programs to reinforce corporate culture while also utilizing skills development training as a platform for identifying employees who would benefit from leadership roles or mentorship opportunities.\n\nBrandix's strategic planning document should clearly articulate these initiatives under the PEOPLE EXCELLENCE & SOCIAL IMPACT pillar, showing direct links between employee volunteering and Brandix\u2019s broader",
+      "method": "RAG-enhanced"
+    },
+    {
+      "objective_id": "OBJ-035",
+      "objective": "Zero hazardous discharge",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "current_score": 26.875758171081543,
+      "suggestions": {
+        "new_actions": [
+          "Implement a Water Reclamation System: Develop an onsite water treatment facility that recycles process wastewater for non-potable uses in the factory, such as cooling systems or landscape irrigation. This will significantly reduce freshwater usage and hazardous discharge into local water bodies.",
+          "Launch a Green Chemistry Program: Partner with suppliers who use environmentally friendly chemicals that minimize waste during production processes to ensure zero harmful effluents are produced from the outset, not just managed post-production.",
+          "Employee Sustainability Training Workshops: Conduct regular training sessions for employees at all levels on environmental best practices and hazardous substance management protocols that directly contribute to reducing discharge risks associated with manufacturing processes."
+        ],
+        "kpi_enhancements": [
+          "Reduction of Hazardous Substances Used: Achieve a 50% reduction in the usage of hazardous chemical substances by December 2024, measured quarterly through procurement records and waste audits at manufacturing sites. Target to reach net-zero discharge within five years (by end of 2030).",
+          "Water Reuse Efficiency: Increase the percentage of water reclaimed for non-potable uses by 40% annually, with a goal of achieving full self-sufficiency in local wastewater use within three years (by end of 2027). This will be monitored through monthly audits and meter readings.",
+          "Employee Sustainability Engagement: Aim for at least an 85% participation rate from employees in sustainability training programs, with effectiveness assessed semi-annually by surveys assessing knowledge retention and practice application on the factory floor. The target is to reach full engagement within one year (by end of Q2 2023)."
+        ],
+        "timeline_recommendations": [
+          "Q1/Q2: Complete feasibility studies for a Water Reclamation System and Green Chemistry Program. Begin employee sustainability training workshops with quarterly follow-ups to assess progress in hazardous discharge reduction practices among staff."
+        ],
+        "resource_requirements": [],
+        "integration_opportunities": []
+      },
+      "retrieved_context": [
+        {
+          "text": "Strategic Objective: Zero hazardous discharge\nPillar: ENVIRONMENTAL LEADERSHIP\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-035",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6223976016044617
+        },
+        {
+          "text": "Strategic Objective: Zero waste to landfills\nPillar: ENVIRONMENTAL LEADERSHIP\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-053",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.46025550365448
+        },
+        {
+          "text": "Strategic Objective: Net Zero across all sites by 2030\nPillar: ENVIRONMENTAL LEADERSHIP\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-015",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.4350692629814148
+        },
+        {
+          "text": "Strategic Objective: Net Zero Carbon by 2030 (operations) and Net Zero value chain by 2050 (SBTi-validated)\nPillar: ENVIRONMENTAL LEADERSHIP\nType: goal\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-003",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.39848360419273376
+        },
+        {
+          "text": "Strategic Objective: Scope 1&2: Net Zero by 2030\nPillar: ENVIRONMENTAL LEADERSHIP\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-021",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.39312446117401123
+        }
+      ],
+      "raw_response": "NEW ACTIONS (2-3 Specific Action Items):\n1. Implement a Water Reclamation System: Develop an onsite water treatment facility that recycles process wastewater for non-potable uses in the factory, such as cooling systems or landscape irrigation. This will significantly reduce freshwater usage and hazardous discharge into local water bodies.\n   \n2. Launch a Green Chemistry Program: Partner with suppliers who use environmentally friendly chemicals that minimize waste during production processes to ensure zero harmful effluents are produced from the outset, not just managed post-production. \n\n3. Employee Sustainability Training Workshops: Conduct regular training sessions for employees at all levels on environmental best practices and hazardous substance management protocols that directly contribute to reducing discharge risks associated with manufacturing processes.\n\nKPI ENHANCEMENTS (2-3 Measurable KPIs):\n1. Reduction of Hazardous Substances Used: Achieve a 50% reduction in the usage of hazardous chemical substances by December 2024, measured quarterly through procurement records and waste audits at manufacturing sites. Target to reach net-zero discharge within five years (by end of 2030).\n   \n2. Water Reuse Efficiency: Increase the percentage of water reclaimed for non-potable uses by 40% annually, with a goal of achieving full self-sufficiency in local wastewater use within three years (by end of 2027). This will be monitored through monthly audits and meter readings.\n   \n3. Employee Sustainability Engagement: Aim for at least an 85% participation rate from employees in sustainability training programs, with effectiveness assessed semi-annually by surveys assessing knowledge retention and practice application on the factory floor. The target is to reach full engagement within one year (by end of Q2 2023).\n\nTIMELINE RECOMMENDATIONS:\nYear 1 Quarterly Milestones:\n- Q1/Q2: Complete feasibility studies for a Water Reclamation System and Green Chemistry Program. Begin employee sustainability training workshops with quarterly follow-ups to assess progress in hazardous discharge reduction practices among staff.\n   \n- Q3/Q4: Finalize contracts with suppliers of environmentally friendly chemicals, implement the first pilot projects for both programs on a small scale, and prepare comprehensive reports on initial KPI findings from employee workshops to guide future actions in subsequent quarters.\n\nRESOURCE REQUIREMENTS:\n- Budget allocation needs an immediate 20% increase towards environmental sustainability initiatives specifically for the development of water treatment technology and green chemistry integration into supply chains, with a detailed cost breakdown provided by Q3/Q4 year one.\n   \n- Form cross-functional teams to oversee these new actions including representatives from R&D, procurement, production, environmental compliance, and human resources departments for collaborative project management within Brandix's centralized sustainability department framework or a newly formed Green Innovation Hub.",
+      "method": "RAG-enhanced"
+    },
+    {
+      "objective_id": "OBJ-175",
+      "objective": "Zero tolerance compliance culture",
+      "pillar": "GOVERNANCE & RISK MANAGEMENT",
+      "current_score": 27.820435166358948,
+      "suggestions": {
+        "new_actions": [
+          "Implement a comprehensive compliance training program for all employees by Q2 of Year 1, which includes scenario-based learning on zero tolerance policy towards non-compliance issues in the workplace. This will directly impact our commitment to creating an exemplary governance and proactive risk management culture as per Objective [3].",
+          "Conduct quarterly internal audits specifically designed to identify potential compliance risks, starting Q1 of Year 1, with immediate corrective actions taken for any non-compliances found during the process. This aligns closely with our objective from document [2] and reinforces a zero tolerance approach towards governance issues within Brandix."
+        ],
+        "kpi_enhancements": [
+          "Achieve 90% completion rate of compliance training among all employees by Q3, as measured through mandatory course certificates issued to participants; targeting full participation and understanding for the remaining percentage in Q4 with refresher courses if needed.",
+          "Reduce internal audit findings related to non-compliances from a baseline of 10% (as seen historically) down to less than 5% by the end of Year 1, aiming for zero tolerance in compliance issues within governance and risk management areas as per Objective [2].",
+          "Infrastructure enhancements may include secure online learning platforms accessible by all employees ensuring seamless delivery of compliance training, which aligns with the Information Security Management System similar to document similarity action item 2. This should integrate into Brandix\u2019s existing IT systems without significant additional investment but might require an initial setup fee for service agreements and potential upgrades as per Objective [1]."
+        ],
+        "timeline_recommendations": [
+          "Q1: Launch comprehensive employee compliance training program. Begin quarterly internal audits to identify non-compliances immediately after the completion of each month's end, with an initial focus on high-risk areas identified from historical data and market analysis.",
+          "Q2: Implement immediate corrective actions for any detected issues during Q1\u2019s audits while ensuring that all employees have completed their compliance training by this point in time to align objectives [3] and minimize the risk of future non-compliances as per Objective [2].",
+          "Throughout Year 1: Review effectiveness of corrective actions, update policies if necessary based on audit outcomes from Q1 through end of each quarter. By Q4, aim to have no new compliance issues identified and all previous ones resolved or under control as per Objective [2]."
+        ],
+        "resource_requirements": [],
+        "integration_opportunities": [
+          "Integrate compliance training outcomes with the ESG Governance & Reporting Framework to demonstrate progress in governance aspects tied directly back into Brandix's sustainability narrative, reinforcing brand integrity and aligning closely with Objective [1]."
+        ]
+      },
+      "retrieved_context": [
+        {
+          "text": "Strategic Objective: Zero tolerance compliance culture\nPillar: GOVERNANCE & RISK MANAGEMENT\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-175",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.7513476610183716
+        },
+        {
+          "text": "Strategic Objective: Compliance violations: 0\nPillar: GOVERNANCE & RISK MANAGEMENT\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-177",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.6000913977622986
+        },
+        {
+          "text": "Strategic Objective: Exemplary governance and proactive risk management\nPillar: GOVERNANCE & RISK MANAGEMENT\nType: vision\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-160",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.47633126378059387
+        },
+        {
+          "text": "Strategic Objective: Sustainability reporting: 100% compliance\nPillar: GOVERNANCE & RISK MANAGEMENT\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-168",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.466510534286499
+        },
+        {
+          "text": "Strategic Objective: ISO 27001 certification by 2026\nPillar: GOVERNANCE & RISK MANAGEMENT\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-174",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.4408420920372009
+        }
+      ],
+      "raw_response": "NEW ACTIONS:\n1. Implement a comprehensive compliance training program for all employees by Q2 of Year 1, which includes scenario-based learning on zero tolerance policy towards non-compliance issues in the workplace. This will directly impact our commitment to creating an exemplary governance and proactive risk management culture as per Objective [3].\n   \n2. Conduct quarterly internal audits specifically designed to identify potential compliance risks, starting Q1 of Year 1, with immediate corrective actions taken for any non-compliances found during the process. This aligns closely with our objective from document [2] and reinforces a zero tolerance approach towards governance issues within Brandix.\n\nKPI ENHANCEMENTS:\n1. Achieve 90% completion rate of compliance training among all employees by Q3, as measured through mandatory course certificates issued to participants; targeting full participation and understanding for the remaining percentage in Q4 with refresher courses if needed.\n   \n2. Reduce internal audit findings related to non-compliances from a baseline of 10% (as seen historically) down to less than 5% by the end of Year 1, aiming for zero tolerance in compliance issues within governance and risk management areas as per Objective [2].\n\nTIMELINE RECOMMENDATIONS:\n- Q1: Launch comprehensive employee compliance training program. Begin quarterly internal audits to identify non-compliances immediately after the completion of each month's end, with an initial focus on high-risk areas identified from historical data and market analysis. \n   \n- Q2: Implement immediate corrective actions for any detected issues during Q1\u2019s audits while ensuring that all employees have completed their compliance training by this point in time to align objectives [3] and minimize the risk of future non-compliances as per Objective [2].\n   \n- Throughout Year 1: Review effectiveness of corrective actions, update policies if necessary based on audit outcomes from Q1 through end of each quarter. By Q4, aim to have no new compliance issues identified and all previous ones resolved or under control as per Objective [2].\n   \nRESOURCE REQUIREMENTS:\n- Budget allocation for professional development resources including eLearning modules on the zero tolerance policy towards non-compliance. Approximately $50,000 to be set aside over Year 1 with incremental increases based on program efficacy and need as per Objective [2].\n   \n- Form a dedicated compliance team within HR tasked specifically with managing the new training initiative, internal audits, monitoring progress towards KPIs. This could involve hiring or reassigning up to 5 additional members for this purpose based on current workforce capacity and projected needs as per Objective [2].\n   \n- Infrastructure enhancements may include secure online learning platforms accessible by all employees ensuring seamless delivery of compliance training, which aligns with the Information Security Management System similar to document similarity action item 2. This should integrate into Brandix\u2019s existing IT systems without significant additional investment but might require an initial setup fee for service agreements and potential upgrades as per Objective [1].\n   \nINTEGRATION OPPORTUNITIES:\n- Integrate compliance training outcomes with the ESG Governance & Reporting Framework to demonstrate progress in governance aspects tied directly back into Brandix's sustainability narrative, reinforcing brand integrity and aligning closely with Objective [1].",
+      "method": "RAG-enhanced"
+    },
+    {
+      "objective_id": "OBJ-112",
+      "objective": "\"Formula 1 Driver\" career pathways",
+      "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+      "current_score": 29.540520906448364,
+      "suggestions": {
+        "new_actions": [
+          "Launch a comprehensive \"Formula 1 Driver\" mentorship program that pairs experienced employees who have successfully navigated the career pathway within Brandix with newer hires, ensuring they receive guidance and advice on professional development throughout their tenure at the company. This aligns closely to existing initiatives by integrating it into our Mentorship programs objective [Context 4]."
+        ],
+        "kpi_enhancements": [
+          "Increase the number of employees who have completed at least one \"Formula 1 Driver\" workshop by 30% in Q4 Year 1, to be assessed through participation records and post-event evaluations for immediate application feedback [Context: Women in Leadership Development Program]."
+        ],
+        "timeline_recommendations": [
+          "Launch the mentorship program by Q2 Year 1, establish tracking systems shortly afterward."
+        ],
+        "resource_requirements": [],
+        "integration_opportunities": [
+          "Host a series of interactive workshops and seminars focused on career development skills tailored for Brandix employees that align with the \"Formula 1 Driver\" pathway objectives (e.g., public speaking, leadership in sustainable business practices) to foster professional growth within our people-centric approach [Contexts 2, 3].",
+          "Integrate mentorship and career development workshops into the Women in Leadership Development Program, creating a synergy between gender equality efforts and personalized growth pathways. This connection reinforces our commitment to"
+        ]
+      },
+      "retrieved_context": [
+        {
+          "text": "Strategic Objective: \"Formula 1 Driver\" career pathways\nPillar: PEOPLE EXCELLENCE & SOCIAL IMPACT\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-112",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.7794373035430908
+        },
+        {
+          "text": "Strategic Objective: \"Associate as Formula 1 Driver\" program\nPillar: INNOVATION & DIGITAL TRANSFORMATION\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-075",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.4925024211406708
+        },
+        {
+          "text": "Strategic Objective: Most inclusive and empowered workforce with transformative community impact\nPillar: PEOPLE EXCELLENCE & SOCIAL IMPACT\nType: vision\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-099",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.434543251991272
+        },
+        {
+          "text": "Strategic Objective: Mentorship programs\nPillar: PEOPLE EXCELLENCE & SOCIAL IMPACT\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-122",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.42675554752349854
+        },
+        {
+          "text": "Strategic Objective: 3.2 Diversity, Equity, and Inclusion\nPillar: PEOPLE EXCELLENCE & SOCIAL IMPACT\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-118",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4164550006389618
+        }
+      ],
+      "raw_response": "NEW ACTIONS (2-3 specific action items):\n1. Launch a comprehensive \"Formula 1 Driver\" mentorship program that pairs experienced employees who have successfully navigated the career pathway within Brandix with newer hires, ensuring they receive guidance and advice on professional development throughout their tenure at the company. This aligns closely to existing initiatives by integrating it into our Mentorship programs objective [Context 4].\n   \n2. Develop a transparent internal tracking system that employees can access wherein they input career progression steps, achievements under each phase of the \"Formula 1 Driver\" program and feedback received from mentors at various intervals to ensure continuous improvement (e.g., quarterly check-ins). This action reinforces our commitment to People Excellence & Social Impact through personal growth opportunities [Contexts 3, 4].\n   \n3. Host a series of interactive workshops and seminars focused on career development skills tailored for Brandix employees that align with the \"Formula 1 Driver\" pathway objectives (e.g., public speaking, leadership in sustainable business practices) to foster professional growth within our people-centric approach [Contexts 2, 3].\n   \nKPI Enhancements:\n1. Achieve a mentorship engagement rate of at least 80% for mentees by the end of Q4 Year 1 with regular bi-monthly feedback sessions documented in employee surveys measuring satisfaction and perceived career development impact, aligning this KPI within our Mental Health & Wellbeing Strategy [Similarity: 29.5%, Contexts 3].\n   \n2. Increase the number of employees who have completed at least one \"Formula 1 Driver\" workshop by 30% in Q4 Year 1, to be assessed through participation records and post-event evaluations for immediate application feedback [Context: Women in Leadership Development Program].\n   \n3. Implement a recognition system where employees receive awards or acknowledgments based on career progression milestones achieved under the \"Formula 1 Driver\" pathway within Q4 Year 1, tracked through our internal performance management platform with quarterly public announcements to celebrate successes and encourage continued dedication [Similarity: Women in Leadership Development Program].\n   \nTimeframe Recommendations:\n- Launch the mentorship program by Q2 Year 1, establish tracking systems shortly afterward.\n   \n- Schedule initial career development workshops within Q3 of Year 1 and plan a follow-up session at least once per quarter thereafter to ensure ongoing learning opportunities are available for all employees embarking or progressing through the \"Formula 1 Driver\" pathway [Similarity: Employee Skills Development Program].\n   \nResource Requirements:\n- Allocate a budget of $200,000 from Brandix's strategic development fund to create and sustain these initiatives including workshop facilitators, mentor training resources, tracking system setup, and awards for achievements. This requires dedicating an additional team member specifically overseeing the \"Formula 1 Driver\" program with a cross-departmental liaison role to ensure alignment across Brandix's global locations [Similarity: Community Impact Programs Expansion].\n   \nIntegration Opportunities:\n- Integrate mentorship and career development workshops into the Women in Leadership Development Program, creating a synergy between gender equality efforts and personalized growth pathways. This connection reinforces our commitment to",
+      "method": "RAG-enhanced"
+    },
+    {
+      "objective_id": "OBJ-071",
+      "objective": "IoT sensors and connected machines (80% by 2029)",
+      "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+      "current_score": 30.204737186431885,
+      "suggestions": {
+        "new_actions": [
+          "Conduct a comprehensive digitalization audit by the end of Q1 to identify current technology infrastructure gaps in relation to IoT sensors application within production lines, with immediate implementation planned for identified deficiencies."
+        ],
+        "kpi_enhancements": [
+          "Aim for a minimum of 10% reduction in energy consumption per unit produced due to improved machine efficiency from IoT implementations, with quarterly benchmarks starting Q4 Year 1 and progressing towards the year-on-year improvement throughout Year 2 until reaching at least an overall 5% annual net decrease.",
+          "Target a reduction in material waste by at least 5% within one year from the start of IoT sensor installations, with quarterly assessments evaluating production data against historical baselines to identify areas for process optimization directly linked to digital enhancements introduced via sensors and connected machines."
+        ],
+        "timeline_recommendations": [
+          "By end of Q2, complete initial digitalization audit with immediate remediation plans in place based on findings within one month post"
+        ],
+        "resource_requirements": [],
+        "integration_opportunities": []
+      },
+      "retrieved_context": [
+        {
+          "text": "Strategic Objective: IoT sensors and connected machines (80% by 2029)\nPillar: INNOVATION & DIGITAL TRANSFORMATION\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-071",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.6641202569007874
+        },
+        {
+          "text": "Strategic Objective: 40% automation rate by 2030\nPillar: INNOVATION & DIGITAL TRANSFORMATION\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-076",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.4560169279575348
+        },
+        {
+          "text": "Strategic Objective: Automation rate: 40% by 2030\nPillar: INNOVATION & DIGITAL TRANSFORMATION\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-087",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.45539507269859314
+        },
+        {
+          "text": "Strategic Objective: Advanced Automation\nPillar: INNOVATION & DIGITAL TRANSFORMATION\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-074",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.44803184270858765
+        },
+        {
+          "text": "Strategic Objective: 80% digital integration across manufacturing by 2029\nPillar: INNOVATION & DIGITAL TRANSFORMATION\nType: goal\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-069",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.43885719776153564
+        }
+      ],
+      "raw_response": "**NEW ACTIONS** (2-3 concrete action items):\n1. Conduct a comprehensive digitalization audit by the end of Q1 to identify current technology infrastructure gaps in relation to IoT sensors application within production lines, with immediate implementation planned for identified deficiencies. \n   \n   Action: Commission an expert third-party firm specializing in industrial automation and IoT integration assessments tailored specifically for Brandix's manufacturing processes by Q2 of Year 1 to ensure unbiased recommendations are made, with a follow-up review after six months into the deployment phase.\n\n2. Launch an 'Innovate at Workshops Series', starting in Q3 and running bi-monthly throughout all Brandix facilities across Bangladesh by end of Year 1 to foster employee engagement and collect ideas directly related to IoT sensor integration, with a focus on sustainability practices within the technological upgrades.\n   \n   Action: Set aside a dedicated budget for these workshops from R&D funds as well as incentivizing participation through recognition programs like 'Brandix Innovator of the Month' to ensure active and continuous employee engagement throughout Year 1, with quarterly updates on progress shared during company-wide all-hands meetings.\n   \n3. Partner with a leading IoT solutions provider by Q4 of Year 1 for bespoke sensor technology that aligns directly with Brandix\u2019s manufacturing processes and sustainability goals to ensure seamless integration without disrupting current operations significantly, while also providing ongoing support through dedicated Account Managers.\n   \n   Action: Form a select committee from the R&D team along with members of IT and Operations departments by Q1 for vetting potential partnership candidates based on their track record in sustainable tech solutions within apparel manufacturing, ensuring alignment with Brandix's brand values. Finalize negotiations and contractual terms before deployment begins to ensure no delays are encountered as we approach the Year 2 goals set by this initiative.\n   \n**KPI Enhancements (2-3 measurable KPI targets)**:\n1. Aim for a minimum of 10% reduction in energy consumption per unit produced due to improved machine efficiency from IoT implementations, with quarterly benchmarks starting Q4 Year 1 and progressing towards the year-on-year improvement throughout Year 2 until reaching at least an overall 5% annual net decrease.\n   \n   Action: Install monitoring systems that measure real-time energy usage per production unit as part of IoT sensor installations, with data analysis provided bi-monthly to R&D and Operations teams for immediate feedback loops on efficiency improvements or necessary adjustments in the technology deployment strategy throughout Year 1.\n   \n2. Target a reduction in material waste by at least 5% within one year from the start of IoT sensor installations, with quarterly assessments evaluating production data against historical baselines to identify areas for process optimization directly linked to digital enhancements introduced via sensors and connected machines.\n   \n   Action: Integrate a predictive analytics module into our ERP system by Q3 Year 1 that specifically monitors material usage in real-time, with quarterly reports on waste reduction progress presented during the company's all-hands meetings to maintain transparency and keep teams motivated toward ach09.\n   \n**Timeframe Recommendations (Suggesting milestones) for Year 1 by Q4:**\n\n   - By end of Q2, complete initial digitalization audit with immediate remediation plans in place based on findings within one month post",
       "method": "RAG-enhanced"
     }
   ],
   "summary": {
-    "total_gaps": 1,
-    "processed": 1,
-    "total_suggestions": 3,
+    "total_gaps": 100,
+    "processed": 10,
+    "total_suggestions": 62,
     "by_severity": {
-      "critical": 0,
-      "high": 0,
-      "medium": 1
+      "critical": 9,
+      "high": 1,
+      "medium": 0
     }
   },
   "gap_objectives": [
+    {
+      "objective_idx": 145,
+      "objective_id": "OBJ-146",
+      "objective": "AI-powered inspection",
+      "pillar": "OPERATIONAL EXCELLENCE",
+      "type": "initiative",
+      "max_similarity": 0.22970137000083923,
+      "alignment_score": 22.970137000083923,
+      "severity": "Critical",
+      "gap_size": 27.029862999916077
+    },
+    {
+      "objective_idx": 12,
+      "objective_id": "OBJ-013",
+      "objective": "Eliminate R-22 refrigerants by 2030",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "initiative",
+      "max_similarity": 0.23335330188274384,
+      "alignment_score": 23.335330188274384,
+      "severity": "Critical",
+      "gap_size": 26.664669811725616
+    },
+    {
+      "objective_idx": 102,
+      "objective_id": "OBJ-103",
+      "objective": "Zero fatalities/high-consequence injuries",
+      "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+      "type": "initiative",
+      "max_similarity": 0.2614254355430603,
+      "alignment_score": 26.14254355430603,
+      "severity": "Critical",
+      "gap_size": 23.85745644569397
+    },
     {
       "objective_idx": 84,
       "objective_id": "OBJ-085",
       "objective": "Blockchain traceability (95% visibility by 2029)",
       "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
       "type": "initiative",
-      "max_similarity": 0.47659608721733093,
-      "alignment_score": 47.65960872173309,
-      "severity": "Medium",
-      "gap_size": 2.3403912782669067
+      "max_similarity": 0.2617034912109375,
+      "alignment_score": 26.17034912109375,
+      "severity": "Critical",
+      "gap_size": 23.82965087890625
+    },
+    {
+      "objective_idx": 147,
+      "objective_id": "OBJ-148",
+      "objective": "Customer complaints: 0",
+      "pillar": "OPERATIONAL EXCELLENCE",
+      "type": "initiative",
+      "max_similarity": 0.2624486982822418,
+      "alignment_score": 26.244869828224182,
+      "severity": "Critical",
+      "gap_size": 23.755130171775818
+    },
+    {
+      "objective_idx": 134,
+      "objective_id": "OBJ-135",
+      "objective": "50,000 volunteer hours annually",
+      "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+      "type": "initiative",
+      "max_similarity": 0.26768460869789124,
+      "alignment_score": 26.768460869789124,
+      "severity": "Critical",
+      "gap_size": 23.231539130210876
+    },
+    {
+      "objective_idx": 34,
+      "objective_id": "OBJ-035",
+      "objective": "Zero hazardous discharge",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "initiative",
+      "max_similarity": 0.26875758171081543,
+      "alignment_score": 26.875758171081543,
+      "severity": "Critical",
+      "gap_size": 23.124241828918457
+    },
+    {
+      "objective_idx": 174,
+      "objective_id": "OBJ-175",
+      "objective": "Zero tolerance compliance culture",
+      "pillar": "GOVERNANCE & RISK MANAGEMENT",
+      "type": "initiative",
+      "max_similarity": 0.2782043516635895,
+      "alignment_score": 27.820435166358948,
+      "severity": "Critical",
+      "gap_size": 22.179564833641052
+    },
+    {
+      "objective_idx": 111,
+      "objective_id": "OBJ-112",
+      "objective": "\"Formula 1 Driver\" career pathways",
+      "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+      "type": "initiative",
+      "max_similarity": 0.29540520906448364,
+      "alignment_score": 29.540520906448364,
+      "severity": "Critical",
+      "gap_size": 20.459479093551636
+    },
+    {
+      "objective_idx": 70,
+      "objective_id": "OBJ-071",
+      "objective": "IoT sensors and connected machines (80% by 2029)",
+      "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+      "type": "initiative",
+      "max_similarity": 0.30204737186431885,
+      "alignment_score": 30.204737186431885,
+      "severity": "High",
+      "gap_size": 19.795262813568115
     }
   ]
 }

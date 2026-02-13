@@ -88,15 +88,17 @@ CURRENT BEST MATCHING ACTIONS:
 {actions_context}
 
 ANALYSIS TASK:
-This strategic objective has weak alignment ({score:.1f}%) with current action items. Generate specific, actionable improvement suggestions in the following categories:
+This strategic objective has weak alignment ({score:.1f}%) with current action items. Generate specific, actionable improvement suggestions in the following categories. 
+
+CRITICAL REQUIREMENT: For every suggestion, you MUST include at least one specific metric (e.g., "Reduce by 15%"), a concrete number (e.g., "5 pilot sites"), or a specific date/quarter. Avoid vague language like "improve" or "enhance" without a target figure.
 
 1. NEW ACTIONS: Suggest 2-3 specific new action items that directly address this objective
 2. KPI ENHANCEMENTS: Recommend 2-3 measurable KPIs to track progress
-3. TIMELINE ADJUSTMENTS: Suggest realistic timeline milestones (quarterly)
-4. RESOURCE ALLOCATION: Identify key resources, budget, or team needs
+3. TIMELINE RECOMMENDATIONS: Suggest realistic timeline milestones (quarterly)
+4. RESOURCE REQUIREMENTS: Identify key resources, budget, or team needs
 5. RISK MITIGATION: Highlight 1-2 potential risks and mitigation strategies
 
-Format your response as:
+Format your response strictly as:
 
 **NEW ACTIONS:**
 - [Specific action 1]
@@ -107,10 +109,10 @@ Format your response as:
 - [Measurable KPI 1]
 - [Measurable KPI 2]
 
-**TIMELINE ADJUSTMENTS:**
+**TIMELINE RECOMMENDATIONS:**
 - [Q1-Q4 milestones]
 
-**RESOURCE ALLOCATION:**
+**RESOURCE REQUIREMENTS:**
 - [Budget/team/infrastructure needs]
 
 **RISK MITIGATION:**
@@ -141,8 +143,8 @@ Be specific, actionable, and realistic for an apparel manufacturing company."""
         categories = {
             'new_actions': [],
             'kpi_enhancements': [],
-            'timeline_adjustments': [],
-            'resource_allocation': [],
+            'timeline_recommendations': [],
+            'resource_requirements': [],
             'risk_mitigation': []
         }
         
@@ -155,15 +157,15 @@ Be specific, actionable, and realistic for an apparel manufacturing company."""
                 continue
             
             # Detect category headers
-            if 'NEW ACTIONS' in line.upper():
+            if "**NEW ACTIONS:**" in line:
                 current_category = 'new_actions'
-            elif 'KPI' in line.upper():
+            elif "**KPI ENHANCEMENTS:**" in line:
                 current_category = 'kpi_enhancements'
-            elif 'TIMELINE' in line.upper():
-                current_category = 'timeline_adjustments'
-            elif 'RESOURCE' in line.upper():
-                current_category = 'resource_allocation'
-            elif 'RISK' in line.upper():
+            elif "**TIMELINE RECOMMENDATIONS:**" in line:
+                current_category = 'timeline_recommendations'
+            elif "**RESOURCE REQUIREMENTS:**" in line:
+                current_category = 'resource_requirements'
+            elif "**RISK MITIGATION:**" in line:
                 current_category = 'risk_mitigation'
             elif line.startswith('-') or line.startswith('•'):
                 # Add bullet point to current category

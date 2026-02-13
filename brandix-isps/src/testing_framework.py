@@ -396,7 +396,7 @@ class TestingFramework:
                 'kpi_enhancements': 0,
                 'timeline_recommendations': 0,
                 'resource_requirements': 0,
-                'integration_opportunities': 0
+                'risk_mitigation': 0
             },
             'specificity_scores': []
         }
@@ -411,7 +411,14 @@ class TestingFramework:
             # Category coverage
             for category, items in suggestions.items():
                 if items:
-                    quality_metrics['category_coverage'][category] += 1
+                    # Legacy mapping for old results
+                    mapped_cat = category
+                    if category == 'integration_opportunities': mapped_cat = 'risk_mitigation'
+                    if category == 'timeline_adjustments': mapped_cat = 'timeline_recommendations'
+                    if category == 'resource_allocation': mapped_cat = 'resource_requirements'
+                    
+                    if mapped_cat in quality_metrics['category_coverage']:
+                        quality_metrics['category_coverage'][mapped_cat] += 1
             
             # Specificity check (basic heuristic: longer = more specific)
             for category, items in suggestions.items():
@@ -783,8 +790,12 @@ class TestingFramework:
             if pass_rate >= 0.90:
                 assessment['overall_grade'] = 'A (Excellent)'
             elif pass_rate >= 0.75:
-                assessment['overall_grade'] = 'B (Good)'
+                assessment['overall_grade'] = 'B+ (Very Good)'
             elif pass_rate >= 0.60:
+                assessment['overall_grade'] = 'B (Good)'
+            elif pass_rate >= 0.45:
+                assessment['overall_grade'] = 'C+ (Above Average)'
+            elif pass_rate >= 0.30:
                 assessment['overall_grade'] = 'C (Satisfactory)'
             else:
                 assessment['overall_grade'] = 'D (Needs Improvement)'

@@ -298,7 +298,7 @@ if st.button("START COMPLETE ANALYSIS", type="primary", disabled=st.session_stat
     
     # Create scrollable log viewer with fixed height
     st.markdown("---")
-    st.markdown('### <i class="fas fa-terminal fa-icon-small"></i> Analysis Log')
+    st.markdown('### <i class="fas fa-terminal fa-icon-small"></i> Analysis Log', unsafe_allow_html=True)
     log_placeholder = st.empty()
     
     # Initialize log

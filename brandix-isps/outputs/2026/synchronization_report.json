@@ -1,0 +1,4278 @@
+{
+  "overall_alignment": {
+    "overall_score": 42.19023287296295,
+    "mean_max_similarity": 71.54176235198975,
+    "classification": "Strong Alignment",
+    "coverage_rate": 100.0,
+    "distribution": {
+      "strong": 22,
+      "moderate": 21,
+      "weak": 0
+    },
+    "total_objectives": 43,
+    "total_actions": 18
+  },
+  "objective_details": [
+    {
+      "objective_idx": 0,
+      "objective_id": "OBJ-001",
+      "objective": "Achieve net-positive environmental impact across the value chain by 2030",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "vision",
+      "matched_actions": [
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.7069426774978638,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.696771502494812,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.693975567817688,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6901832818984985,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.4932425618171692,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4124675989151001,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 10,
+          "action_id": "PEOPLE-003",
+          "title": "Community Impact Programs Expansion",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4109671115875244,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.3935442268848419,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 14,
+          "action_id": "OPS-003",
+          "title": "Supply Chain Visibility Enhancement",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.38907390832901,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.34481698274612427,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 70.69426774978638,
+      "coverage": "Strong",
+      "max_similarity": 0.7069426774978638,
+      "mean_similarity": 0.4098840057849884,
+      "num_strong_matches": 1,
+      "num_moderate_matches": 3
+    },
+    {
+      "objective_idx": 1,
+      "objective_id": "OBJ-002",
+      "objective": "1.1 AIR - Climate Action and Decarbonization",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "strategic_sub_section",
+      "matched_actions": [
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6997824907302856,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6773933172225952,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6577165126800537,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6073634624481201,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.5544171929359436,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.3562299609184265,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 10,
+          "action_id": "PEOPLE-003",
+          "title": "Community Impact Programs Expansion",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.29481858015060425,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.2762921452522278,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 15,
+          "action_id": "GOV-001",
+          "title": "ESG Governance & Reporting Framework",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.27129051089286804,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.26692476868629456,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 69.97824907302856,
+      "coverage": "Moderate",
+      "max_similarity": 0.6997824907302856,
+      "mean_similarity": 0.3419937193393707,
+      "num_strong_matches": 0,
+      "num_moderate_matches": 5
+    },
+    {
+      "objective_idx": 2,
+      "objective_id": "OBJ-003",
+      "objective": "Net Zero Carbon by 2030 (operations) and Net Zero value chain by 2050 (SBTi-validated)",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "goal",
+      "matched_actions": [
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6145839691162109,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.5949125289916992,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.5837899446487427,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.5217781066894531,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.4375149607658386,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.4036499857902527,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 4,
+          "action_id": "INNOV-001",
+          "title": "Industry 4.0 Manufacturing Pilot",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.3585483431816101,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 14,
+          "action_id": "OPS-003",
+          "title": "Supply Chain Visibility Enhancement",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.35424524545669556,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 15,
+          "action_id": "GOV-001",
+          "title": "ESG Governance & Reporting Framework",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.3418535888195038,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.33922600746154785,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 61.458396911621094,
+      "coverage": "Moderate",
+      "max_similarity": 0.6145839691162109,
+      "mean_similarity": 0.378325879573822,
+      "num_strong_matches": 0,
+      "num_moderate_matches": 4
+    },
+    {
+      "objective_idx": 3,
+      "objective_id": "OBJ-004",
+      "objective": "Renewable energy: 100% by 2030",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "kpi",
+      "matched_actions": [
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.870772123336792,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6948493719100952,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6800522804260254,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6794722080230713,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.49951499700546265,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4358735978603363,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.43074536323547363,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.4266728162765503,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.37280476093292236,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 10,
+          "action_id": "PEOPLE-003",
+          "title": "Community Impact Programs Expansion",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.35808640718460083,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 87.0772123336792,
+      "coverage": "Strong",
+      "max_similarity": 0.870772123336792,
+      "mean_similarity": 0.43066245317459106,
+      "num_strong_matches": 1,
+      "num_moderate_matches": 3
+    },
+    {
+      "objective_idx": 4,
+      "objective_id": "OBJ-005",
+      "objective": "Scope 1&2: Net Zero by 2030",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "kpi",
+      "matched_actions": [
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.7379705905914307,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.7137190103530884,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.7036757469177246,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.65921550989151,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.5369394421577454,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4877064824104309,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4450916647911072,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.43945208191871643,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 10,
+          "action_id": "PEOPLE-003",
+          "title": "Community Impact Programs Expansion",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.424963116645813,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4137675166130066,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 73.79705905914307,
+      "coverage": "Strong",
+      "max_similarity": 0.7379705905914307,
+      "mean_similarity": 0.46361351013183594,
+      "num_strong_matches": 3,
+      "num_moderate_matches": 2
+    },
+    {
+      "objective_idx": 5,
+      "objective_id": "OBJ-006",
+      "objective": "Scope 3: 42% reduction by 2030",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "kpi",
+      "matched_actions": [
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.7690879702568054,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.7557463049888611,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.7527403235435486,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.7121992111206055,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.555810809135437,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.5148938298225403,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.45404335856437683,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 10,
+          "action_id": "PEOPLE-003",
+          "title": "Community Impact Programs Expansion",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4359963536262512,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4234081208705902,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.42182838916778564,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 76.90879702568054,
+      "coverage": "Strong",
+      "max_similarity": 0.7690879702568054,
+      "mean_similarity": 0.4595078229904175,
+      "num_strong_matches": 4,
+      "num_moderate_matches": 2
+    },
+    {
+      "objective_idx": 6,
+      "objective_id": "OBJ-007",
+      "objective": "1.2 WATER - Stewardship and Net-Positive Operations",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "strategic_sub_section",
+      "matched_actions": [
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.8285554647445679,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6880885362625122,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6851047873497009,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6199082136154175,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.45019012689590454,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4434816241264343,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.3964608311653137,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.39543652534484863,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 14,
+          "action_id": "OPS-003",
+          "title": "Supply Chain Visibility Enhancement",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.3662627339363098,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.3601722717285156,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 82.85554647445679,
+      "coverage": "Strong",
+      "max_similarity": 0.8285554647445679,
+      "mean_similarity": 0.40392810106277466,
+      "num_strong_matches": 1,
+      "num_moderate_matches": 3
+    },
+    {
+      "objective_idx": 7,
+      "objective_id": "OBJ-008",
+      "objective": "Net-positive water operations by 2030 with 50% sustainable water mix",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "goal",
+      "matched_actions": [
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.7742998600006104,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.5881966948509216,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.5783783197402954,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.5622804164886475,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.3840571343898773,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.33872076869010925,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.32509881258010864,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 14,
+          "action_id": "OPS-003",
+          "title": "Supply Chain Visibility Enhancement",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.3120998740196228,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 10,
+          "action_id": "PEOPLE-003",
+          "title": "Community Impact Programs Expansion",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.30017971992492676,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.2935808598995209,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 77.42998600006104,
+      "coverage": "Strong",
+      "max_similarity": 0.7742998600006104,
+      "mean_similarity": 0.3415311872959137,
+      "num_strong_matches": 1,
+      "num_moderate_matches": 3
+    },
+    {
+      "objective_idx": 8,
+      "objective_id": "OBJ-009",
+      "objective": "Sustainable water mix: 50% by 2030",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "kpi",
+      "matched_actions": [
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.8635621070861816,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6777294874191284,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6686988472938538,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.65279221534729,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.4681398272514343,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4302941858768463,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.40126845240592957,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 10,
+          "action_id": "PEOPLE-003",
+          "title": "Community Impact Programs Expansion",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.36388885974884033,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.3543880581855774,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.32396647334098816,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 86.35621070861816,
+      "coverage": "Strong",
+      "max_similarity": 0.8635621070861816,
+      "mean_similarity": 0.3934427797794342,
+      "num_strong_matches": 1,
+      "num_moderate_matches": 3
+    },
+    {
+      "objective_idx": 9,
+      "objective_id": "OBJ-010",
+      "objective": "Groundwater (SL): 0% by 2028",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "kpi",
+      "matched_actions": [
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6949417591094971,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.5697487592697144,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.5371441841125488,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.5306174755096436,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.4568433165550232,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.3994019627571106,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.3814839720726013,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.37891504168510437,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 10,
+          "action_id": "PEOPLE-003",
+          "title": "Community Impact Programs Expansion",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.3559764623641968,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 15,
+          "action_id": "GOV-001",
+          "title": "ESG Governance & Reporting Framework",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.33755987882614136,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 69.4941759109497,
+      "coverage": "Moderate",
+      "max_similarity": 0.6949417591094971,
+      "mean_similarity": 0.3696151673793793,
+      "num_strong_matches": 0,
+      "num_moderate_matches": 4
+    },
+    {
+      "objective_idx": 10,
+      "objective_id": "OBJ-011",
+      "objective": "1.3 EARTH - Circular Economy and Materials",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "strategic_sub_section",
+      "matched_actions": [
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.7824276685714722,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.7456949353218079,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.7055293321609497,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6500765681266785,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.4395153820514679,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.37002280354499817,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.3655862808227539,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.34567978978157043,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 14,
+          "action_id": "OPS-003",
+          "title": "Supply Chain Visibility Enhancement",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.3310094475746155,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.3176056742668152,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 78.24276685714722,
+      "coverage": "Strong",
+      "max_similarity": 0.7824276685714722,
+      "mean_similarity": 0.3931114375591278,
+      "num_strong_matches": 3,
+      "num_moderate_matches": 1
+    },
+    {
+      "objective_idx": 11,
+      "objective_id": "OBJ-012",
+      "objective": "75% sustainable materials and 95%+ waste recycling by 2030",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "goal",
+      "matched_actions": [
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.8032302856445312,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.7931675314903259,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6618863940238953,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6316240429878235,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.400338739156723,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.38245442509651184,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.37876981496810913,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.3700001537799835,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.320531964302063,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 14,
+          "action_id": "OPS-003",
+          "title": "Supply Chain Visibility Enhancement",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.3197031319141388,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 80.32302856445312,
+      "coverage": "Strong",
+      "max_similarity": 0.8032302856445312,
+      "mean_similarity": 0.39815986156463623,
+      "num_strong_matches": 2,
+      "num_moderate_matches": 2
+    },
+    {
+      "objective_idx": 12,
+      "objective_id": "OBJ-013",
+      "objective": "Sustainable materials: 75% by 2030",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "kpi",
+      "matched_actions": [
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.8467099666595459,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6968767642974854,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6950565576553345,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6782071590423584,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.4399062395095825,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.4275394082069397,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.422931045293808,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4080982506275177,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 14,
+          "action_id": "OPS-003",
+          "title": "Supply Chain Visibility Enhancement",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.35969287157058716,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.3415569067001343,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 84.67099666595459,
+      "coverage": "Strong",
+      "max_similarity": 0.8467099666595459,
+      "mean_similarity": 0.4186933934688568,
+      "num_strong_matches": 1,
+      "num_moderate_matches": 3
+    },
+    {
+      "objective_idx": 13,
+      "objective_id": "OBJ-014",
+      "objective": "Sustainable packaging: 100% by 2028",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "kpi",
+      "matched_actions": [
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.764477014541626,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6517735123634338,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6490418910980225,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.5977997779846191,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 14,
+          "action_id": "OPS-003",
+          "title": "Supply Chain Visibility Enhancement",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.4765142798423767,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.4320705533027649,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.42126548290252686,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.41772615909576416,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.39341267943382263,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.3559003472328186,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 76.4477014541626,
+      "coverage": "Strong",
+      "max_similarity": 0.764477014541626,
+      "mean_similarity": 0.42216187715530396,
+      "num_strong_matches": 1,
+      "num_moderate_matches": 3
+    },
+    {
+      "objective_idx": 14,
+      "objective_id": "OBJ-015",
+      "objective": "2.1 Digital Manufacturing Excellence",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "strategic_sub_section",
+      "matched_actions": [
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6856473684310913,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6628521084785461,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6326897144317627,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 4,
+          "action_id": "INNOV-001",
+          "title": "Industry 4.0 Manufacturing Pilot",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.5904982686042786,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.5890957117080688,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 6,
+          "action_id": "INNOV-003",
+          "title": "Innovation Center Establishment",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.5233330726623535,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.5092871785163879,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.5041654706001282,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 14,
+          "action_id": "OPS-003",
+          "title": "Supply Chain Visibility Enhancement",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.493757039308548,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4803365468978882,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 68.56473684310913,
+      "coverage": "Moderate",
+      "max_similarity": 0.6856473684310913,
+      "mean_similarity": 0.4857511520385742,
+      "num_strong_matches": 0,
+      "num_moderate_matches": 8
+    },
+    {
+      "objective_idx": 15,
+      "objective_id": "OBJ-016",
+      "objective": "80% digital integration across manufacturing by 2029",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "goal",
+      "matched_actions": [
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6515809297561646,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 4,
+          "action_id": "INNOV-001",
+          "title": "Industry 4.0 Manufacturing Pilot",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.6084778904914856,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.5738850235939026,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.5709149837493896,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 6,
+          "action_id": "INNOV-003",
+          "title": "Innovation Center Establishment",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.5449785590171814,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.5426647663116455,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 5,
+          "action_id": "INNOV-002",
+          "title": "Virtual Sampling & Digital Design Initiative",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.5063509941101074,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 7,
+          "action_id": "INNOV-004",
+          "title": "ERP System Upgrade",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.41716060042381287,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 14,
+          "action_id": "OPS-003",
+          "title": "Supply Chain Visibility Enhancement",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.40970754623413086,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.3942539691925049,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 65.15809297561646,
+      "coverage": "Moderate",
+      "max_similarity": 0.6515809297561646,
+      "mean_similarity": 0.4249132573604584,
+      "num_strong_matches": 0,
+      "num_moderate_matches": 7
+    },
+    {
+      "objective_idx": 16,
+      "objective_id": "OBJ-017",
+      "objective": "Digital integration: 80% by 2029",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "kpi",
+      "matched_actions": [
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6371499300003052,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6347917318344116,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6193749904632568,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6152437925338745,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 6,
+          "action_id": "INNOV-003",
+          "title": "Innovation Center Establishment",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.5924429893493652,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 5,
+          "action_id": "INNOV-002",
+          "title": "Virtual Sampling & Digital Design Initiative",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.5326941013336182,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 4,
+          "action_id": "INNOV-001",
+          "title": "Industry 4.0 Manufacturing Pilot",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.5047307014465332,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 7,
+          "action_id": "INNOV-004",
+          "title": "ERP System Upgrade",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.44515174627304077,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.41103869676589966,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 10,
+          "action_id": "PEOPLE-003",
+          "title": "Community Impact Programs Expansion",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.39885497093200684,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 63.71499300003052,
+      "coverage": "Moderate",
+      "max_similarity": 0.6371499300003052,
+      "mean_similarity": 0.45421281456947327,
+      "num_strong_matches": 0,
+      "num_moderate_matches": 7
+    },
+    {
+      "objective_idx": 17,
+      "objective_id": "OBJ-018",
+      "objective": "Automation rate: 40% by 2030",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "kpi",
+      "matched_actions": [
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6368116736412048,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.627204179763794,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6254931092262268,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6166017651557922,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 6,
+          "action_id": "INNOV-003",
+          "title": "Innovation Center Establishment",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.41131967306137085,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.40578287839889526,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.40123575925827026,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.38923248648643494,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 4,
+          "action_id": "INNOV-001",
+          "title": "Industry 4.0 Manufacturing Pilot",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.3861321210861206,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.36949124932289124,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 63.68116736412048,
+      "coverage": "Moderate",
+      "max_similarity": 0.6368116736412048,
+      "mean_similarity": 0.40882155299186707,
+      "num_strong_matches": 0,
+      "num_moderate_matches": 4
+    },
+    {
+      "objective_idx": 18,
+      "objective_id": "OBJ-019",
+      "objective": "Virtual sampling: 90% by 2028",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "kpi",
+      "matched_actions": [
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6693959832191467,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6664776802062988,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6560285091400146,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6164472103118896,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 5,
+          "action_id": "INNOV-002",
+          "title": "Virtual Sampling & Digital Design Initiative",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.49538981914520264,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4335804581642151,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.3977039158344269,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 10,
+          "action_id": "PEOPLE-003",
+          "title": "Community Impact Programs Expansion",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.38791948556900024,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.3573913872241974,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.3522251844406128,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 66.93959832191467,
+      "coverage": "Moderate",
+      "max_similarity": 0.6693959832191467,
+      "mean_similarity": 0.4113127887248993,
+      "num_strong_matches": 0,
+      "num_moderate_matches": 4
+    },
+    {
+      "objective_idx": 19,
+      "objective_id": "OBJ-020",
+      "objective": "Supply chain visibility: 95% by 2029",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "kpi",
+      "matched_actions": [
+        {
+          "action_idx": 14,
+          "action_id": "OPS-003",
+          "title": "Supply Chain Visibility Enhancement",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.7439076900482178,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.7045684456825256,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6604560613632202,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6231317520141602,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6074435710906982,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.5174287557601929,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.4240304231643677,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.40741783380508423,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.38458365201950073,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 4,
+          "action_id": "INNOV-001",
+          "title": "Industry 4.0 Manufacturing Pilot",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.37643587589263916,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 74.39076900482178,
+      "coverage": "Strong",
+      "max_similarity": 0.7439076900482178,
+      "mean_similarity": 0.4439059793949127,
+      "num_strong_matches": 2,
+      "num_moderate_matches": 4
+    },
+    {
+      "objective_idx": 20,
+      "objective_id": "OBJ-021",
+      "objective": "2.2 Innovation Culture",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "strategic_sub_section",
+      "matched_actions": [
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6648499965667725,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6508527398109436,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6375730037689209,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6183438301086426,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 6,
+          "action_id": "INNOV-003",
+          "title": "Innovation Center Establishment",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.564907431602478,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4948479235172272,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.45071932673454285,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 4,
+          "action_id": "INNOV-001",
+          "title": "Industry 4.0 Manufacturing Pilot",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.4317447245121002,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4173428416252136,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.39685994386672974,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 66.48499965667725,
+      "coverage": "Moderate",
+      "max_similarity": 0.6648499965667725,
+      "mean_similarity": 0.45157039165496826,
+      "num_strong_matches": 0,
+      "num_moderate_matches": 5
+    },
+    {
+      "objective_idx": 21,
+      "objective_id": "OBJ-022",
+      "objective": "Innovation leader in sustainable apparel solutions",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "goal",
+      "matched_actions": [
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.7182451486587524,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6486251354217529,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6377172470092773,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6228207349777222,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4118717908859253,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 6,
+          "action_id": "INNOV-003",
+          "title": "Innovation Center Establishment",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.4101351797580719,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 4,
+          "action_id": "INNOV-001",
+          "title": "Industry 4.0 Manufacturing Pilot",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.38007158041000366,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 14,
+          "action_id": "OPS-003",
+          "title": "Supply Chain Visibility Enhancement",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.37802019715309143,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.37502607703208923,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.3616156578063965,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 71.82451486587524,
+      "coverage": "Strong",
+      "max_similarity": 0.7182451486587524,
+      "mean_similarity": 0.39723339676856995,
+      "num_strong_matches": 1,
+      "num_moderate_matches": 3
+    },
+    {
+      "objective_idx": 22,
+      "objective_id": "OBJ-023",
+      "objective": "Co-innovation projects: 50 by 2030",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "kpi",
+      "matched_actions": [
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6997160315513611,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6927128434181213,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6825273036956787,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6767202615737915,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 6,
+          "action_id": "INNOV-003",
+          "title": "Innovation Center Establishment",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.5096274018287659,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.4727608561515808,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4615866541862488,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.4262338876724243,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.41047143936157227,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.404669851064682,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 69.97160315513611,
+      "coverage": "Moderate",
+      "max_similarity": 0.6997160315513611,
+      "mean_similarity": 0.4597955346107483,
+      "num_strong_matches": 0,
+      "num_moderate_matches": 5
+    },
+    {
+      "objective_idx": 23,
+      "objective_id": "OBJ-024",
+      "objective": "3.1 Employee Wellbeing and Development",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "strategic_sub_section",
+      "matched_actions": [
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.665458083152771,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6596603393554688,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6498563289642334,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.6248651742935181,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.5902310609817505,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.571398138999939,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.564328670501709,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.4299160838127136,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.4184949994087219,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 10,
+          "action_id": "PEOPLE-003",
+          "title": "Community Impact Programs Expansion",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4048810601234436,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 66.5458083152771,
+      "coverage": "Moderate",
+      "max_similarity": 0.665458083152771,
+      "mean_similarity": 0.4468299448490143,
+      "num_strong_matches": 0,
+      "num_moderate_matches": 7
+    },
+    {
+      "objective_idx": 24,
+      "objective_id": "OBJ-025",
+      "objective": "Zero harm and industry-leading satisfaction",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "goal",
+      "matched_actions": [
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6859342455863953,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6844778656959534,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6771862506866455,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6432662010192871,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4689224362373352,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.46409308910369873,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4260236620903015,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.40298357605934143,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.36031290888786316,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 14,
+          "action_id": "OPS-003",
+          "title": "Supply Chain Visibility Enhancement",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.3542235493659973,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 68.59342455863953,
+      "coverage": "Moderate",
+      "max_similarity": 0.6859342455863953,
+      "mean_similarity": 0.41577407717704773,
+      "num_strong_matches": 0,
+      "num_moderate_matches": 4
+    },
+    {
+      "objective_idx": 25,
+      "objective_id": "OBJ-026",
+      "objective": "3.2 Diversity, Equity, and Inclusion",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "strategic_sub_section",
+      "matched_actions": [
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6781250238418579,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6641045212745667,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6458489894866943,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.5998899936676025,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.5514586567878723,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 10,
+          "action_id": "PEOPLE-003",
+          "title": "Community Impact Programs Expansion",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4547637403011322,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.45320338010787964,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4475857615470886,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.421502947807312,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.34243130683898926,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 67.81250238418579,
+      "coverage": "Moderate",
+      "max_similarity": 0.6781250238418579,
+      "mean_similarity": 0.4088228642940521,
+      "num_strong_matches": 0,
+      "num_moderate_matches": 5
+    },
+    {
+      "objective_idx": 26,
+      "objective_id": "OBJ-027",
+      "objective": "40% women in management and inclusive culture",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "goal",
+      "matched_actions": [
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.6488279104232788,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6104033589363098,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.5482467412948608,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.5333791971206665,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.5232629179954529,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4106399416923523,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.39665836095809937,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.389200896024704,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 10,
+          "action_id": "PEOPLE-003",
+          "title": "Community Impact Programs Expansion",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.3460020422935486,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 12,
+          "action_id": "OPS-001",
+          "title": "Quality Excellence - Six Sigma Deployment",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.3053196370601654,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 64.88279104232788,
+      "coverage": "Moderate",
+      "max_similarity": 0.6488279104232788,
+      "mean_similarity": 0.3614062964916229,
+      "num_strong_matches": 0,
+      "num_moderate_matches": 5
+    },
+    {
+      "objective_idx": 27,
+      "objective_id": "OBJ-028",
+      "objective": "Women in management: 40% by 2030",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "kpi",
+      "matched_actions": [
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.7066178917884827,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6652313470840454,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.629105806350708,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6207431554794312,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.5887037515640259,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.4768427014350891,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.46736666560173035,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4620453715324402,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.41025954484939575,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 10,
+          "action_id": "PEOPLE-003",
+          "title": "Community Impact Programs Expansion",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.38078024983406067,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 70.66178917884827,
+      "coverage": "Strong",
+      "max_similarity": 0.7066178917884827,
+      "mean_similarity": 0.4296495318412781,
+      "num_strong_matches": 1,
+      "num_moderate_matches": 4
+    },
+    {
+      "objective_idx": 28,
+      "objective_id": "OBJ-029",
+      "objective": "Gender pay gap: 0% by 2028",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "kpi",
+      "matched_actions": [
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6073577404022217,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.5947973728179932,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.5847310423851013,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.5826880931854248,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.54880291223526,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.4722250699996948,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4182378649711609,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 10,
+          "action_id": "PEOPLE-003",
+          "title": "Community Impact Programs Expansion",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.39140474796295166,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.38570183515548706,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.3409178853034973,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 60.73577404022217,
+      "coverage": "Moderate",
+      "max_similarity": 0.6073577404022217,
+      "mean_similarity": 0.37936267256736755,
+      "num_strong_matches": 0,
+      "num_moderate_matches": 5
+    },
+    {
+      "objective_idx": 29,
+      "objective_id": "OBJ-030",
+      "objective": "3.3 Community Development",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "strategic_sub_section",
+      "matched_actions": [
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.717023491859436,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.7062656879425049,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6740144491195679,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6084403991699219,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.5504587888717651,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 10,
+          "action_id": "PEOPLE-003",
+          "title": "Community Impact Programs Expansion",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.5398441553115845,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.507487416267395,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.4773455262184143,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4488561749458313,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.40028202533721924,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 71.7023491859436,
+      "coverage": "Strong",
+      "max_similarity": 0.717023491859436,
+      "mean_similarity": 0.4517802596092224,
+      "num_strong_matches": 2,
+      "num_moderate_matches": 5
+    },
+    {
+      "objective_idx": 30,
+      "objective_id": "OBJ-031",
+      "objective": "Impact 1 million community members by 2030",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "goal",
+      "matched_actions": [
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.7523956894874573,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.7392642498016357,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.7063459753990173,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6703877449035645,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 10,
+          "action_id": "PEOPLE-003",
+          "title": "Community Impact Programs Expansion",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.5707380771636963,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.5161247849464417,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.5023145079612732,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4610024094581604,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.44105130434036255,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.3862636089324951,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 75.23956894874573,
+      "coverage": "Strong",
+      "max_similarity": 0.7523956894874573,
+      "mean_similarity": 0.44796717166900635,
+      "num_strong_matches": 3,
+      "num_moderate_matches": 4
+    },
+    {
+      "objective_idx": 31,
+      "objective_id": "OBJ-032",
+      "objective": "Total beneficiaries: 1,000,000 by 2030",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "kpi",
+      "matched_actions": [
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.68947434425354,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6549570560455322,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6496038436889648,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6089537143707275,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.5313236713409424,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.5172550082206726,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.5050062537193298,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 10,
+          "action_id": "PEOPLE-003",
+          "title": "Community Impact Programs Expansion",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4992642402648926,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.48761892318725586,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.48203977942466736,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 68.947434425354,
+      "coverage": "Moderate",
+      "max_similarity": 0.68947434425354,
+      "mean_similarity": 0.45795243978500366,
+      "num_strong_matches": 0,
+      "num_moderate_matches": 7
+    },
+    {
+      "objective_idx": 32,
+      "objective_id": "OBJ-033",
+      "objective": "4.1 Quality Excellence",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "strategic_sub_section",
+      "matched_actions": [
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.741531491279602,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.684418797492981,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6782904863357544,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6581501960754395,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.6072301864624023,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.5508872270584106,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.5360624194145203,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 12,
+          "action_id": "OPS-001",
+          "title": "Quality Excellence - Six Sigma Deployment",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.4903002381324768,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.4733942151069641,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 10,
+          "action_id": "PEOPLE-003",
+          "title": "Community Impact Programs Expansion",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.46044445037841797,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 74.1531491279602,
+      "coverage": "Strong",
+      "max_similarity": 0.741531491279602,
+      "mean_similarity": 0.46920502185821533,
+      "num_strong_matches": 1,
+      "num_moderate_matches": 6
+    },
+    {
+      "objective_idx": 33,
+      "objective_id": "OBJ-034",
+      "objective": "Zero complaints and Six Sigma quality",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "goal",
+      "matched_actions": [
+        {
+          "action_idx": 12,
+          "action_id": "OPS-001",
+          "title": "Quality Excellence - Six Sigma Deployment",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.6621560454368591,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6462398767471313,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6163445711135864,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.578627347946167,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.5663883090019226,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.5055382251739502,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.40693166851997375,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4055291414260864,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4025646150112152,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.3794477880001068,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 66.21560454368591,
+      "coverage": "Moderate",
+      "max_similarity": 0.6621560454368591,
+      "mean_similarity": 0.4081050157546997,
+      "num_strong_matches": 0,
+      "num_moderate_matches": 6
+    },
+    {
+      "objective_idx": 34,
+      "objective_id": "OBJ-035",
+      "objective": "4.2 Operational Efficiency",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "strategic_sub_section",
+      "matched_actions": [
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.7164822816848755,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6987483501434326,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.693179726600647,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6515841484069824,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.5160288214683533,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 14,
+          "action_id": "OPS-003",
+          "title": "Supply Chain Visibility Enhancement",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.45679157972335815,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4437721371650696,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 12,
+          "action_id": "OPS-001",
+          "title": "Quality Excellence - Six Sigma Deployment",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.43304312229156494,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.42804864048957825,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4226517677307129,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 71.64822816848755,
+      "coverage": "Strong",
+      "max_similarity": 0.7164822816848755,
+      "mean_similarity": 0.43169161677360535,
+      "num_strong_matches": 1,
+      "num_moderate_matches": 4
+    },
+    {
+      "objective_idx": 35,
+      "objective_id": "OBJ-036",
+      "objective": "30% productivity improvement",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "goal",
+      "matched_actions": [
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.7268880009651184,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.7055884599685669,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6942967176437378,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6825602650642395,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.5169328451156616,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.5064479112625122,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.5043261647224426,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.48373910784721375,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 10,
+          "action_id": "PEOPLE-003",
+          "title": "Community Impact Programs Expansion",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.437023401260376,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.4208349287509918,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 72.68880009651184,
+      "coverage": "Strong",
+      "max_similarity": 0.7268880009651184,
+      "mean_similarity": 0.4499340057373047,
+      "num_strong_matches": 2,
+      "num_moderate_matches": 5
+    },
+    {
+      "objective_idx": 36,
+      "objective_id": "OBJ-037",
+      "objective": "Productivity: +30% by 2030",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "kpi",
+      "matched_actions": [
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.7284049987792969,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.7227350473403931,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6883155107498169,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6753212809562683,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.49810299277305603,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.48980480432510376,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.478254109621048,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.47025641798973083,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.44722989201545715,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 10,
+          "action_id": "PEOPLE-003",
+          "title": "Community Impact Programs Expansion",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4196656346321106,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 72.84049987792969,
+      "coverage": "Strong",
+      "max_similarity": 0.7284049987792969,
+      "mean_similarity": 0.44863811135292053,
+      "num_strong_matches": 2,
+      "num_moderate_matches": 2
+    },
+    {
+      "objective_idx": 37,
+      "objective_id": "OBJ-038",
+      "objective": "Capacity: +30% by 2030",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "kpi",
+      "matched_actions": [
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.7539305686950684,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.7216982841491699,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.7215821743011475,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.7023308873176575,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.5546075701713562,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.5235711336135864,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.5088101625442505,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4354037344455719,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4259284734725952,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 10,
+          "action_id": "PEOPLE-003",
+          "title": "Community Impact Programs Expansion",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.41792362928390503,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 75.39305686950684,
+      "coverage": "Strong",
+      "max_similarity": 0.7539305686950684,
+      "mean_similarity": 0.4611496925354004,
+      "num_strong_matches": 4,
+      "num_moderate_matches": 3
+    },
+    {
+      "objective_idx": 38,
+      "objective_id": "OBJ-039",
+      "objective": "5.1 ESG Governance",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "strategic_sub_section",
+      "matched_actions": [
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6643393039703369,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 15,
+          "action_id": "GOV-001",
+          "title": "ESG Governance & Reporting Framework",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.637165904045105,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6349833011627197,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6288285851478577,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.5836067199707031,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.5823937654495239,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 17,
+          "action_id": "GOV-003",
+          "title": "Information Security Management System",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.38986071944236755,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.34344083070755005,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.3202575147151947,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 14,
+          "action_id": "OPS-003",
+          "title": "Supply Chain Visibility Enhancement",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.3155635595321655,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 66.43393039703369,
+      "coverage": "Moderate",
+      "max_similarity": 0.6643393039703369,
+      "mean_similarity": 0.40510237216949463,
+      "num_strong_matches": 0,
+      "num_moderate_matches": 6
+    },
+    {
+      "objective_idx": 39,
+      "objective_id": "OBJ-040",
+      "objective": "Top-tier ESG ratings and transparency",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "goal",
+      "matched_actions": [
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6538021564483643,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6376608610153198,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6368682384490967,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6030359864234924,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 15,
+          "action_id": "GOV-001",
+          "title": "ESG Governance & Reporting Framework",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.575312077999115,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.4816831350326538,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 14,
+          "action_id": "OPS-003",
+          "title": "Supply Chain Visibility Enhancement",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.44051429629325867,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4048279821872711,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.3895412087440491,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 12,
+          "action_id": "OPS-001",
+          "title": "Quality Excellence - Six Sigma Deployment",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.37035682797431946,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 65.38021564483643,
+      "coverage": "Moderate",
+      "max_similarity": 0.6538021564483643,
+      "mean_similarity": 0.4190128743648529,
+      "num_strong_matches": 0,
+      "num_moderate_matches": 5
+    },
+    {
+      "objective_idx": 40,
+      "objective_id": "OBJ-041",
+      "objective": "ESG rating: A-level by 2028",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "kpi",
+      "matched_actions": [
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6853193044662476,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6774153709411621,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6582313179969788,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6249811053276062,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 15,
+          "action_id": "GOV-001",
+          "title": "ESG Governance & Reporting Framework",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.5527681708335876,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.5103182196617126,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.463927686214447,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 13,
+          "action_id": "OPS-002",
+          "title": "Production Capacity Expansion Phase 1",
+          "pillar": "OPERATIONAL EXCELLENCE",
+          "similarity": 0.4347361624240875,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.43100377917289734,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.419514536857605,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 68.53193044662476,
+      "coverage": "Moderate",
+      "max_similarity": 0.6853193044662476,
+      "mean_similarity": 0.4429202079772949,
+      "num_strong_matches": 0,
+      "num_moderate_matches": 6
+    },
+    {
+      "objective_idx": 41,
+      "objective_id": "OBJ-042",
+      "objective": "5.2 Risk Management",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "strategic_sub_section",
+      "matched_actions": [
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.7295734286308289,
+          "alignment_strength": "Strong"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6744972467422485,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6695843935012817,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.6622878909111023,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.5944852232933044,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 15,
+          "action_id": "GOV-001",
+          "title": "ESG Governance & Reporting Framework",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.5017770528793335,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 17,
+          "action_id": "GOV-003",
+          "title": "Information Security Management System",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.47320935130119324,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.45588159561157227,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.40750738978385925,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.4061717391014099,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 72.95734286308289,
+      "coverage": "Strong",
+      "max_similarity": 0.7295734286308289,
+      "mean_similarity": 0.4377496540546417,
+      "num_strong_matches": 1,
+      "num_moderate_matches": 5
+    },
+    {
+      "objective_idx": 42,
+      "objective_id": "OBJ-043",
+      "objective": "Proactive risk identification and mitigation",
+      "pillar": "ENVIRONMENTAL LEADERSHIP",
+      "type": "goal",
+      "matched_actions": [
+        {
+          "action_idx": 1,
+          "action_id": "ENV-002",
+          "title": "Sustainable Water Management Initiative",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6846632361412048,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 0,
+          "action_id": "ENV-001",
+          "title": "Renewable Energy Expansion Phase 1",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6607038974761963,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 3,
+          "action_id": "ENV-004",
+          "title": "Waste Minimization & Circular Economy Pilot",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.6433827877044678,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 2,
+          "action_id": "ENV-003",
+          "title": "Sustainable Materials Sourcing Acceleration",
+          "pillar": "ENVIRONMENTAL LEADERSHIP",
+          "similarity": 0.616232693195343,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 16,
+          "action_id": "GOV-002",
+          "title": "Climate Risk Assessment & Adaptation",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.6012204885482788,
+          "alignment_strength": "Moderate"
+        },
+        {
+          "action_idx": 15,
+          "action_id": "GOV-001",
+          "title": "ESG Governance & Reporting Framework",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.42272841930389404,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 9,
+          "action_id": "PEOPLE-002",
+          "title": "Women in Leadership Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.42140936851501465,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 17,
+          "action_id": "GOV-003",
+          "title": "Information Security Management System",
+          "pillar": "GOVERNANCE & RISK MANAGEMENT",
+          "similarity": 0.37982654571533203,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 11,
+          "action_id": "PEOPLE-004",
+          "title": "Employee Skills Development Program",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.3740278482437134,
+          "alignment_strength": "Weak"
+        },
+        {
+          "action_idx": 8,
+          "action_id": "PEOPLE-001",
+          "title": "Mental Health & Wellbeing Strategy",
+          "pillar": "PEOPLE EXCELLENCE & SOCIAL IMPACT",
+          "similarity": 0.36675724387168884,
+          "alignment_strength": "Weak"
+        }
+      ],
+      "alignment_score": 68.46632361412048,
+      "coverage": "Moderate",
+      "max_similarity": 0.6846632361412048,
+      "mean_similarity": 0.40659913420677185,
+      "num_strong_matches": 0,
+      "num_moderate_matches": 5
+    }
+  ],
+  "gaps": {
+    "weak_objectives": [],
+    "orphan_actions": [
+      {
+        "action_id": "INNOV-004",
+        "title": "ERP System Upgrade",
+        "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+        "max_similarity": 0.44515174627304077,
+        "recommendation": "Review strategic alignment or consider removing"
+      },
+      {
+        "action_id": "GOV-003",
+        "title": "Information Security Management System",
+        "pillar": "GOVERNANCE & RISK MANAGEMENT",
+        "max_similarity": 0.47320935130119324,
+        "recommendation": "Review strategic alignment or consider removing"
+      }
+    ],
+    "pillar_gaps": [],
+    "coverage_gaps": []
+  },
+  "pillar_stats": {
+    "ENVIRONMENTAL LEADERSHIP": {
+      "objectives": [
+        "Achieve net-positive environmental impact across the value c",
+        "1.1 AIR - Climate Action and Decarbonization",
+        "Net Zero Carbon by 2030 (operations) and Net Zero value chai",
+        "Renewable energy: 100% by 2030",
+        "Scope 1&2: Net Zero by 2030",
+        "Scope 3: 42% reduction by 2030",
+        "1.2 WATER - Stewardship and Net-Positive Operations",
+        "Net-positive water operations by 2030 with 50% sustainable w",
+        "Sustainable water mix: 50% by 2030",
+        "Groundwater (SL): 0% by 2028",
+        "1.3 EARTH - Circular Economy and Materials",
+        "75% sustainable materials and 95%+ waste recycling by 2030",
+        "Sustainable materials: 75% by 2030",
+        "Sustainable packaging: 100% by 2028",
+        "2.1 Digital Manufacturing Excellence",
+        "80% digital integration across manufacturing by 2029",
+        "Digital integration: 80% by 2029",
+        "Automation rate: 40% by 2030",
+        "Virtual sampling: 90% by 2028",
+        "Supply chain visibility: 95% by 2029",
+        "2.2 Innovation Culture",
+        "Innovation leader in sustainable apparel solutions",
+        "Co-innovation projects: 50 by 2030",
+        "3.1 Employee Wellbeing and Development",
+        "Zero harm and industry-leading satisfaction",
+        "3.2 Diversity, Equity, and Inclusion",
+        "40% women in management and inclusive culture",
+        "Women in management: 40% by 2030",
+        "Gender pay gap: 0% by 2028",
+        "3.3 Community Development",
+        "Impact 1 million community members by 2030",
+        "Total beneficiaries: 1,000,000 by 2030",
+        "4.1 Quality Excellence",
+        "Zero complaints and Six Sigma quality",
+        "4.2 Operational Efficiency",
+        "30% productivity improvement",
+        "Productivity: +30% by 2030",
+        "Capacity: +30% by 2030",
+        "5.1 ESG Governance",
+        "Top-tier ESG ratings and transparency",
+        "ESG rating: A-level by 2028",
+        "5.2 Risk Management",
+        "Proactive risk identification and mitigation"
+      ],
+      "objective_ids": [
+        "OBJ-001",
+        "OBJ-002",
+        "OBJ-003",
+        "OBJ-004",
+        "OBJ-005",
+        "OBJ-006",
+        "OBJ-007",
+        "OBJ-008",
+        "OBJ-009",
+        "OBJ-010",
+        "OBJ-011",
+        "OBJ-012",
+        "OBJ-013",
+        "OBJ-014",
+        "OBJ-015",
+        "OBJ-016",
+        "OBJ-017",
+        "OBJ-018",
+        "OBJ-019",
+        "OBJ-020",
+        "OBJ-021",
+        "OBJ-022",
+        "OBJ-023",
+        "OBJ-024",
+        "OBJ-025",
+        "OBJ-026",
+        "OBJ-027",
+        "OBJ-028",
+        "OBJ-029",
+        "OBJ-030",
+        "OBJ-031",
+        "OBJ-032",
+        "OBJ-033",
+        "OBJ-034",
+        "OBJ-035",
+        "OBJ-036",
+        "OBJ-037",
+        "OBJ-038",
+        "OBJ-039",
+        "OBJ-040",
+        "OBJ-041",
+        "OBJ-042",
+        "OBJ-043"
+      ],
+      "scores": [
+        70.69426774978638,
+        69.97824907302856,
+        61.458396911621094,
+        87.0772123336792,
+        73.79705905914307,
+        76.90879702568054,
+        82.85554647445679,
+        77.42998600006104,
+        86.35621070861816,
+        69.4941759109497,
+        78.24276685714722,
+        80.32302856445312,
+        84.67099666595459,
+        76.4477014541626,
+        68.56473684310913,
+        65.15809297561646,
+        63.71499300003052,
+        63.68116736412048,
+        66.93959832191467,
+        74.39076900482178,
+        66.48499965667725,
+        71.82451486587524,
+        69.97160315513611,
+        66.5458083152771,
+        68.59342455863953,
+        67.81250238418579,
+        64.88279104232788,
+        70.66178917884827,
+        60.73577404022217,
+        71.7023491859436,
+        75.23956894874573,
+        68.947434425354,
+        74.1531491279602,
+        66.21560454368591,
+        71.64822816848755,
+        72.68880009651184,
+        72.84049987792969,
+        75.39305686950684,
+        66.43393039703369,
+        65.38021564483643,
+        68.53193044662476,
+        72.95734286308289,
+        68.46632361412048
+      ],
+      "count": 43,
+      "average_score": 71.5417533419853,
+      "min_score": 60.73577404022217,
+      "max_score": 87.0772123336792,
+      "median_score": 70.66178917884827,
+      "pillar_status": "Strong"
+    }
+  },
+  "summary": {
+    "total_objectives": 43,
+    "total_actions": 18,
+    "well_covered_objectives": 43,
+    "gap_objectives_count": 0,
+    "orphan_actions_count": 2,
+    "weak_pillars_count": 0
+  },
+  "year": "2026",
+  "analysis_date": "2026-02-11 11:29:30"
+}

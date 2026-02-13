@@ -1,0 +1,86 @@
+{
+  "improvements": [
+    {
+      "objective_id": "OBJ-085",
+      "objective": "Blockchain traceability (95% visibility by 2029)",
+      "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+      "current_score": 49.717044830322266,
+      "suggestions": {
+        "new_actions": [
+          "Implement a comprehensive Blockchain Traceability Solution: Develop partnerships to implement blockchain technology specifically designed for the fashion industry which will enhance traceability from raw materials to finished products within Brandix's supply chain network by Q4 of Year 2, aiming at achieving a pilot run with full functionality.",
+          "Blockchain Certification Program: Establish an internal certification process where suppliers are required to use and demonstrate blockchain capabilities as part of their auditing procedures for compliance within the first year after implementation commencement in Q1, ensuring that Brandix's supply chain adheres to responsible sourcing practices.",
+          "Employee Blockchain Awareness Campaign: Launch an internal education campaign starting from Year 2 with continuous updates and workshops on blockchain technology by the end of each quarter for all employees, focusing particularly on those in procurement, supply chain management, quality assurance teams to ensure they are well-versed in operationalizing Blockchain traceability."
+        ],
+        "kpi_enhancements": [],
+        "timeline_recommendations": [],
+        "resource_requirements": [],
+        "integration_opportunities": [
+          "Visibility Transparency Score: Develop a scoring system wherein suppliers' ability to demonstrate 95% traceability is assessed quarterly, using blockchain audits that provide real-time data on material sourcing and movement within the Brandix network; by end of Year 3, aim for at least an average score above 80% across all major supply tiers.",
+          "Employee Competency Level: By Q4 of Year 2, ensure a minimum competency level is met wherein 95% of relevant employees have completed the Blockchain Awareness Campaign and can demonstrate proficiency in blockchain-related processes; this will be measured through practical assessments as part of their regular job performance reviews."
+        ]
+      },
+      "retrieved_context": [
+        {
+          "text": "Strategic Objective: Blockchain traceability (95% visibility by 2029)\nPillar: INNOVATION & DIGITAL TRANSFORMATION\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-085",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.7239824533462524
+        },
+        {
+          "text": "Strategic Objective: Supply chain visibility: 95% by 2029\nPillar: INNOVATION & DIGITAL TRANSFORMATION\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-089",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.40467214584350586
+        },
+        {
+          "text": "Strategic Objective: End-to-end visibility platform\nPillar: INNOVATION & DIGITAL TRANSFORMATION\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-083",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.3725299537181854
+        },
+        {
+          "text": "Strategic Objective: 80% digital integration across manufacturing by 2029\nPillar: INNOVATION & DIGITAL TRANSFORMATION\nType: goal\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-069",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.35790640115737915
+        },
+        {
+          "text": "Strategic Objective: Digital integration: 80% by 2029\nPillar: INNOVATION & DIGITAL TRANSFORMATION\nType: initiative\nContext: This is a strategic objective from Brandix's 2025-2030 strategic plan.",
+          "source": "strategic_plan",
+          "id": "OBJ-086",
+          "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+          "similarity": 0.3415800929069519
+        }
+      ],
+      "raw_response": "**NEW ACTIONS** (3 items):\n1. Implement a comprehensive Blockchain Traceability Solution: Develop partnerships to implement blockchain technology specifically designed for the fashion industry which will enhance traceability from raw materials to finished products within Brandix's supply chain network by Q4 of Year 2, aiming at achieving a pilot run with full functionality.\n   \n2. Blockchain Certification Program: Establish an internal certification process where suppliers are required to use and demonstrate blockchain capabilities as part of their auditing procedures for compliance within the first year after implementation commencement in Q1, ensuring that Brandix's supply chain adheres to responsible sourcing practices.\n   \n3. Employee Blockchain Awareness Campaign: Launch an internal education campaign starting from Year 2 with continuous updates and workshops on blockchain technology by the end of each quarter for all employees, focusing particularly on those in procurement, supply chain management, quality assurance teams to ensure they are well-versed in operationalizing Blockchain traceability.\n   \n**KPI ENHANCEMENTS** (3 items):\n1. Supplier Integration Rate: Increase from current zero% by 20% at the end of Year 1, with full integration expected to reach a target rate where all suppliers in Brandix's top five tiers have blockchain traceability measures implemented within their processes. This will be achieved through both direct partnership efforts and cooperative initiatives such as shared pilot programs or learning consortiums for supply chain visibility solutions.\n   \n2. Visibility Transparency Score: Develop a scoring system wherein suppliers' ability to demonstrate 95% traceability is assessed quarterly, using blockchain audits that provide real-time data on material sourcing and movement within the Brandix network; by end of Year 3, aim for at least an average score above 80% across all major supply tiers.\n   \n3. Employee Competency Level: By Q4 of Year 2, ensure a minimum competency level is met wherein 95% of relevant employees have completed the Blockchain Awareness Campaign and can demonstrate proficiency in blockchain-related processes; this will be measured through practical assessments as part of their regular job performance reviews.\n   \n**TIMELINE RECOMMENDATIONS**:\n1. Year 1 Quarterly Milestones (Q1, Q2, Q3, and Q4): Launch the Blockchain Traceability Solution development; begin employee education campaigns; initiate supplier integration pilot programs with first set of partnerships established for blockchain auditing capabilities by mid-year endpoints.\n   \n2. Year 2 Quarterly Milestones (Q1, Q2, and H2): Reach a targeted Supplier Integration Rate increment; continue education campaigns assessing initial results and adjust as needed to ensure understanding is being retained and applied in their roles effectively by the end of each quarter's third month.\n   \n3. Year 0-4 Quarterly Milestons: Implement supplier certification program milestones, with an aim for all major audits within Brandix\u2019s supply chain to incorporate blockchain traceability measures and a Visibility Transparency Score by the end of Q4 in year four.\n   \n**RESOURCE REQUIREMENTS**: \n- Budget Allocation: Set aside an initial investment fund that increases progressively from $2 million at commencement, reaching up to $10 million over five years with scaling blockchain solution development and full supplier integration.\n   \n-",
+      "method": "RAG-enhanced"
+    }
+  ],
+  "summary": {
+    "total_gaps": 1,
+    "processed": 1,
+    "total_suggestions": 5,
+    "by_severity": {
+      "critical": 0,
+      "high": 0,
+      "medium": 1
+    }
+  },
+  "gap_objectives": [
+    {
+      "objective_idx": 84,
+      "objective_id": "OBJ-085",
+      "objective": "Blockchain traceability (95% visibility by 2029)",
+      "pillar": "INNOVATION & DIGITAL TRANSFORMATION",
+      "type": "initiative",
+      "max_similarity": 0.49717044830322266,
+      "alignment_score": 49.717044830322266,
+      "severity": "Medium",
+      "gap_size": 0.2829551696777344
+    }
+  ]
+}

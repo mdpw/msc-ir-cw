@@ -1,0 +1,130 @@
+{
+  "test_suite_version": "1.0",
+  "timestamp": "2026-02-13T14:06:42.609751",
+  "tests_run": [
+    "alignment_classification",
+    "similarity_scores",
+    "llm_improvements",
+    "performance",
+    "coverage"
+  ],
+  "alignment_classification": {
+    "test_name": "Alignment Classification Accuracy",
+    "matched_pairs": 10,
+    "overall_accuracy": 0.4,
+    "per_class_metrics": {
+      "Strong": {
+        "precision": 0.5,
+        "recall": 0.6666666666666666,
+        "f1_score": 0.5714285714285715,
+        "support": 8
+      },
+      "Moderate": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "support": 2
+      },
+      "Weak": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "support": 0
+      }
+    },
+    "weighted_metrics": {
+      "precision": 0.3,
+      "recall": 0.4,
+      "f1_score": 0.34285714285714286
+    },
+    "confusion_matrix": {
+      "matrix": [
+        [
+          4,
+          2,
+          0
+        ],
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "labels": [
+        "Strong",
+        "Moderate",
+        "Weak"
+      ]
+    }
+  },
+  "similarity_scores": {
+    "test_name": "Similarity Score Accuracy",
+    "samples_evaluated": 10,
+    "mean_squared_error": 0.042910403504286106,
+    "mean_absolute_error": 0.17777319431304933,
+    "root_mean_squared_error": 0.20714826454567778,
+    "correlation_coefficient": 0.05287028913335796,
+    "within_10_percent": 0.3,
+    "within_20_percent": 0.6,
+    "score_statistics": {
+      "mean_true": 0.77,
+      "mean_pred": 0.7684855580329895,
+      "std_true": 0.19,
+      "std_pred": 0.0931658645920502
+    }
+  },
+  "llm_improvements": {
+    "test_name": "LLM Improvement Quality",
+    "objectives_processed": 1,
+    "average_suggestions_per_objective": 3.0,
+    "category_coverage_rate": {
+      "new_actions": 0.0,
+      "kpi_enhancements": 1.0,
+      "timeline_recommendations": 0.0,
+      "resource_requirements": 0.0,
+      "integration_opportunities": 1.0
+    },
+    "average_specificity_score": 0.7333333333333333,
+    "quality_assessment": "High"
+  },
+  "performance": {
+    "test_name": "System Performance Benchmark",
+    "timestamp": "2026-02-13T14:06:42.865459",
+    "benchmarks": {
+      "document_processing_time": 0.0,
+      "embedding_time_per_10_items": 0.17743587493896484,
+      "embedding_throughput": 56.35838864851791,
+      "similarity_matrix_calculation_time": 0.007586956024169922,
+      "estimated_total_analysis_time": 3.18368911743164,
+      "scalability": {
+        "objectives_count": 179,
+        "actions_count": 18,
+        "comparisons_required": 3222,
+        "time_per_comparison_ms": 0.9881095957267662
+      }
+    }
+  },
+  "coverage": {
+    "test_name": "Test Coverage Analysis",
+    "total_objectives": 179,
+    "objectives_tested": 10,
+    "coverage_percentage": 5.58659217877095,
+    "coverage_assessment": "Low"
+  },
+  "overall_assessment": {
+    "tests_completed": 5,
+    "tests_passed": 1,
+    "tests_failed": 2,
+    "tests_skipped": 0,
+    "overall_grade": "D (Needs Improvement)",
+    "recommendations": [
+      "Improve alignment classification accuracy (currently below 70%)",
+      "Improve similarity score accuracy (low correlation with ground truth)"
+    ]
+  }
+}

@@ -1,0 +1,504 @@
+{
+  "metadata": {
+    "year": "2026",
+    "created": "2026-02-13",
+    "annotator": "ISPS Expert AI",
+    "instructions": "Please review each objective-action pair and provide your expert assessment",
+    "notes": "Annotated based on semantic alignment between strategic vision and tactical initiatives."
+  },
+  "alignment_criteria": {
+    "Strong": "Direct match, clear implementation of objective (≥70% alignment)",
+    "Moderate": "Related but partial implementation (50-70% alignment)",
+    "Weak": "Minimal or unclear connection (<50% alignment)"
+  },
+  "scoring_guide": {
+    "1.0": "Perfect alignment - action directly achieves objective",
+    "0.8-0.9": "Strong alignment - action substantially addresses objective",
+    "0.6-0.7": "Good alignment - action clearly supports objective",
+    "0.5-0.6": "Moderate alignment - action partially supports objective",
+    "0.3-0.5": "Weak alignment - action has minor connection",
+    "0.0-0.3": "Very weak alignment - action barely relates"
+  },
+  "objective_action_pairs": [
+    {
+      "objective_id": "OBJ-001",
+      "objective_text": "Achieve net-positive environmental impact across the value chain by 2030",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-003",
+      "action_title": "Sustainable Materials Sourcing Acceleration",
+      "action_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "system_prediction": {
+        "alignment": "Strong",
+        "score": 0.7069426774978638
+      },
+      "expected_alignment": "Strong",
+      "expected_score": 0.85,
+      "expert_notes": "Sustainable materials are key to reducing value chain footprint.",
+      "confidence": "High"
+    },
+    {
+      "objective_id": "OBJ-001",
+      "objective_text": "Achieve net-positive environmental impact across the value chain by 2030",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-004",
+      "action_title": "Waste Minimization & Circular Economy Pilot",
+      "action_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.696771502494812
+      },
+      "expected_alignment": "Strong",
+      "expected_score": 0.80,
+      "expert_notes": "Circular economy is a primary driver for net-positive impact.",
+      "confidence": "High"
+    },
+    {
+      "objective_id": "OBJ-001",
+      "objective_text": "Achieve net-positive environmental impact across the value chain by 2030",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-002",
+      "action_title": "Sustainable Water Management Initiative",
+      "action_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.693975567817688
+      },
+      "expected_alignment": "Moderate",
+      "expected_score": 0.65,
+      "expert_notes": "Water is part of the impact but is a specific sub-component.",
+      "confidence": "Medium"
+    },
+    {
+      "objective_id": "OBJ-002",
+      "objective_text": "1.1 AIR - Climate Action and Decarbonization",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-001",
+      "action_title": "Renewable Energy Expansion Phase 1",
+      "action_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.6997823715209961
+      },
+      "expected_alignment": "Strong",
+      "expected_score": 0.90,
+      "expert_notes": "Renewable energy is the main tool for decarbonization.",
+      "confidence": "High"
+    },
+    {
+      "objective_id": "OBJ-002",
+      "objective_text": "1.1 AIR - Climate Action and Decarbonization",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-004",
+      "action_title": "Waste Minimization & Circular Economy Pilot",
+      "action_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.6773931980133057
+      },
+      "expected_alignment": "Moderate",
+      "expected_score": 0.60,
+      "expert_notes": "Waste reduction helps lower secondary emissions.",
+      "confidence": "Medium"
+    },
+    {
+      "objective_id": "OBJ-002",
+      "objective_text": "1.1 AIR - Climate Action and Decarbonization",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-002",
+      "action_title": "Sustainable Water Management Initiative",
+      "action_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.6577163934707642
+      },
+      "expected_alignment": "Weak",
+      "expected_score": 0.35,
+      "expert_notes": "Water management is separate from atmospheric carbon goals.",
+      "confidence": "High"
+    },
+    {
+      "objective_id": "OBJ-003",
+      "objective_text": "Net Zero Carbon by 2030 (operations) and Net Zero value chain by 2050 (SBTi-validated)",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-001",
+      "action_title": "Renewable Energy Expansion Phase 1",
+      "action_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.6145839691162109
+      },
+      "expected_alignment": "Strong",
+      "expected_score": 0.95,
+      "expert_notes": "Zero-carbon energy is critical for Net Zero operations.",
+      "confidence": "High"
+    },
+    {
+      "objective_id": "OBJ-003",
+      "objective_text": "Net Zero Carbon by 2030 (operations) and Net Zero value chain by 2050 (SBTi-validated)",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-004",
+      "action_title": "Waste Minimization & Circular Economy Pilot",
+      "action_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.5949125289916992
+      },
+      "expected_alignment": "Moderate",
+      "expected_score": 0.55,
+      "expert_notes": "Waste reduces Scope 3 but is only part of the solution.",
+      "confidence": "Medium"
+    },
+    {
+      "objective_id": "OBJ-003",
+      "objective_text": "Net Zero Carbon by 2030 (operations) and Net Zero value chain by 2050 (SBTi-validated)",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-003",
+      "action_title": "Sustainable Materials Sourcing Acceleration",
+      "action_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.5837899446487427
+      },
+      "expected_alignment": "Moderate",
+      "expected_score": 0.60,
+      "expert_notes": "Critical for value chain (Scope 3) Net Zero goal.",
+      "confidence": "Medium"
+    },
+    {
+      "objective_id": "OBJ-004",
+      "objective_text": "Renewable Energy Expansion",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-001",
+      "action_title": "Renewable Energy Expansion Phase 1",
+      "action_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "system_prediction": {
+        "alignment": "Strong",
+        "score": 0.9798686504364014
+      },
+      "expected_alignment": "Strong",
+      "expected_score": 1.0,
+      "expert_notes": "Direct, identical match.",
+      "confidence": "Very High"
+    },
+    {
+      "objective_id": "OBJ-004",
+      "objective_text": "Renewable Energy Expansion",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-002",
+      "action_title": "Sustainable Water Management Initiative",
+      "action_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "system_prediction": {
+        "alignment": "Strong",
+        "score": 0.7068093419075012
+      },
+      "expected_alignment": "Weak",
+      "expected_score": 0.10,
+      "expert_notes": "No logical connection between water and renewable energy.",
+      "confidence": "High"
+    },
+    {
+      "objective_id": "OBJ-004",
+      "objective_text": "Renewable Energy Expansion",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-003",
+      "action_title": "Sustainable Materials Sourcing Acceleration",
+      "action_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "system_prediction": {
+        "alignment": "Strong",
+        "score": 0.7027686238288879
+      },
+      "expected_alignment": "Weak",
+      "expected_score": 0.20,
+      "expert_notes": "Tangentially related to sustainability but not energy.",
+      "confidence": "Medium"
+    },
+    {
+      "objective_id": "OBJ-005",
+      "objective_text": "100% renewable electricity by 2030",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-001",
+      "action_title": "Renewable Energy Expansion Phase 1",
+      "action_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "system_prediction": {
+        "alignment": "Strong",
+        "score": 0.8570451736450195
+      },
+      "expected_alignment": "Strong",
+      "expected_score": 0.90,
+      "expert_notes": "Phase 1 is a direct path to the 100% goal.",
+      "confidence": "High"
+    },
+    {
+      "objective_id": "OBJ-005",
+      "objective_text": "100% renewable electricity by 2030",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-002",
+      "action_title": "Sustainable Water Management Initiative",
+      "action_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "system_prediction": {
+        "alignment": "Strong",
+        "score": 0.7026951313018799
+      },
+      "expected_alignment": "Weak",
+      "expected_score": 0.10,
+      "expert_notes": "No relation between water and electricity sourcing.",
+      "confidence": "High"
+    },
+    {
+      "objective_id": "OBJ-005",
+      "objective_text": "100% renewable electricity by 2030",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-003",
+      "action_title": "Sustainable Materials Sourcing Acceleration",
+      "action_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.6655232310295105
+      },
+      "expected_alignment": "Weak",
+      "expected_score": 0.20,
+      "expert_notes": "Indirect sustainability link only.",
+      "confidence": "Medium"
+    },
+    {
+      "objective_id": "OBJ-006",
+      "objective_text": "Install 50 MW additional solar capacity",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-001",
+      "action_title": "Renewable Energy Expansion Phase 1",
+      "action_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "system_prediction": {
+        "alignment": "Strong",
+        "score": 0.7453389763832092
+      },
+      "expected_alignment": "Strong",
+      "expected_score": 0.90,
+      "expert_notes": "Solar installation is a primary action for energy expansion.",
+      "confidence": "High"
+    },
+    {
+      "objective_id": "OBJ-006",
+      "objective_text": "Install 50 MW additional solar capacity",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-002",
+      "action_title": "Sustainable Water Management Initiative",
+      "action_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.6345149278640747
+      },
+      "expected_alignment": "Weak",
+      "expected_score": 0.10,
+      "expert_notes": "No relation.",
+      "confidence": "High"
+    },
+    {
+      "objective_id": "OBJ-006",
+      "objective_text": "Install 50 MW additional solar capacity",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-003",
+      "action_title": "Sustainable Materials Sourcing Acceleration",
+      "action_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.578269362449646
+      },
+      "expected_alignment": "Weak",
+      "expected_score": 0.15,
+      "expert_notes": "No direct relation.",
+      "confidence": "Medium"
+    },
+    {
+      "objective_id": "OBJ-007",
+      "objective_text": "Energy storage systems deployment",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-001",
+      "action_title": "Renewable Energy Expansion Phase 1",
+      "action_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "system_prediction": {
+        "alignment": "Strong",
+        "score": 0.7492069005966187
+      },
+      "expected_alignment": "Moderate",
+      "expected_score": 0.65,
+      "expert_notes": "Storage is often part of a renewable energy rollout.",
+      "confidence": "Medium"
+    },
+    {
+      "objective_id": "OBJ-007",
+      "objective_text": "Energy storage systems deployment",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-002",
+      "action_title": "Sustainable Water Management Initiative",
+      "action_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.6782687902450562
+      },
+      "expected_alignment": "Weak",
+      "expected_score": 0.05,
+      "expert_notes": "No relation.",
+      "confidence": "High"
+    },
+    {
+      "objective_id": "OBJ-007",
+      "objective_text": "Energy storage systems deployment",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-003",
+      "action_title": "Sustainable Materials Sourcing Acceleration",
+      "action_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.6412687301635742
+      },
+      "expected_alignment": "Weak",
+      "expected_score": 0.10,
+      "expert_notes": "No relation.",
+      "confidence": "High"
+    },
+    {
+      "objective_id": "OBJ-008",
+      "objective_text": "Energy Efficiency",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-001",
+      "action_title": "Renewable Energy Expansion Phase 1",
+      "action_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "system_prediction": {
+        "alignment": "Strong",
+        "score": 0.8005954027175903
+      },
+      "expected_alignment": "Moderate",
+      "expected_score": 0.50,
+      "expert_notes": "Expansion (new supply) is different from efficiency (less use).",
+      "confidence": "Medium"
+    },
+    {
+      "objective_id": "OBJ-008",
+      "objective_text": "Energy Efficiency",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-004",
+      "action_title": "Waste Minimization & Circular Economy Pilot",
+      "action_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "system_prediction": {
+        "alignment": "Strong",
+        "score": 0.7412643432617188
+      },
+      "expected_alignment": "Moderate",
+      "expected_score": 0.45,
+      "expert_notes": "Resource efficiency overlap but conceptually distinct.",
+      "confidence": "Medium"
+    },
+    {
+      "objective_id": "OBJ-008",
+      "objective_text": "Energy Efficiency",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-002",
+      "action_title": "Sustainable Water Management Initiative",
+      "action_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "system_prediction": {
+        "alignment": "Strong",
+        "score": 0.7127224206924438
+      },
+      "expected_alignment": "Weak",
+      "expected_score": 0.20,
+      "expert_notes": "Different utility types.",
+      "confidence": "High"
+    },
+    {
+      "objective_id": "OBJ-009",
+      "objective_text": "30% energy intensity reduction",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-001",
+      "action_title": "Renewable Energy Expansion Phase 1",
+      "action_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "system_prediction": {
+        "alignment": "Strong",
+        "score": 0.7736932635307312
+      },
+      "expected_alignment": "Moderate",
+      "expected_score": 0.45,
+      "expert_notes": "Sourcing change isn't intensity reduction.",
+      "confidence": "Medium"
+    },
+    {
+      "objective_id": "OBJ-009",
+      "objective_text": "30% energy intensity reduction",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-004",
+      "action_title": "Waste Minimization & Circular Economy Pilot",
+      "action_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.685108482837677
+      },
+      "expected_alignment": "Moderate",
+      "expected_score": 0.55,
+      "expert_notes": "Joint resource efficiency measures often coupled.",
+      "confidence": "Medium"
+    },
+    {
+      "objective_id": "OBJ-009",
+      "objective_text": "30% energy intensity reduction",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-002",
+      "action_title": "Sustainable Water Management Initiative",
+      "action_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.6794058084487915
+      },
+      "expected_alignment": "Moderate",
+      "expected_score": 0.50,
+      "expert_notes": "Audit/efficiency synergy between utilities.",
+      "confidence": "Medium"
+    },
+    {
+      "objective_id": "OBJ-010",
+      "objective_text": "ISO 50001 Energy Management Systems",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-001",
+      "action_title": "Renewable Energy Expansion Phase 1",
+      "action_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "system_prediction": {
+        "alignment": "Strong",
+        "score": 0.7577981948852539
+      },
+      "expected_alignment": "Moderate",
+      "expected_score": 0.60,
+      "expert_notes": "ISO 50001 covers energy sourcing and usage.",
+      "confidence": "Medium"
+    },
+    {
+      "objective_id": "OBJ-010",
+      "objective_text": "ISO 50001 Energy Management Systems",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-002",
+      "action_title": "Sustainable Water Management Initiative",
+      "action_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.6868517398834229
+      },
+      "expected_alignment": "Moderate",
+      "expected_score": 0.45,
+      "expert_notes": "Similar management loop as ISO 14001/46001.",
+      "confidence": "Medium"
+    },
+    {
+      "objective_id": "OBJ-010",
+      "objective_text": "ISO 50001 Energy Management Systems",
+      "objective_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "action_id": "ENV-004",
+      "action_title": "Waste Minimization & Circular Economy Pilot",
+      "action_pillar": "ENVIRONMENTAL LEADERSHIP",
+      "system_prediction": {
+        "alignment": "Moderate",
+        "score": 0.6792497634887695
+      },
+      "expected_alignment": "Moderate",
+      "expected_score": 0.55,
+      "expert_notes": "Management systems often address multiple resource streams.",
+      "confidence": "Medium"
+    }
+  ]
+}

@@ -229,168 +229,112 @@ st.markdown("---")
 
 # Tabs
 tab1, tab2, tab3, tab4 = st.tabs([
+    "Ground Truth",
     "Run Tests",
     "Test Results",
-    "Ground Truth",
     "Performance"
 ])
 
 # ============================================================
-# TAB 1: Run Tests
+# TAB 1: Ground Truth Management
 # ============================================================
 
 with tab1:
-    st.markdown('<h3><i class="fas fa-play-circle fa-icon"></i>Run Comprehensive Tests</h3>', unsafe_allow_html=True)
+    st.markdown('<h3><i class="fas fa-file-signature fa-icon"></i>Ground Truth Management</h3>', unsafe_allow_html=True)
     
-    if not sync_exists:
-        st.error("No analysis results found!")
-        st.info("Go to **'Run Analysis'** page and complete analysis first")
-        st.stop()
+    st.info("""
+    **Ground truth** is expert-validated data used to test system accuracy.
+    It consists of objective-action pairs with expected alignment scores.
+    """)
     
-    st.write("Execute the complete testing suite to validate system accuracy")
-    
-    # Test options
-    col1, col2 = st.columns(2)
-    
-    with col1:
-        st.markdown('### <i class="fas fa-tasks fa-icon-small"></i>Available Tests', unsafe_allow_html=True)
-        st.markdown("""
-        1. **Alignment Classification** - Accuracy of Strong/Moderate/Weak labels
-        2. **Similarity Scores** - Numerical score accuracy (MSE, MAE, correlation)
-        3. **LLM Improvements** - Quality of AI-generated suggestions
-        4. **System Performance** - Speed and efficiency benchmarks
-        5. **Coverage Analysis** - Test coverage statistics
-        """)
-    
-    with col2:
-        st.markdown('### <i class="fas fa-check-double fa-icon-small"></i>Prerequisites', unsafe_allow_html=True)
+    if gt_exists:
+        st.success("Ground truth file exists!")
         
-        prereqs = []
-        if sync_exists:
-            prereqs.append("Synchronization analysis complete")
-        else:
-            prereqs.append("Synchronization analysis required")
+        # Load and display
+        with open(gt_path, 'r', encoding='utf-8') as f:
+            gt_data = json.load(f)
         
-        if gt_exists:
-            # Count ground truth pairs
-            with open(gt_path, 'r') as f:
-                gt_data = json.load(f)
-                gt_count = len(gt_data.get('objective_action_pairs', []))
-            prereqs.append(f"Ground truth ready ({gt_count} pairs)")
-        else:
-            prereqs.append("Ground truth recommended (optional)")
+        # Stats
+        col1, col2, col3 = st.columns(3)
         
-        improvements_path = OUTPUTS_BASE / selected_year / "improvements.json"
-        if improvements_path.exists():
-            prereqs.append("LLM improvements available")
-        else:
-            prereqs.append("LLM improvements optional")
+        pairs = gt_data.get('objective_action_pairs', [])
+        annotated = [p for p in pairs if p.get('expected_alignment') != 'TO_BE_ANNOTATED']
         
-        for prereq in prereqs:
-            st.markdown(f"- {prereq}")
-    
-    st.markdown("---")
-    
-    # Run button
-    if st.button("Run Complete Test Suite", type="primary", use_container_width=True):
+        with col1:
+            st.metric("Total Pairs", len(pairs))
+        with col2:
+            st.metric("Annotated", len(annotated))
+        with col3:
+            completion = len(annotated) / len(pairs) * 100 if pairs else 0
+            st.metric("Completion", f"{completion:.0f}%")
         
-        progress_bar = st.progress(0)
-        status_text = st.empty()
+        # Display sample
+        st.markdown("#### Sample Ground Truth Data")
         
-        try:
-            # Import required modules
-            from synchronization_engine import SynchronizationEngine
-            from document_processor import DocumentProcessor
-            from embedding_engine import EmbeddingEngine
-            from vector_store import VectorStore
+        sample_pairs = pairs[:5]
+        sample_data = []
+        
+        for pair in sample_pairs:
+            # Safe access to system_prediction
+            sys_pred = pair.get('system_prediction', {})
             
-            # Load synchronization report
-            status_text.info("Loading synchronization report...")
-            progress_bar.progress(10)
-            
-            with open(sync_report_path, 'r', encoding='utf-8') as f:
-                sync_report = json.load(f)
-            
-            # Load improvements if available
-            improvements_data = None
-            if improvements_path.exists():
-                with open(improvements_path, 'r', encoding='utf-8') as f:
-                    improvements_data = json.load(f)
-            
-            # Initialize system components
-            status_text.info("Initializing system components...")
-            progress_bar.progress(20)
-            
-            upload_dir = Path("data/uploaded") / selected_year
-            strategic_path = upload_dir / "strategic_plan.docx"
-            action_path = upload_dir / "action_plan.docx"
-            
-            processor = DocumentProcessor()
-            objectives = processor.load_strategic_plan(str(strategic_path))
-            actions = processor.load_action_plan(str(action_path))
-            
-            engine = EmbeddingEngine()
-            vs = VectorStore(dimension=384)
-            
-            sync_engine = SynchronizationEngine(processor, engine, vs)
-            
-            # Embed documents
-            status_text.info("Generating embeddings...")
-            progress_bar.progress(40)
-            
-            engine.embed_objectives(objectives)
-            engine.embed_actions(actions)
-            
-            # Initialize testing framework
-            status_text.info("Initializing testing framework...")
-            progress_bar.progress(60)
-            
-            testing_framework = TestingFramework()
-            
-            # Run tests
-            status_text.info("Running comprehensive tests (this may take 1-2 minutes)...")
-            progress_bar.progress(70)
-            
-            test_results = testing_framework.run_comprehensive_tests(
-                sync_report=sync_report,
-                sync_engine=sync_engine,
-                improvements_data=improvements_data,
-                ground_truth_path=str(gt_path),
-                expert_feedback=None
+            sample_data.append({
+                'Objective ID': pair.get('objective_id', 'N/A'),
+                'Action ID': pair.get('action_id', 'N/A'),
+                'Expected': pair.get('expected_alignment', 'TO_BE_ANNOTATED'),
+                'Score': pair.get('expected_score', 0.0),
+                'System Pred': sys_pred.get('alignment', 'N/A') if sys_pred else 'N/A'
+            })
+        
+        df = pd.DataFrame(sample_data)
+        st.dataframe(df, use_container_width=True, hide_index=True)
+        
+        # Download
+        with open(gt_path, 'r') as f:
+            st.download_button(
+                label="Download Ground Truth File",
+                data=f.read(),
+                file_name=f"{selected_year}_ground_truth.json",
+                mime="application/json",
+                use_container_width=True
             )
+    
+    else:
+        st.warning("No ground truth file found")
+        
+        st.markdown("""
+        ### Create Ground Truth Template
+        
+        Generate a template with system predictions that experts can annotate.
+        """)
+        
+        if st.button("Create Ground Truth Template", type="primary", use_container_width=True):
             
-            # Save results
-            status_text.info("Saving test results...")
-            progress_bar.progress(90)
-            
-            testing_framework.save_test_results(test_results, str(test_results_path))
-            
-            # Complete
-            progress_bar.progress(100)
-            status_text.success("All tests complete!")
-            
-            st.success("### Testing Complete!")
-            
-            # Show summary
-            if 'overall_assessment' in test_results:
-                assessment = test_results['overall_assessment']
-                
-                col1, col2, col3 = st.columns(3)
-                
-                with col1:
-                    st.metric("Tests Passed", assessment['tests_passed'])
-                with col2:
-                    st.metric("Tests Failed", assessment['tests_failed'])
-                with col3:
-                    st.metric("Overall Grade", assessment['overall_grade'])
-            
-            st.info("Switch to **'Test Results'** tab to view detailed results")
-            st.rerun()
-            
-        except Exception as e:
-            progress_bar.progress(0)
-            status_text.error(f"Error during testing: {str(e)}")
-            st.exception(e)
+            if not sync_exists:
+                st.error("Run analysis first to create template")
+            else:
+                try:
+                    # Load sync report
+                    with open(sync_report_path, 'r') as f:
+                        sync_report = json.load(f)
+                    
+                    # Create template
+                    from run_tests import create_sample_ground_truth
+                    import io
+                    from contextlib import redirect_stdout
+                    
+                    f = io.StringIO()
+                    with redirect_stdout(f):
+                        create_sample_ground_truth(selected_year)
+                    
+                    st.success("Ground truth template created!")
+                    st.info(f"File saved to: {gt_path}")
+                    
+                    st.rerun()
+                    
+                except Exception as e:
+                    st.error(f"Error: {str(e)}")
+                    st.exception(e)
 
 # ============================================================
 # TAB 2: Test Results
@@ -633,105 +577,161 @@ with tab2:
                     )
 
 # ============================================================
-# TAB 3: Ground Truth Management
+# TAB 2: Run Tests
 # ============================================================
 
-with tab3:
-    st.markdown('<h3><i class="fas fa-file-signature fa-icon"></i>Ground Truth Management</h3>', unsafe_allow_html=True)
+with tab2:
+    st.markdown('<h3><i class="fas fa-play-circle fa-icon"></i>Run Comprehensive Tests</h3>', unsafe_allow_html=True)
     
-    st.info("""
-    **Ground truth** is expert-validated data used to test system accuracy.
-    It consists of objective-action pairs with expected alignment scores.
-    """)
+    if not sync_exists:
+        st.error("No analysis results found!")
+        st.info("Go to **'Run Analysis'** page and complete analysis first")
+        st.stop()
     
-    if gt_exists:
-        st.success("Ground truth file exists!")
-        
-        # Load and display
-        with open(gt_path, 'r', encoding='utf-8') as f:
-            gt_data = json.load(f)
-        
-        # Stats
-        col1, col2, col3 = st.columns(3)
-        
-        pairs = gt_data.get('objective_action_pairs', [])
-        annotated = [p for p in pairs if p.get('expected_alignment') != 'TO_BE_ANNOTATED']
-        
-        with col1:
-            st.metric("Total Pairs", len(pairs))
-        with col2:
-            st.metric("Annotated", len(annotated))
-        with col3:
-            completion = len(annotated) / len(pairs) * 100 if pairs else 0
-            st.metric("Completion", f"{completion:.0f}%")
-        
-        # Display sample
-        st.markdown("#### Sample Ground Truth Data")
-        
-        sample_pairs = pairs[:5]
-        sample_data = []
-        
-        for pair in sample_pairs:
-            # Safe access to system_prediction
-            sys_pred = pair.get('system_prediction', {})
-            
-            sample_data.append({
-                'Objective ID': pair.get('objective_id', 'N/A'),
-                'Action ID': pair.get('action_id', 'N/A'),
-                'Expected': pair.get('expected_alignment', 'TO_BE_ANNOTATED'),
-                'Score': pair.get('expected_score', 0.0),
-                'System Pred': sys_pred.get('alignment', 'N/A') if sys_pred else 'N/A'
-            })
-        
-        df = pd.DataFrame(sample_data)
-        st.dataframe(df, use_container_width=True, hide_index=True)
-        
-        # Download
-        with open(gt_path, 'r') as f:
-            st.download_button(
-                label="Download Ground Truth File",
-                data=f.read(),
-                file_name=f"{selected_year}_ground_truth.json",
-                mime="application/json",
-                use_container_width=True
-            )
+    st.write("Execute the complete testing suite to validate system accuracy")
     
-    else:
-        st.warning("No ground truth file found")
-        
+    # Test options
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.markdown('### <i class="fas fa-tasks fa-icon-small"></i>Available Tests', unsafe_allow_html=True)
         st.markdown("""
-        ### Create Ground Truth Template
-        
-        Generate a template with system predictions that experts can annotate.
+        1. **Alignment Classification** - Accuracy of Strong/Moderate/Weak labels
+        2. **Similarity Scores** - Numerical score accuracy (MSE, MAE, correlation)
+        3. **LLM Improvements** - Quality of AI-generated suggestions
+        4. **System Performance** - Speed and efficiency benchmarks
+        5. **Coverage Analysis** - Test coverage statistics
         """)
+    
+    with col2:
+        st.markdown('### <i class="fas fa-check-double fa-icon-small"></i>Prerequisites', unsafe_allow_html=True)
         
-        if st.button("Create Ground Truth Template", type="primary", use_container_width=True):
+        prereqs = []
+        if sync_exists:
+            prereqs.append("Synchronization analysis complete")
+        else:
+            prereqs.append("Synchronization analysis required")
+        
+        if gt_exists:
+            # Count ground truth pairs
+            with open(gt_path, 'r') as f:
+                gt_data = json.load(f)
+                gt_count = len(gt_data.get('objective_action_pairs', []))
+            prereqs.append(f"Ground truth ready ({gt_count} pairs)")
+        else:
+            prereqs.append("Ground truth recommended (optional)")
+        
+        improvements_path = OUTPUTS_BASE / selected_year / "improvements.json"
+        if improvements_path.exists():
+            prereqs.append("LLM improvements available")
+        else:
+            prereqs.append("LLM improvements optional")
+        
+        for prereq in prereqs:
+            st.markdown(f"- {prereq}")
+    
+    st.markdown("---")
+    
+    # Run button
+    if st.button("Run Complete Test Suite", type="primary", use_container_width=True):
+        
+        progress_bar = st.progress(0)
+        status_text = st.empty()
+        
+        try:
+            # Import required modules
+            from synchronization_engine import SynchronizationEngine
+            from document_processor import DocumentProcessor
+            from embedding_engine import EmbeddingEngine
+            from vector_store import VectorStore
             
-            if not sync_exists:
-                st.error("Run analysis first to create template")
-            else:
-                try:
-                    # Load sync report
-                    with open(sync_report_path, 'r') as f:
-                        sync_report = json.load(f)
-                    
-                    # Create template
-                    from run_tests import create_sample_ground_truth
-                    import io
-                    from contextlib import redirect_stdout
-                    
-                    f = io.StringIO()
-                    with redirect_stdout(f):
-                        create_sample_ground_truth(selected_year)
-                    
-                    st.success("Ground truth template created!")
-                    st.info(f"File saved to: {gt_path}")
-                    
-                    st.rerun()
-                    
-                except Exception as e:
-                    st.error(f"Error: {str(e)}")
-                    st.exception(e)
+            # Load synchronization report
+            status_text.info("Loading synchronization report...")
+            progress_bar.progress(10)
+            
+            with open(sync_report_path, 'r', encoding='utf-8') as f:
+                sync_report = json.load(f)
+            
+            # Load improvements if available
+            improvements_data = None
+            if improvements_path.exists():
+                with open(improvements_path, 'r', encoding='utf-8') as f:
+                    improvements_data = json.load(f)
+            
+            # Initialize system components
+            status_text.info("Initializing system components...")
+            progress_bar.progress(20)
+            
+            upload_dir = Path("data/uploaded") / selected_year
+            strategic_path = upload_dir / "strategic_plan.docx"
+            action_path = upload_dir / "action_plan.docx"
+            
+            processor = DocumentProcessor()
+            objectives = processor.load_strategic_plan(str(strategic_path))
+            actions = processor.load_action_plan(str(action_path))
+            
+            engine = EmbeddingEngine()
+            vs = VectorStore(dimension=384)
+            
+            sync_engine = SynchronizationEngine(processor, engine, vs)
+            
+            # Embed documents
+            status_text.info("Generating embeddings...")
+            progress_bar.progress(40)
+            
+            engine.embed_objectives(objectives)
+            engine.embed_actions(actions)
+            
+            # Initialize testing framework
+            status_text.info("Initializing testing framework...")
+            progress_bar.progress(60)
+            
+            testing_framework = TestingFramework()
+            
+            # Run tests
+            status_text.info("Running comprehensive tests (this may take 1-2 minutes)...")
+            progress_bar.progress(70)
+            
+            test_results = testing_framework.run_comprehensive_tests(
+                sync_report=sync_report,
+                sync_engine=sync_engine,
+                improvements_data=improvements_data,
+                ground_truth_path=str(gt_path),
+                expert_feedback=None
+            )
+            
+            # Save results
+            status_text.info("Saving test results...")
+            progress_bar.progress(90)
+            
+            testing_framework.save_test_results(test_results, str(test_results_path))
+            
+            # Complete
+            progress_bar.progress(100)
+            status_text.success("All tests complete!")
+            
+            st.success("### Testing Complete!")
+            
+            # Show summary
+            if 'overall_assessment' in test_results:
+                assessment = test_results['overall_assessment']
+                
+                col1, col2, col3 = st.columns(3)
+                
+                with col1:
+                    st.metric("Tests Passed", assessment['tests_passed'])
+                with col2:
+                    st.metric("Tests Failed", assessment['tests_failed'])
+                with col3:
+                    st.metric("Overall Grade", assessment['overall_grade'])
+            
+            st.info("Switch to **'Test Results'** tab to view detailed results")
+            st.rerun()
+            
+        except Exception as e:
+            progress_bar.progress(0)
+            status_text.error(f"Error during testing: {str(e)}")
+            st.exception(e)
 
 # ============================================================
 # TAB 4: Performance Benchmarks
@@ -804,6 +804,6 @@ with tab4:
 st.markdown("---")
 st.markdown("""
 <div class="info-box">
-<i class="fas fa-info-circle fa-icon-small"></i><strong>Note:</strong> Testing Framework validates system accuracy and performance | Coursework Requirement 3.8
+<i class="fas fa-info-circle fa-icon-small"></i><strong>Note:</strong> Testing Framework validates system accuracy and performance
 </div>
 """, unsafe_allow_html=True)

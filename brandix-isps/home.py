@@ -256,43 +256,101 @@ with col1:
     designed to analyze and optimize the alignment between Brandix's 5-year Strategic Plan (2025-2030) 
     and annual Action Plans.
     
-    #### Key Features:
+    #### Key Features
+    """)
     
-    **<i class="fas fa-upload fa-icon-small"></i>Document Upload & Management**
-    - Upload and manage strategic plans and action plans by year
-    - Support for multi-year analysis (2026-2030)
-    - Version control and document tracking
+    # 2-column grid for features
+    f_col1, f_col2 = st.columns(2)
     
-    **<i class="fas fa-cog fa-icon-small"></i>AI-Powered Analysis**
-    - Advanced NLP embeddings using Sentence Transformers
-    - FAISS vector similarity search
-    - Local LLM integration (Phi-3 Mini via Ollama)
-    - Comprehensive synchronization scoring
-    
-    **<i class="fas fa-chart-bar fa-icon-small"></i>Detailed Results & Insights**
-    - Overall alignment metrics and KPIs
-    - Strategy-wise synchronization analysis
-    - Gap identification and severity assessment
-    - Pillar-level performance breakdown
-    
-    **<i class="fas fa-robot fa-icon-small"></i>AI-Generated Improvements**
-    - Intelligent recommendations for weak alignments
-    - New action suggestions
-    - KPI enhancements
-    - Timeline and resource recommendations
-    
-    **<i class="fas fa-clipboard fa-icon-small"></i>Executive Summaries**
-    - LLM-generated professional reports
-    - Key findings and critical gaps
-    - Strategic recommendations
-    - Risk assessment and next steps
-    
-    **<i class="fas fa-chart-line fa-icon-small"></i>Multi-Year Comparison**
-    - Track alignment progress across years
-    - Trend analysis and projections
-    - Year-over-year improvements
-    - 2030 goal tracking
-    """, unsafe_allow_html=True)
+    with f_col1:
+        st.markdown("""
+        <div class="feature-box">
+        <h4><i class="fas fa-upload fa-icon-small"></i>Document Management</h4>
+        <ul>
+        <li>Upload strategic & action plans</li>
+        <li>Multi-year analysis support</li>
+        <li>Version control & document tracking</li>
+        </ul>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("""
+        <div class="feature-box">
+        <h4><i class="fas fa-chart-bar fa-icon-small"></i>Results & Insights</h4>
+        <ul>
+        <li>Alignment metrics & KPIs</li>
+        <li>Strategy-wise sync analysis</li>
+        <li>Gap & severity assessment</li>
+        </ul>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("""
+        <div class="feature-box">
+        <h4><i class="fas fa-clipboard fa-icon-small"></i>Executive Summaries</h4>
+        <ul>
+        <li>Professional strategic reports</li>
+        <li>Critical gap identification</li>
+        <li>Leadership recommendations</li>
+        </ul>
+        </div>
+        """, unsafe_allow_html=True)
+
+        st.markdown("""
+        <div class="feature-box">
+        <h4><i class="fas fa-network-wired fa-icon-small"></i>Knowledge Graph</h4>
+        <ul>
+        <li>Interactive network visuals</li>
+        <li>Relationship discovery</li>
+        <li>Similarity threshold filtering</li>
+        </ul>
+        </div>
+        """, unsafe_allow_html=True)
+        
+    with f_col2:
+        st.markdown("""
+        <div class="feature-box">
+        <h4><i class="fas fa-cog fa-icon-small"></i>AI-Powered Analysis</h4>
+        <ul>
+        <li>Sentence Transformer NLP</li>
+        <li>FAISS vector similarity search</li>
+        <li>Local LLM (Phi-3 Mini)</li>
+        </ul>
+        </div>
+        """, unsafe_allow_html=True)
+
+        st.markdown("""
+        <div class="feature-box">
+        <h4><i class="fas fa-robot fa-icon-small"></i>AI Improvements</h4>
+        <ul>
+        <li>Intelligent gap solutions</li>
+        <li>New action & KPI suggestions</li>
+        <li>Resource & risk mitigation</li>
+        </ul>
+        </div>
+        """, unsafe_allow_html=True)
+
+        st.markdown("""
+        <div class="feature-box">
+        <h4><i class="fas fa-chart-line fa-icon-small"></i>Multi-Year Comparison</h4>
+        <ul>
+        <li>Track progress across years</li>
+        <li>Trend analysis & projections</li>
+        <li>2030 goal tracking</li>
+        </ul>
+        </div>
+        """, unsafe_allow_html=True)
+
+        st.markdown("""
+        <div class="feature-box">
+        <h4><i class="fas fa-vial fa-icon-small"></i>Testing & Evaluation</h4>
+        <ul>
+        <li>Ground truth comparison</li>
+        <li>Precision/Recall/F1 metrics</li>
+        <li>Expert validation framework</li>
+        </ul>
+        </div>
+        """, unsafe_allow_html=True)
 
 with col2:
     st.markdown("""
@@ -339,18 +397,22 @@ with col2:
     
     **Step 1:** Upload Documents
     - Go to <i class="fas fa-upload fa-icon-small"></i>Admin Upload
-    - Select year
-    - Upload plans
     
     **Step 2:** Run Analysis
     - Go to <i class="fas fa-cog fa-icon-small"></i>Run Analysis
-    - Click Start
-    - Wait for completion
     
     **Step 3:** View Results
     - Go to <i class="fas fa-chart-bar fa-icon-small"></i>View Results
-    - Explore insights
-    - Download reports
+    - Explore <i class="fas fa-network-wired fa-icon-small"></i>Knowledge Graph
+    
+    **Step 4:** Evaluate
+    - Go to <i class="fas fa-vial fa-icon-small"></i>Testing & Evaluation
+    
+    **Step 5:** Strategic Insights
+    - Go to <i class="fas fa-clipboard fa-icon-small"></i>Executive Summary
+    
+    **Step 6:** Track Progress
+    - Go to <i class="fas fa-chart-line fa-icon-small"></i>Multi-Year Comparison
     """, unsafe_allow_html=True)
 
 st.markdown("---")
@@ -409,6 +471,8 @@ navigation_data = {
         '<i class="fas fa-upload fa-icon-small"></i>Admin Upload',
         '<i class="fas fa-cog fa-icon-small"></i>Run Analysis',
         '<i class="fas fa-chart-bar fa-icon-small"></i>View Results',
+        '<i class="fas fa-network-wired fa-icon-small"></i>Knowledge Graph',
+        '<i class="fas fa-vial fa-icon-small"></i>Testing & Evaluation',
         '<i class="fas fa-clipboard fa-icon-small"></i>Executive Summary',
         '<i class="fas fa-chart-line fa-icon-small"></i>Multi-Year Comparison'
     ],
@@ -416,6 +480,8 @@ navigation_data = {
         "Upload and manage strategic and action plans by year",
         "Execute AI analysis pipeline (embeddings → alignment → insights)",
         "View detailed synchronization results and metrics",
+        "Interactive visualization of strategic networks",
+        "System evaluation and metrics (Precision/Recall)",
         "Read LLM-generated executive summaries and recommendations",
         "Compare alignment trends across multiple years"
     ],
@@ -423,6 +489,8 @@ navigation_data = {
         "First time setup, adding new years",
         "After uploading documents",
         "After analysis completes",
+        "Visualizing complex relationships",
+        "Validating system accuracy",
         "For high-level strategic insights",
         "When 2+ years are analyzed"
     ]
@@ -445,7 +513,7 @@ with st.expander("📚 Technical Specifications"):
         - **NLP:** Sentence-Transformers
         - **Vector DB:** FAISS
         - **LLM:** Phi-3 Mini (Ollama)
-        - **Visualization:** Plotly
+        - **Graphing:** NetworkX, Plotly
         - **Data Processing:** Pandas, NumPy
         - **Document Parsing:** python-docx
         """)
@@ -469,19 +537,9 @@ with st.expander("📚 Technical Specifications"):
 st.markdown("---")
 
 # Footer
-col1, col2, col3 = st.columns(3)
+col1, col2 = st.columns(2)
 
 with col1:
-    st.markdown("""
-    **<i class="fas fa-envelope fa-icon-small"></i>Support**
-    
-    For technical issues or questions:
-    - Check documentation
-    - Review coursework brief
-    - Contact developer
-    """, unsafe_allow_html=True)
-
-with col2:
     st.markdown("""
     **<i class="fas fa-graduation-cap fa-icon-small"></i>Academic Project**
     
@@ -490,7 +548,7 @@ with col2:
     Brandix Case Study
     """, unsafe_allow_html=True)
 
-with col3:
+with col2:
     st.markdown("""
     **<i class="fas fa-calendar-alt fa-icon-small"></i>Version Info**
     

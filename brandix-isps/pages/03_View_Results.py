@@ -497,8 +497,8 @@ with tab4:
     st.markdown('<h3><i class="fas fa-layer-group fa-icon"></i>Pillar-Level Performance</h3>', unsafe_allow_html=True)
     
     for pillar, stats in pillar_stats.items():
-        status_color = '#2ecc71' if stats['pillar_status'] == 'Strong' else '#f39c12' if stats['pillar_status'] == 'Moderate' else '#e74c3c'
-        with st.expander(f"**{pillar}** - <span style='color: {status_color};'>{stats['pillar_status']}</span> ({stats['average_score']:.1f}%)"):
+        status_emoji = '🟢' if stats['pillar_status'] == 'Strong' else '🟡' if stats['pillar_status'] == 'Moderate' else '🔴'
+        with st.expander(f"{status_emoji} **{pillar}** - {stats['pillar_status']} ({stats['average_score']:.1f}%)"):
             col1, col2, col3 = st.columns(3)
             
             with col1:

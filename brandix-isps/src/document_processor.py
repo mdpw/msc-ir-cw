@@ -103,32 +103,64 @@ class DocumentProcessor:
                     })
                     obj_id += 1
             
-            # Pattern 3: Key Initiatives (numbered list after "Key Initiatives:")
+            # Pattern 3: Key Initiatives (numbered or bulleted list after "Key Initiatives:")
             elif "Key Initiatives:" in text:
-                # Look ahead for numbered items
+                # Look ahead for numbered or bulleted items
                 j = i + 1
-                while j < len(all_text) and re.match(r'^\d+\.\s+', all_text[j]):
-                    initiative = re.sub(r'^\d+\.\s+', '', all_text[j])
-                    if len(initiative) > 10:
-                        objectives.append({
-                            'id': f"OBJ-{obj_id:03d}",
-                            'pillar': current_pillar,
-                            'text': initiative,
-                            'type': 'initiative'
-                        })
-                        obj_id += 1
-                    j += 1
+                while j < len(all_text):
+                    next_text = all_text[j]
+                    # Stop if we hit a new pillar or major section
+                    if (next_text.startswith("PILLAR") and ":" in next_text) or \
+                       re.match(r'^[6-9]\.?\s*[A-Z]', next_text) or \
+                       re.match(r'^5\.?\s*STRATEGIC PILLARS', next_text, re.IGNORECASE):
+                        break
+                        
+                    # Match numbered (1., 2.) or bulleted (•, -, *) items
+                    init_match = re.match(r'^(\d+\.|[•\-*])\s+(.+)', next_text)
+                    if init_match:
+                        initiative = init_match.group(2).strip()
+                        if len(initiative) > 10:
+                            objectives.append({
+                                'id': f"OBJ-{obj_id:03d}",
+                                'pillar': current_pillar,
+                                'text': initiative,
+                                'type': 'initiative'
+                            })
+                            obj_id += 1
+                        j += 1
+                    elif next_text: # Some text that isn't a list item but follows "Key Initiatives:"
+                        # Only consume if it looks like part of the list but isn't a new section
+                        if len(next_text) > 10 and not next_text.startswith(("PILLAR", "Goal:", "Vision:", "KPIs:")):
+                            objectives.append({
+                                'id': f"OBJ-{obj_id:03d}",
+                                'pillar': current_pillar,
+                                'text': next_text,
+                                'type': 'initiative'
+                            })
+                            obj_id += 1
+                        j += 1
+                    else:
+                        j += 1
+                        
                 i = j - 1  # Skip the processed items
             
-            # Pattern 4: KPIs (bullet points after "KPIs:")
+            # Pattern 4: KPIs (bullet points or key-value pairs after "KPIs:")
             elif text == "KPIs:":
                 j = i + 1
                 while j < len(all_text):
                     kpi_text = all_text[j]
-                    # Check for bullet points or dashes
-                    if kpi_text.startswith(("-", "•")) or ": " in kpi_text:
-                        kpi_clean = kpi_text.lstrip("-•").strip()
-                        if len(kpi_clean) > 10 and "by 20" in kpi_clean:  # KPIs usually have targets
+                    
+                    # Stop if we hit a new pillar or major section
+                    if (kpi_text.startswith("PILLAR") and ":" in kpi_text) or \
+                       re.match(r'^[6-9]\.?\s*[A-Z]', kpi_text) or \
+                       re.match(r'^5\.?\s*STRATEGIC PILLARS', kpi_text, re.IGNORECASE):
+                        break
+                        
+                    # KPIs can be bulleted or look like "Name: Value"
+                    # Capture them if they have a colon or numeric content
+                    if kpi_text.startswith(("-", "•", "*")) or ":" in kpi_text or re.search(r'\d+', kpi_text):
+                        kpi_clean = re.sub(r'^[\-•*]\s*', '', kpi_text).strip()
+                        if len(kpi_clean) > 5:
                             objectives.append({
                                 'id': f"OBJ-{obj_id:03d}",
                                 'pillar': current_pillar,

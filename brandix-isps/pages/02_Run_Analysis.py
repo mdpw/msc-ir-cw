@@ -289,8 +289,23 @@ if already_analyzed:
 st.markdown("---")
 
 # Single Start Button
-if st.button("START COMPLETE ANALYSIS", type="primary", disabled=st.session_state.analysis_running):
-    st.session_state.analysis_running = True
+col1, col2 = st.columns([2, 1])
+with col1:
+    if st.button("START COMPLETE ANALYSIS", type="primary", disabled=st.session_state.analysis_running, use_container_width=True):
+        st.session_state.analysis_running = True
+        # ... logic follows ...
+with col2:
+    if st.button("RESET RESULTS ONLY", type="secondary", disabled=st.session_state.analysis_running, use_container_width=True):
+        import shutil
+        output_dir = Path(f"outputs/{selected_year}")
+        if output_dir.exists():
+            shutil.rmtree(output_dir)
+        st.session_state.analysis_complete[selected_year] = False
+        st.success(f"Results for {selected_year} cleared.")
+        time.sleep(1)
+        st.rerun()
+
+if st.session_state.analysis_running:
     
     # Progress tracking
     progress_bar = st.progress(0)
@@ -688,8 +703,6 @@ if st.button("START COMPLETE ANALYSIS", type="primary", disabled=st.session_stat
         
         status_text.empty()
         progress_bar.empty()
-        
-        st.balloons()
         
         st.markdown(f'### <i class="fas fa-check-circle fa-icon-small" style="color: #4caf50;"></i> Analysis Complete for {selected_year}!', unsafe_allow_html=True)
         st.success("""

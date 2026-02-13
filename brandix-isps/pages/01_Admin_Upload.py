@@ -268,6 +268,7 @@ with col1:
         
         st.info(f"""
         **Existing File:**
+        - **Filename:** `{existing_metadata.get('strategic_plan_filename', 'strategic_plan.docx')}`
         - Upload Date: {upload_date}
         - File Size: {file_size:.1f} KB
         """)
@@ -328,6 +329,7 @@ with col2:
         
         st.info(f"""
         **Existing File:**
+        - **Filename:** `{existing_metadata.get('action_plan_filename', 'action_plan.docx')}`
         - Upload Date: {upload_date}
         - File Size: {file_size:.1f} KB
         """)
@@ -444,6 +446,30 @@ if strategic_exists or action_exists:
                 action_path.unlink()
                 st.success("Action Plan deleted!")
                 st.rerun()
+
+    # Full Reset Option
+    st.markdown("---")
+    st.markdown('### <i class="fas fa-exclamation-triangle fa-icon" style="color: #f44336;"></i> Danger Zone', unsafe_allow_html=True)
+    with st.expander("Reset All Data for this Year"):
+        st.error(f"This will delete ALL data for {selected_year}, including uploaded documents and analysis results.")
+        if st.button(f"CONFIRM FULL RESET FOR {selected_year}", type="secondary", use_container_width=True):
+            import shutil
+            
+            # 1. Delete source uploads
+            if year_path.exists():
+                shutil.rmtree(year_path)
+            
+            # 2. Delete analysis outputs
+            output_dir = Path(f"outputs/{selected_year}")
+            if output_dir.exists():
+                shutil.rmtree(output_dir)
+            
+            # 3. Clear session state related to this year
+            if 'analysis_complete' in st.session_state:
+                st.session_state.analysis_complete[selected_year] = False
+                
+            st.success(f"All data for {selected_year} has been reset.")
+            st.rerun()
 
 # Next Steps
 if both_ready:

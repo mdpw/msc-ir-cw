@@ -7,7 +7,7 @@
     "notes": "Annotated based on semantic alignment between strategic vision and tactical initiatives."
   },
   "alignment_criteria": {
-    "Strong": "Direct match, clear implementation of objective (≥70% alignment)",
+    "Strong": "Direct match, clear implementation of objective (\u226570% alignment)",
     "Moderate": "Related but partial implementation (50-70% alignment)",
     "Weak": "Minimal or unclear connection (<50% alignment)"
   },
@@ -48,7 +48,7 @@
         "score": 0.696771502494812
       },
       "expected_alignment": "Strong",
-      "expected_score": 0.80,
+      "expected_score": 0.8,
       "expert_notes": "Circular economy is a primary driver for net-positive impact.",
       "confidence": "High"
     },
@@ -80,7 +80,7 @@
         "score": 0.6997823715209961
       },
       "expected_alignment": "Strong",
-      "expected_score": 0.90,
+      "expected_score": 0.9,
       "expert_notes": "Renewable energy is the main tool for decarbonization.",
       "confidence": "High"
     },
@@ -96,7 +96,7 @@
         "score": 0.6773931980133057
       },
       "expected_alignment": "Moderate",
-      "expected_score": 0.60,
+      "expected_score": 0.6,
       "expert_notes": "Waste reduction helps lower secondary emissions.",
       "confidence": "Medium"
     },
@@ -160,7 +160,7 @@
         "score": 0.5837899446487427
       },
       "expected_alignment": "Moderate",
-      "expected_score": 0.60,
+      "expected_score": 0.6,
       "expert_notes": "Critical for value chain (Scope 3) Net Zero goal.",
       "confidence": "Medium"
     },
@@ -192,7 +192,7 @@
         "score": 0.7068093419075012
       },
       "expected_alignment": "Weak",
-      "expected_score": 0.10,
+      "expected_score": 0.1,
       "expert_notes": "No logical connection between water and renewable energy.",
       "confidence": "High"
     },
@@ -208,7 +208,7 @@
         "score": 0.7027686238288879
       },
       "expected_alignment": "Weak",
-      "expected_score": 0.20,
+      "expected_score": 0.2,
       "expert_notes": "Tangentially related to sustainability but not energy.",
       "confidence": "Medium"
     },
@@ -224,7 +224,7 @@
         "score": 0.8570451736450195
       },
       "expected_alignment": "Strong",
-      "expected_score": 0.90,
+      "expected_score": 0.9,
       "expert_notes": "Phase 1 is a direct path to the 100% goal.",
       "confidence": "High"
     },
@@ -240,7 +240,7 @@
         "score": 0.7026951313018799
       },
       "expected_alignment": "Weak",
-      "expected_score": 0.10,
+      "expected_score": 0.1,
       "expert_notes": "No relation between water and electricity sourcing.",
       "confidence": "High"
     },
@@ -256,7 +256,7 @@
         "score": 0.6655232310295105
       },
       "expected_alignment": "Weak",
-      "expected_score": 0.20,
+      "expected_score": 0.2,
       "expert_notes": "Indirect sustainability link only.",
       "confidence": "Medium"
     },
@@ -272,7 +272,7 @@
         "score": 0.7453389763832092
       },
       "expected_alignment": "Strong",
-      "expected_score": 0.90,
+      "expected_score": 0.9,
       "expert_notes": "Solar installation is a primary action for energy expansion.",
       "confidence": "High"
     },
@@ -288,7 +288,7 @@
         "score": 0.6345149278640747
       },
       "expected_alignment": "Weak",
-      "expected_score": 0.10,
+      "expected_score": 0.1,
       "expert_notes": "No relation.",
       "confidence": "High"
     },
@@ -352,7 +352,7 @@
         "score": 0.6412687301635742
       },
       "expected_alignment": "Weak",
-      "expected_score": 0.10,
+      "expected_score": 0.1,
       "expert_notes": "No relation.",
       "confidence": "High"
     },
@@ -368,7 +368,7 @@
         "score": 0.8005954027175903
       },
       "expected_alignment": "Moderate",
-      "expected_score": 0.50,
+      "expected_score": 0.5,
       "expert_notes": "Expansion (new supply) is different from efficiency (less use).",
       "confidence": "Medium"
     },
@@ -400,7 +400,7 @@
         "score": 0.7127224206924438
       },
       "expected_alignment": "Weak",
-      "expected_score": 0.20,
+      "expected_score": 0.2,
       "expert_notes": "Different utility types.",
       "confidence": "High"
     },
@@ -448,7 +448,7 @@
         "score": 0.6794058084487915
       },
       "expected_alignment": "Moderate",
-      "expected_score": 0.50,
+      "expected_score": 0.5,
       "expert_notes": "Audit/efficiency synergy between utilities.",
       "confidence": "Medium"
     },
@@ -464,7 +464,7 @@
         "score": 0.7577981948852539
       },
       "expected_alignment": "Moderate",
-      "expected_score": 0.60,
+      "expected_score": 0.6,
       "expert_notes": "ISO 50001 covers energy sourcing and usage.",
       "confidence": "Medium"
     },

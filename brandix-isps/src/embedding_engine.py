@@ -9,6 +9,7 @@ import os
 # Add parent directory to path to import document_processor
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from src.document_processor import DocumentProcessor
+import config
 
 class EmbeddingEngine:
     def __init__(self, model_name='all-MiniLM-L6-v2'):
@@ -24,8 +25,10 @@ class EmbeddingEngine:
         # Combine multiple fields for richer representation
         parts = []
         
-        # Add main text first (most important)
-        if 'text' in item:
+        # Use cleaned text if available, otherwise fallback to main text
+        if 'cleaned_text' in item and item['cleaned_text']:
+            parts.append(item['cleaned_text'])
+        elif 'text' in item:
             parts.append(item['text'])
         
         # For actions, add title if different from text
@@ -91,7 +94,7 @@ class EmbeddingEngine:
         # Normalization/Sharpening: Apply power function to increase contrast
         # This helps push lower semantic matches further down while keeping strong matches high
         # Improves correlation with expert judgement
-        self.similarity_matrix = np.power(np.maximum(raw_sim, 0), 1.5)
+        self.similarity_matrix = np.maximum(raw_sim, 0)
         
         print(f"Similarity matrix shape: {self.similarity_matrix.shape}")
         return self.similarity_matrix
@@ -114,10 +117,10 @@ class EmbeddingEngine:
         return matches
     
     def _classify_alignment(self, similarity: float) -> str:
-        """Classify alignment strength (Standardized to 0.45/0.30)"""
-        if similarity >= 0.45:
+        """Classify alignment strength using centralized config thresholds"""
+        if similarity >= config.ALIGNMENT_THRESHOLD_STRONG:
             return "Strong"
-        elif similarity >= 0.30:
+        elif similarity >= config.ALIGNMENT_THRESHOLD_MODERATE:
             return "Moderate"
         else:
             return "Weak"
@@ -134,10 +137,11 @@ class EmbeddingEngine:
         max_per_objective = np.max(self.similarity_matrix, axis=1)
         mean_max_similarity = np.mean(max_per_objective)
         
-        # Count alignment strengths (using max similarity per objective)
-        strong_count = int(np.sum(max_per_objective >= 0.70))
-        moderate_count = int(np.sum((max_per_objective >= 0.50) & (max_per_objective < 0.70)))
-        weak_count = int(np.sum(max_per_objective < 0.50))
+        # Count alignment strengths (using thresholds from config)
+        strong_count = int(np.sum(max_per_objective >= config.ALIGNMENT_THRESHOLD_STRONG))
+        moderate_count = int(np.sum((max_per_objective >= config.ALIGNMENT_THRESHOLD_MODERATE) & 
+                                   (max_per_objective < config.ALIGNMENT_THRESHOLD_STRONG)))
+        weak_count = int(np.sum(max_per_objective < config.ALIGNMENT_THRESHOLD_MODERATE))
         
         results = {
             'overall_score': float(mean_similarity * 100),
@@ -203,9 +207,9 @@ if __name__ == "__main__":
     print(f"Mean Max Similarity:         {results['mean_max_similarity']:.2f}%")
     print(f"Total Objectives Analyzed:   {results['total_objectives']}")
     print(f"\nAlignment Distribution:")
-    print(f"  Strong (≥70%):   {results['strong_alignments']} objectives")
-    print(f"  Moderate (50-70%): {results['moderate_alignments']} objectives")
-    print(f"  Weak (<50%):     {results['weak_alignments']} objectives")
+    print(f"  Strong (≥{config.ALIGNMENT_THRESHOLD_STRONG:.0%}):   {results['strong_alignments']} objectives")
+    print(f"  Moderate ({config.ALIGNMENT_THRESHOLD_MODERATE:.0%}-{config.ALIGNMENT_THRESHOLD_STRONG:.0%}): {results['moderate_alignments']} objectives")
+    print(f"  Weak (<{config.ALIGNMENT_THRESHOLD_MODERATE:.0%}):     {results['weak_alignments']} objectives")
     print(f"\nCoverage Rate:              {results['coverage_rate']:.1f}%")
     print("="*80)
     

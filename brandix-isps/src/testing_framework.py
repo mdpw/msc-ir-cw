@@ -301,6 +301,17 @@ class TestingFramework:
         true_scores = []
         pred_scores = []
         
+        ground_truth_pairs = {
+            f"{pair['objective_id']}_{pair['action_id']}": pair.get('expected_score')
+            for pair in self.ground_truth.get('objective_action_pairs', [])
+            if pair.get('expected_score') is not None
+        }
+        
+        objective_details = sync_report.get('objective_details', [])
+        
+        true_scores = []
+        pred_scores = []
+        
         for obj_detail in objective_details:
             obj_id = obj_detail['objective_id']
             
@@ -536,12 +547,12 @@ class TestingFramework:
     # 5. SYSTEM PERFORMANCE BENCHMARKING
     # ============================================================
     
-    def benchmark_system_performance(self, sync_engine) -> Dict:
+    def benchmark_system_performance(self, sync_engine, strategic_path: str = None, action_path: str = None) -> Dict:
         """
         Benchmark system performance metrics
         
         Measures:
-        - Processing time for different components
+        - Processing time for different components (including real file I/O)
         - Memory usage
         - Throughput (objectives/second)
         """
@@ -551,18 +562,34 @@ class TestingFramework:
         
         benchmarks = {}
         
-        # 1. Document processing time
-        print("Testing document processing speed...")
+        # 1. Document processing time (Full cycle: Load + Parse + Clean)
+        print("Testing document processing speed (including file loading)...")
         start = time.time()
-        # Simulate reprocessing
+        
+        # Get references for subsequent benchmarks
         objectives = sync_engine.doc_processor.strategic_objectives
         actions = sync_engine.doc_processor.action_items
+        
+        if strategic_path and action_path and Path(strategic_path).exists() and Path(action_path).exists():
+            # Real-world benchmark: Load from disk and parse
+            from document_processor import DocumentProcessor
+            temp_processor = DocumentProcessor()
+            _ = temp_processor.load_strategic_plan(strategic_path)
+            _ = temp_processor.load_action_plan(action_path)
+        else:
+            # Fallback to in-memory cleaning if paths not provided
+            for obj in objectives:
+                _ = sync_engine.doc_processor.clean_text(obj.get('text', ''))
+            for action in actions:
+                _ = sync_engine.doc_processor.clean_text(action.get('text', ''))
+        
         doc_time = time.time() - start
-        benchmarks['document_processing_time'] = float(doc_time)
+        benchmarks['document_processing_time'] = float(max(doc_time, 0.001))
         
         # 2. Embedding generation time
         print("Testing embedding generation speed...")
         start = time.time()
+        # Use existing objectives for embedding benchmark
         obj_embeddings = sync_engine.embedding_engine.create_embeddings(
             [obj['text'] for obj in objectives[:10]]  # Sample
         )
@@ -620,7 +647,9 @@ class TestingFramework:
     def run_comprehensive_tests(self, sync_report: Dict, sync_engine, 
                                 improvements_data: Dict = None,
                                 ground_truth_path: str = "data/ground_truth.json",
-                                expert_feedback: Dict = None) -> Dict:
+                                expert_feedback: Dict = None,
+                                strategic_path: str = None,
+                                action_path: str = None) -> Dict:
         """
         Run all tests and generate comprehensive evaluation report
         
@@ -692,7 +721,11 @@ class TestingFramework:
         
         # Test 4: System Performance
         print("\n[Test 4/5] System Performance Benchmarks")
-        performance_results = self.benchmark_system_performance(sync_engine)
+        performance_results = self.benchmark_system_performance(
+            sync_engine,
+            strategic_path=strategic_path,
+            action_path=action_path
+        )
         test_results['performance'] = performance_results
         test_results['tests_run'].append('performance')
         

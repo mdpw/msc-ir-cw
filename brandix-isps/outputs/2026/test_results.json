@@ -1,6 +1,6 @@
 {
   "test_suite_version": "1.0",
-  "timestamp": "2026-02-13T17:25:15.643825",
+  "timestamp": "2026-02-14T11:22:51.357223",
   "tests_run": [
     "alignment_classification",
     "similarity_scores",
@@ -11,43 +11,43 @@
   "alignment_classification": {
     "test_name": "Alignment Classification Accuracy",
     "matched_pairs": 10,
-    "overall_accuracy": 0.5,
+    "overall_accuracy": 0.7,
     "per_class_metrics": {
       "Strong": {
-        "precision": 0.5555555555555556,
-        "recall": 0.8333333333333334,
-        "f1_score": 0.6666666666666667,
-        "support": 9
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1_score": 0.6666666666666666,
+        "support": 2
       },
       "Moderate": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1_score": 0.0,
-        "support": 1
+        "precision": 0.7142857142857143,
+        "recall": 0.8333333333333334,
+        "f1_score": 0.7692307692307692,
+        "support": 7
       },
       "Weak": {
         "precision": 0.0,
         "recall": 0.0,
         "f1_score": 0.0,
-        "support": 0
+        "support": 1
       }
     },
     "weighted_metrics": {
-      "precision": 0.33333333333333337,
-      "recall": 0.5,
-      "f1_score": 0.4
+      "precision": 0.8285714285714285,
+      "recall": 0.7,
+      "f1_score": 0.7282051282051281
     },
     "confusion_matrix": {
       "matrix": [
         [
-          5,
-          1,
+          2,
+          2,
           0
         ],
         [
-          4,
           0,
-          0
+          5,
+          1
         ],
         [
           0,
@@ -65,47 +65,47 @@
   "similarity_scores": {
     "test_name": "Similarity Score Accuracy",
     "samples_evaluated": 10,
-    "mean_squared_error": 0.09822222455940671,
-    "mean_absolute_error": 0.2482061970233917,
-    "root_mean_squared_error": 0.31340425102319003,
-    "correlation_coefficient": 0.24979760564444495,
-    "within_10_percent": 0.4,
-    "within_20_percent": 0.5,
+    "mean_squared_error": 0.029585177818110337,
+    "mean_absolute_error": 0.1349824380874634,
+    "root_mean_squared_error": 0.17200342385577777,
+    "correlation_coefficient": 0.4923801593968688,
+    "within_10_percent": 0.5,
+    "within_20_percent": 0.8,
     "score_statistics": {
-      "mean_true": 0.77,
-      "mean_pred": 0.5339553654193878,
-      "std_true": 0.19,
-      "std_pred": 0.14050859395512366
+      "mean_true": 0.7100000000000001,
+      "mean_pred": 0.6700887322425843,
+      "std_true": 0.18681541692269404,
+      "std_pred": 0.1313969241537561
     }
   },
   "llm_improvements": {
     "test_name": "LLM Improvement Quality",
     "objectives_processed": 10,
-    "average_suggestions_per_objective": 5.1,
+    "average_suggestions_per_objective": 5.5,
     "category_coverage_rate": {
       "new_actions": 0.7,
-      "kpi_enhancements": 0.8,
-      "timeline_recommendations": 0.4,
-      "resource_requirements": 0.2,
-      "risk_mitigation": 0.4
+      "kpi_enhancements": 0.7,
+      "timeline_recommendations": 0.5,
+      "resource_requirements": 0.4,
+      "risk_mitigation": 0.7
     },
-    "average_specificity_score": 0.592156862745098,
+    "average_specificity_score": 0.6145454545454545,
     "quality_assessment": "Medium"
   },
   "performance": {
     "test_name": "System Performance Benchmark",
-    "timestamp": "2026-02-13T17:25:15.917849",
+    "timestamp": "2026-02-14T11:22:51.840845",
     "benchmarks": {
-      "document_processing_time": 0.0,
-      "embedding_time_per_10_items": 0.22420215606689453,
-      "embedding_throughput": 44.60260407583382,
-      "similarity_matrix_calculation_time": 0.0051975250244140625,
-      "estimated_total_analysis_time": 4.0184161186218255,
+      "document_processing_time": 0.2270801067352295,
+      "embedding_time_per_10_items": 0.19876766204833984,
+      "embedding_throughput": 50.30999457833349,
+      "similarity_matrix_calculation_time": 0.0022056102752685547,
+      "estimated_total_analysis_time": 3.787226867675781,
       "scalability": {
         "objectives_count": 179,
         "actions_count": 18,
         "comparisons_required": 3222,
-        "time_per_comparison_ms": 1.2471806699633226
+        "time_per_comparison_ms": 1.1754273332327068
       }
     }
   },
@@ -118,12 +118,10 @@
   },
   "overall_assessment": {
     "tests_completed": 5,
-    "tests_passed": 2,
-    "tests_failed": 1,
+    "tests_passed": 3,
+    "tests_failed": 0,
     "tests_skipped": 0,
-    "overall_grade": "B (Good)",
-    "recommendations": [
-      "Improve similarity score accuracy (correlation with expert below 0.40)"
-    ]
+    "overall_grade": "A (Excellent)",
+    "recommendations": []
   }
 }

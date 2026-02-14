@@ -298,6 +298,32 @@ with tab1:
                 mime="application/json",
                 use_container_width=True
             )
+        
+        st.markdown("---")
+        st.markdown('#### <i class="fas fa-file-upload fa-icon-small"></i> Upload Modified Ground Truth', unsafe_allow_html=True)
+        
+        uploaded_gt = st.file_uploader(
+            f"Upload modified ground truth for {selected_year} (JSON)",
+            type=['json'],
+            key='gt_uploader'
+        )
+        
+        if uploaded_gt:
+            try:
+                # Validate JSON
+                new_gt_data = json.load(uploaded_gt)
+                
+                # Check structure (basic validation)
+                if 'objective_action_pairs' not in new_gt_data:
+                    st.error("Invalid format: Missing 'objective_action_pairs'")
+                else:
+                    # Save
+                    with open(gt_path, 'w', encoding='utf-8') as f:
+                        json.dump(new_gt_data, f, indent=2)
+                    st.success("Ground truth updated successfully!")
+                    st.rerun()
+            except Exception as e:
+                st.error(f"Error uploading ground truth: {str(e)}")
     
     else:
         st.warning("No ground truth file found")
@@ -697,7 +723,9 @@ with tab2:
                 sync_engine=sync_engine,
                 improvements_data=improvements_data,
                 ground_truth_path=str(gt_path),
-                expert_feedback=None
+                expert_feedback=None,
+                strategic_path=str(strategic_path),
+                action_path=str(action_path)
             )
             
             # Save results

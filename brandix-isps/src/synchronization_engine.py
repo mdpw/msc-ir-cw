@@ -8,6 +8,8 @@ import pandas as pd
 from typing import Dict, List
 import json
 import os
+import config
+import re
 
 class SynchronizationEngine:
     def __init__(self, doc_processor, embedding_engine, vector_store):
@@ -57,6 +59,7 @@ class SynchronizationEngine:
         # Calculate similarity matrix
         print("Calculating similarity matrix...")
         self.embedding_engine.calculate_similarity_matrix()
+        self._apply_keyword_boost()
         
         # Generate comprehensive report
         print("Generating synchronization report...")
@@ -82,6 +85,7 @@ class SynchronizationEngine:
         """
         if self.embedding_engine.similarity_matrix is None:
             self.embedding_engine.calculate_similarity_matrix()
+            self._apply_keyword_boost()
         
         sim_matrix = self.embedding_engine.similarity_matrix
         
@@ -89,21 +93,21 @@ class SynchronizationEngine:
         overall_score = np.mean(sim_matrix) * 100
         max_per_objective = np.max(sim_matrix, axis=1)
         mean_max_similarity = np.mean(max_per_objective)
-        coverage_rate = np.sum(max_per_objective >= 0.30) / len(max_per_objective) * 100
+        coverage_rate = np.sum(max_per_objective >= config.ALIGNMENT_THRESHOLD_MODERATE) / len(max_per_objective) * 100
         
         # Classify overall alignment
-        if mean_max_similarity >= 0.45:
+        if mean_max_similarity >= config.ALIGNMENT_THRESHOLD_STRONG:
             classification = "Strong Alignment"
-        elif mean_max_similarity >= 0.30:
+        elif mean_max_similarity >= config.ALIGNMENT_THRESHOLD_MODERATE:
             classification = "Good Alignment"
         else:
             classification = "Needs Improvement"
         
-        # Count alignments by strength (Adjusted for sharpened scores: matrix = raw^1.5)
-        # Raw 0.58^1.5 approx 0.45
-        strong = int(np.sum(max_per_objective >= 0.45))
-        moderate = int(np.sum((max_per_objective >= 0.30) & (max_per_objective < 0.45)))
-        weak = int(np.sum(max_per_objective < 0.30))
+        # Count alignments by strength
+        strong = int(np.sum(max_per_objective >= config.ALIGNMENT_THRESHOLD_STRONG))
+        moderate = int(np.sum((max_per_objective >= config.ALIGNMENT_THRESHOLD_MODERATE) & 
+                             (max_per_objective < config.ALIGNMENT_THRESHOLD_STRONG)))
+        weak = int(np.sum(max_per_objective < config.ALIGNMENT_THRESHOLD_MODERATE))
         
         return {
             'overall_score': float(overall_score),
@@ -165,9 +169,9 @@ class SynchronizationEngine:
         alignment_score = max_similarity * 100
         
         # Determine coverage level
-        if alignment_score >= 45:
+        if max_similarity >= config.ALIGNMENT_THRESHOLD_STRONG:
             coverage = 'Strong'
-        elif alignment_score >= 30:
+        elif max_similarity >= config.ALIGNMENT_THRESHOLD_MODERATE:
             coverage = 'Moderate'
         else:
             coverage = 'Weak'
@@ -183,18 +187,49 @@ class SynchronizationEngine:
             'coverage': coverage,
             'max_similarity': max_similarity,
             'mean_similarity': mean_similarity,
-            'num_strong_matches': int(np.sum(similarities >= 0.45)),
-            'num_moderate_matches': int(np.sum((similarities >= 0.30) & (similarities < 0.45)))
+            'num_strong_matches': int(np.sum(similarities >= config.ALIGNMENT_THRESHOLD_STRONG)),
+            'num_moderate_matches': int(np.sum((similarities >= config.ALIGNMENT_THRESHOLD_MODERATE) & 
+                                              (similarities < config.ALIGNMENT_THRESHOLD_STRONG)))
         }
     
     def _classify_alignment(self, similarity: float) -> str:
-        """Classify alignment strength"""
-        if similarity >= 0.45:
+        """Classify alignment strength using centralized config thresholds"""
+        if similarity >= config.ALIGNMENT_THRESHOLD_STRONG:
             return "Strong"
-        elif similarity >= 0.30:
+        elif similarity >= config.ALIGNMENT_THRESHOLD_MODERATE:
             return "Moderate"
         else:
             return "Weak"
+
+    def _apply_keyword_boost(self):
+        """Apply a bonus to similarity scores for exact keyword overlap"""
+        if self.embedding_engine.similarity_matrix is None:
+            return
+
+        print("Applying keyword overlap boost...")
+        objectives = self.doc_processor.strategic_objectives
+        actions = self.doc_processor.action_items
+        matrix = self.embedding_engine.similarity_matrix
+
+        for i, obj in enumerate(objectives):
+            obj_words = set(self.doc_processor.clean_text(obj['text']).split())
+            if not obj_words: continue
+
+            for j, act in enumerate(actions):
+                act_words = set(self.doc_processor.clean_text(act['text']).split())
+                if not act_words: continue
+
+                # Calculate overlap
+                intersection = obj_words.intersection(act_words)
+                if intersection:
+                    # Bonus proportional to number of shared unique words
+                    # Max bonus of 0.15
+                    bonus = min(0.15, len(intersection) * 0.03)
+                    matrix[i, j] += bonus
+                    # Cap at 1.0
+                    matrix[i, j] = min(1.0, matrix[i, j])
+
+        self.embedding_engine.similarity_matrix = matrix
     
     def build_alignment_matrix(self) -> pd.DataFrame:
         """
@@ -250,9 +285,9 @@ class SynchronizationEngine:
                 obj = self.doc_processor.strategic_objectives[idx]
                 
                 # Determine severity
-                if max_sim < 0.20:
+                if max_sim < config.ALIGNMENT_THRESHOLD_WEAK:
                     severity = 'Critical'
-                elif max_sim < 0.30:
+                elif max_sim < config.ALIGNMENT_THRESHOLD_MODERATE:
                     severity = 'High'
                 else:
                     severity = 'Medium'
@@ -314,9 +349,9 @@ class SynchronizationEngine:
             
             # Classification
             avg = stats['average_score']
-            if avg >= 45:
+            if avg >= config.ALIGNMENT_THRESHOLD_STRONG * 100:
                 stats['pillar_status'] = 'Strong'
-            elif avg >= 30:
+            elif avg >= config.ALIGNMENT_THRESHOLD_MODERATE * 100:
                 stats['pillar_status'] = 'Moderate'
             else:
                 stats['pillar_status'] = 'Weak'
@@ -349,7 +384,7 @@ class SynchronizationEngine:
         max_per_action = np.max(sim_matrix, axis=0)
         
         for idx, max_sim in enumerate(max_per_action):
-            if max_sim < 0.30:
+            if max_sim < config.ALIGNMENT_THRESHOLD_MODERATE:
                 action = self.doc_processor.action_items[idx]
                 gaps['orphan_actions'].append({
                     'action_id': action['id'],
@@ -373,7 +408,7 @@ class SynchronizationEngine:
         # 4. Coverage gaps (objectives with no moderate/strong matches)
         for idx, obj in enumerate(self.doc_processor.strategic_objectives):
             similarities = sim_matrix[idx]
-            if not np.any(similarities >= 0.30):
+            if not np.any(similarities >= config.ALIGNMENT_THRESHOLD_MODERATE):
                 gaps['coverage_gaps'].append({
                     'objective_id': obj.get('id', f'OBJ-{idx:03d}'),
                     'objective': obj['text'],

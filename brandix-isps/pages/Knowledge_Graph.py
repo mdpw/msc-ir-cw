@@ -225,15 +225,15 @@ with col1:
         max_value=0.80,
         value=0.50,
         step=0.05,
-        help="Minimum similarity score to show connections"
+        help="Minimum similarity score to show connections. Set to 0.70 to see only Strong links."
     )
 
 with col2:
     layout_type = st.selectbox(
         "Layout Algorithm",
-        options=['spring', 'hierarchical', 'circular', 'kamada_kawai'],
+        options=['radial', 'spring', 'hierarchical', 'circular', 'kamada_kawai'],
         index=0,
-        help="Algorithm for positioning nodes in the graph"
+        help="Algorithm for positioning nodes. 'radial' is recommended for readability."
     )
 
 with col3:

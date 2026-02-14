@@ -6,6 +6,28 @@ class DocumentProcessor:
     def __init__(self):
         self.strategic_objectives = []
         self.action_items = []
+        # Domain-specific words that don't add semantic value for alignment
+        self.domain_stopwords = {
+            'brandix', 'isps', 'strategic', 'objective', 'plan', 'pillar',
+            'management', 'system', 'implement', 'achieve', 'initiative',
+            'support', 'across', 'within', 'related', 'provide', 'ensure'
+        }
+
+    def clean_text(self, text: str) -> str:
+        """Remove domain-specific noise and extra whitespace"""
+        if not text:
+            return ""
+        
+        # Basic cleaning
+        text = text.lower()
+        # Remove special characters but keep alphanumeric
+        text = re.sub(r'[^a-zA-Z0-9\s%]', ' ', text)
+        
+        # Tokenize and remove stopwords
+        words = text.split()
+        filtered_words = [w for w in words if w not in self.domain_stopwords and len(w) > 2]
+        
+        return " ".join(filtered_words)
     
     def extract_from_docx(self, file_path: str) -> str:
         """Extract text from DOCX file"""
@@ -87,6 +109,7 @@ class DocumentProcessor:
                     'id': f"OBJ-{obj_id:03d}",
                     'pillar': current_pillar,
                     'text': text,
+                    'cleaned_text': self.clean_text(text),
                     'type': 'strategic_sub_section'
                 })
                 obj_id += 1
@@ -99,6 +122,7 @@ class DocumentProcessor:
                         'id': f"OBJ-{obj_id:03d}",
                         'pillar': current_pillar,
                         'text': goal_text,
+                        'cleaned_text': self.clean_text(goal_text),
                         'type': 'goal'
                     })
                     obj_id += 1
@@ -124,6 +148,7 @@ class DocumentProcessor:
                                 'id': f"OBJ-{obj_id:03d}",
                                 'pillar': current_pillar,
                                 'text': initiative,
+                                'cleaned_text': self.clean_text(initiative),
                                 'type': 'initiative'
                             })
                             obj_id += 1
@@ -135,6 +160,7 @@ class DocumentProcessor:
                                 'id': f"OBJ-{obj_id:03d}",
                                 'pillar': current_pillar,
                                 'text': next_text,
+                                'cleaned_text': self.clean_text(next_text),
                                 'type': 'initiative'
                             })
                             obj_id += 1
@@ -165,6 +191,7 @@ class DocumentProcessor:
                                 'id': f"OBJ-{obj_id:03d}",
                                 'pillar': current_pillar,
                                 'text': kpi_clean,
+                                'cleaned_text': self.clean_text(kpi_clean),
                                 'type': 'kpi'
                             })
                             obj_id += 1
@@ -181,6 +208,7 @@ class DocumentProcessor:
                         'id': f"OBJ-{obj_id:03d}",
                         'pillar': current_pillar,
                         'text': vision_text,
+                        'cleaned_text': self.clean_text(vision_text),
                         'type': 'vision'
                     })
                     obj_id += 1
@@ -217,6 +245,7 @@ class DocumentProcessor:
                     'title': action_title,
                     'pillar': current_pillar,
                     'text': action_title,
+                    'cleaned_text': self.clean_text(action_title),
                     'type': 'action'
                 })
         

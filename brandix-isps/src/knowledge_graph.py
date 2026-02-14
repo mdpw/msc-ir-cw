@@ -156,9 +156,13 @@ class KnowledgeGraphGenerator:
             # Hierarchical layout (objectives on left, actions on right)
             self.node_positions = self._hierarchical_layout()
         
+        elif layout_type == 'radial':
+            # Radial layout (actions in center, objectives in circle)
+            self.node_positions = self._radial_layout()
+        
         else:
             # Default to spring
-            self.node_positions = nx.spring_layout(self.graph, seed=42)
+            self.node_positions = nx.spring_layout(self.graph, k=2.0/np.sqrt(len(self.graph.nodes)), iterations=100, seed=42)
         
         print("Layout calculated")
         
@@ -173,15 +177,41 @@ class KnowledgeGraphGenerator:
         actions = [n for n, d in self.graph.nodes(data=True) if d['type'] == 'action']
         
         # Position objectives on left (x=0)
-        obj_y_spacing = 2.0 / max(len(objectives), 1)
+        obj_y_spacing = 4.0 / max(len(objectives), 1)
         for i, obj_id in enumerate(objectives):
-            positions[obj_id] = (0, i * obj_y_spacing - 1)
+            positions[obj_id] = (0, i * obj_y_spacing - 2)
         
         # Position actions on right (x=2)
-        action_y_spacing = 2.0 / max(len(actions), 1)
+        action_y_spacing = 4.0 / max(len(actions), 1)
         for i, action_id in enumerate(actions):
-            positions[action_id] = (2, i * action_y_spacing - 1)
+            positions[action_id] = (2, i * action_y_spacing - 2)
         
+        return positions
+
+    def _radial_layout(self) -> Dict:
+        """Create radial layout: Actions in center, Objectives in outer circle clustered by pillar"""
+        positions = {}
+        
+        actions = [n for n, d in self.graph.nodes(data=True) if d['type'] == 'action']
+        objectives = [n for n, d in self.graph.nodes(data=True) if d['type'] == 'objective']
+        
+        # Sort objectives by pillar for clustering
+        objectives.sort(key=lambda x: self.graph.nodes[x].get('pillar', ''))
+        
+        # Position actions in a small inner circle
+        num_actions = len(actions)
+        for i, action_id in enumerate(actions):
+            angle = (2 * np.pi * i) / max(num_actions, 1)
+            radius = 0.5
+            positions[action_id] = (radius * np.cos(angle), radius * np.sin(angle))
+            
+        # Position objectives in a large outer circle
+        num_objectives = len(objectives)
+        for i, obj_id in enumerate(objectives):
+            angle = (2 * np.pi * i) / max(num_objectives, 1)
+            radius = 2.5
+            positions[obj_id] = (radius * np.cos(angle), radius * np.sin(angle))
+            
         return positions
     
     def create_plotly_figure(self, title="Strategic Alignment Knowledge Graph", 
@@ -283,6 +313,7 @@ class KnowledgeGraphGenerator:
                 y=y_coords,
                 mode='lines',
                 line=dict(width=2, color='#2ecc71'),
+                opacity=0.8,
                 hoverinfo='skip',
                 showlegend=True,
                 name=f'Strong Alignment (≥70%) - {len(strong_edges)} links'
@@ -298,6 +329,7 @@ class KnowledgeGraphGenerator:
                 y=y_coords,
                 mode='lines',
                 line=dict(width=1.5, color='#f39c12'),
+                opacity=0.4,
                 hoverinfo='skip',
                 showlegend=True,
                 name=f'Moderate Alignment (50-70%) - {len(moderate_edges)} links'
@@ -312,7 +344,8 @@ class KnowledgeGraphGenerator:
                 x=x_coords,
                 y=y_coords,
                 mode='lines',
-                line=dict(width=1, color='#e74c3c', dash='dash'),
+                line=dict(width=0.8, color='rgba(231, 76, 60, 0.15)', dash='dot'),
+                opacity=0.2,
                 hoverinfo='skip',
                 showlegend=True,
                 name=f'Weak Alignment (<50%) - {len(weak_edges)} links'

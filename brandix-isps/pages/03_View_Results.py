@@ -278,6 +278,21 @@ with tab1:
             help="Objectives with <50% alignment"
         )
     
+    # New Row for Scope Metrics
+    col1, col2, col3, col4 = st.columns(4)
+    with col1:
+        st.metric("Total Objectives", overall.get('total_objectives', len(objectives)))
+    with col2:
+        st.metric("Total Actions", overall.get('total_actions', 0))
+    with col3:
+        st.metric("Strategic Pillars", len(pillar_stats))
+    with col4:
+        # Calculate comparison density
+        total_objs = overall.get('total_objectives', len(objectives))
+        total_acts = overall.get('total_actions', 0)
+        comparisons = total_objs * total_acts
+        st.metric("Total Comparisons", f"{comparisons:,}")
+    
     st.markdown("---")
     
     # Alignment Distribution
@@ -456,7 +471,7 @@ with tab3:
     
     if gaps['weak_objectives']:
         weak_data = []
-        for gap in gaps['weak_objectives'][:20]:  # Show top 20
+        for gap in gaps['weak_objectives']:  # Show all gaps
             weak_data.append({
                 'ID': gap['objective_id'],
                 'Objective': gap['objective'][:80],
@@ -477,7 +492,7 @@ with tab3:
     
     if gaps['orphan_actions']:
         orphan_data = []
-        for orphan in gaps['orphan_actions'][:20]:
+        for orphan in gaps['orphan_actions']: # Show all orphan actions
             orphan_data.append({
                 'Action ID': orphan['action_id'],
                 'Title': orphan['title'][:60],

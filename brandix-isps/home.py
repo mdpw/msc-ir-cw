@@ -6,6 +6,7 @@ Main Homepage
 import streamlit as st
 from pathlib import Path
 import base64
+import os
 
 # Helper function to encode image
 def get_base64_image(image_path):
@@ -244,6 +245,14 @@ else:
 st.markdown("### Intelligent Strategic Planning Synchronization System")
 st.markdown("**AI-Powered Strategic Alignment Analysis for Brandix Lanka Limited**")
 st.markdown("---")
+
+# Cloud deployment notice
+if 'STREAMLIT_SHARING_MODE' in os.environ or 'HOSTNAME' in os.environ:
+    st.info("""
+    **ℹ️ Cloud Deployment Notice:** This application is running in cloud mode.
+    Core features (alignment analysis, testing, knowledge graphs) are fully functional.
+    LLM-powered features (AI Improvements, Executive Summary) require local deployment with Ollama.
+    """)
 
 # Introduction
 col1, col2 = st.columns([2, 1])

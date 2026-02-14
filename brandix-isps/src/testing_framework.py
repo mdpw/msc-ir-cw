@@ -232,28 +232,28 @@ class TestingFramework:
     def _display_classification_results(self, results: Dict):
         """Display classification results in readable format"""
         print(f"Overall Accuracy: {results['overall_accuracy']:.2%}\n")
-        
+
         print("Per-Class Performance:")
         print("-" * 60)
         print(f"{'Class':<12} {'Precision':<12} {'Recall':<12} {'F1-Score':<12}")
         print("-" * 60)
-        
+
         for class_name, metrics in results['per_class_metrics'].items():
             print(f"{class_name:<12} {metrics['precision']:.2%}     "
                   f"{metrics['recall']:.2%}     {metrics['f1_score']:.2%}")
-        
+
         print("-" * 60)
         print(f"{'Weighted Avg':<12} {results['weighted_metrics']['precision']:.2%}     "
               f"{results['weighted_metrics']['recall']:.2%}     "
               f"{results['weighted_metrics']['f1_score']:.2%}")
         print()
-        
+
         # Confusion Matrix
         print("\nConfusion Matrix:")
         print("-" * 60)
         cm = np.array(results['confusion_matrix']['matrix'])
         labels = results['confusion_matrix']['labels']
-        
+
         # Header
         header = "Actual \\ Pred"
         print(f"{header:<15}", end="")
@@ -261,7 +261,7 @@ class TestingFramework:
             print(f"{label:<12}", end="")
         print()
         print("-" * 60)
-        
+
         # Rows
         for i, label in enumerate(labels):
             print(f"{label:<15}", end="")

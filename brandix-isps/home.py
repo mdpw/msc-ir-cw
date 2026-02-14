@@ -535,27 +535,4 @@ with st.expander("📚 Technical Specifications"):
         """)
 
 st.markdown("---")
-
-# Footer
-col1, col2 = st.columns(2)
-
-with col1:
-    st.markdown("""
-    **<i class="fas fa-graduation-cap fa-icon-small"></i>Academic Project**
-    
-    MSc Computer Science
-    Information Retrieval Module
-    Brandix Case Study
-    """, unsafe_allow_html=True)
-
-with col2:
-    st.markdown("""
-    **<i class="fas fa-calendar-alt fa-icon-small"></i>Version Info**
-    
-    Version: 1.0
-    Released: January 2026
-    Status: Production Ready
-    """, unsafe_allow_html=True)
-
-st.markdown("---")
 st.markdown('<p style="text-align: center; color: rgba(255, 255, 255, 0.5);"><i class="fas fa-bullseye fa-icon-small"></i>Brandix ISPS - Intelligent Strategic Planning Synchronization System | Powered by AI</p>', unsafe_allow_html=True)

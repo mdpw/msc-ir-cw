@@ -426,53 +426,56 @@ with tab3:
                     with col3:
                         st.metric("Weighted F1-Score",
                                  f"{result['weighted_metrics']['f1_score']:.1%}")
-                    
-                    # Per-class metrics table
-                    st.markdown("#### Per-Class Performance")
-                    
-                    class_data = []
-                    for class_name, metrics in result['per_class_metrics'].items():
-                        class_data.append({
-                            'Class': class_name,
-                            'Precision': f"{metrics['precision']:.2%}",
-                            'Recall': f"{metrics['recall']:.2%}",
-                            'F1-Score': f"{metrics['f1_score']:.2%}",
-                            'Support': metrics['support']
-                        })
-                    
-                    df = pd.DataFrame(class_data)
-                    st.dataframe(df, use_container_width=True, hide_index=True)
-                    
-                    # Confusion Matrix
-                    st.markdown("#### Confusion Matrix")
-                    
-                    cm = result['confusion_matrix']['matrix']
-                    labels = result['confusion_matrix']['labels']
-                    
-                    fig = go.Figure(data=go.Heatmap(
-                        z=cm,
-                        x=labels,
-                        y=labels,
-                        colorscale='Blues',
-                        text=cm,
-                        texttemplate='%{text}',
-                        textfont={"size": 16, "color": "white"},
-                        hovertemplate='Predicted: %{x}<br>Actual: %{y}<br>Count: %{z}<extra></extra>'
-                    ))
-                    
-                    fig.update_layout(
-                        title="Confusion Matrix",
-                        xaxis_title="Predicted Class",
-                        yaxis_title="Actual Class",
-                        height=400,
-                        plot_bgcolor='rgba(0,0,0,0)',
-                        paper_bgcolor='rgba(0,0,0,0)',
-                        font=dict(color='#e0e0e0'),
-                        xaxis=dict(gridcolor='rgba(255,255,255,0.05)'),
-                        yaxis=dict(gridcolor='rgba(255,255,255,0.05)')
-                    )
-                    
-                    st.plotly_chart(fig, use_container_width=True)
+
+                    # Per-class metrics table and Confusion Matrix side by side
+                    col_left, col_right = st.columns(2)
+
+                    with col_left:
+                        st.markdown("#### Per-Class Performance")
+
+                        class_data = []
+                        for class_name, metrics in result['per_class_metrics'].items():
+                            class_data.append({
+                                'Class': class_name,
+                                'Precision': f"{metrics['precision']:.2%}",
+                                'Recall': f"{metrics['recall']:.2%}",
+                                'F1-Score': f"{metrics['f1_score']:.2%}",
+                                'Support': metrics['support']
+                            })
+
+                        df = pd.DataFrame(class_data)
+                        st.dataframe(df, use_container_width=True, hide_index=True)
+
+                    with col_right:
+                        st.markdown("#### Confusion Matrix")
+
+                        cm = result['confusion_matrix']['matrix']
+                        labels = result['confusion_matrix']['labels']
+
+                        fig = go.Figure(data=go.Heatmap(
+                            z=cm,
+                            x=labels,
+                            y=labels,
+                            colorscale='Blues',
+                            text=cm,
+                            texttemplate='%{text}',
+                            textfont={"size": 16, "color": "white"},
+                            hovertemplate='Predicted: %{x}<br>Actual: %{y}<br>Count: %{z}<extra></extra>'
+                        ))
+
+                        fig.update_layout(
+                            title="Confusion Matrix",
+                            xaxis_title="Predicted Class",
+                            yaxis_title="Actual Class",
+                            height=400,
+                            plot_bgcolor='rgba(0,0,0,0)',
+                            paper_bgcolor='rgba(0,0,0,0)',
+                            font=dict(color='#e0e0e0'),
+                            xaxis=dict(gridcolor='rgba(255,255,255,0.05)'),
+                            yaxis=dict(gridcolor='rgba(255,255,255,0.05)')
+                        )
+
+                        st.plotly_chart(fig, use_container_width=True)
         
         # Test 2: Similarity Scores
         if 'similarity_scores' in test_results:

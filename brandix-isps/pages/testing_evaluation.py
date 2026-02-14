@@ -476,7 +476,111 @@ with tab3:
                         )
 
                         st.plotly_chart(fig, use_container_width=True)
-        
+
+        # Test 1B: Comprehensive Alignment Classification (All Pairs)
+        if 'alignment_classification_comprehensive' in test_results:
+            result = test_results['alignment_classification_comprehensive']
+
+            if result.get('status') != 'skipped' and 'overall_accuracy' in result:
+                with st.expander("Test 1B: Comprehensive Alignment Classification (All Ground Truth Pairs)", expanded=True):
+                    st.markdown('<i class="fas fa-search-plus fa-icon-small"></i><strong>Detailed Analysis</strong>', unsafe_allow_html=True)
+
+                    col1, col2, col3 = st.columns(3)
+
+                    with col1:
+                        st.metric("Overall Accuracy",
+                                 f"{result['overall_accuracy']:.1%}")
+                    with col2:
+                        st.metric("Weighted Precision",
+                                 f"{result['weighted_metrics']['precision']:.1%}")
+                    with col3:
+                        st.metric("Weighted F1-Score",
+                                 f"{result['weighted_metrics']['f1_score']:.1%}")
+
+                    # Per-class metrics table and Confusion Matrix side by side
+                    col_left, col_right = st.columns(2)
+
+                    with col_left:
+                        st.markdown("#### Per-Class Performance")
+
+                        class_data = []
+                        for class_name, metrics in result['per_class_metrics'].items():
+                            # Show actual metrics for all classes
+                            support = metrics['support']
+                            if support == 0:
+                                precision_str = "N/A"
+                                recall_str = "N/A"
+                                f1_str = "N/A"
+                            else:
+                                precision_str = f"{metrics['precision']:.2%}"
+                                recall_str = f"{metrics['recall']:.2%}"
+                                f1_str = f"{metrics['f1_score']:.2%}"
+
+                            class_data.append({
+                                'Class': class_name,
+                                'Precision': precision_str,
+                                'Recall': recall_str,
+                                'F1-Score': f1_str,
+                                'Support': support
+                            })
+
+                        df = pd.DataFrame(class_data)
+                        st.dataframe(df, use_container_width=True, hide_index=True)
+
+                        # Add explanation for N/A values
+                        if any(row['Support'] == 0 for row in class_data):
+                            st.markdown('<p style="font-size: 0.85em; color: rgba(255, 255, 255, 0.6);"><i class="fas fa-exclamation-triangle fa-icon-small"></i>N/A indicates no samples in ground truth for that class</p>', unsafe_allow_html=True)
+
+                    with col_right:
+                        st.markdown("#### Confusion Matrix")
+
+                        cm = result['confusion_matrix']['matrix']
+                        labels = result['confusion_matrix']['labels']
+
+                        fig = go.Figure(data=go.Heatmap(
+                            z=cm,
+                            x=labels,
+                            y=labels,
+                            colorscale='Greens',
+                            text=cm,
+                            texttemplate='%{text}',
+                            textfont={"size": 16, "color": "white"},
+                            hovertemplate='Predicted: %{x}<br>Actual: %{y}<br>Count: %{z}<extra></extra>'
+                        ))
+
+                        fig.update_layout(
+                            title="Confusion Matrix (All Pairs)",
+                            xaxis_title="Predicted Class",
+                            yaxis_title="Actual Class",
+                            height=400,
+                            plot_bgcolor='rgba(0,0,0,0)',
+                            paper_bgcolor='rgba(0,0,0,0)',
+                            font=dict(color='#e0e0e0'),
+                            xaxis=dict(gridcolor='rgba(255,255,255,0.05)'),
+                            yaxis=dict(gridcolor='rgba(255,255,255,0.05)')
+                        )
+
+                        st.plotly_chart(fig, use_container_width=True)
+
+                    # Show comparison with Top-K test
+                    st.markdown("---")
+                    st.markdown('#### <i class="fas fa-chart-bar fa-icon-small"></i>Comparison: Top-K vs All Pairs', unsafe_allow_html=True)
+
+                    if 'alignment_classification' in test_results:
+                        topk_result = test_results['alignment_classification']
+
+                        comp_col1, comp_col2 = st.columns(2)
+
+                        with comp_col1:
+                            st.markdown("**Top-K Evaluation**")
+                            st.metric("Pairs Evaluated", topk_result.get('matched_pairs', 0))
+                            st.metric("Accuracy", f"{topk_result.get('overall_accuracy', 0):.1%}")
+
+                        with comp_col2:
+                            st.markdown("**Comprehensive Evaluation**")
+                            st.metric("Pairs Evaluated", result.get('matched_pairs', 0))
+                            st.metric("Accuracy", f"{result.get('overall_accuracy', 0):.1%}")
+
         # Test 2: Similarity Scores
         if 'similarity_scores' in test_results:
             result = test_results['similarity_scores']
@@ -558,7 +662,8 @@ with tab3:
         if 'performance' in test_results:
             result = test_results['performance']
             
-            with st.expander("⚡ Test 4: System Performance", expanded=True):
+            with st.expander("Test 4: System Performance", expanded=True):
+                st.markdown('<i class="fas fa-tachometer-alt fa-icon-small"></i><strong>Performance Metrics</strong>', unsafe_allow_html=True)
                 
                 benchmarks = result['benchmarks']
                 
@@ -625,7 +730,8 @@ with tab2:
     with col1:
         st.markdown('### <i class="fas fa-tasks fa-icon-small"></i>Available Tests', unsafe_allow_html=True)
         st.markdown("""
-        1. **Alignment Classification** - Accuracy of Strong/Moderate/Weak labels
+        1. **Alignment Classification (Top-K)** - Accuracy on top-ranked actions
+        1B. **Comprehensive Classification (All Pairs)** - Accuracy on all ground truth pairs
         2. **Similarity Scores** - Numerical score accuracy (MSE, MAE, correlation)
         3. **LLM Improvements** - Quality of AI-generated suggestions
         4. **System Performance** - Speed and efficiency benchmarks

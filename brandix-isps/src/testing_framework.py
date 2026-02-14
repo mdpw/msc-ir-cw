@@ -228,7 +228,131 @@ class TestingFramework:
         self._display_classification_results(results)
         
         return results
-    
+
+    def evaluate_alignment_classification_all_pairs(self, sync_report: Dict) -> Dict:
+        """
+        Test accuracy of alignment classification for ALL ground truth pairs
+        (not just top-ranked actions)
+
+        This provides comprehensive evaluation across all annotated pairs,
+        including weak alignments that may not appear in top recommendations.
+
+        Metrics:
+        - Classification accuracy
+        - Precision, Recall, F1 per class
+        - Confusion matrix
+        """
+        if not self.ground_truth:
+            return {"error": "Ground truth not loaded"}
+
+        print("\n" + "="*80)
+        print("COMPREHENSIVE ALIGNMENT CLASSIFICATION EVALUATION (ALL PAIRS)")
+        print("="*80)
+
+        # Extract predictions from sync report - build lookup structure
+        objective_details = sync_report.get('objective_details', [])
+
+        # Create a lookup: {obj_id: {action_id: prediction}}
+        predictions_lookup = {}
+        for obj_detail in objective_details:
+            obj_id = obj_detail['objective_id']
+            predictions_lookup[obj_id] = {}
+
+            for action in obj_detail.get('matched_actions', []):
+                action_id = action['action_id']
+                predictions_lookup[obj_id][action_id] = {
+                    'alignment': action['alignment_strength'],
+                    'score': action['similarity']
+                }
+
+        # Build prediction and ground truth arrays
+        y_true = []  # Ground truth labels
+        y_pred = []  # System predictions
+
+        matched_pairs = 0
+        missing_pairs = 0
+
+        # Iterate through ALL ground truth pairs
+        for pair in self.ground_truth.get('objective_action_pairs', []):
+            obj_id = pair['objective_id']
+            action_id = pair['action_id']
+            expected_alignment = pair.get('expected_alignment')
+
+            # Skip if not annotated yet
+            if expected_alignment == 'TO_BE_ANNOTATED':
+                continue
+
+            # Look up the system prediction for this specific pair
+            if obj_id in predictions_lookup and action_id in predictions_lookup[obj_id]:
+                predicted_alignment = predictions_lookup[obj_id][action_id]['alignment']
+
+                y_true.append(expected_alignment)
+                y_pred.append(predicted_alignment)
+                matched_pairs += 1
+            else:
+                missing_pairs += 1
+
+        if matched_pairs == 0:
+            return {
+                "error": "No matching pairs between ground truth and predictions",
+                "suggestion": "Ensure ground truth pairs were analyzed by the system"
+            }
+
+        print(f"Evaluated {matched_pairs} ground truth pairs")
+        if missing_pairs > 0:
+            print(f"Warning: {missing_pairs} ground truth pairs not found in predictions\n")
+        else:
+            print()
+
+        # Define class order
+        classes = ['Strong', 'Moderate', 'Weak']
+
+        # Calculate metrics
+        accuracy = np.mean([1 if t == p else 0 for t, p in zip(y_true, y_pred)])
+
+        # Precision, Recall, F1 for each class
+        precision = precision_score(y_true, y_pred, labels=classes, average=None, zero_division=0)
+        recall = recall_score(y_true, y_pred, labels=classes, average=None, zero_division=0)
+        f1 = f1_score(y_true, y_pred, labels=classes, average=None, zero_division=0)
+
+        # Weighted averages
+        precision_weighted = precision_score(y_true, y_pred, labels=classes, average='weighted', zero_division=0)
+        recall_weighted = recall_score(y_true, y_pred, labels=classes, average='weighted', zero_division=0)
+        f1_weighted = f1_score(y_true, y_pred, labels=classes, average='weighted', zero_division=0)
+
+        # Confusion matrix
+        cm = confusion_matrix(y_true, y_pred, labels=classes)
+
+        results = {
+            'test_name': 'Comprehensive Alignment Classification (All Pairs)',
+            'matched_pairs': matched_pairs,
+            'missing_pairs': missing_pairs,
+            'overall_accuracy': float(accuracy),
+            'per_class_metrics': {
+                classes[i]: {
+                    'precision': float(precision[i]),
+                    'recall': float(recall[i]),
+                    'f1_score': float(f1[i]),
+                    'support': int(np.sum(cm[i, :]))  # Row sum for actual class count
+                }
+                for i in range(len(classes))
+            },
+            'weighted_metrics': {
+                'precision': float(precision_weighted),
+                'recall': float(recall_weighted),
+                'f1_score': float(f1_weighted)
+            },
+            'confusion_matrix': {
+                'matrix': cm.tolist(),
+                'labels': classes
+            }
+        }
+
+        # Display results
+        self._display_classification_results(results)
+
+        return results
+
     def _display_classification_results(self, results: Dict):
         """Display classification results in readable format"""
         print(f"Overall Accuracy: {results['overall_accuracy']:.2%}\n")
@@ -677,9 +801,9 @@ class TestingFramework:
         # Load ground truth
         ground_truth_loaded = self.load_ground_truth(ground_truth_path)
         
-        # Test 1: Alignment Classification
+        # Test 1: Alignment Classification (Top-K)
         if ground_truth_loaded:
-            print("\n[Test 1/5] Alignment Classification Accuracy")
+            print("\n[Test 1/6] Alignment Classification Accuracy (Top-K)")
             classification_results = self.evaluate_alignment_classification(sync_report)
             test_results['alignment_classification'] = classification_results
             test_results['tests_run'].append('alignment_classification')
@@ -689,10 +813,23 @@ class TestingFramework:
                 'status': 'skipped',
                 'reason': 'Ground truth not available'
             }
-        
+
+        # Test 1B: Comprehensive Alignment Classification (All Pairs)
+        if ground_truth_loaded:
+            print("\n[Test 1B/6] Comprehensive Alignment Classification (All Pairs)")
+            comprehensive_results = self.evaluate_alignment_classification_all_pairs(sync_report)
+            test_results['alignment_classification_comprehensive'] = comprehensive_results
+            test_results['tests_run'].append('alignment_classification_comprehensive')
+        else:
+            print("\nWARNING: Skipping comprehensive classification test - no ground truth available")
+            test_results['alignment_classification_comprehensive'] = {
+                'status': 'skipped',
+                'reason': 'Ground truth not available'
+            }
+
         # Test 2: Similarity Scores
         if ground_truth_loaded:
-            print("\n[Test 2/5] Similarity Score Accuracy")
+            print("\n[Test 2/6] Similarity Score Accuracy")
             score_results = self.evaluate_similarity_scores(sync_report)
             test_results['similarity_scores'] = score_results
             test_results['tests_run'].append('similarity_scores')
@@ -702,12 +839,12 @@ class TestingFramework:
                 'status': 'skipped',
                 'reason': 'Ground truth not available'
             }
-        
+
         # Test 3: LLM Improvements
         if improvements_data:
-            print("\n[Test 3/5] LLM Improvement Quality")
+            print("\n[Test 3/6] LLM Improvement Quality")
             improvement_results = self.evaluate_llm_improvements(
-                improvements_data, 
+                improvements_data,
                 expert_feedback
             )
             test_results['llm_improvements'] = improvement_results
@@ -718,9 +855,9 @@ class TestingFramework:
                 'status': 'skipped',
                 'reason': 'No improvement data provided'
             }
-        
+
         # Test 4: System Performance
-        print("\n[Test 4/5] System Performance Benchmarks")
+        print("\n[Test 4/6] System Performance Benchmarks")
         performance_results = self.benchmark_system_performance(
             sync_engine,
             strategic_path=strategic_path,
@@ -730,7 +867,7 @@ class TestingFramework:
         test_results['tests_run'].append('performance')
         
         # Test 5: Coverage Analysis
-        print("\n[Test 5/5] Coverage Analysis")
+        print("\n[Test 5/6] Coverage Analysis")
         coverage_results = self._analyze_test_coverage(sync_report)
         test_results['coverage'] = coverage_results
         test_results['tests_run'].append('coverage')
@@ -791,6 +928,19 @@ class TestingFramework:
                 assessment['tests_failed'] += 1
                 assessment['recommendations'].append(
                     "Improve alignment classification accuracy (currently below 50%)"
+                )
+
+        # Check comprehensive alignment classification (all pairs)
+        if 'alignment_classification_comprehensive' in test_results:
+            result = test_results['alignment_classification_comprehensive']
+            if result.get('status') == 'skipped':
+                assessment['tests_skipped'] += 1
+            elif result.get('overall_accuracy', 0) >= 0.50:
+                assessment['tests_passed'] += 1
+            else:
+                assessment['tests_failed'] += 1
+                assessment['recommendations'].append(
+                    "Improve comprehensive alignment classification (weak class detection needs enhancement)"
                 )
         
         if 'similarity_scores' in test_results:

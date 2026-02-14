@@ -1,15 +1,19 @@
 # ISPS Testing Framework - Evaluation Report
 
-**Generated:** 2026-02-14T11:22:51.357223
+**Generated:** 2026-02-14T16:29:04.446897
 
 ---
 
 ## Overall Assessment
 
-- **Grade:** A (Excellent)
-- **Tests Passed:** 3/5
-- **Tests Failed:** 0
+- **Grade:** B+ (Very Good)
+- **Tests Passed:** 3/6
+- **Tests Failed:** 1
 - **Tests Skipped:** 0
+
+### Recommendations
+
+1. Improve comprehensive alignment classification (weak class detection needs enhancement)
 
 ---
 

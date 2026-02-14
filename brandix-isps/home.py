@@ -242,7 +242,7 @@ else:
     # Fallback if logo not found
     st.markdown('<h1><i class="fas fa-bullseye fa-icon-large"></i>Brandix ISPS</h1>', unsafe_allow_html=True)
 
-st.markdown("### Intelligent Strategic Planning Synchronization Systemzzzzz")
+st.markdown("### Intelligent Strategic Planning Synchronization System")
 st.markdown("**AI-Powered Strategic Alignment Analysis for Brandix Lanka Limited**")
 st.markdown("---")
 

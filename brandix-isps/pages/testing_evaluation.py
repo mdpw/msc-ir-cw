@@ -440,11 +440,11 @@ with tab3:
                                 'Precision': f"{metrics['precision']:.2%}",
                                 'Recall': f"{metrics['recall']:.2%}",
                                 'F1-Score': f"{metrics['f1_score']:.2%}",
-                                'Support': metrics['support']
+                                'Support': str(metrics['support'])
                             })
 
-                        df = pd.DataFrame(class_data)
-                        st.dataframe(df, use_container_width=True, hide_index=True)
+                        df = pd.DataFrame(class_data).set_index('Class')
+                        st.table(df)
 
                     with col_right:
                         st.markdown("#### Confusion Matrix")
@@ -505,7 +505,6 @@ with tab3:
 
                         class_data = []
                         for class_name, metrics in result['per_class_metrics'].items():
-                            # Show actual metrics for all classes
                             support = metrics['support']
                             if support == 0:
                                 precision_str = "N/A"
@@ -521,11 +520,11 @@ with tab3:
                                 'Precision': precision_str,
                                 'Recall': recall_str,
                                 'F1-Score': f1_str,
-                                'Support': support
+                                'Support': str(support)
                             })
 
-                        df = pd.DataFrame(class_data)
-                        st.dataframe(df, use_container_width=True, hide_index=True)
+                        df = pd.DataFrame(class_data).set_index('Class')
+                        st.table(df)
 
                         # Add explanation for N/A values
                         if any(row['Support'] == 0 for row in class_data):

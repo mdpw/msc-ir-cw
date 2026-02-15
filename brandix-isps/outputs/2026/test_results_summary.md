@@ -1,6 +1,6 @@
 # ISPS Testing Framework - Evaluation Report
 
-**Generated:** 2026-02-15T13:00:09.439205
+**Generated:** 2026-02-15T14:55:05.014100
 
 ---
 
@@ -31,7 +31,7 @@
 ## Test 3: LLM Improvements
 
 - **Objectives Processed:** 10
-- **Avg Specificity:** 0.61
+- **Avg Specificity:** 0.58
 - **Quality:** Medium
 
 ---

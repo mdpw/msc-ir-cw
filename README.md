@@ -233,4 +233,4 @@ Key parameters in [config.py](brandix-isps/config.py):
 
 ## License
 
-This project was developed for academic purposes as part of the MSc Computer Science programme.
+This project was developed for academic purposes as part of the MSc Data Science programme.

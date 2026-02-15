@@ -9,8 +9,6 @@ env/
 ENV/
 
 # ISPS specific
-outputs/*.json
-outputs/*.txt
 models/*.faiss
 models/*.meta
 

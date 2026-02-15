@@ -227,7 +227,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Header with Logo
-logo_base64 = get_base64_image("pages/brandix_logo.png")
+logo_base64 = get_base64_image(Path(__file__).parent / "pages" / "brandix_logo.png")
 
 if logo_base64:
     st.markdown(f"""

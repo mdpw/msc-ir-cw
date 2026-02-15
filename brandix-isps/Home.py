@@ -367,8 +367,8 @@ with col2:
     """)
     
     # Check system components
-    UPLOAD_BASE = Path("data/uploaded")
-    OUTPUTS_BASE = Path("outputs")
+    UPLOAD_BASE = Path(__file__).parent / "data" / "uploaded"
+    OUTPUTS_BASE = Path(__file__).parent / "outputs"
     
     UPLOAD_BASE.mkdir(parents=True, exist_ok=True)
     OUTPUTS_BASE.mkdir(parents=True, exist_ok=True)

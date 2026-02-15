@@ -198,7 +198,7 @@ st.markdown("---")
 
 # Available years (Strategic Plan 2025-2030)
 AVAILABLE_YEARS = ["2026", "2027", "2028", "2029", "2030"]
-UPLOAD_BASE = Path("data/uploaded")
+UPLOAD_BASE = Path(__file__).parent.parent / "data" / "uploaded"
 UPLOAD_BASE.mkdir(parents=True, exist_ok=True)
 
 # Initialize session state

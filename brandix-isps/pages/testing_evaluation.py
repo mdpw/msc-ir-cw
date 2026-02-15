@@ -174,8 +174,8 @@ st.markdown("---")
 
 # Available years
 AVAILABLE_YEARS = ["2026", "2027", "2028", "2029", "2030"]
-OUTPUTS_BASE = Path("outputs")
-GT_BASE = Path("data/ground_truth")
+OUTPUTS_BASE = Path(__file__).parent.parent / "outputs"
+GT_BASE = Path(__file__).parent.parent / "data" / "ground_truth"
 
 # Year selection
 col1, col2 = st.columns([1, 3])
@@ -797,7 +797,7 @@ with tab2:
             status_text.info("Initializing system components...")
             progress_bar.progress(20)
             
-            upload_dir = Path("data/uploaded") / selected_year
+            upload_dir = Path(__file__).parent.parent / "data" / "uploaded" / selected_year
             strategic_path = upload_dir / "strategic_plan.docx"
             action_path = upload_dir / "action_plan.docx"
             

@@ -144,7 +144,7 @@ st.markdown("### Track Progress Toward 2030 Strategic Goals")
 st.markdown("---")
 
 AVAILABLE_YEARS = ["2026", "2027", "2028", "2029", "2030"]
-OUTPUTS_BASE = Path("outputs")
+OUTPUTS_BASE = Path(__file__).parent.parent / "outputs"
 
 # Function to load year data
 def load_year_data(year):

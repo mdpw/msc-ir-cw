@@ -190,8 +190,8 @@ st.markdown("---")
 
 # Configuration
 AVAILABLE_YEARS = ["2026", "2027", "2028", "2029", "2030"]
-UPLOAD_BASE = Path("data/uploaded")
-OUTPUTS_BASE = Path("outputs")
+UPLOAD_BASE = Path(__file__).parent.parent / "data" / "uploaded"
+OUTPUTS_BASE = Path(__file__).parent.parent / "outputs"
 
 # Initialize session state
 if 'selected_year' not in st.session_state:

@@ -1,0 +1,185 @@
+{
+  "test_suite_version": "1.0",
+  "timestamp": "2026-02-15T13:00:09.439205",
+  "tests_run": [
+    "alignment_classification",
+    "alignment_classification_comprehensive",
+    "similarity_scores",
+    "llm_improvements",
+    "performance",
+    "coverage"
+  ],
+  "alignment_classification": {
+    "test_name": "Alignment Classification Accuracy",
+    "matched_pairs": 10,
+    "overall_accuracy": 0.7,
+    "per_class_metrics": {
+      "Strong": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1_score": 0.6666666666666666,
+        "support": 2
+      },
+      "Moderate": {
+        "precision": 0.7142857142857143,
+        "recall": 0.8333333333333334,
+        "f1_score": 0.7692307692307692,
+        "support": 7
+      },
+      "Weak": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "support": 1
+      }
+    },
+    "weighted_metrics": {
+      "precision": 0.8285714285714285,
+      "recall": 0.7,
+      "f1_score": 0.7282051282051281
+    },
+    "confusion_matrix": {
+      "matrix": [
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          0,
+          5,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "labels": [
+        "Strong",
+        "Moderate",
+        "Weak"
+      ]
+    }
+  },
+  "alignment_classification_comprehensive": {
+    "test_name": "Comprehensive Alignment Classification (All Pairs)",
+    "matched_pairs": 30,
+    "missing_pairs": 0,
+    "overall_accuracy": 0.4666666666666667,
+    "per_class_metrics": {
+      "Strong": {
+        "precision": 1.0,
+        "recall": 0.2857142857142857,
+        "f1_score": 0.4444444444444445,
+        "support": 7
+      },
+      "Moderate": {
+        "precision": 0.4583333333333333,
+        "recall": 0.8461538461538461,
+        "f1_score": 0.5945945945945945,
+        "support": 13
+      },
+      "Weak": {
+        "precision": 0.25,
+        "recall": 0.1,
+        "f1_score": 0.14285714285714288,
+        "support": 10
+      }
+    },
+    "weighted_metrics": {
+      "precision": 0.5152777777777777,
+      "recall": 0.4666666666666667,
+      "f1_score": 0.408980408980409
+    },
+    "confusion_matrix": {
+      "matrix": [
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          0,
+          11,
+          2
+        ],
+        [
+          0,
+          9,
+          1
+        ]
+      ],
+      "labels": [
+        "Strong",
+        "Moderate",
+        "Weak"
+      ]
+    }
+  },
+  "similarity_scores": {
+    "test_name": "Similarity Score Accuracy",
+    "samples_evaluated": 10,
+    "mean_squared_error": 0.029585177818110337,
+    "mean_absolute_error": 0.1349824380874634,
+    "root_mean_squared_error": 0.17200342385577777,
+    "correlation_coefficient": 0.4923801593968688,
+    "within_10_percent": 0.5,
+    "within_20_percent": 0.8,
+    "score_statistics": {
+      "mean_true": 0.7100000000000001,
+      "mean_pred": 0.6700887322425843,
+      "std_true": 0.18681541692269404,
+      "std_pred": 0.1313969241537561
+    }
+  },
+  "llm_improvements": {
+    "test_name": "LLM Improvement Quality",
+    "objectives_processed": 10,
+    "average_suggestions_per_objective": 5.9,
+    "category_coverage_rate": {
+      "new_actions": 0.9,
+      "kpi_enhancements": 1.0,
+      "timeline_recommendations": 0.3,
+      "resource_requirements": 0.2,
+      "risk_mitigation": 0.3
+    },
+    "average_specificity_score": 0.6135593220338982,
+    "quality_assessment": "Medium"
+  },
+  "performance": {
+    "test_name": "System Performance Benchmark",
+    "timestamp": "2026-02-15T13:00:09.808276",
+    "benchmarks": {
+      "document_processing_time": 0.13826990127563477,
+      "embedding_time_per_10_items": 0.12347173690795898,
+      "embedding_throughput": 80.99019460181742,
+      "similarity_matrix_calculation_time": 0.0023136138916015625,
+      "estimated_total_analysis_time": 2.350727605819702,
+      "scalability": {
+        "objectives_count": 179,
+        "actions_count": 18,
+        "comparisons_required": 3222,
+        "time_per_comparison_ms": 0.7295864698385172
+      }
+    }
+  },
+  "coverage": {
+    "test_name": "Test Coverage Analysis",
+    "total_objectives": 179,
+    "objectives_tested": 10,
+    "coverage_percentage": 5.58659217877095,
+    "coverage_assessment": "Low"
+  },
+  "overall_assessment": {
+    "tests_completed": 6,
+    "tests_passed": 3,
+    "tests_failed": 1,
+    "tests_skipped": 0,
+    "overall_grade": "B+ (Very Good)",
+    "recommendations": [
+      "Improve comprehensive alignment classification (weak class detection needs enhancement)"
+    ]
+  }
+}

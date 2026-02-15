@@ -2,7 +2,7 @@
   "metadata": {
     "year": "2026",
     "created": "2026-02-13",
-    "annotator": "ISPS Expert AI",
+    "annotator": "Domain Expert",
     "instructions": "Please review each objective-action pair and provide your expert assessment",
     "notes": "Annotated based on semantic alignment between strategic vision and tactical initiatives."
   },

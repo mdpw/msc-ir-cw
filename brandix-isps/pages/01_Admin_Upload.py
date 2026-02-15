@@ -467,7 +467,10 @@ if strategic_exists or action_exists:
             # 3. Clear session state related to this year
             if 'analysis_complete' in st.session_state:
                 st.session_state.analysis_complete[selected_year] = False
-                
+
+            # 4. Clear cached data so other pages refresh
+            st.cache_data.clear()
+
             st.success(f"All data for {selected_year} has been reset.")
             st.rerun()
 

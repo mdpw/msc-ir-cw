@@ -8,7 +8,7 @@ ACTION_PLAN_PATH = "data/BRANDIX_ACTION_PLAN_YEAR_1.docx"
 
 # Model settings
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"
-LLM_MODEL = "llama3.1"
+LLM_MODEL = "phi3:mini"
 EMBEDDING_DIMENSION = 384
 
 # Analysis settings

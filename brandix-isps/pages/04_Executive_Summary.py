@@ -167,14 +167,13 @@ with col2:
     st.info(f"Executive Summary for **Year {selected_year}**")
 
 # Load Data
-@st.cache_data
 def load_executive_summary(year):
     """Load executive summary for a specific year"""
     summary_file = OUTPUTS_BASE / year / 'executive_summary.json'
-    
+
     if not summary_file.exists():
         return None
-    
+
     with open(summary_file, 'r', encoding='utf-8') as f:
         return json.load(f)
 

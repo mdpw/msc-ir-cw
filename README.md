@@ -6,7 +6,7 @@ Built as a coursework project for **MSc Computer Science - Information Retrieval
 
 ## Live Demo
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://brandix-isps.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://msc-ir-cw-isps.streamlit.app/)
 
 ## Problem Statement
 
